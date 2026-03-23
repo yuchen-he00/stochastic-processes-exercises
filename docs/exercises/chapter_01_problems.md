@@ -115,7 +115,7 @@
     	$$
     	则淘汰 $i$。定义事件
     	$$
-	    E=\bigl\{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert<C_r\bigr\}.
+	    E=\{\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|<C_r\}.
     	$$
     	请证明 $\Pr(E)\ge1-\delta$，并据此说明算法成功概率至少 $1-\delta$。
     3. 设最优臂编号为 $1$（玩家并不知道），证明：以至少 $1-\delta$ 的概率，该算法的拉动次数不超过
@@ -138,7 +138,7 @@
     	$$
     	Define
     	$$
-	    E=\bigl\{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert<C_r\bigr\}.
+	    E=\{\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|<C_r\}.
     	$$
     	Prove $\Pr(E)\ge1-\delta$, and conclude that the algorithm succeeds with probability at least $1-\delta$.
     3. Assume the optimal arm is indexed by $1$ (unknown to the learner). Prove that with probability at least $1-\delta$, the number of pulls is at most

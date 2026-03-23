@@ -824,13 +824,13 @@
 $$
 \Pr\left(Y \ge nH_n + t\right) \le \frac{2n^2}{t^2},
 $$
-其中 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 是奖券类型总数，<span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> 是收集齐全 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 种奖券所需的抽奖次数。现在我们用另一种方法来计算这个问题的集中性。</p>
+其中 <span class="arithmatex">\(n\)</span> 是奖券类型总数，<span class="arithmatex">\(Y\)</span> 是收集齐全 <span class="arithmatex">\(n\)</span> 种奖券所需的抽奖次数。现在我们用另一种方法来计算这个问题的集中性。</p>
 <ol>
-<li>请用联合界分析“存在一种奖券类型在前 <span class="arithmatex"><span class="MathJax_Preview">nH_n+t</span><script type="math/tex">nH_n+t</script></span> 次抽奖中都没有被抽到”的概率，并据此证明
+<li>请用联合界分析“存在一种奖券类型在前 <span class="arithmatex">\(nH_n+t\)</span> 次抽奖中都没有被抽到”的概率，并据此证明
     $$
     \Pr\left(Y \ge nH_n+t\right) \le e^{-t/n}.
     $$</li>
-<li>请根据上一问结论，计算在 <span class="arithmatex"><span class="MathJax_Preview">n=100</span><script type="math/tex">n=100</script></span> 时，开多少包可以保证以至少 <span class="arithmatex"><span class="MathJax_Preview">99\%</span><script type="math/tex">99\%</script></span> 的概率收集全一套？并把你的界与切比雪夫不等式得到的界进行比较。</li>
+<li>请根据上一问结论，计算在 <span class="arithmatex">\(n=100\)</span> 时，开多少包可以保证以至少 <span class="arithmatex">\(99\%\)</span> 的概率收集全一套？并把你的界与切比雪夫不等式得到的界进行比较。</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -838,20 +838,20 @@ $$
 $$
 \Pr\left(Y \ge nH_n + t\right) \le \frac{2n^2}{t^2},
 $$
-where <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> is the total number of coupon types, and <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span> is the number of draws needed to collect all <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> types. Now use a different method to study concentration.</p>
+where <span class="arithmatex">\(n\)</span> is the total number of coupon types, and <span class="arithmatex">\(Y\)</span> is the number of draws needed to collect all <span class="arithmatex">\(n\)</span> types. Now use a different method to study concentration.</p>
 <ol>
-<li>Use the union bound to analyze the probability that at least one coupon type is never drawn in the first <span class="arithmatex"><span class="MathJax_Preview">nH_n+t</span><script type="math/tex">nH_n+t</script></span> draws, and deduce
+<li>Use the union bound to analyze the probability that at least one coupon type is never drawn in the first <span class="arithmatex">\(nH_n+t\)</span> draws, and deduce
     $$
     \Pr\left(Y \ge nH_n+t\right) \le e^{-t/n}.
     $$</li>
-<li>Based on the bound above, when <span class="arithmatex"><span class="MathJax_Preview">n=100</span><script type="math/tex">n=100</script></span>, how many packs are needed to guarantee at least <span class="arithmatex"><span class="MathJax_Preview">99\%</span><script type="math/tex">99\%</script></span> probability of collecting a full set? Compare your bound with the one from Chebyshev's inequality.</li>
+<li>Based on the bound above, when <span class="arithmatex">\(n=100\)</span>, how many packs are needed to guarantee at least <span class="arithmatex">\(99\%\)</span> probability of collecting a full set? Compare your bound with the one from Chebyshev's inequality.</li>
 </ol>
 </div>
 </div>
 </div>
 <details class="success">
 <summary>来自[Your name]的解答</summary>
-<p>总所周知，<span class="arithmatex"><span class="MathJax_Preview">1+1=2</span><script type="math/tex">1+1=2</script></span>。</p>
+<p>总所周知，<span class="arithmatex">\(1+1=2\)</span>。</p>
 </details>
 <details class="note">
 <summary>来自[Your name]的想法</summary>
@@ -861,7 +861,7 @@ where <span class="arithmatex"><span class="MathJax_Preview">n</span><script typ
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>在正文中我们证明了，当 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个球随机投入 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个箱子时，最大负载
+<p>在正文中我们证明了，当 <span class="arithmatex">\(n\)</span> 个球随机投入 <span class="arithmatex">\(n\)</span> 个箱子时，最大负载
 $$
 X = \max_{i\in[n]} X_i
 $$
@@ -869,13 +869,13 @@ $$
 $$
 \Pr\left(X \ge \frac{6\log n}{\log\log n}\right) \le \frac{1}{n}.
 $$
-请利用这一尾部概率结论，以及 <span class="arithmatex"><span class="MathJax_Preview">0\le X\le n</span><script type="math/tex">0\le X\le n</script></span>，证明
+请利用这一尾部概率结论，以及 <span class="arithmatex">\(0\le X\le n\)</span>，证明
 $$
 \mathbb{E}[X] = O\left(\frac{\log n}{\log\log n}\right).
 $$</p>
 </div>
 <div class="tabbed-block">
-<p>In the main text we proved that when <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> balls are thrown independently and uniformly into <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bins, the maximum load
+<p>In the main text we proved that when <span class="arithmatex">\(n\)</span> balls are thrown independently and uniformly into <span class="arithmatex">\(n\)</span> bins, the maximum load
 $$
 X = \max_{i\in[n]} X_i
 $$
@@ -883,7 +883,7 @@ satisfies
 $$
 \Pr\left(X \ge \frac{6\log n}{\log\log n}\right) \le \frac{1}{n}.
 $$
-Use this tail bound together with <span class="arithmatex"><span class="MathJax_Preview">0\le X\le n</span><script type="math/tex">0\le X\le n</script></span> to prove
+Use this tail bound together with <span class="arithmatex">\(0\le X\le n\)</span> to prove
 $$
 \mathbb{E}[X] = O\left(\frac{\log n}{\log\log n}\right).
 $$</p>
@@ -894,16 +894,16 @@ $$</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>在流模型计算流长度的问题中，我们提到：任何试图精确计算数据流长度 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的确定性算法，如果内存不足，则必然出错。</p>
+<p>在流模型计算流长度的问题中，我们提到：任何试图精确计算数据流长度 <span class="arithmatex">\(m\)</span> 的确定性算法，如果内存不足，则必然出错。</p>
 <ol>
-<li>请使用鸽巢原理，严格证明：任何状态数少于 <span class="arithmatex"><span class="MathJax_Preview">N+1</span><script type="math/tex">N+1</script></span> 的确定性算法，必定无法对所有长度不超过 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 的数据流给出精确计数。这说明任何保证精确计数的确定性算法至少需要 <span class="arithmatex"><span class="MathJax_Preview">\lceil \log_2(N+1)\rceil</span><script type="math/tex">\lceil \log_2(N+1)\rceil</script></span> 比特内存。</li>
-<li>如果允许随机算法，但仍要求在任何输入下都必须零误差输出流长度 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>，它能否比确定性算法消耗更少的峰值内存空间？请证明你的结论。</li>
+<li>请使用鸽巢原理，严格证明：任何状态数少于 <span class="arithmatex">\(N+1\)</span> 的确定性算法，必定无法对所有长度不超过 <span class="arithmatex">\(N\)</span> 的数据流给出精确计数。这说明任何保证精确计数的确定性算法至少需要 <span class="arithmatex">\(\lceil \log_2(N+1)\rceil\)</span> 比特内存。</li>
+<li>如果允许随机算法，但仍要求在任何输入下都必须零误差输出流长度 <span class="arithmatex">\(m\)</span>，它能否比确定性算法消耗更少的峰值内存空间？请证明你的结论。</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>In the streaming model for counting stream length, we mentioned that any deterministic algorithm attempting to compute the exact length <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> must fail if memory is insufficient.</p>
+<p>In the streaming model for counting stream length, we mentioned that any deterministic algorithm attempting to compute the exact length <span class="arithmatex">\(m\)</span> must fail if memory is insufficient.</p>
 <ol>
-<li>Use the pigeonhole principle to rigorously prove: any deterministic algorithm with fewer than <span class="arithmatex"><span class="MathJax_Preview">N+1</span><script type="math/tex">N+1</script></span> states cannot output exact counts for all streams of length at most <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>. Conclude that any deterministic algorithm guaranteeing exact counting needs at least <span class="arithmatex"><span class="MathJax_Preview">\lceil\log_2(N+1)\rceil</span><script type="math/tex">\lceil\log_2(N+1)\rceil</script></span> bits of memory.</li>
+<li>Use the pigeonhole principle to rigorously prove: any deterministic algorithm with fewer than <span class="arithmatex">\(N+1\)</span> states cannot output exact counts for all streams of length at most <span class="arithmatex">\(N\)</span>. Conclude that any deterministic algorithm guaranteeing exact counting needs at least <span class="arithmatex">\(\lceil\log_2(N+1)\rceil\)</span> bits of memory.</li>
 <li>If randomized algorithms are allowed, but we still require zero error on every input, can peak memory be smaller than for deterministic algorithms? Prove your conclusion.</li>
 </ol>
 </div>
@@ -913,20 +913,20 @@ $$</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>假设你有一个预测股市涨跌的算法。该算法每次独立预测时，都以 <span class="arithmatex"><span class="MathJax_Preview">\tfrac34</span><script type="math/tex">\tfrac34</script></span> 的概率给出正确建议。为提升准确率，你决定让该算法独立运行 <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> 次，并采用多数表决（majority vote）。</p>
-<p>请证明：对任意给定的允许出错概率上限 <span class="arithmatex"><span class="MathJax_Preview">\delta\in(0,1)</span><script type="math/tex">\delta\in(0,1)</script></span>，只要
+<p>假设你有一个预测股市涨跌的算法。该算法每次独立预测时，都以 <span class="arithmatex">\(\tfrac34\)</span> 的概率给出正确建议。为提升准确率，你决定让该算法独立运行 <span class="arithmatex">\(N\)</span> 次，并采用多数表决（majority vote）。</p>
+<p>请证明：对任意给定的允许出错概率上限 <span class="arithmatex">\(\delta\in(0,1)\)</span>，只要
 $$
 N \ge 8\ln\left(\frac{1}{\delta}\right),
 $$
-这种多数表决策略就能以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 的概率给出正确投资决策。</p>
+这种多数表决策略就能以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率给出正确投资决策。</p>
 </div>
 <div class="tabbed-block">
-<p>Suppose you have an algorithm that predicts whether the stock market goes up or down tomorrow. Each independent prediction is correct with probability <span class="arithmatex"><span class="MathJax_Preview">\tfrac34</span><script type="math/tex">\tfrac34</script></span>. To improve accuracy, you run the algorithm independently <span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> times and use majority vote.</p>
-<p>Prove that for any target error level <span class="arithmatex"><span class="MathJax_Preview">\delta\in(0,1)</span><script type="math/tex">\delta\in(0,1)</script></span>, if
+<p>Suppose you have an algorithm that predicts whether the stock market goes up or down tomorrow. Each independent prediction is correct with probability <span class="arithmatex">\(\tfrac34\)</span>. To improve accuracy, you run the algorithm independently <span class="arithmatex">\(N\)</span> times and use majority vote.</p>
+<p>Prove that for any target error level <span class="arithmatex">\(\delta\in(0,1)\)</span>, if
 $$
 N \ge 8\ln\left(\frac{1}{\delta}\right),
 $$
-then majority vote outputs the correct decision with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>.</p>
+then majority vote outputs the correct decision with probability at least <span class="arithmatex">\(1-\delta\)</span>.</p>
 </div>
 </div>
 </div>
@@ -934,38 +934,38 @@ then majority vote outputs the correct decision with probability at least <span 
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>设 <span class="arithmatex"><span class="MathJax_Preview">X\sim\mathcal{N}(0,1)</span><script type="math/tex">X\sim\mathcal{N}(0,1)</script></span> 为标准高斯随机变量。</p>
+<p>设 <span class="arithmatex">\(X\sim\mathcal{N}(0,1)\)</span> 为标准高斯随机变量。</p>
 <ol>
-<li>请证明：对任意 <span class="arithmatex"><span class="MathJax_Preview">x&gt;0</span><script type="math/tex">x>0</script></span>，有
+<li>请证明：对任意 <span class="arithmatex">\(x&gt;0\)</span>，有
     $$
     \left(x^{-1}-x^{-3}\right)e^{-x^2/2}
     \le \int_x^{+\infty} e^{-y^2/2}\,\mathrm{d}y
     \le x^{-1}e^{-x^2/2}.
     $$</li>
-<li>利用上述结论，证明标准高斯尾部概率 <span class="arithmatex"><span class="MathJax_Preview">\Pr(|X|\ge t)</span><script type="math/tex">\Pr(|X|\ge t)</script></span>（<span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>）的上下界，并说明当 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 足够大时，
+<li>利用上述结论，证明标准高斯尾部概率 <span class="arithmatex">\(\Pr(|X|\ge t)\)</span>（<span class="arithmatex">\(t&gt;0\)</span>）的上下界，并说明当 <span class="arithmatex">\(t\)</span> 足够大时，
     $$
     \Pr(|X|\ge t)=\Theta\left(t^{-1}e^{-t^2/2}\right).
     $$
-    进一步证明当 <span class="arithmatex"><span class="MathJax_Preview">t\to+\infty</span><script type="math/tex">t\to+\infty</script></span> 时，
+    进一步证明当 <span class="arithmatex">\(t\to+\infty\)</span> 时，
     $$
     \Pr(|X|\ge t)\sim \sqrt{\frac{2}{\pi}}\,t^{-1}e^{-t^2/2}.
     $$</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>Let <span class="arithmatex"><span class="MathJax_Preview">X\sim\mathcal{N}(0,1)</span><script type="math/tex">X\sim\mathcal{N}(0,1)</script></span> be a standard Gaussian random variable.</p>
+<p>Let <span class="arithmatex">\(X\sim\mathcal{N}(0,1)\)</span> be a standard Gaussian random variable.</p>
 <ol>
-<li>Prove that for any <span class="arithmatex"><span class="MathJax_Preview">x&gt;0</span><script type="math/tex">x>0</script></span>,
+<li>Prove that for any <span class="arithmatex">\(x&gt;0\)</span>,
     $$
     \left(x^{-1}-x^{-3}\right)e^{-x^2/2}
     \le \int_x^{+\infty} e^{-y^2/2}\,\mathrm{d}y
     \le x^{-1}e^{-x^2/2}.
     $$</li>
-<li>Use the above to derive upper and lower bounds for <span class="arithmatex"><span class="MathJax_Preview">\Pr(|X|\ge t)</span><script type="math/tex">\Pr(|X|\ge t)</script></span> (<span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>), and explain why for large <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>,
+<li>Use the above to derive upper and lower bounds for <span class="arithmatex">\(\Pr(|X|\ge t)\)</span> (<span class="arithmatex">\(t&gt;0\)</span>), and explain why for large <span class="arithmatex">\(t\)</span>,
     $$
     \Pr(|X|\ge t)=\Theta\left(t^{-1}e^{-t^2/2}\right).
     $$
-    Further prove that as <span class="arithmatex"><span class="MathJax_Preview">t\to+\infty</span><script type="math/tex">t\to+\infty</script></span>,
+    Further prove that as <span class="arithmatex">\(t\to+\infty\)</span>,
     $$
     \Pr(|X|\ge t)\sim \sqrt{\frac{2}{\pi}}\,t^{-1}e^{-t^2/2}.
     $$</li>
@@ -977,7 +977,7 @@ then majority vote outputs the correct decision with probability at least <span 
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>设 <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_n</span><script type="math/tex">X_1,\dots,X_n</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个标准高斯随机变量（不要求相互独立），即对所有 <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span> 有 <span class="arithmatex"><span class="MathJax_Preview">X_i\sim\mathcal{N}(0,1)</span><script type="math/tex">X_i\sim\mathcal{N}(0,1)</script></span>。令
+<p>设 <span class="arithmatex">\(X_1,\dots,X_n\)</span> 为 <span class="arithmatex">\(n\)</span> 个标准高斯随机变量（不要求相互独立），即对所有 <span class="arithmatex">\(i\in[n]\)</span> 有 <span class="arithmatex">\(X_i\sim\mathcal{N}(0,1)\)</span>。令
 $$
 Z=\max_{i\in[n]}X_i.
 $$
@@ -987,7 +987,7 @@ $$
 $$</p>
 </div>
 <div class="tabbed-block">
-<p>Let <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_n</span><script type="math/tex">X_1,\dots,X_n</script></span> be <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> standard Gaussian random variables (not necessarily independent), i.e., <span class="arithmatex"><span class="MathJax_Preview">X_i\sim\mathcal{N}(0,1)</span><script type="math/tex">X_i\sim\mathcal{N}(0,1)</script></span> for all <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span>. Define
+<p>Let <span class="arithmatex">\(X_1,\dots,X_n\)</span> be <span class="arithmatex">\(n\)</span> standard Gaussian random variables (not necessarily independent), i.e., <span class="arithmatex">\(X_i\sim\mathcal{N}(0,1)\)</span> for all <span class="arithmatex">\(i\in[n]\)</span>. Define
 $$
 Z=\max_{i\in[n]}X_i.
 $$
@@ -1002,18 +1002,18 @@ $$</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>如果均值为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> 的随机变量 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 满足：对任意 <span class="arithmatex"><span class="MathJax_Preview">\lambda\in\mathbb{R}</span><script type="math/tex">\lambda\in\mathbb{R}</script></span>，
+<p>如果均值为 <span class="arithmatex">\(0\)</span> 的随机变量 <span class="arithmatex">\(X\)</span> 满足：对任意 <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>，
 $$
 \mathbb{E}\big[e^{\lambda X}\big]\le \exp\left(\frac{\lambda^2\sigma^2}{2}\right),
 $$
-则称 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 是参数为 <span class="arithmatex"><span class="MathJax_Preview">\sigma^2</span><script type="math/tex">\sigma^2</script></span> 的次高斯随机变量。</p>
+则称 <span class="arithmatex">\(X\)</span> 是参数为 <span class="arithmatex">\(\sigma^2\)</span> 的次高斯随机变量。</p>
 <ol>
-<li>（集中性）请模仿正文中切尔诺夫界的证明，证明对任意 <span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>，
+<li>（集中性）请模仿正文中切尔诺夫界的证明，证明对任意 <span class="arithmatex">\(t&gt;0\)</span>，
     $$
     \Pr(X\ge t)\le \exp\left(-\frac{t^2}{2\sigma^2}\right).
     $$</li>
-<li>（可加性）若 <span class="arithmatex"><span class="MathJax_Preview">X_1,X_2</span><script type="math/tex">X_1,X_2</script></span> 相互独立、均值为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，参数分别为 <span class="arithmatex"><span class="MathJax_Preview">\sigma_1^2,\sigma_2^2</span><script type="math/tex">\sigma_1^2,\sigma_2^2</script></span>，证明 <span class="arithmatex"><span class="MathJax_Preview">X_1+X_2</span><script type="math/tex">X_1+X_2</script></span> 也是次高斯，且参数为 <span class="arithmatex"><span class="MathJax_Preview">\sigma_1^2+\sigma_2^2</span><script type="math/tex">\sigma_1^2+\sigma_2^2</script></span>。</li>
-<li>（有界变量即次高斯）结合霍夫丁引理，说明若 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[X]=0</span><script type="math/tex">\mathbb{E}[X]=0</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">X\in[a,b]</span><script type="math/tex">X\in[a,b]</script></span>，那么 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 是参数
+<li>（可加性）若 <span class="arithmatex">\(X_1,X_2\)</span> 相互独立、均值为 <span class="arithmatex">\(0\)</span>，参数分别为 <span class="arithmatex">\(\sigma_1^2,\sigma_2^2\)</span>，证明 <span class="arithmatex">\(X_1+X_2\)</span> 也是次高斯，且参数为 <span class="arithmatex">\(\sigma_1^2+\sigma_2^2\)</span>。</li>
+<li>（有界变量即次高斯）结合霍夫丁引理，说明若 <span class="arithmatex">\(\mathbb{E}[X]=0\)</span> 且 <span class="arithmatex">\(X\in[a,b]\)</span>，那么 <span class="arithmatex">\(X\)</span> 是参数
     $$
     \sigma^2=\frac{(b-a)^2}{4}
     $$
@@ -1021,18 +1021,18 @@ $$
 </ol>
 </div>
 <div class="tabbed-block">
-<p>If a zero-mean random variable <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> satisfies, for all <span class="arithmatex"><span class="MathJax_Preview">\lambda\in\mathbb{R}</span><script type="math/tex">\lambda\in\mathbb{R}</script></span>,
+<p>If a zero-mean random variable <span class="arithmatex">\(X\)</span> satisfies, for all <span class="arithmatex">\(\lambda\in\mathbb{R}\)</span>,
 $$
 \mathbb{E}\big[e^{\lambda X}\big]\le \exp\left(\frac{\lambda^2\sigma^2}{2}\right),
 $$
-then <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> is called sub-Gaussian with parameter <span class="arithmatex"><span class="MathJax_Preview">\sigma^2</span><script type="math/tex">\sigma^2</script></span>.</p>
+then <span class="arithmatex">\(X\)</span> is called sub-Gaussian with parameter <span class="arithmatex">\(\sigma^2\)</span>.</p>
 <ol>
-<li>(Concentration) Following the Chernoff-bound proof in the text, prove that for any <span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>,
+<li>(Concentration) Following the Chernoff-bound proof in the text, prove that for any <span class="arithmatex">\(t&gt;0\)</span>,
     $$
     \Pr(X\ge t)\le \exp\left(-\frac{t^2}{2\sigma^2}\right).
     $$</li>
-<li>(Additivity) If <span class="arithmatex"><span class="MathJax_Preview">X_1</span><script type="math/tex">X_1</script></span> and <span class="arithmatex"><span class="MathJax_Preview">X_2</span><script type="math/tex">X_2</script></span> are independent sub-Gaussian random variables with mean <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> and parameters <span class="arithmatex"><span class="MathJax_Preview">\sigma_1^2</span><script type="math/tex">\sigma_1^2</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\sigma_2^2</span><script type="math/tex">\sigma_2^2</script></span>, prove that <span class="arithmatex"><span class="MathJax_Preview">X_1+X_2</span><script type="math/tex">X_1+X_2</script></span> is sub-Gaussian with parameter <span class="arithmatex"><span class="MathJax_Preview">\sigma_1^2+\sigma_2^2</span><script type="math/tex">\sigma_1^2+\sigma_2^2</script></span>.</li>
-<li>(Bounded implies sub-Gaussian) Using Hoeffding's lemma, show that if <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[X]=0</span><script type="math/tex">\mathbb{E}[X]=0</script></span> and <span class="arithmatex"><span class="MathJax_Preview">X\in[a,b]</span><script type="math/tex">X\in[a,b]</script></span>, then <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> is sub-Gaussian with parameter
+<li>(Additivity) If <span class="arithmatex">\(X_1\)</span> and <span class="arithmatex">\(X_2\)</span> are independent sub-Gaussian random variables with mean <span class="arithmatex">\(0\)</span> and parameters <span class="arithmatex">\(\sigma_1^2\)</span> and <span class="arithmatex">\(\sigma_2^2\)</span>, prove that <span class="arithmatex">\(X_1+X_2\)</span> is sub-Gaussian with parameter <span class="arithmatex">\(\sigma_1^2+\sigma_2^2\)</span>.</li>
+<li>(Bounded implies sub-Gaussian) Using Hoeffding's lemma, show that if <span class="arithmatex">\(\mathbb{E}[X]=0\)</span> and <span class="arithmatex">\(X\in[a,b]\)</span>, then <span class="arithmatex">\(X\)</span> is sub-Gaussian with parameter
     $$
     \sigma^2=\frac{(b-a)^2}{4}.
     $$</li>
@@ -1044,19 +1044,19 @@ then <span class="arithmatex"><span class="MathJax_Preview">X</span><script type
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>称随机变量 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 为参数 <span class="arithmatex"><span class="MathJax_Preview">(\nu,\alpha)</span><script type="math/tex">(\nu,\alpha)</script></span> 的次指数（sub-exponential）随机变量（<span class="arithmatex"><span class="MathJax_Preview">\nu,\alpha&gt;0</span><script type="math/tex">\nu,\alpha>0</script></span>），如果其中心化后的矩生成函数满足：对任意 <span class="arithmatex"><span class="MathJax_Preview">|\lambda|\le 1/\alpha</span><script type="math/tex">|\lambda|\le 1/\alpha</script></span>，
+<p>称随机变量 <span class="arithmatex">\(X\)</span> 为参数 <span class="arithmatex">\((\nu,\alpha)\)</span> 的次指数（sub-exponential）随机变量（<span class="arithmatex">\(\nu,\alpha&gt;0\)</span>），如果其中心化后的矩生成函数满足：对任意 <span class="arithmatex">\(|\lambda|\le 1/\alpha\)</span>，
 $$
 \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\left(\frac{\lambda^2\nu}{2}\right).
 $$
-1. （集中性）请证明：对任意 <span class="arithmatex"><span class="MathJax_Preview">t\ge0</span><script type="math/tex">t\ge0</script></span>，
+1. （集中性）请证明：对任意 <span class="arithmatex">\(t\ge0\)</span>，
     $$
     \Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     \begin{cases}
-    \exp\left(-\dfrac{t^2}{2\nu}\right), &amp; t\in\left[0,\dfrac{\nu}{\alpha}\right],\
+    \exp\left(-\dfrac{t^2}{2\nu}\right), &amp; t\in\left[0,\dfrac{\nu}{\alpha}\right],\cr
     \exp\left(-\dfrac{t}{2\alpha}\right), &amp; t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     \end{cases}
     $$
-2. （可加性）设 <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_N</span><script type="math/tex">X_1,\dots,X_N</script></span> 相互独立，且每个 <span class="arithmatex"><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> 都是参数 <span class="arithmatex"><span class="MathJax_Preview">(\nu_i,\alpha_i)</span><script type="math/tex">(\nu_i,\alpha_i)</script></span> 的次指数随机变量。证明：对任意常数 <span class="arithmatex"><span class="MathJax_Preview">w_1,\dots,w_N\in\mathbb{R}</span><script type="math/tex">w_1,\dots,w_N\in\mathbb{R}</script></span>，加权和 <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^N w_iX_i</span><script type="math/tex">\sum_{i=1}^N w_iX_i</script></span> 也是次指数随机变量，参数为
+2. （可加性）设 <span class="arithmatex">\(X_1,\dots,X_N\)</span> 相互独立，且每个 <span class="arithmatex">\(X_i\)</span> 都是参数 <span class="arithmatex">\((\nu_i,\alpha_i)\)</span> 的次指数随机变量。证明：对任意常数 <span class="arithmatex">\(w_1,\dots,w_N\in\mathbb{R}\)</span>，加权和 <span class="arithmatex">\(\sum_{i=1}^N w_iX_i\)</span> 也是次指数随机变量，参数为
     $$
     \left(\sum_{i=1}^N w_i^2\nu_i,\;\max_{i\in[N]}|w_i|\alpha_i\right).
     $$
@@ -1064,29 +1064,29 @@ $$
     $$
     S_N=\sum_{i=1}^N w_iX_i,
     $$
-    任意 <span class="arithmatex"><span class="MathJax_Preview">t\ge0</span><script type="math/tex">t\ge0</script></span>，有
+    任意 <span class="arithmatex">\(t\ge0\)</span>，有
     $$
     \Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     \begin{cases}
-    \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), &amp; t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\
+    \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), &amp; t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\cr
     \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), &amp; \text{其他情况}.
     \end{cases}
     $$</p>
 </div>
 <div class="tabbed-block">
-<p>A random variable <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> is called sub-exponential with parameters <span class="arithmatex"><span class="MathJax_Preview">(\nu,\alpha)</span><script type="math/tex">(\nu,\alpha)</script></span> (where <span class="arithmatex"><span class="MathJax_Preview">\nu,\alpha&gt;0</span><script type="math/tex">\nu,\alpha>0</script></span>) if its centered moment generating function satisfies, for all <span class="arithmatex"><span class="MathJax_Preview">|\lambda|\le 1/\alpha</span><script type="math/tex">|\lambda|\le 1/\alpha</script></span>,
+<p>A random variable <span class="arithmatex">\(X\)</span> is called sub-exponential with parameters <span class="arithmatex">\((\nu,\alpha)\)</span> (where <span class="arithmatex">\(\nu,\alpha&gt;0\)</span>) if its centered moment generating function satisfies, for all <span class="arithmatex">\(|\lambda|\le 1/\alpha\)</span>,
 $$
 \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\left(\frac{\lambda^2\nu}{2}\right).
 $$
-1. (Concentration) Prove that for any <span class="arithmatex"><span class="MathJax_Preview">t\ge0</span><script type="math/tex">t\ge0</script></span>,
+1. (Concentration) Prove that for any <span class="arithmatex">\(t\ge0\)</span>,
     $$
     \Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     \begin{cases}
-    \exp\left(-\dfrac{t^2}{2\nu}\right), &amp; t\in\left[0,\dfrac{\nu}{\alpha}\right],\
+    \exp\left(-\dfrac{t^2}{2\nu}\right), &amp; t\in\left[0,\dfrac{\nu}{\alpha}\right],\cr
     \exp\left(-\dfrac{t}{2\alpha}\right), &amp; t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     \end{cases}
     $$
-2. (Additivity) Suppose <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_N</span><script type="math/tex">X_1,\dots,X_N</script></span> are independent and each <span class="arithmatex"><span class="MathJax_Preview">X_i</span><script type="math/tex">X_i</script></span> is sub-exponential with parameters <span class="arithmatex"><span class="MathJax_Preview">(\nu_i,\alpha_i)</span><script type="math/tex">(\nu_i,\alpha_i)</script></span>. Prove that for any constants <span class="arithmatex"><span class="MathJax_Preview">w_1,\dots,w_N\in\mathbb{R}</span><script type="math/tex">w_1,\dots,w_N\in\mathbb{R}</script></span>, the weighted sum <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^N w_iX_i</span><script type="math/tex">\sum_{i=1}^N w_iX_i</script></span> is sub-exponential with parameters
+2. (Additivity) Suppose <span class="arithmatex">\(X_1,\dots,X_N\)</span> are independent and each <span class="arithmatex">\(X_i\)</span> is sub-exponential with parameters <span class="arithmatex">\((\nu_i,\alpha_i)\)</span>. Prove that for any constants <span class="arithmatex">\(w_1,\dots,w_N\in\mathbb{R}\)</span>, the weighted sum <span class="arithmatex">\(\sum_{i=1}^N w_iX_i\)</span> is sub-exponential with parameters
     $$
     \left(\sum_{i=1}^N w_i^2\nu_i,\;\max_{i\in[N]}|w_i|\alpha_i\right).
     $$
@@ -1094,11 +1094,11 @@ $$
     $$
     S_N=\sum_{i=1}^N w_iX_i,
     $$
-    any <span class="arithmatex"><span class="MathJax_Preview">t\ge0</span><script type="math/tex">t\ge0</script></span> satisfies
+    any <span class="arithmatex">\(t\ge0\)</span> satisfies
     $$
     \Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     \begin{cases}
-    \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), &amp; t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\
+    \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), &amp; t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\cr
     \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), &amp; \text{otherwise}.
     \end{cases}
     $$</p>
@@ -1109,29 +1109,29 @@ $$
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>设 <span class="arithmatex"><span class="MathJax_Preview">X_1,X_2,\dots</span><script type="math/tex">X_1,X_2,\dots</script></span> 是一列中心化（<span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[X_i]=0</span><script type="math/tex">\mathbb{E}[X_i]=0</script></span>）且两两不相关的随机变量，即对任意 <span class="arithmatex"><span class="MathJax_Preview">i\ne j</span><script type="math/tex">i\ne j</script></span>，
+<p>设 <span class="arithmatex">\(X_1,X_2,\dots\)</span> 是一列中心化（<span class="arithmatex">\(\mathbb{E}[X_i]=0\)</span>）且两两不相关的随机变量，即对任意 <span class="arithmatex">\(i\ne j\)</span>，
 $$
 \mathbb{E}[X_iX_j]=\mathbb{E}[X_i]\mathbb{E}[X_j].
 $$
-1. 假设存在常数 <span class="arithmatex"><span class="MathJax_Preview">C&lt;+\infty</span><script type="math/tex">C<+\infty</script></span> 使得对所有 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 都有 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Var}(X_i)\le C</span><script type="math/tex">\mathrm{Var}(X_i)\le C</script></span>。请证明对任意 <span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>，
+1. 假设存在常数 <span class="arithmatex">\(C&lt;+\infty\)</span> 使得对所有 <span class="arithmatex">\(i\)</span> 都有 <span class="arithmatex">\(\mathrm{Var}(X_i)\le C\)</span>。请证明对任意 <span class="arithmatex">\(t&gt;0\)</span>，
     $$
     \Pr\left(\left|\frac{1}{n}\sum_{i=1}^n X_i\right|\ge t\right)\le \frac{C}{nt^2}.
     $$
-2. 利用上述结论，证明 <span class="arithmatex"><span class="MathJax_Preview">L^2</span><script type="math/tex">L^2</script></span> 弱大数定律：若 <span class="arithmatex"><span class="MathJax_Preview">X_1,X_2,\dots</span><script type="math/tex">X_1,X_2,\dots</script></span> 的期望均为 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>、方差一致有界（<span class="arithmatex"><span class="MathJax_Preview">\sup_i\mathrm{Var}(X_i)&lt;+\infty</span><script type="math/tex">\sup_i\mathrm{Var}(X_i)<+\infty</script></span>）且两两不相关，则
+2. 利用上述结论，证明 <span class="arithmatex">\(L^2\)</span> 弱大数定律：若 <span class="arithmatex">\(X_1,X_2,\dots\)</span> 的期望均为 <span class="arithmatex">\(\mu\)</span>、方差一致有界（<span class="arithmatex">\(\sup_i\mathrm{Var}(X_i)&lt;+\infty\)</span>）且两两不相关，则
     $$
     \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu.
     $$</p>
 </div>
 <div class="tabbed-block">
-<p>Let <span class="arithmatex"><span class="MathJax_Preview">X_1,X_2,\dots</span><script type="math/tex">X_1,X_2,\dots</script></span> be centered random variables (<span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[X_i]=0</span><script type="math/tex">\mathbb{E}[X_i]=0</script></span>) that are pairwise uncorrelated, i.e., for any <span class="arithmatex"><span class="MathJax_Preview">i\ne j</span><script type="math/tex">i\ne j</script></span>,
+<p>Let <span class="arithmatex">\(X_1,X_2,\dots\)</span> be centered random variables (<span class="arithmatex">\(\mathbb{E}[X_i]=0\)</span>) that are pairwise uncorrelated, i.e., for any <span class="arithmatex">\(i\ne j\)</span>,
 $$
 \mathbb{E}[X_iX_j]=\mathbb{E}[X_i]\mathbb{E}[X_j].
 $$
-1. Assume there exists a constant <span class="arithmatex"><span class="MathJax_Preview">C&lt;+\infty</span><script type="math/tex">C<+\infty</script></span> such that <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Var}(X_i)\le C</span><script type="math/tex">\mathrm{Var}(X_i)\le C</script></span> for all <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>. Prove that for any <span class="arithmatex"><span class="MathJax_Preview">t&gt;0</span><script type="math/tex">t>0</script></span>,
+1. Assume there exists a constant <span class="arithmatex">\(C&lt;+\infty\)</span> such that <span class="arithmatex">\(\mathrm{Var}(X_i)\le C\)</span> for all <span class="arithmatex">\(i\)</span>. Prove that for any <span class="arithmatex">\(t&gt;0\)</span>,
     $$
     \Pr\left(\left|\frac{1}{n}\sum_{i=1}^n X_i\right|\ge t\right)\le \frac{C}{nt^2}.
     $$
-2. Use the above to prove the <span class="arithmatex"><span class="MathJax_Preview">L^2</span><script type="math/tex">L^2</script></span> weak law of large numbers: if <span class="arithmatex"><span class="MathJax_Preview">X_1,X_2,\dots</span><script type="math/tex">X_1,X_2,\dots</script></span> all have mean <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>, uniformly bounded variance (<span class="arithmatex"><span class="MathJax_Preview">\sup_i\mathrm{Var}(X_i)&lt;+\infty</span><script type="math/tex">\sup_i\mathrm{Var}(X_i)<+\infty</script></span>), and are pairwise uncorrelated, then
+2. Use the above to prove the <span class="arithmatex">\(L^2\)</span> weak law of large numbers: if <span class="arithmatex">\(X_1,X_2,\dots\)</span> all have mean <span class="arithmatex">\(\mu\)</span>, uniformly bounded variance (<span class="arithmatex">\(\sup_i\mathrm{Var}(X_i)&lt;+\infty\)</span>), and are pairwise uncorrelated, then
     $$
     \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu.
     $$</p>
@@ -1143,21 +1143,21 @@ $$
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>上一题表明，仅有“不相关”可得到多项式级别集中不等式。那么“两两独立且有界”是否能像完全独立那样带来指数级集中？本题给出一个反例。</p>
-<p>设 <span class="arithmatex"><span class="MathJax_Preview">U=(U_1,\dots,U_\ell)</span><script type="math/tex">U=(U_1,\dots,U_\ell)</script></span> 均匀分布在 <span class="arithmatex"><span class="MathJax_Preview">\{0,1\}^\ell</span><script type="math/tex">\{0,1\}^\ell</script></span> 上，令 <span class="arithmatex"><span class="MathJax_Preview">n=2^\ell-1</span><script type="math/tex">n=2^\ell-1</script></span>。对任意非零向量 <span class="arithmatex"><span class="MathJax_Preview">v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}</span><script type="math/tex">v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}</script></span>，定义
+<p>设 <span class="arithmatex">\(U=(U_1,\dots,U_\ell)\)</span> 均匀分布在 <span class="arithmatex">\(\{0,1\}^\ell\)</span> 上，令 <span class="arithmatex">\(n=2^\ell-1\)</span>。对任意非零向量 <span class="arithmatex">\(v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}\)</span>，定义
 $$
 X_v=\langle U,v\rangle \pmod 2.
 $$
-1. 请证明这 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个随机变量 <span class="arithmatex"><span class="MathJax_Preview">X_v</span><script type="math/tex">X_v</script></span> 都服从 <span class="arithmatex"><span class="MathJax_Preview">\{0,1\}</span><script type="math/tex">\{0,1\}</script></span> 上的均匀分布，且它们两两独立。
-2. 请证明：对任何由 <span class="arithmatex"><span class="MathJax_Preview">\{X_v\}_{v\ne\mathbf{0}}</span><script type="math/tex">\{X_v\}_{v\ne\mathbf{0}}</script></span> 生成的事件 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})</span><script type="math/tex">A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})</script></span>），其概率 <span class="arithmatex"><span class="MathJax_Preview">\Pr(A)</span><script type="math/tex">\Pr(A)</script></span> 要么为 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>，要么至少为 <span class="arithmatex"><span class="MathJax_Preview">\dfrac{1}{n+1}</span><script type="math/tex">\dfrac{1}{n+1}</script></span>。</p>
+1. 请证明这 <span class="arithmatex">\(n\)</span> 个随机变量 <span class="arithmatex">\(X_v\)</span> 都服从 <span class="arithmatex">\(\{0,1\}\)</span> 上的均匀分布，且它们两两独立。
+2. 请证明：对任何由 <span class="arithmatex">\(\{X_v\}_{v\ne\mathbf{0}}\)</span> 生成的事件 <span class="arithmatex">\(A\)</span>（即 <span class="arithmatex">\(A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})\)</span>），其概率 <span class="arithmatex">\(\Pr(A)\)</span> 要么为 <span class="arithmatex">\(0\)</span>，要么至少为 <span class="arithmatex">\(\dfrac{1}{n+1}\)</span>。</p>
 </div>
 <div class="tabbed-block">
 <p>The previous exercise shows that uncorrelatedness gives only polynomial concentration. Can pairwise independence plus boundedness yield exponential concentration like full independence? This problem provides a counterexample.</p>
-<p>Let <span class="arithmatex"><span class="MathJax_Preview">U=(U_1,\dots,U_\ell)</span><script type="math/tex">U=(U_1,\dots,U_\ell)</script></span> be uniform on <span class="arithmatex"><span class="MathJax_Preview">\{0,1\}^\ell</span><script type="math/tex">\{0,1\}^\ell</script></span>, and let <span class="arithmatex"><span class="MathJax_Preview">n=2^\ell-1</span><script type="math/tex">n=2^\ell-1</script></span>. For each nonzero vector <span class="arithmatex"><span class="MathJax_Preview">v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}</span><script type="math/tex">v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}</script></span>, define
+<p>Let <span class="arithmatex">\(U=(U_1,\dots,U_\ell)\)</span> be uniform on <span class="arithmatex">\(\{0,1\}^\ell\)</span>, and let <span class="arithmatex">\(n=2^\ell-1\)</span>. For each nonzero vector <span class="arithmatex">\(v\in\{0,1\}^\ell\setminus\{\mathbf{0}\}\)</span>, define
 $$
 X_v=\langle U,v\rangle \pmod 2.
 $$
-1. Prove that these <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> random variables <span class="arithmatex"><span class="MathJax_Preview">X_v</span><script type="math/tex">X_v</script></span> are each uniform on <span class="arithmatex"><span class="MathJax_Preview">\{0,1\}</span><script type="math/tex">\{0,1\}</script></span> and are pairwise independent.
-2. Prove that for any event <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> generated by <span class="arithmatex"><span class="MathJax_Preview">\{X_v\}_{v\ne\mathbf{0}}</span><script type="math/tex">\{X_v\}_{v\ne\mathbf{0}}</script></span> (i.e., <span class="arithmatex"><span class="MathJax_Preview">A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})</span><script type="math/tex">A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})</script></span>), the probability <span class="arithmatex"><span class="MathJax_Preview">\Pr(A)</span><script type="math/tex">\Pr(A)</script></span> is either <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> or at least <span class="arithmatex"><span class="MathJax_Preview">\dfrac{1}{n+1}</span><script type="math/tex">\dfrac{1}{n+1}</script></span>.</p>
+1. Prove that these <span class="arithmatex">\(n\)</span> random variables <span class="arithmatex">\(X_v\)</span> are each uniform on <span class="arithmatex">\(\{0,1\}\)</span> and are pairwise independent.
+2. Prove that for any event <span class="arithmatex">\(A\)</span> generated by <span class="arithmatex">\(\{X_v\}_{v\ne\mathbf{0}}\)</span> (i.e., <span class="arithmatex">\(A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})\)</span>), the probability <span class="arithmatex">\(\Pr(A)\)</span> is either <span class="arithmatex">\(0\)</span> or at least <span class="arithmatex">\(\dfrac{1}{n+1}\)</span>.</p>
 </div>
 </div>
 </div>

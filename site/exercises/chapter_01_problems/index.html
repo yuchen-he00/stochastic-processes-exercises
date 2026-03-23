@@ -792,40 +792,40 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>在投球入箱模型中，将 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个球独立均匀随机地投入 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个箱子，最大负载高概率是 <span class="arithmatex"><span class="MathJax_Preview">O\left(\frac{\log n}{\log\log n}\right)</span><script type="math/tex">O\left(\frac{\log n}{\log\log n}\right)</script></span>。现在改变规则：每次投球时，独立均匀随机挑选两个不同箱子，把球放入这两个箱子中当前球更少的那个（若一样多则任意选）。</p>
-<p>令 <span class="arithmatex"><span class="MathJax_Preview">\nu_k</span><script type="math/tex">\nu_k</script></span> 表示投入全部 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个球后，负载至少为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的箱子数量（<span class="arithmatex"><span class="MathJax_Preview">k\le n</span><script type="math/tex">k\le n</script></span>）。</p>
+<p>在投球入箱模型中，将 <span class="arithmatex">\(n\)</span> 个球独立均匀随机地投入 <span class="arithmatex">\(n\)</span> 个箱子，最大负载高概率是 <span class="arithmatex">\(O\left(\frac{\log n}{\log\log n}\right)\)</span>。现在改变规则：每次投球时，独立均匀随机挑选两个不同箱子，把球放入这两个箱子中当前球更少的那个（若一样多则任意选）。</p>
+<p>令 <span class="arithmatex">\(\nu_k\)</span> 表示投入全部 <span class="arithmatex">\(n\)</span> 个球后，负载至少为 <span class="arithmatex">\(k\)</span> 的箱子数量（<span class="arithmatex">\(k\le n\)</span>）。</p>
 <ol>
-<li>请证明：在已知 <span class="arithmatex"><span class="MathJax_Preview">\nu_k\le\beta_k</span><script type="math/tex">\nu_k\le\beta_k</script></span>（其中 <span class="arithmatex"><span class="MathJax_Preview">\beta_k</span><script type="math/tex">\beta_k</script></span> 为确定数）的条件下，以至少 <span class="arithmatex"><span class="MathJax_Preview">1-n^{-2}</span><script type="math/tex">1-n^{-2}</script></span> 的概率有
+<li>请证明：在已知 <span class="arithmatex">\(\nu_k\le\beta_k\)</span>（其中 <span class="arithmatex">\(\beta_k\)</span> 为确定数）的条件下，以至少 <span class="arithmatex">\(1-n^{-2}\)</span> 的概率有
     $$
     \nu_{k+1}\le \frac{2\beta_k^2}{n}.
     $$</li>
-<li>定义序列 <span class="arithmatex"><span class="MathJax_Preview">\beta_k</span><script type="math/tex">\beta_k</script></span>：<span class="arithmatex"><span class="MathJax_Preview">\beta_6=n/4</span><script type="math/tex">\beta_6=n/4</script></span>，且
+<li>定义序列 <span class="arithmatex">\(\beta_k\)</span>：<span class="arithmatex">\(\beta_6=n/4\)</span>，且
     $$
     \beta_{k+1}=\frac{2\beta_k^2}{n}.
     $$
-    请解出 <span class="arithmatex"><span class="MathJax_Preview">\beta_{k+6}</span><script type="math/tex">\beta_{k+6}</script></span> 的通项公式，并据此证明只需 <span class="arithmatex"><span class="MathJax_Preview">k^*=O(\log\log n)</span><script type="math/tex">k^*=O(\log\log n)</script></span> 次迭代，上界 <span class="arithmatex"><span class="MathJax_Preview">\beta_{k^*}</span><script type="math/tex">\beta_{k^*}</script></span> 就会下降到 <span class="arithmatex"><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span> 级别。</li>
+    请解出 <span class="arithmatex">\(\beta_{k+6}\)</span> 的通项公式，并据此证明只需 <span class="arithmatex">\(k^*=O(\log\log n)\)</span> 次迭代，上界 <span class="arithmatex">\(\beta_{k^*}\)</span> 就会下降到 <span class="arithmatex">\(O(\log n)\)</span> 级别。</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>In the balls-into-bins model, when <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> balls are independently and uniformly thrown into <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> bins, the maximum load is typically <span class="arithmatex"><span class="MathJax_Preview">O\left(\frac{\log n}{\log\log n}\right)</span><script type="math/tex">O\left(\frac{\log n}{\log\log n}\right)</script></span>. Now change the rule: for each ball, pick two distinct bins independently and uniformly at random, and place the ball into the currently less loaded one (break ties arbitrarily).</p>
-<p>Let <span class="arithmatex"><span class="MathJax_Preview">\nu_k</span><script type="math/tex">\nu_k</script></span> be the number of bins with load at least <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> after all <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> balls are placed (<span class="arithmatex"><span class="MathJax_Preview">k\le n</span><script type="math/tex">k\le n</script></span>).</p>
+<p>In the balls-into-bins model, when <span class="arithmatex">\(n\)</span> balls are independently and uniformly thrown into <span class="arithmatex">\(n\)</span> bins, the maximum load is typically <span class="arithmatex">\(O\left(\frac{\log n}{\log\log n}\right)\)</span>. Now change the rule: for each ball, pick two distinct bins independently and uniformly at random, and place the ball into the currently less loaded one (break ties arbitrarily).</p>
+<p>Let <span class="arithmatex">\(\nu_k\)</span> be the number of bins with load at least <span class="arithmatex">\(k\)</span> after all <span class="arithmatex">\(n\)</span> balls are placed (<span class="arithmatex">\(k\le n\)</span>).</p>
 <ol>
-<li>Prove that under the condition <span class="arithmatex"><span class="MathJax_Preview">\nu_k\le\beta_k</span><script type="math/tex">\nu_k\le\beta_k</script></span> (where <span class="arithmatex"><span class="MathJax_Preview">\beta_k</span><script type="math/tex">\beta_k</script></span> is deterministic), with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-n^{-2}</span><script type="math/tex">1-n^{-2}</script></span>,
+<li>Prove that under the condition <span class="arithmatex">\(\nu_k\le\beta_k\)</span> (where <span class="arithmatex">\(\beta_k\)</span> is deterministic), with probability at least <span class="arithmatex">\(1-n^{-2}\)</span>,
     $$
     \nu_{k+1}\le \frac{2\beta_k^2}{n}.
     $$</li>
-<li>Define <span class="arithmatex"><span class="MathJax_Preview">\beta_6=n/4</span><script type="math/tex">\beta_6=n/4</script></span> and
+<li>Define <span class="arithmatex">\(\beta_6=n/4\)</span> and
     $$
     \beta_{k+1}=\frac{2\beta_k^2}{n}.
     $$
-    Derive a closed form for <span class="arithmatex"><span class="MathJax_Preview">\beta_{k+6}</span><script type="math/tex">\beta_{k+6}</script></span>, and show that after only <span class="arithmatex"><span class="MathJax_Preview">k^*=O(\log\log n)</span><script type="math/tex">k^*=O(\log\log n)</script></span> iterations, <span class="arithmatex"><span class="MathJax_Preview">\beta_{k^*}</span><script type="math/tex">\beta_{k^*}</script></span> drops to order <span class="arithmatex"><span class="MathJax_Preview">O(\log n)</span><script type="math/tex">O(\log n)</script></span>.</li>
+    Derive a closed form for <span class="arithmatex">\(\beta_{k+6}\)</span>, and show that after only <span class="arithmatex">\(k^*=O(\log\log n)\)</span> iterations, <span class="arithmatex">\(\beta_{k^*}\)</span> drops to order <span class="arithmatex">\(O(\log n)\)</span>.</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="admonition success">
 <p class="admonition-title">来自[Your name]的解答</p>
-<p>总所周知，<span class="arithmatex"><span class="MathJax_Preview">1+1=2</span><script type="math/tex">1+1=2</script></span>。</p>
+<p>总所周知，<span class="arithmatex">\(1+1=2\)</span>。</p>
 </div>
 <details class="note">
 <summary>来自[Your name]的想法</summary>
@@ -835,28 +835,28 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>在多臂老虎机中，设第 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 次拉动前，第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 个臂已被拉动 <span class="arithmatex"><span class="MathJax_Preview">T_i(t-1)</span><script type="math/tex">T_i(t-1)</script></span> 次，其经验均值为 <span class="arithmatex"><span class="MathJax_Preview">\hat\mu_{i,T_i(t-1)}</span><script type="math/tex">\hat\mu_{i,T_i(t-1)}</script></span>。UCB 算法在前 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 轮先各拉一次；对 <span class="arithmatex"><span class="MathJax_Preview">t\ge n+1</span><script type="math/tex">t\ge n+1</script></span>，选择最大化
+<p>在多臂老虎机中，设第 <span class="arithmatex">\(t\)</span> 次拉动前，第 <span class="arithmatex">\(i\)</span> 个臂已被拉动 <span class="arithmatex">\(T_i(t-1)\)</span> 次，其经验均值为 <span class="arithmatex">\(\hat\mu_{i,T_i(t-1)}\)</span>。UCB 算法在前 <span class="arithmatex">\(n\)</span> 轮先各拉一次；对 <span class="arithmatex">\(t\ge n+1\)</span>，选择最大化
 $$
 U_{i,t}=\hat\mu_{i,T_i(t-1)}+\sqrt{\frac{2\ln t}{T_i(t-1)}}
 $$
-的臂（并列随机）。设臂 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> 是最优臂，<span class="arithmatex"><span class="MathJax_Preview">\Delta_i=\mu_1-\mu_i</span><script type="math/tex">\Delta_i=\mu_1-\mu_i</script></span>。</p>
+的臂（并列随机）。设臂 <span class="arithmatex">\(1\)</span> 是最优臂，<span class="arithmatex">\(\Delta_i=\mu_1-\mu_i\)</span>。</p>
 <ol>
-<li>证明：若第 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 步选择了次优臂 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>（即 <span class="arithmatex"><span class="MathJax_Preview">U_{i,t}\ge U_{1,t}</span><script type="math/tex">U_{i,t}\ge U_{1,t}</script></span>），则至少发生以下三种情况之一：<ul>
-<li>事件 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>：最优臂被严重低估：
+<li>证明：若第 <span class="arithmatex">\(t\)</span> 步选择了次优臂 <span class="arithmatex">\(i\)</span>（即 <span class="arithmatex">\(U_{i,t}\ge U_{1,t}\)</span>），则至少发生以下三种情况之一：<ul>
+<li>事件 <span class="arithmatex">\(A\)</span>：最优臂被严重低估：
   $$
   \hat\mu_{1,T_1(t-1)}\le \mu_1-\sqrt{\frac{2\ln t}{T_1(t-1)}}.
   $$</li>
-<li>事件 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>：次优臂被严重高估：
+<li>事件 <span class="arithmatex">\(B\)</span>：次优臂被严重高估：
   $$
   \hat\mu_{i,T_i(t-1)}\ge \mu_i+\sqrt{\frac{2\ln t}{T_i(t-1)}}.
   $$</li>
-<li>事件 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>：该次优臂探索不足：
+<li>事件 <span class="arithmatex">\(C\)</span>：该次优臂探索不足：
   $$
   \Delta_i\le 2\sqrt{\frac{2\ln t}{T_i(t-1)}}.
   $$</li>
 </ul>
 </li>
-<li>对固定 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 和次优臂 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>（<span class="arithmatex"><span class="MathJax_Preview">t\ge n+1, i\ne1</span><script type="math/tex">t\ge n+1, i\ne1</script></span>），证明事件 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 与事件 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的概率都不超过 <span class="arithmatex"><span class="MathJax_Preview">t^{-4}</span><script type="math/tex">t^{-4}</script></span>。</li>
+<li>对固定 <span class="arithmatex">\(t\)</span> 和次优臂 <span class="arithmatex">\(i\)</span>（<span class="arithmatex">\(t\ge n+1, i\ne1\)</span>），证明事件 <span class="arithmatex">\(A\)</span> 与事件 <span class="arithmatex">\(B\)</span> 的概率都不超过 <span class="arithmatex">\(t^{-4}\)</span>。</li>
 <li>证明每个次优臂被拉动的期望次数
     $$
     \mathbb{E}[T_i(T)] = O\left(\frac{\ln T}{\Delta_i^2}\right),
@@ -869,28 +869,28 @@ $$
 </ol>
 </div>
 <div class="tabbed-block">
-<p>In multi-armed bandits, let <span class="arithmatex"><span class="MathJax_Preview">T_i(t-1)</span><script type="math/tex">T_i(t-1)</script></span> be the number of pulls of arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> before round <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>, and let <span class="arithmatex"><span class="MathJax_Preview">\hat\mu_{i,T_i(t-1)}</span><script type="math/tex">\hat\mu_{i,T_i(t-1)}</script></span> be its empirical mean. UCB pulls each arm once in the first <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> rounds. For <span class="arithmatex"><span class="MathJax_Preview">t\ge n+1</span><script type="math/tex">t\ge n+1</script></span>, it chooses an arm maximizing
+<p>In multi-armed bandits, let <span class="arithmatex">\(T_i(t-1)\)</span> be the number of pulls of arm <span class="arithmatex">\(i\)</span> before round <span class="arithmatex">\(t\)</span>, and let <span class="arithmatex">\(\hat\mu_{i,T_i(t-1)}\)</span> be its empirical mean. UCB pulls each arm once in the first <span class="arithmatex">\(n\)</span> rounds. For <span class="arithmatex">\(t\ge n+1\)</span>, it chooses an arm maximizing
 $$
 U_{i,t}=\hat\mu_{i,T_i(t-1)}+\sqrt{\frac{2\ln t}{T_i(t-1)}}.
 $$
-Break ties randomly. Assume arm <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> is optimal and define <span class="arithmatex"><span class="MathJax_Preview">\Delta_i=\mu_1-\mu_i</span><script type="math/tex">\Delta_i=\mu_1-\mu_i</script></span>.</p>
+Break ties randomly. Assume arm <span class="arithmatex">\(1\)</span> is optimal and define <span class="arithmatex">\(\Delta_i=\mu_1-\mu_i\)</span>.</p>
 <ol>
-<li>Prove that if at round <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> a suboptimal arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> is selected (i.e., <span class="arithmatex"><span class="MathJax_Preview">U_{i,t}\ge U_{1,t}</span><script type="math/tex">U_{i,t}\ge U_{1,t}</script></span>), then at least one of the following holds:<ul>
-<li>Event <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: the optimal arm is severely underestimated:
+<li>Prove that if at round <span class="arithmatex">\(t\)</span> a suboptimal arm <span class="arithmatex">\(i\)</span> is selected (i.e., <span class="arithmatex">\(U_{i,t}\ge U_{1,t}\)</span>), then at least one of the following holds:<ul>
+<li>Event <span class="arithmatex">\(A\)</span>: the optimal arm is severely underestimated:
   $$
   \hat\mu_{1,T_1(t-1)}\le \mu_1-\sqrt{\frac{2\ln t}{T_1(t-1)}};
   $$</li>
-<li>Event <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>: suboptimal arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> is severely overestimated:
+<li>Event <span class="arithmatex">\(B\)</span>: suboptimal arm <span class="arithmatex">\(i\)</span> is severely overestimated:
   $$
   \hat\mu_{i,T_i(t-1)}\ge \mu_i+\sqrt{\frac{2\ln t}{T_i(t-1)}};
   $$</li>
-<li>Event <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>: arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> has not been explored enough:
+<li>Event <span class="arithmatex">\(C\)</span>: arm <span class="arithmatex">\(i\)</span> has not been explored enough:
   $$
   \Delta_i\le 2\sqrt{\frac{2\ln t}{T_i(t-1)}}.
   $$</li>
 </ul>
 </li>
-<li>For fixed <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> and suboptimal arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">t\ge n+1, i\ne1</span><script type="math/tex">t\ge n+1, i\ne1</script></span>), prove that both <span class="arithmatex"><span class="MathJax_Preview">\Pr(A)</span><script type="math/tex">\Pr(A)</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\Pr(B)</span><script type="math/tex">\Pr(B)</script></span> are at most <span class="arithmatex"><span class="MathJax_Preview">t^{-4}</span><script type="math/tex">t^{-4}</script></span>.</li>
+<li>For fixed <span class="arithmatex">\(t\)</span> and suboptimal arm <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(t\ge n+1, i\ne1\)</span>), prove that both <span class="arithmatex">\(\Pr(A)\)</span> and <span class="arithmatex">\(\Pr(B)\)</span> are at most <span class="arithmatex">\(t^{-4}\)</span>.</li>
 <li>Prove
     $$
     \mathbb{E}[T_i(T)] = O\left(\frac{\ln T}{\Delta_i^2}\right)
@@ -908,23 +908,23 @@ Break ties randomly. Assume arm <span class="arithmatex"><span class="MathJax_Pr
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>考虑多臂老虎机的纯探索（pure exploration）变体：目标是在尽量少的拉动后停止，并以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 的概率输出均值最大的臂（<span class="arithmatex"><span class="MathJax_Preview">\delta\in(0,1)</span><script type="math/tex">\delta\in(0,1)</script></span>）。</p>
+<p>考虑多臂老虎机的纯探索（pure exploration）变体：目标是在尽量少的拉动后停止，并以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率输出均值最大的臂（<span class="arithmatex">\(\delta\in(0,1)\)</span>）。</p>
 <ol>
-<li>若已知所有次优臂与最优臂的均值差都至少为 <span class="arithmatex"><span class="MathJax_Preview">\Delta&gt;0</span><script type="math/tex">\Delta>0</script></span>（但不知道最优臂是谁），请基于霍夫丁不等式设计一个简单算法（如均匀探索），并给出总拉动次数上界以保证成功概率至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>。</li>
-<li>考虑连续淘汰（successive elimination）算法：维护活跃集 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>，初始 <span class="arithmatex"><span class="MathJax_Preview">S=[n]</span><script type="math/tex">S=[n]</script></span>。第 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 轮对活跃臂各拉一次，得到经验均值 <span class="arithmatex"><span class="MathJax_Preview">\hat\mu_{i,r}</span><script type="math/tex">\hat\mu_{i,r}</script></span>，令
+<li>若已知所有次优臂与最优臂的均值差都至少为 <span class="arithmatex">\(\Delta&gt;0\)</span>（但不知道最优臂是谁），请基于霍夫丁不等式设计一个简单算法（如均匀探索），并给出总拉动次数上界以保证成功概率至少 <span class="arithmatex">\(1-\delta\)</span>。</li>
+<li>考虑连续淘汰（successive elimination）算法：维护活跃集 <span class="arithmatex">\(S\)</span>，初始 <span class="arithmatex">\(S=[n]\)</span>。第 <span class="arithmatex">\(r\)</span> 轮对活跃臂各拉一次，得到经验均值 <span class="arithmatex">\(\hat\mu_{i,r}\)</span>，令
     $$
     C_r=\sqrt{\frac{\ln(4nr^2/\delta)}{2r}}.
     $$
-    若某活跃臂 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 满足
+    若某活跃臂 <span class="arithmatex">\(i\)</span> 满足
     $$
     \max_{j\in S}\hat\mu_{j,r}-\hat\mu_{i,r}\ge 2C_r,
     $$
-    则淘汰 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>。定义事件
+    则淘汰 <span class="arithmatex">\(i\)</span>。定义事件
     $$
-    E=\bigl{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert&lt;C_r\bigr}.
+    E={\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|&lt;C_r}.
     $$
-    请证明 <span class="arithmatex"><span class="MathJax_Preview">\Pr(E)\ge1-\delta</span><script type="math/tex">\Pr(E)\ge1-\delta</script></span>，并据此说明算法成功概率至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>。</li>
-<li>设最优臂编号为 <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>（玩家并不知道），证明：以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 的概率，该算法的拉动次数不超过
+    请证明 <span class="arithmatex">\(\Pr(E)\ge1-\delta\)</span>，并据此说明算法成功概率至少 <span class="arithmatex">\(1-\delta\)</span>。</li>
+<li>设最优臂编号为 <span class="arithmatex">\(1\)</span>（玩家并不知道），证明：以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率，该算法的拉动次数不超过
     $$
     O\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
     $$</li>
@@ -932,23 +932,23 @@ Break ties randomly. Assume arm <span class="arithmatex"><span class="MathJax_Pr
 </ol>
 </div>
 <div class="tabbed-block">
-<p>Consider the pure exploration version of multi-armed bandits: we only care about stopping as early as possible and outputting the arm with largest mean with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> (<span class="arithmatex"><span class="MathJax_Preview">\delta\in(0,1)</span><script type="math/tex">\delta\in(0,1)</script></span>).</p>
+<p>Consider the pure exploration version of multi-armed bandits: we only care about stopping as early as possible and outputting the arm with largest mean with probability at least <span class="arithmatex">\(1-\delta\)</span> (<span class="arithmatex">\(\delta\in(0,1)\)</span>).</p>
 <ol>
-<li>Suppose all suboptimal arms have mean gap at least <span class="arithmatex"><span class="MathJax_Preview">\Delta&gt;0</span><script type="math/tex">\Delta>0</script></span> from the best arm (but the best arm is unknown). Using Hoeffding's inequality, design a simple algorithm (e.g., uniform exploration) and derive the total number of pulls needed for success probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>.</li>
-<li>Consider successive elimination: maintain an active set <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>, initialized as <span class="arithmatex"><span class="MathJax_Preview">S=[n]</span><script type="math/tex">S=[n]</script></span>. In round <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>, pull each active arm once and compute empirical means <span class="arithmatex"><span class="MathJax_Preview">\hat\mu_{i,r}</span><script type="math/tex">\hat\mu_{i,r}</script></span>. Let
+<li>Suppose all suboptimal arms have mean gap at least <span class="arithmatex">\(\Delta&gt;0\)</span> from the best arm (but the best arm is unknown). Using Hoeffding's inequality, design a simple algorithm (e.g., uniform exploration) and derive the total number of pulls needed for success probability at least <span class="arithmatex">\(1-\delta\)</span>.</li>
+<li>Consider successive elimination: maintain an active set <span class="arithmatex">\(S\)</span>, initialized as <span class="arithmatex">\(S=[n]\)</span>. In round <span class="arithmatex">\(r\)</span>, pull each active arm once and compute empirical means <span class="arithmatex">\(\hat\mu_{i,r}\)</span>. Let
     $$
     C_r=\sqrt{\frac{\ln(4nr^2/\delta)}{2r}}.
     $$
-    Eliminate active arm <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> if
+    Eliminate active arm <span class="arithmatex">\(i\)</span> if
     $$
     \max_{j\in S}\hat\mu_{j,r}-\hat\mu_{i,r}\ge 2C_r.
     $$
     Define
     $$
-    E=\bigl{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert&lt;C_r\bigr}.
+    E={\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|&lt;C_r}.
     $$
-    Prove <span class="arithmatex"><span class="MathJax_Preview">\Pr(E)\ge1-\delta</span><script type="math/tex">\Pr(E)\ge1-\delta</script></span>, and conclude that the algorithm succeeds with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>.</li>
-<li>Assume the optimal arm is indexed by <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> (unknown to the learner). Prove that with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>, the number of pulls is at most
+    Prove <span class="arithmatex">\(\Pr(E)\ge1-\delta\)</span>, and conclude that the algorithm succeeds with probability at least <span class="arithmatex">\(1-\delta\)</span>.</li>
+<li>Assume the optimal arm is indexed by <span class="arithmatex">\(1\)</span> (unknown to the learner). Prove that with probability at least <span class="arithmatex">\(1-\delta\)</span>, the number of pulls is at most
     $$
     O\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
     $$</li>
@@ -965,45 +965,45 @@ Break ties randomly. Assume arm <span class="arithmatex"><span class="MathJax_Pr
 $$
 T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
 $$
-个样本可区分 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(1/2)</span><script type="math/tex">\mathrm{Ber}(1/2)</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(1/2+\varepsilon)</span><script type="math/tex">\mathrm{Ber}(1/2+\varepsilon)</script></span>，且正确率至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>。本题要求证明该量级最优。</p>
+个样本可区分 <span class="arithmatex">\(\mathrm{Ber}(1/2)\)</span> 与 <span class="arithmatex">\(\mathrm{Ber}(1/2+\varepsilon)\)</span>，且正确率至少 <span class="arithmatex">\(1-\delta\)</span>。本题要求证明该量级最优。</p>
 <p>设
 $$
 L=\frac{1}{100\varepsilon^2}\log\frac{1}{4\delta},\qquad
 \varepsilon\in(0,1/8),\ \delta\in(0,e^{-4}/4).
 $$
-先考虑确定性算法（随机性仅来自抛硬币），并反设存在满足要求且 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_0[T]\le L</span><script type="math/tex">\mathbb{E}_0[T]\le L</script></span> 的算法 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span>。记 <span class="arithmatex"><span class="MathJax_Preview">\Pr_i,\mathbb{E}_i</span><script type="math/tex">\Pr_i,\mathbb{E}_i</script></span> 分别表示输入为情形 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>（<span class="arithmatex"><span class="MathJax_Preview">i=0</span><script type="math/tex">i=0</script></span> 公平，<span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span> 有偏）时的概率与期望。样本空间 <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{0,1\}^*</span><script type="math/tex">\Omega=\{0,1\}^*</script></span>。</p>
+先考虑确定性算法（随机性仅来自抛硬币），并反设存在满足要求且 <span class="arithmatex">\(\mathbb{E}_0[T]\le L\)</span> 的算法 <span class="arithmatex">\(\mathcal{A}\)</span>。记 <span class="arithmatex">\(\Pr_i,\mathbb{E}_i\)</span> 分别表示输入为情形 <span class="arithmatex">\(i\)</span>（<span class="arithmatex">\(i=0\)</span> 公平，<span class="arithmatex">\(i=1\)</span> 有偏）时的概率与期望。样本空间 <span class="arithmatex">\(\Omega=\{0,1\}^*\)</span>。</p>
 <p>定义事件：
-- <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: <span class="arithmatex"><span class="MathJax_Preview">T\le4L</span><script type="math/tex">T\le4L</script></span>；
-- <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>: 对任意 <span class="arithmatex"><span class="MathJax_Preview">1\le t\le4L</span><script type="math/tex">1\le t\le4L</script></span>，
+- <span class="arithmatex">\(A\)</span>: <span class="arithmatex">\(T\le4L\)</span>；
+- <span class="arithmatex">\(B\)</span>: 对任意 <span class="arithmatex">\(1\le t\le4L\)</span>，
   $$
   \left|K_t-\frac{t}{2}\right|\le\sqrt{L\log\frac{1}{4\delta}},
   $$
-  其中 <span class="arithmatex"><span class="MathJax_Preview">K_t</span><script type="math/tex">K_t</script></span> 为前 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 次抛掷中正面个数；
-- <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>: 算法输出 <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>（判断为公平硬币）。</p>
+  其中 <span class="arithmatex">\(K_t\)</span> 为前 <span class="arithmatex">\(t\)</span> 次抛掷中正面个数；
+- <span class="arithmatex">\(C\)</span>: 算法输出 <span class="arithmatex">\(0\)</span>（判断为公平硬币）。</p>
 <ol>
 <li>使用如下定理（无需证明）证明：
     $$
     \Pr_0(A\cap B\cap C)\ge\frac14.
     $$
-    定理：若 <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_N</span><script type="math/tex">X_1,\dots,X_N</script></span> 是独立伯努利变量，
+    定理：若 <span class="arithmatex">\(X_1,\dots,X_N\)</span> 是独立伯努利变量，
     $$
     S_k=\sum_{i=1}^k\left(X_i-\mathbb{E}[X_i]\right),
     $$
-    则任意 <span class="arithmatex"><span class="MathJax_Preview">s&gt;0</span><script type="math/tex">s>0</script></span> 有
+    则任意 <span class="arithmatex">\(s&gt;0\)</span> 有
     $$
     \Pr\left(\max_{1\le k\le N}|S_k|\ge s\right)\le\frac{\mathrm{Var}(S_N)}{s^2}.
     $$</li>
-<li>证明：对任意 <span class="arithmatex"><span class="MathJax_Preview">\omega\in A\cap B\cap C</span><script type="math/tex">\omega\in A\cap B\cap C</script></span>，
+<li>证明：对任意 <span class="arithmatex">\(\omega\in A\cap B\cap C\)</span>，
     $$
     \frac{\Pr_1(\omega)}{\Pr_0(\omega)}\ge4\delta.
     $$</li>
-<li>证明 <span class="arithmatex"><span class="MathJax_Preview">\Pr_1(C)&gt;\delta</span><script type="math/tex">\Pr_1(C)>\delta</script></span>，并据此说明满足要求且保证 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_0[T]\le L</span><script type="math/tex">\mathbb{E}_0[T]\le L</script></span> 的确定性算法不存在。</li>
-<li>若 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 是随机算法（可使用额外随机数），下界
+<li>证明 <span class="arithmatex">\(\Pr_1(C)&gt;\delta\)</span>，并据此说明满足要求且保证 <span class="arithmatex">\(\mathbb{E}_0[T]\le L\)</span> 的确定性算法不存在。</li>
+<li>若 <span class="arithmatex">\(\mathcal{A}\)</span> 是随机算法（可使用额外随机数），下界
     $$
     \mathbb{E}_0[T]=\Omega\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
     是否仍成立？为什么？</li>
-<li>若你了解 KL 散度，请计算单次抛掷下这两种伯努利分布的 KL 散度，并直观解释为什么需要与 <span class="arithmatex"><span class="MathJax_Preview">1/\varepsilon^2</span><script type="math/tex">1/\varepsilon^2</script></span> 同阶的信息量才能把两者区分开。</li>
+<li>若你了解 KL 散度，请计算单次抛掷下这两种伯努利分布的 KL 散度，并直观解释为什么需要与 <span class="arithmatex">\(1/\varepsilon^2\)</span> 同阶的信息量才能把两者区分开。</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -1011,45 +1011,45 @@ $$
 $$
 T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
 $$
-samples suffice to distinguish <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(1/2)</span><script type="math/tex">\mathrm{Ber}(1/2)</script></span> from <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(1/2+\varepsilon)</span><script type="math/tex">\mathrm{Ber}(1/2+\varepsilon)</script></span> with success probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>. This problem asks you to prove this rate is optimal up to constants.</p>
+samples suffice to distinguish <span class="arithmatex">\(\mathrm{Ber}(1/2)\)</span> from <span class="arithmatex">\(\mathrm{Ber}(1/2+\varepsilon)\)</span> with success probability at least <span class="arithmatex">\(1-\delta\)</span>. This problem asks you to prove this rate is optimal up to constants.</p>
 <p>Let
 $$
 L=\frac{1}{100\varepsilon^2}\log\frac{1}{4\delta},\qquad
 \varepsilon\in(0,1/8),\ \delta\in(0,e^{-4}/4).
 $$
-First consider deterministic algorithms (all randomness comes from coin tosses). For contradiction, assume there exists an algorithm <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> meeting the guarantee with <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_0[T]\le L</span><script type="math/tex">\mathbb{E}_0[T]\le L</script></span>. Let <span class="arithmatex"><span class="MathJax_Preview">\Pr_i</span><script type="math/tex">\Pr_i</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_i</span><script type="math/tex">\mathbb{E}_i</script></span> denote probability and expectation under hypothesis <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> (<span class="arithmatex"><span class="MathJax_Preview">i=0</span><script type="math/tex">i=0</script></span> fair, <span class="arithmatex"><span class="MathJax_Preview">i=1</span><script type="math/tex">i=1</script></span> biased). The sample space is <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{0,1\}^*</span><script type="math/tex">\Omega=\{0,1\}^*</script></span>.</p>
+First consider deterministic algorithms (all randomness comes from coin tosses). For contradiction, assume there exists an algorithm <span class="arithmatex">\(\mathcal{A}\)</span> meeting the guarantee with <span class="arithmatex">\(\mathbb{E}_0[T]\le L\)</span>. Let <span class="arithmatex">\(\Pr_i\)</span> and <span class="arithmatex">\(\mathbb{E}_i\)</span> denote probability and expectation under hypothesis <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(i=0\)</span> fair, <span class="arithmatex">\(i=1\)</span> biased). The sample space is <span class="arithmatex">\(\Omega=\{0,1\}^*\)</span>.</p>
 <p>Define events:
-- <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>: <span class="arithmatex"><span class="MathJax_Preview">T\le4L</span><script type="math/tex">T\le4L</script></span>;
-- <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>: for all <span class="arithmatex"><span class="MathJax_Preview">1\le t\le4L</span><script type="math/tex">1\le t\le4L</script></span>,
+- <span class="arithmatex">\(A\)</span>: <span class="arithmatex">\(T\le4L\)</span>;
+- <span class="arithmatex">\(B\)</span>: for all <span class="arithmatex">\(1\le t\le4L\)</span>,
   $$
   \left|K_t-\frac{t}{2}\right|\le\sqrt{L\log\frac{1}{4\delta}},
   $$
-  where <span class="arithmatex"><span class="MathJax_Preview">K_t</span><script type="math/tex">K_t</script></span> is the number of heads in the first <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> tosses;
-- <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>: algorithm outputs <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> (declares fair coin).</p>
+  where <span class="arithmatex">\(K_t\)</span> is the number of heads in the first <span class="arithmatex">\(t\)</span> tosses;
+- <span class="arithmatex">\(C\)</span>: algorithm outputs <span class="arithmatex">\(0\)</span> (declares fair coin).</p>
 <ol>
 <li>Using the following theorem (no proof needed), show
     $$
     \Pr_0(A\cap B\cap C)\ge\frac14.
     $$
-    Theorem: If <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_N</span><script type="math/tex">X_1,\dots,X_N</script></span> are independent Bernoulli random variables and
+    Theorem: If <span class="arithmatex">\(X_1,\dots,X_N\)</span> are independent Bernoulli random variables and
     $$
     S_k=\sum_{i=1}^k\left(X_i-\mathbb{E}[X_i]\right),
     $$
-    then for any <span class="arithmatex"><span class="MathJax_Preview">s&gt;0</span><script type="math/tex">s>0</script></span>,
+    then for any <span class="arithmatex">\(s&gt;0\)</span>,
     $$
     \Pr\left(\max_{1\le k\le N}|S_k|\ge s\right)\le\frac{\mathrm{Var}(S_N)}{s^2}.
     $$</li>
-<li>Prove that for every <span class="arithmatex"><span class="MathJax_Preview">\omega\in A\cap B\cap C</span><script type="math/tex">\omega\in A\cap B\cap C</script></span>,
+<li>Prove that for every <span class="arithmatex">\(\omega\in A\cap B\cap C\)</span>,
     $$
     \frac{\Pr_1(\omega)}{\Pr_0(\omega)}\ge4\delta.
     $$</li>
-<li>Prove <span class="arithmatex"><span class="MathJax_Preview">\Pr_1(C)&gt;\delta</span><script type="math/tex">\Pr_1(C)>\delta</script></span>, and conclude that no deterministic algorithm satisfying the required guarantee can have <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_0[T]\le L</span><script type="math/tex">\mathbb{E}_0[T]\le L</script></span>.</li>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> is randomized (with extra internal randomness), does the lower bound
+<li>Prove <span class="arithmatex">\(\Pr_1(C)&gt;\delta\)</span>, and conclude that no deterministic algorithm satisfying the required guarantee can have <span class="arithmatex">\(\mathbb{E}_0[T]\le L\)</span>.</li>
+<li>If <span class="arithmatex">\(\mathcal{A}\)</span> is randomized (with extra internal randomness), does the lower bound
     $$
     \mathbb{E}_0[T]=\Omega\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
     still hold? Why?</li>
-<li>If you know KL divergence, compute the KL divergence between the two Bernoulli distributions per toss, and explain intuitively why distinguishing them requires information of order <span class="arithmatex"><span class="MathJax_Preview">1/\varepsilon^2</span><script type="math/tex">1/\varepsilon^2</script></span>.</li>
+<li>If you know KL divergence, compute the KL divergence between the two Bernoulli distributions per toss, and explain intuitively why distinguishing them requires information of order <span class="arithmatex">\(1/\varepsilon^2\)</span>.</li>
 </ol>
 </div>
 </div>
@@ -1059,44 +1059,44 @@ First consider deterministic algorithms (all randomness comes from coin tosses).
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>在上一题基础上，推广到多臂老虎机（MAB）懊悔下界。</p>
-<p>考虑 <span class="arithmatex"><span class="MathJax_Preview">K=n+1</span><script type="math/tex">K=n+1</script></span> 个臂，编号 <span class="arithmatex"><span class="MathJax_Preview">0,1,\dots,n</span><script type="math/tex">0,1,\dots,n</script></span>。构造实例集合
+<p>考虑 <span class="arithmatex">\(K=n+1\)</span> 个臂，编号 <span class="arithmatex">\(0,1,\dots,n\)</span>。构造实例集合
 $$
 \mathcal{I}={\nu_0,\nu_1,\dots,\nu_n}:
 $$
-- 实例 <span class="arithmatex"><span class="MathJax_Preview">\nu_0</span><script type="math/tex">\nu_0</script></span>：臂 <span class="arithmatex"><span class="MathJax_Preview">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</span><script type="math/tex">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</script></span>，其余 <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span> 满足 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(\tfrac12)</span><script type="math/tex">\mathrm{Ber}(\tfrac12)</script></span>；
-- 实例 <span class="arithmatex"><span class="MathJax_Preview">\nu_j</span><script type="math/tex">\nu_j</script></span>（<span class="arithmatex"><span class="MathJax_Preview">j\in[n]</span><script type="math/tex">j\in[n]</script></span>）：臂 <span class="arithmatex"><span class="MathJax_Preview">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</span><script type="math/tex">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</script></span>，臂 <span class="arithmatex"><span class="MathJax_Preview">j\sim\mathrm{Ber}(\tfrac12+\varepsilon)</span><script type="math/tex">j\sim\mathrm{Ber}(\tfrac12+\varepsilon)</script></span>（最优），其余臂 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(\tfrac12)</span><script type="math/tex">\mathrm{Ber}(\tfrac12)</script></span>。</p>
-<p>称算法是 <span class="arithmatex"><span class="MathJax_Preview">(\varepsilon,\delta)</span><script type="math/tex">(\varepsilon,\delta)</script></span>-PAC 的，若停止时以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 的概率输出一个 <span class="arithmatex"><span class="MathJax_Preview">\varepsilon</span><script type="math/tex">\varepsilon</script></span>-最优臂。记 <span class="arithmatex"><span class="MathJax_Preview">T_j</span><script type="math/tex">T_j</script></span> 为臂 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 被拉动总次数，<span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_\nu[\cdot]</span><script type="math/tex">\mathbb{E}_\nu[\cdot]</script></span> 为实例 <span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span> 下期望。</p>
+- 实例 <span class="arithmatex">\(\nu_0\)</span>：臂 <span class="arithmatex">\(0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)\)</span>，其余 <span class="arithmatex">\(i\in[n]\)</span> 满足 <span class="arithmatex">\(\mathrm{Ber}(\tfrac12)\)</span>；
+- 实例 <span class="arithmatex">\(\nu_j\)</span>（<span class="arithmatex">\(j\in[n]\)</span>）：臂 <span class="arithmatex">\(0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)\)</span>，臂 <span class="arithmatex">\(j\sim\mathrm{Ber}(\tfrac12+\varepsilon)\)</span>（最优），其余臂 <span class="arithmatex">\(\mathrm{Ber}(\tfrac12)\)</span>。</p>
+<p>称算法是 <span class="arithmatex">\((\varepsilon,\delta)\)</span>-PAC 的，若停止时以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率输出一个 <span class="arithmatex">\(\varepsilon\)</span>-最优臂。记 <span class="arithmatex">\(T_j\)</span> 为臂 <span class="arithmatex">\(j\)</span> 被拉动总次数，<span class="arithmatex">\(\mathbb{E}_\nu[\cdot]\)</span> 为实例 <span class="arithmatex">\(\nu\)</span> 下期望。</p>
 <ol>
-<li>假设 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{G}</span><script type="math/tex">\mathcal{G}</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">(\varepsilon/2,\delta)</span><script type="math/tex">(\varepsilon/2,\delta)</script></span>-PAC 算法（<span class="arithmatex"><span class="MathJax_Preview">\delta&lt;1/8</span><script type="math/tex">\delta<1/8</script></span>）。利用上一题结论论证：存在常数 <span class="arithmatex"><span class="MathJax_Preview">c&gt;0</span><script type="math/tex">c>0</script></span>，使得任意 <span class="arithmatex"><span class="MathJax_Preview">j\in[n]</span><script type="math/tex">j\in[n]</script></span> 在实例 <span class="arithmatex"><span class="MathJax_Preview">\nu_0</span><script type="math/tex">\nu_0</script></span> 下都有
+<li>假设 <span class="arithmatex">\(\mathcal{G}\)</span> 是 <span class="arithmatex">\((\varepsilon/2,\delta)\)</span>-PAC 算法（<span class="arithmatex">\(\delta&lt;1/8\)</span>）。利用上一题结论论证：存在常数 <span class="arithmatex">\(c&gt;0\)</span>，使得任意 <span class="arithmatex">\(j\in[n]\)</span> 在实例 <span class="arithmatex">\(\nu_0\)</span> 下都有
     $$
     \mathbb{E}_{\nu_0}[T_j]\ge\frac{c}{\varepsilon^2}\log\frac{1}{\delta}.
     $$</li>
-<li>设总轮数为 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 的 MAB 算法 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 在实例 <span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span> 上的累积期望懊悔为 <span class="arithmatex"><span class="MathJax_Preview">R_T(\mathcal{A},\nu)</span><script type="math/tex">R_T(\mathcal{A},\nu)</script></span>。证明：对任意 MAB 算法 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span>，总存在某个实例 <span class="arithmatex"><span class="MathJax_Preview">\nu\in\mathcal{I}</span><script type="math/tex">\nu\in\mathcal{I}</script></span> 使得
+<li>设总轮数为 <span class="arithmatex">\(T\)</span> 的 MAB 算法 <span class="arithmatex">\(\mathcal{A}\)</span> 在实例 <span class="arithmatex">\(\nu\)</span> 上的累积期望懊悔为 <span class="arithmatex">\(R_T(\mathcal{A},\nu)\)</span>。证明：对任意 MAB 算法 <span class="arithmatex">\(\mathcal{A}\)</span>，总存在某个实例 <span class="arithmatex">\(\nu\in\mathcal{I}\)</span> 使得
     $$
     R_T(\mathcal{A},\nu)=\Omega(\sqrt{nT}).
     $$
-    提示：取 <span class="arithmatex"><span class="MathJax_Preview">\varepsilon=2\sqrt{n/T}</span><script type="math/tex">\varepsilon=2\sqrt{n/T}</script></span>，若假设 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 在所有实例上懊悔都很小，可构造纯探索算法：运行 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 共 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 轮后输出被拉动次数最多的臂，并与第 1 问矛盾。</li>
+    提示：取 <span class="arithmatex">\(\varepsilon=2\sqrt{n/T}\)</span>，若假设 <span class="arithmatex">\(\mathcal{A}\)</span> 在所有实例上懊悔都很小，可构造纯探索算法：运行 <span class="arithmatex">\(\mathcal{A}\)</span> 共 <span class="arithmatex">\(T\)</span> 轮后输出被拉动次数最多的臂，并与第 1 问矛盾。</li>
 </ol>
 </div>
 <div class="tabbed-block">
 <p>Building on the previous problem, derive a lower bound on regret for multi-armed bandits (MAB).</p>
-<p>Consider a bandit with <span class="arithmatex"><span class="MathJax_Preview">K=n+1</span><script type="math/tex">K=n+1</script></span> arms indexed by <span class="arithmatex"><span class="MathJax_Preview">0,1,\dots,n</span><script type="math/tex">0,1,\dots,n</script></span>. Construct the instance family
+<p>Consider a bandit with <span class="arithmatex">\(K=n+1\)</span> arms indexed by <span class="arithmatex">\(0,1,\dots,n\)</span>. Construct the instance family
 $$
 \mathcal{I}={\nu_0,\nu_1,\dots,\nu_n}:
 $$
-- Instance <span class="arithmatex"><span class="MathJax_Preview">\nu_0</span><script type="math/tex">\nu_0</script></span>: arm <span class="arithmatex"><span class="MathJax_Preview">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</span><script type="math/tex">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</script></span>, and each other arm <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span> has <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(\tfrac12)</span><script type="math/tex">\mathrm{Ber}(\tfrac12)</script></span>;
-- Instance <span class="arithmatex"><span class="MathJax_Preview">\nu_j</span><script type="math/tex">\nu_j</script></span> (<span class="arithmatex"><span class="MathJax_Preview">j\in[n]</span><script type="math/tex">j\in[n]</script></span>): arm <span class="arithmatex"><span class="MathJax_Preview">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</span><script type="math/tex">0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)</script></span>, arm <span class="arithmatex"><span class="MathJax_Preview">j\sim\mathrm{Ber}(\tfrac12+\varepsilon)</span><script type="math/tex">j\sim\mathrm{Ber}(\tfrac12+\varepsilon)</script></span> (optimal), and all other arms are <span class="arithmatex"><span class="MathJax_Preview">\mathrm{Ber}(\tfrac12)</span><script type="math/tex">\mathrm{Ber}(\tfrac12)</script></span>.</p>
-<p>An algorithm is <span class="arithmatex"><span class="MathJax_Preview">(\varepsilon,\delta)</span><script type="math/tex">(\varepsilon,\delta)</script></span>-PAC if it outputs an <span class="arithmatex"><span class="MathJax_Preview">\varepsilon</span><script type="math/tex">\varepsilon</script></span>-optimal arm with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> upon stopping. Let <span class="arithmatex"><span class="MathJax_Preview">T_j</span><script type="math/tex">T_j</script></span> be the total number of pulls of arm <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}_\nu[\cdot]</span><script type="math/tex">\mathbb{E}_\nu[\cdot]</script></span> denote expectation under instance <span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span>.</p>
+- Instance <span class="arithmatex">\(\nu_0\)</span>: arm <span class="arithmatex">\(0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)\)</span>, and each other arm <span class="arithmatex">\(i\in[n]\)</span> has <span class="arithmatex">\(\mathrm{Ber}(\tfrac12)\)</span>;
+- Instance <span class="arithmatex">\(\nu_j\)</span> (<span class="arithmatex">\(j\in[n]\)</span>): arm <span class="arithmatex">\(0\sim\mathrm{Ber}(\tfrac12+\tfrac\varepsilon2)\)</span>, arm <span class="arithmatex">\(j\sim\mathrm{Ber}(\tfrac12+\varepsilon)\)</span> (optimal), and all other arms are <span class="arithmatex">\(\mathrm{Ber}(\tfrac12)\)</span>.</p>
+<p>An algorithm is <span class="arithmatex">\((\varepsilon,\delta)\)</span>-PAC if it outputs an <span class="arithmatex">\(\varepsilon\)</span>-optimal arm with probability at least <span class="arithmatex">\(1-\delta\)</span> upon stopping. Let <span class="arithmatex">\(T_j\)</span> be the total number of pulls of arm <span class="arithmatex">\(j\)</span>, and <span class="arithmatex">\(\mathbb{E}_\nu[\cdot]\)</span> denote expectation under instance <span class="arithmatex">\(\nu\)</span>.</p>
 <ol>
-<li>Assume <span class="arithmatex"><span class="MathJax_Preview">\mathcal{G}</span><script type="math/tex">\mathcal{G}</script></span> is <span class="arithmatex"><span class="MathJax_Preview">(\varepsilon/2,\delta)</span><script type="math/tex">(\varepsilon/2,\delta)</script></span>-PAC with <span class="arithmatex"><span class="MathJax_Preview">\delta&lt;1/8</span><script type="math/tex">\delta<1/8</script></span>. Using the previous problem, show there exists a constant <span class="arithmatex"><span class="MathJax_Preview">c&gt;0</span><script type="math/tex">c>0</script></span> such that for every <span class="arithmatex"><span class="MathJax_Preview">j\in[n]</span><script type="math/tex">j\in[n]</script></span>, under <span class="arithmatex"><span class="MathJax_Preview">\nu_0</span><script type="math/tex">\nu_0</script></span>,
+<li>Assume <span class="arithmatex">\(\mathcal{G}\)</span> is <span class="arithmatex">\((\varepsilon/2,\delta)\)</span>-PAC with <span class="arithmatex">\(\delta&lt;1/8\)</span>. Using the previous problem, show there exists a constant <span class="arithmatex">\(c&gt;0\)</span> such that for every <span class="arithmatex">\(j\in[n]\)</span>, under <span class="arithmatex">\(\nu_0\)</span>,
     $$
     \mathbb{E}_{\nu_0}[T_j]\ge\frac{c}{\varepsilon^2}\log\frac{1}{\delta}.
     $$</li>
-<li>Let <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> be any MAB algorithm run for <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> rounds, and let its cumulative expected regret on instance <span class="arithmatex"><span class="MathJax_Preview">\nu</span><script type="math/tex">\nu</script></span> be <span class="arithmatex"><span class="MathJax_Preview">R_T(\mathcal{A},\nu)</span><script type="math/tex">R_T(\mathcal{A},\nu)</script></span>. Prove that for any such algorithm, there exists some <span class="arithmatex"><span class="MathJax_Preview">\nu\in\mathcal{I}</span><script type="math/tex">\nu\in\mathcal{I}</script></span> such that
+<li>Let <span class="arithmatex">\(\mathcal{A}\)</span> be any MAB algorithm run for <span class="arithmatex">\(T\)</span> rounds, and let its cumulative expected regret on instance <span class="arithmatex">\(\nu\)</span> be <span class="arithmatex">\(R_T(\mathcal{A},\nu)\)</span>. Prove that for any such algorithm, there exists some <span class="arithmatex">\(\nu\in\mathcal{I}\)</span> such that
     $$
     R_T(\mathcal{A},\nu)=\Omega(\sqrt{nT}).
     $$
-    Hint: set <span class="arithmatex"><span class="MathJax_Preview">\varepsilon=2\sqrt{n/T}</span><script type="math/tex">\varepsilon=2\sqrt{n/T}</script></span>. If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> had small regret on all instances, construct a pure-exploration algorithm by running <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> for <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> rounds and outputting the most-pulled arm; then derive a contradiction with part 1.</li>
+    Hint: set <span class="arithmatex">\(\varepsilon=2\sqrt{n/T}\)</span>. If <span class="arithmatex">\(\mathcal{A}\)</span> had small regret on all instances, construct a pure-exploration algorithm by running <span class="arithmatex">\(\mathcal{A}\)</span> for <span class="arithmatex">\(T\)</span> rounds and outputting the most-pulled arm; then derive a contradiction with part 1.</li>
 </ol>
 </div>
 </div>
@@ -1105,38 +1105,38 @@ $$
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>考虑样本空间 <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{1,2,\dots,n\}</span><script type="math/tex">\Omega=\{1,2,\dots,n\}</script></span>。对分布 <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>，记 <span class="arithmatex"><span class="MathJax_Preview">q_i=\Pr(X=i)</span><script type="math/tex">q_i=\Pr(X=i)</script></span>。对分布 <span class="arithmatex"><span class="MathJax_Preview">p,q</span><script type="math/tex">p,q</script></span>，总变分距离定义为
+<p>考虑样本空间 <span class="arithmatex">\(\Omega=\{1,2,\dots,n\}\)</span>。对分布 <span class="arithmatex">\(q\)</span>，记 <span class="arithmatex">\(q_i=\Pr(X=i)\)</span>。对分布 <span class="arithmatex">\(p,q\)</span>，总变分距离定义为
 $$
 d_{\mathrm{TV}}(p,q)=\frac12\sum_{i=1}^n|p_i-q_i|.
 $$
-令 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> 为均匀分布，<span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> 为未知分布。已知 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> 要么等于 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>，要么满足 <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>（<span class="arithmatex"><span class="MathJax_Preview">\varepsilon\in(0,1/2)</span><script type="math/tex">\varepsilon\in(0,1/2)</script></span>）。目标是用尽量少样本做判别。</p>
+令 <span class="arithmatex">\(\mu\)</span> 为均匀分布，<span class="arithmatex">\(\pi\)</span> 为未知分布。已知 <span class="arithmatex">\(\pi\)</span> 要么等于 <span class="arithmatex">\(\mu\)</span>，要么满足 <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>（<span class="arithmatex">\(\varepsilon\in(0,1/2)\)</span>）。目标是用尽量少样本做判别。</p>
 <ol>
 <li>令
     $$
     |\pi|=\sqrt{\sum_{i=1}^n\pi_i^2}.
     $$
-    若 <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> 独立采自 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>，证明
+    若 <span class="arithmatex">\(X,Y\)</span> 独立采自 <span class="arithmatex">\(\pi\)</span>，证明
     $$
     \Pr(X=Y)=|\pi|^2.
     $$</li>
 <li>证明：
-    1) <span class="arithmatex"><span class="MathJax_Preview">\|\mu\|^2=1/n</span><script type="math/tex">\|\mu\|^2=1/n</script></span>；
-    2) 若 <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>，则
+    1) <span class="arithmatex">\(\|\mu\|^2=1/n\)</span>；
+    2) 若 <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>，则
     $$
     |\pi|^2-|\mu|^2\ge\frac{4\varepsilon^2}{n}.
     $$</li>
-<li>设 <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_m</span><script type="math/tex">X_1,\dots,X_m</script></span>（<span class="arithmatex"><span class="MathJax_Preview">m\ge4</span><script type="math/tex">m\ge4</script></span>）独立采自 <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>。对 <span class="arithmatex"><span class="MathJax_Preview">1\le i&lt;j\le m</span><script type="math/tex">1\le i<j\le m</script></span>，定义
+<li>设 <span class="arithmatex">\(X_1,\dots,X_m\)</span>（<span class="arithmatex">\(m\ge4\)</span>）独立采自 <span class="arithmatex">\(\pi\)</span>。对 <span class="arithmatex">\(1\le i&lt;j\le m\)</span>，定义
     $$
     Y_{ij}=\mathbf{1}{X_i=X_j},\qquad
     Z=\frac{1}{\binom m2}\sum_{1\le i&lt;j\le m}Y_{ij}.
     $$
     证明：
-    1) <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[Z]=\|\pi\|^2</span><script type="math/tex">\mathbb{E}[Z]=\|\pi\|^2</script></span>；
+    1) <span class="arithmatex">\(\mathbb{E}[Z]=\|\pi\|^2\)</span>；
     2)
     $$
     \mathrm{Var}(Z)\le\frac{4|\pi|^3}{m}+\frac{4|\pi|^2}{m^2};
     $$
-    3) 无论 <span class="arithmatex"><span class="MathJax_Preview">\pi=\mu</span><script type="math/tex">\pi=\mu</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>，都有
+    3) 无论 <span class="arithmatex">\(\pi=\mu\)</span> 或 <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>，都有
     $$
     \Pr\left(|Z-\mathbb{E}[Z]|\ge\varepsilon^2\mathbb{E}[Z]\right)
     \le \frac{4\sqrt n}{\varepsilon^4m}+\frac{4n}{\varepsilon^4m^2}.
@@ -1145,46 +1145,46 @@ $$
     $$
     m=\frac{100\sqrt n}{\varepsilon^4}
     $$
-    个样本并计算 <span class="arithmatex"><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>。若
+    个样本并计算 <span class="arithmatex">\(Z\)</span>。若
     $$
     Z\ge\frac{1+2\varepsilon^2}{n}
     $$
-    输出“<span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>”，否则输出“<span class="arithmatex"><span class="MathJax_Preview">\pi=\mu</span><script type="math/tex">\pi=\mu</script></span>”。请证明该算法出错概率不超过 <span class="arithmatex"><span class="MathJax_Preview">0.1</span><script type="math/tex">0.1</script></span>。</li>
+    输出“<span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>”，否则输出“<span class="arithmatex">\(\pi=\mu\)</span>”。请证明该算法出错概率不超过 <span class="arithmatex">\(0.1\)</span>。</li>
 </ol>
 </div>
 <div class="tabbed-block">
-<p>Let the sample space be <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{1,2,\dots,n\}</span><script type="math/tex">\Omega=\{1,2,\dots,n\}</script></span>. For a distribution <span class="arithmatex"><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>, write <span class="arithmatex"><span class="MathJax_Preview">q_i=\Pr(X=i)</span><script type="math/tex">q_i=\Pr(X=i)</script></span>. For distributions <span class="arithmatex"><span class="MathJax_Preview">p,q</span><script type="math/tex">p,q</script></span>, define total variation distance by
+<p>Let the sample space be <span class="arithmatex">\(\Omega=\{1,2,\dots,n\}\)</span>. For a distribution <span class="arithmatex">\(q\)</span>, write <span class="arithmatex">\(q_i=\Pr(X=i)\)</span>. For distributions <span class="arithmatex">\(p,q\)</span>, define total variation distance by
 $$
 d_{\mathrm{TV}}(p,q)=\frac12\sum_{i=1}^n|p_i-q_i|.
 $$
-Let <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> be uniform on <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> be an unknown distribution. Assume either <span class="arithmatex"><span class="MathJax_Preview">\pi=\mu</span><script type="math/tex">\pi=\mu</script></span>, or <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span> where <span class="arithmatex"><span class="MathJax_Preview">\varepsilon\in(0,1/2)</span><script type="math/tex">\varepsilon\in(0,1/2)</script></span>. The goal is to decide which case holds using as few samples as possible.</p>
+Let <span class="arithmatex">\(\mu\)</span> be uniform on <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(\pi\)</span> be an unknown distribution. Assume either <span class="arithmatex">\(\pi=\mu\)</span>, or <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span> where <span class="arithmatex">\(\varepsilon\in(0,1/2)\)</span>. The goal is to decide which case holds using as few samples as possible.</p>
 <ol>
 <li>Define
     $$
     |\pi|=\sqrt{\sum_{i=1}^n\pi_i^2}.
     $$
-    If <span class="arithmatex"><span class="MathJax_Preview">X,Y</span><script type="math/tex">X,Y</script></span> are i.i.d. from <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>, prove
+    If <span class="arithmatex">\(X,Y\)</span> are i.i.d. from <span class="arithmatex">\(\pi\)</span>, prove
     $$
     \Pr(X=Y)=|\pi|^2.
     $$</li>
 <li>Prove:
-    1) <span class="arithmatex"><span class="MathJax_Preview">\|\mu\|^2=1/n</span><script type="math/tex">\|\mu\|^2=1/n</script></span>;
-    2) if <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>, then
+    1) <span class="arithmatex">\(\|\mu\|^2=1/n\)</span>;
+    2) if <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>, then
     $$
     |\pi|^2-|\mu|^2\ge\frac{4\varepsilon^2}{n}.
     $$</li>
-<li>Let <span class="arithmatex"><span class="MathJax_Preview">X_1,\dots,X_m</span><script type="math/tex">X_1,\dots,X_m</script></span> (<span class="arithmatex"><span class="MathJax_Preview">m\ge4</span><script type="math/tex">m\ge4</script></span>) be i.i.d. from <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>. For <span class="arithmatex"><span class="MathJax_Preview">1\le i&lt;j\le m</span><script type="math/tex">1\le i<j\le m</script></span>, define
+<li>Let <span class="arithmatex">\(X_1,\dots,X_m\)</span> (<span class="arithmatex">\(m\ge4\)</span>) be i.i.d. from <span class="arithmatex">\(\pi\)</span>. For <span class="arithmatex">\(1\le i&lt;j\le m\)</span>, define
     $$
     Y_{ij}=\mathbf{1}{X_i=X_j},\qquad
     Z=\frac{1}{\binom m2}\sum_{1\le i&lt;j\le m}Y_{ij}.
     $$
     Prove:
-    1) <span class="arithmatex"><span class="MathJax_Preview">\mathbb{E}[Z]=\|\pi\|^2</span><script type="math/tex">\mathbb{E}[Z]=\|\pi\|^2</script></span>;
+    1) <span class="arithmatex">\(\mathbb{E}[Z]=\|\pi\|^2\)</span>;
     2)
     $$
     \mathrm{Var}(Z)\le\frac{4|\pi|^3}{m}+\frac{4|\pi|^2}{m^2};
     $$
-    3) regardless of whether <span class="arithmatex"><span class="MathJax_Preview">\pi=\mu</span><script type="math/tex">\pi=\mu</script></span> or <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>,
+    3) regardless of whether <span class="arithmatex">\(\pi=\mu\)</span> or <span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>,
     $$
     \Pr\left(|Z-\mathbb{E}[Z]|\ge\varepsilon^2\mathbb{E}[Z]\right)
     \le \frac{4\sqrt n}{\varepsilon^4m}+\frac{4n}{\varepsilon^4m^2}.
@@ -1193,11 +1193,11 @@ Let <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script typ
     $$
     m=\frac{100\sqrt n}{\varepsilon^4}
     $$
-    points from <span class="arithmatex"><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> and compute <span class="arithmatex"><span class="MathJax_Preview">Z</span><script type="math/tex">Z</script></span>. If
+    points from <span class="arithmatex">\(\pi\)</span> and compute <span class="arithmatex">\(Z\)</span>. If
     $$
     Z\ge\frac{1+2\varepsilon^2}{n},
     $$
-    output "<span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon</script></span>"; otherwise output "<span class="arithmatex"><span class="MathJax_Preview">\pi=\mu</span><script type="math/tex">\pi=\mu</script></span>". Prove the error probability is at most <span class="arithmatex"><span class="MathJax_Preview">0.1</span><script type="math/tex">0.1</script></span>.</li>
+    output "<span class="arithmatex">\(d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon\)</span>"; otherwise output "<span class="arithmatex">\(\pi=\mu\)</span>". Prove the error probability is at most <span class="arithmatex">\(0.1\)</span>.</li>
 </ol>
 </div>
 </div>
@@ -1206,32 +1206,32 @@ Let <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script typ
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>令未知分布 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 定义在 <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{1,2,\dots,n\}</span><script type="math/tex">\Omega=\{1,2,\dots,n\}</script></span> 上。给定 <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> 个独立样本
+<p>令未知分布 <span class="arithmatex">\(p\)</span> 定义在 <span class="arithmatex">\(\Omega=\{1,2,\dots,n\}\)</span> 上。给定 <span class="arithmatex">\(T\)</span> 个独立样本
 $$
 X_1,X_2,\dots,X_T\sim p,
 $$
-希望输出经验分布 <span class="arithmatex"><span class="MathJax_Preview">\hat p</span><script type="math/tex">\hat p</script></span>，使得以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 的概率满足
+希望输出经验分布 <span class="arithmatex">\(\hat p\)</span>，使得以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率满足
 $$
 d_{\mathrm{TV}}(p,\hat p)=\frac12\sum_{i=1}^n|p_i-\hat p_i|\le\varepsilon.
 $$
-1. 先考虑 <span class="arithmatex"><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>。请设计一个算法，使用
+1. 先考虑 <span class="arithmatex">\(n=2\)</span>。请设计一个算法，使用
     $$
     T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
-    个样本，以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 概率找到满足 <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">\hat p</span><script type="math/tex">\hat p</script></span>，并给出分析。
-2. 对一般 <span class="arithmatex"><span class="MathJax_Preview">n\ge2</span><script type="math/tex">n\ge2</script></span>，证明
+    个样本，以至少 <span class="arithmatex">\(1-\delta\)</span> 概率找到满足 <span class="arithmatex">\(d_{\mathrm{TV}}(p,\hat p)\le\varepsilon\)</span> 的 <span class="arithmatex">\(\hat p\)</span>，并给出分析。
+2. 对一般 <span class="arithmatex">\(n\ge2\)</span>，证明
     $$
     d_{\mathrm{TV}}(p,\hat p)=\max_{S\subseteq[n]}\sum_{j\in S}(p_j-\hat p_j).
     $$
-3. 对每个 <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span>，令
+3. 对每个 <span class="arithmatex">\(i\in[n]\)</span>，令
     $$
     \hat p_i=\frac1T\sum_{t=1}^T\mathbf{1}{X_t=i}.
     $$
-    对任意子集 <span class="arithmatex"><span class="MathJax_Preview">S\subseteq[n]</span><script type="math/tex">S\subseteq[n]</script></span>，记
+    对任意子集 <span class="arithmatex">\(S\subseteq[n]\)</span>，记
     $$
     p(S)=\sum_{j\in S}p_j,\qquad \hat p(S)=\sum_{j\in S}\hat p_j.
     $$
-    请证明存在常数 <span class="arithmatex"><span class="MathJax_Preview">c&gt;0</span><script type="math/tex">c>0</script></span>，使得任意 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>、任意 <span class="arithmatex"><span class="MathJax_Preview">\varepsilon&gt;0</span><script type="math/tex">\varepsilon>0</script></span>，都有
+    请证明存在常数 <span class="arithmatex">\(c&gt;0\)</span>，使得任意 <span class="arithmatex">\(S\)</span>、任意 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，都有
     $$
     \Pr\big(p(S)-\hat p(S)\ge\varepsilon\big)\le \exp(-c\varepsilon^2T).
     $$
@@ -1239,35 +1239,35 @@ $$
     $$
     T=O\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
     $$
-    个样本，就能以至少 <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span> 概率满足 <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</script></span>。</p>
+    个样本，就能以至少 <span class="arithmatex">\(1-\delta\)</span> 概率满足 <span class="arithmatex">\(d_{\mathrm{TV}}(p,\hat p)\le\varepsilon\)</span>。</p>
 </div>
 <div class="tabbed-block">
-<p>Let an unknown distribution <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> be defined on <span class="arithmatex"><span class="MathJax_Preview">\Omega=\{1,2,\dots,n\}</span><script type="math/tex">\Omega=\{1,2,\dots,n\}</script></span>. Given <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> i.i.d. samples
+<p>Let an unknown distribution <span class="arithmatex">\(p\)</span> be defined on <span class="arithmatex">\(\Omega=\{1,2,\dots,n\}\)</span>. Given <span class="arithmatex">\(T\)</span> i.i.d. samples
 $$
 X_1,X_2,\dots,X_T\sim p,
 $$
-we want to output an empirical distribution <span class="arithmatex"><span class="MathJax_Preview">\hat p</span><script type="math/tex">\hat p</script></span> such that with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>,
+we want to output an empirical distribution <span class="arithmatex">\(\hat p\)</span> such that with probability at least <span class="arithmatex">\(1-\delta\)</span>,
 $$
 d_{\mathrm{TV}}(p,\hat p)=\frac12\sum_{i=1}^n|p_i-\hat p_i|\le\varepsilon.
 $$
-1. First consider <span class="arithmatex"><span class="MathJax_Preview">n=2</span><script type="math/tex">n=2</script></span>. Design an algorithm using
+1. First consider <span class="arithmatex">\(n=2\)</span>. Design an algorithm using
     $$
     T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
-    samples, which outputs <span class="arithmatex"><span class="MathJax_Preview">\hat p</span><script type="math/tex">\hat p</script></span> satisfying <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</script></span> with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>, and analyze it.
-2. For general <span class="arithmatex"><span class="MathJax_Preview">n\ge2</span><script type="math/tex">n\ge2</script></span>, prove
+    samples, which outputs <span class="arithmatex">\(\hat p\)</span> satisfying <span class="arithmatex">\(d_{\mathrm{TV}}(p,\hat p)\le\varepsilon\)</span> with probability at least <span class="arithmatex">\(1-\delta\)</span>, and analyze it.
+2. For general <span class="arithmatex">\(n\ge2\)</span>, prove
     $$
     d_{\mathrm{TV}}(p,\hat p)=\max_{S\subseteq[n]}\sum_{j\in S}(p_j-\hat p_j).
     $$
-3. For each <span class="arithmatex"><span class="MathJax_Preview">i\in[n]</span><script type="math/tex">i\in[n]</script></span>, define
+3. For each <span class="arithmatex">\(i\in[n]\)</span>, define
     $$
     \hat p_i=\frac1T\sum_{t=1}^T\mathbf{1}{X_t=i}.
     $$
-    For any subset <span class="arithmatex"><span class="MathJax_Preview">S\subseteq[n]</span><script type="math/tex">S\subseteq[n]</script></span>, let
+    For any subset <span class="arithmatex">\(S\subseteq[n]\)</span>, let
     $$
     p(S)=\sum_{j\in S}p_j,\qquad \hat p(S)=\sum_{j\in S}\hat p_j.
     $$
-    Prove there exists a constant <span class="arithmatex"><span class="MathJax_Preview">c&gt;0</span><script type="math/tex">c>0</script></span> such that for any <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> and any <span class="arithmatex"><span class="MathJax_Preview">\varepsilon&gt;0</span><script type="math/tex">\varepsilon>0</script></span>,
+    Prove there exists a constant <span class="arithmatex">\(c&gt;0\)</span> such that for any <span class="arithmatex">\(S\)</span> and any <span class="arithmatex">\(\varepsilon&gt;0\)</span>,
     $$
     \Pr\big(p(S)-\hat p(S)\ge\varepsilon\big)\le \exp(-c\varepsilon^2T).
     $$
@@ -1275,7 +1275,7 @@ $$
     $$
     T=O\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
     $$
-    samples to guarantee <span class="arithmatex"><span class="MathJax_Preview">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</span><script type="math/tex">d_{\mathrm{TV}}(p,\hat p)\le\varepsilon</script></span> with probability at least <span class="arithmatex"><span class="MathJax_Preview">1-\delta</span><script type="math/tex">1-\delta</script></span>.</p>
+    samples to guarantee <span class="arithmatex">\(d_{\mathrm{TV}}(p,\hat p)\le\varepsilon\)</span> with probability at least <span class="arithmatex">\(1-\delta\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1287,7 +1287,7 @@ $$
 $$
 S_m={(X_i,C(X_i))}_{i=1}^m,
 $$
-其中 <span class="arithmatex"><span class="MathJax_Preview">X_i\in\mathbb{R}^d</span><script type="math/tex">X_i\in\mathbb{R}^d</script></span> 独立同分布采样自未知分布 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>，标签由布尔函数 <span class="arithmatex"><span class="MathJax_Preview">C:\mathbb{R}^d\to\{0,1\}</span><script type="math/tex">C:\mathbb{R}^d\to\{0,1\}</script></span> 给出。学习算法 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 输出分类器
+其中 <span class="arithmatex">\(X_i\in\mathbb{R}^d\)</span> 独立同分布采样自未知分布 <span class="arithmatex">\(\mu\)</span>，标签由布尔函数 <span class="arithmatex">\(C:\mathbb{R}^d\to\{0,1\}\)</span> 给出。学习算法 <span class="arithmatex">\(\mathcal{A}\)</span> 输出分类器
 $$
 h=\mathcal{A}(\cdot,S_m),
 $$
@@ -1295,21 +1295,21 @@ $$
 $$
 R(h)=\Pr(h(X)\ne C(X)),\quad X\sim\mu.
 $$
-给定任意学习算法 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> 和任意偶数大小有限特征空间 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{X}\subseteq\mathbb{R}^d</span><script type="math/tex">\mathcal{X}\subseteq\mathbb{R}^d</script></span>，其中 <span class="arithmatex"><span class="MathJax_Preview">|\mathcal{X}|=2m&gt;4</span><script type="math/tex">|\mathcal{X}|=2m>4</script></span>。请证明存在函数 <span class="arithmatex"><span class="MathJax_Preview">C:\mathcal{X}\to\{0,1\}</span><script type="math/tex">C:\mathcal{X}\to\{0,1\}</script></span> 和分布 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>，使得
+给定任意学习算法 <span class="arithmatex">\(\mathcal{A}\)</span> 和任意偶数大小有限特征空间 <span class="arithmatex">\(\mathcal{X}\subseteq\mathbb{R}^d\)</span>，其中 <span class="arithmatex">\(|\mathcal{X}|=2m&gt;4\)</span>。请证明存在函数 <span class="arithmatex">\(C:\mathcal{X}\to\{0,1\}\)</span> 和分布 <span class="arithmatex">\(\mu\)</span>，使得
 $$
 \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
 $$
-证明中可采用如下随机构造：令 <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{X}</span><script type="math/tex">\mathcal{X}</script></span> 上均匀分布；对每个 <span class="arithmatex"><span class="MathJax_Preview">x\in\mathcal{X}</span><script type="math/tex">x\in\mathcal{X}</script></span>，独立均匀随机取 <span class="arithmatex"><span class="MathJax_Preview">Y_x\in\{0,1\}</span><script type="math/tex">Y_x\in\{0,1\}</script></span>，并定义随机函数 <span class="arithmatex"><span class="MathJax_Preview">C(x)=Y_x</span><script type="math/tex">C(x)=Y_x</script></span>。</p>
+证明中可采用如下随机构造：令 <span class="arithmatex">\(\mu\)</span> 为 <span class="arithmatex">\(\mathcal{X}\)</span> 上均匀分布；对每个 <span class="arithmatex">\(x\in\mathcal{X}\)</span>，独立均匀随机取 <span class="arithmatex">\(Y_x\in\{0,1\}\)</span>，并定义随机函数 <span class="arithmatex">\(C(x)=Y_x\)</span>。</p>
 <ol>
-<li>先在随机标签 <span class="arithmatex"><span class="MathJax_Preview">\{Y_x\}_{x\in\mathcal{X}}</span><script type="math/tex">\{Y_x\}_{x\in\mathcal{X}}</script></span> 与随机样本 <span class="arithmatex"><span class="MathJax_Preview">S_m</span><script type="math/tex">S_m</script></span> 上证明
+<li>先在随机标签 <span class="arithmatex">\(\{Y_x\}_{x\in\mathcal{X}}\)</span> 与随机样本 <span class="arithmatex">\(S_m\)</span> 上证明
     $$
     \mathbb{E}[R(\mathcal{A}(\cdot,S_m))]\ge\frac14,
     $$
-    并由此说明存在一个确定的函数 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 使得（仅对样本 <span class="arithmatex"><span class="MathJax_Preview">S_m</span><script type="math/tex">S_m</script></span> 取期望）
+    并由此说明存在一个确定的函数 <span class="arithmatex">\(C\)</span> 使得（仅对样本 <span class="arithmatex">\(S_m\)</span> 取期望）
     $$
     \mathbb{E}[R(\mathcal{A}(\cdot,S_m))]\ge\frac14.
     $$</li>
-<li>基于上一问，证明存在确定性函数 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 使得
+<li>基于上一问，证明存在确定性函数 <span class="arithmatex">\(C\)</span> 使得
     $$
     \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     $$</li>
@@ -1320,7 +1320,7 @@ $$
 $$
 S_m={(X_i,C(X_i))}_{i=1}^m,
 $$
-where <span class="arithmatex"><span class="MathJax_Preview">X_i\in\mathbb{R}^d</span><script type="math/tex">X_i\in\mathbb{R}^d</script></span> are i.i.d. from an unknown distribution <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span>, and labels are given by a Boolean function <span class="arithmatex"><span class="MathJax_Preview">C:\mathbb{R}^d\to\{0,1\}</span><script type="math/tex">C:\mathbb{R}^d\to\{0,1\}</script></span>, a learning algorithm <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> outputs a classifier
+where <span class="arithmatex">\(X_i\in\mathbb{R}^d\)</span> are i.i.d. from an unknown distribution <span class="arithmatex">\(\mu\)</span>, and labels are given by a Boolean function <span class="arithmatex">\(C:\mathbb{R}^d\to\{0,1\}\)</span>, a learning algorithm <span class="arithmatex">\(\mathcal{A}\)</span> outputs a classifier
 $$
 h=\mathcal{A}(\cdot,S_m),
 $$
@@ -1328,21 +1328,21 @@ with error
 $$
 R(h)=\Pr(h(X)\ne C(X)),\quad X\sim\mu.
 $$
-Given any learning algorithm <span class="arithmatex"><span class="MathJax_Preview">\mathcal{A}</span><script type="math/tex">\mathcal{A}</script></span> and any finite feature space <span class="arithmatex"><span class="MathJax_Preview">\mathcal{X}\subseteq\mathbb{R}^d</span><script type="math/tex">\mathcal{X}\subseteq\mathbb{R}^d</script></span> with even size <span class="arithmatex"><span class="MathJax_Preview">|\mathcal{X}|=2m&gt;4</span><script type="math/tex">|\mathcal{X}|=2m>4</script></span>, prove that there exist a target function <span class="arithmatex"><span class="MathJax_Preview">C:\mathcal{X}\to\{0,1\}</span><script type="math/tex">C:\mathcal{X}\to\{0,1\}</script></span> and a distribution <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> such that
+Given any learning algorithm <span class="arithmatex">\(\mathcal{A}\)</span> and any finite feature space <span class="arithmatex">\(\mathcal{X}\subseteq\mathbb{R}^d\)</span> with even size <span class="arithmatex">\(|\mathcal{X}|=2m&gt;4\)</span>, prove that there exist a target function <span class="arithmatex">\(C:\mathcal{X}\to\{0,1\}\)</span> and a distribution <span class="arithmatex">\(\mu\)</span> such that
 $$
 \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
 $$
-You may use the following random construction: let <span class="arithmatex"><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> be uniform on <span class="arithmatex"><span class="MathJax_Preview">\mathcal{X}</span><script type="math/tex">\mathcal{X}</script></span>; for each <span class="arithmatex"><span class="MathJax_Preview">x\in\mathcal{X}</span><script type="math/tex">x\in\mathcal{X}</script></span>, independently sample <span class="arithmatex"><span class="MathJax_Preview">Y_x\in\{0,1\}</span><script type="math/tex">Y_x\in\{0,1\}</script></span> uniformly and define <span class="arithmatex"><span class="MathJax_Preview">C(x)=Y_x</span><script type="math/tex">C(x)=Y_x</script></span>.</p>
+You may use the following random construction: let <span class="arithmatex">\(\mu\)</span> be uniform on <span class="arithmatex">\(\mathcal{X}\)</span>; for each <span class="arithmatex">\(x\in\mathcal{X}\)</span>, independently sample <span class="arithmatex">\(Y_x\in\{0,1\}\)</span> uniformly and define <span class="arithmatex">\(C(x)=Y_x\)</span>.</p>
 <ol>
-<li>First prove over random labels <span class="arithmatex"><span class="MathJax_Preview">\{Y_x\}_{x\in\mathcal{X}}</span><script type="math/tex">\{Y_x\}_{x\in\mathcal{X}}</script></span> and random sample <span class="arithmatex"><span class="MathJax_Preview">S_m</span><script type="math/tex">S_m</script></span> that
+<li>First prove over random labels <span class="arithmatex">\(\{Y_x\}_{x\in\mathcal{X}}\)</span> and random sample <span class="arithmatex">\(S_m\)</span> that
     $$
     \mathbb{E}[R(\mathcal{A}(\cdot,S_m))]\ge\frac14,
     $$
-    and conclude there exists a fixed function <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> such that (expectation only over <span class="arithmatex"><span class="MathJax_Preview">S_m</span><script type="math/tex">S_m</script></span>)
+    and conclude there exists a fixed function <span class="arithmatex">\(C\)</span> such that (expectation only over <span class="arithmatex">\(S_m\)</span>)
     $$
     \mathbb{E}[R(\mathcal{A}(\cdot,S_m))]\ge\frac14.
     $$</li>
-<li>Based on part 1, prove there exists a deterministic <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> such that
+<li>Based on part 1, prove there exists a deterministic <span class="arithmatex">\(C\)</span> such that
     $$
     \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     $$</li>

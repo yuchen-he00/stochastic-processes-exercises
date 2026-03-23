@@ -201,7 +201,7 @@
     	$$
     	\Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     	\begin{cases}
-        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\
+        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\cr
         \exp\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     	\end{cases}
     	$$
@@ -217,7 +217,7 @@
     	$$
     	\Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     	\begin{cases}
-        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\
+        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\cr
         \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{其他情况}.
     	\end{cases}
     	$$
@@ -230,7 +230,7 @@
     	$$
     	\Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     	\begin{cases}
-        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\
+        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\cr
         \exp\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     	\end{cases}
     	$$
@@ -246,7 +246,7 @@
     	$$
     	\Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     	\begin{cases}
-        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\
+        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\cr
         \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{otherwise}.
     	\end{cases}
     	$$
