@@ -1,38 +1,52 @@
 # 随机过程开源习题库
 
-这是一个由大家共同维护的开源习题与解答库。我们非常欢迎你为本仓库贡献你的智慧——无论是完整的严谨解答、灵光一现的补充思路，还是纠正已有的错误！
+欢迎为本仓库补充解答、思路和勘误。
 
-## 💡 如何贡献你的解答？
+## 如何贡献你的解答
 
-添加你的解答极其简单，只需按照以下步骤操作：
+### Fork 并同步仓库
+- 仓库地址：https://github.com/yuchen-he00/stochastic-process-exercises
+- 先点击 GitHub 页面右上角 **Fork**。
+- 克隆你自己的仓库：`git clone <你的仓库地址>`
+- 进入项目目录后执行：`git pull`
 
-### 第 1 步：找到对应的解答文件
-所有解答文件均独立存放在 `docs/solutions/` 目录下，并按章节分类。
-例如，你想回答第一章“Power of Two Choices”这道问题，请前往以下路径找到对应的文件（如果文件还不存在，请直接新建它）：
-`docs/solutions/chapter_01/problems/problem_two_choices.md`
+### 找到对应题目与解答文件
+- 先在 `docs/exercises/` 里找到题目文件。
+- 每道题下方都有一行 `--8<--`，这行会标出对应解答文件。
 
-### 第 2 步：追加你的代码块
-在文件的最末尾，直接追加你的解答即可。可以直接复制以下模板，并填入你的名字和内容：
+例如第一章练习“再探奖券收集问题”下方是：
+`--8<-- "solutions/chapter_01/exercises/exercise_coupon_collector.md"`
 
-````markdown
-!!! success "来自[Your name]的解答"
+对应文件就是：
+`docs/solutions/chapter_01/exercises/exercise_coupon_collector.md`
 
-    总所周知，$1+1=2$。
+### 追加你的内容
+把下面代码块直接复制到对应文件末尾（保留缩进），并在对应位置写上你的解答或者想法，中英文皆可：
 
-??? note "来自[Your name]的想法"
+```markdown
+??? success "来自[Your Name]的解答"
 
-    oh这里有一个小想法想说。
+    你的解答写在这里。
 
-⚠️ 极其重要的排版提醒：
-请务必注意，在 !!! success 和 ??? note 下方的正文部分，必须严格保持 4 个空格的缩进！这是触发精美排版的魔法，如果没有这 4 个空格，网页渲染就会格式错乱。
+??? note "来自[Your Name]的想法"
 
-### 第 3 步：提交 Pull Request
-点击仓库右上角的 Fork，将本仓库复制到你的个人账号下。
+    你的补充思路或者评论写在这里。
+```
 
-在对应文件里加上你的解答，随后 Commit 并 Push 到你的个人仓库。
+渲染效果如下：
 
-回到本仓库，点击 New Pull Request 提交你的修改。
+??? success "来自[Your Name]的解答"
 
-闭上眼睛等待合并！一旦 PR 被合并，GitHub 会在后台自动编译，你的神仙解答就会立刻以极其优雅的排版展示在官方网站上！
+    你的解答写在这里。
 
-快来留下你的专属解答吧！
+??? note "来自[Your Name]的想法"
+
+    你的补充思路或者评论写在这里。
+
+### 提交 Pull Request
+1. 新建分支：`git checkout -b your-branch-name`
+2. 提交修改：`git add .`，再执行 `git commit -m "add solution for xx"`
+3. 推送到你的仓库：`git push origin your-branch-name`
+4. 回到 GitHub，点击 **Compare & pull request**
+
+作者会在 1～3 天内审核你的 PR；通过后会合并并自动编译。

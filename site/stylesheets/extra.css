@@ -1,1 +1,76 @@
 /* Heading numbering moved to docs/javascripts/heading-numbering.js */
+
+.md-typeset h1 {
+	color: var(--md-default-fg-color);
+	font-weight: 700;
+}
+
+.md-typeset h2 {
+	color: var(--md-default-fg-color);
+	font-weight: 650;
+}
+
+.md-typeset h3 {
+	color: var(--md-default-fg-color);
+	font-weight: 650;
+}
+
+.md-typeset h3.with-inline-tabs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 0.42rem 0.62rem;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	background-color: var(--md-code-bg-color);
+}
+
+.md-typeset .inline-tab-controls {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	flex-shrink: 0;
+}
+
+.md-typeset .inline-tab-btn {
+	background: transparent;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 999px;
+	padding: 0.15rem 0.65rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	color: var(--md-default-fg-color--light);
+	cursor: pointer;
+}
+
+.md-typeset .inline-tab-btn.is-active {
+	color: var(--md-default-fg-color);
+	border-color: var(--md-default-fg-color--light);
+	background: var(--md-default-bg-color);
+}
+
+.md-typeset .tabbed-set.inline-tabbed > .tabbed-labels {
+	display: none;
+}
+
+.md-nav--secondary .md-nav__link {
+	color: var(--md-default-fg-color--light) !important;
+}
+
+.md-nav--secondary .md-nav__link--active,
+.md-nav--secondary .md-nav__link[aria-current="true"] {
+	color: var(--md-typeset-a-color) !important;
+}
+
+.md-typeset pre {
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.5rem;
+	background-color: var(--md-code-bg-color);
+}
+
+.md-typeset pre code {
+	font-family: var(--md-code-font-family);
+	font-size: 0.9em;
+	line-height: 1.6;
+}

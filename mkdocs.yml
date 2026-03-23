@@ -2,9 +2,12 @@ site_name: 《计算机科学中的随机过程》习题书
 theme:
   name: material
   language: zh
+  font:
+    code: Roboto Mono
   features:
     - navigation.tabs # 开启顶部导航栏
     - navigation.indexes # 允许点击文件夹名称进入对应汇总页
+    - content.code.copy # 代码块复制按钮
 
 nav:
   - 首页: index.md
@@ -30,6 +33,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/heading-numbering.js
+  - javascripts/inline-tabs.js
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
