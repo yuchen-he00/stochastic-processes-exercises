@@ -62,10 +62,11 @@
 	- $C$: $\mathcal{A}$ 输出 $0$，即认为硬币是公平的。
 
 	1. 下面这个定理是切比雪夫不等式的推广，请用这个定理证明 $\Pr[0]{A \cap B \cap C} \ge 1/4$（此定理本身无需证明，可以直接使用）。
-		定理：假设 $X_1,\dots,X_N$ 是 $N$ 个定义在同一个概率空间上的独立伯努利随机变量，令 $S_k=\sum_{i=1}^k \tp{X_i - \E{X_i}}$，那么对于任意的 $s>0$,
-		$$
-		\Pr{\max_{1\le k\le N}\abs{S_k}\ge s} \le \frac{\Var{S_n}}{s^2}.
-		$$
+		!!! theorem "定理（可直接使用）"
+			假设 $X_1,\dots,X_N$ 是 $N$ 个定义在同一个概率空间上的独立伯努利随机变量，令 $S_k=\sum_{i=1}^k \tp{X_i - \E{X_i}}$，那么对于任意的 $s>0$,
+			$$
+			\Pr{\max_{1\le k\le N}\abs{S_k}\ge s} \le \frac{\Var{S_n}}{s^2}.
+			$$
 	2. 请证明，对于任意的 $\omega \in A \cap B \cap C$，有 $\frac{\Pr[1]{\omega}}{\Pr[0]{\omega}} \ge 4\delta$。
 	3. 请证明 $\Pr[1]{C} > \delta$，并据此证明满足要求且保证 $\E[0]{T} \le L$ 的确定性算法是不存在的。
 	4. 若 $\mathcal{A}$ 是一个随机算法，即 $\mathcal{A}$ 可以使用额外的随机数，那么 $\E[0]{T} = \Omega\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}$ 的下界是否仍然成立？为什么？
@@ -93,7 +94,8 @@
     	$$
     	R_T(\mathcal{A}, \nu) = \Omega(\sqrt{nT}).
     	$$
-    	提示：取 $\eps = 2\sqrt{\frac{n}{T}}$。假设 $\mathcal{A}$ 在所有实例上的懊悔都很小，可以构造一个纯探索算法 $\mathcal{G}$：运行 $\mathcal{A}$ 一共 $T$ 轮，然后输出被拉动次数最多的臂。证明 $\mathcal{G}$ 是一个 $\tp{\frac{\eps}{2}, \delta}$-PAC 算法，并利用第一问的结论导出矛盾。
+		??? hint "提示"
+			取 $\eps = 2\sqrt{\frac{n}{T}}$。假设 $\mathcal{A}$ 在所有实例上的懊悔都很小，可以构造一个纯探索算法 $\mathcal{G}$：运行 $\mathcal{A}$ 一共 $T$ 轮，然后输出被拉动次数最多的臂。证明 $\mathcal{G}$ 是一个 $\tp{\frac{\eps}{2}, \delta}$-PAC 算法，并利用第一问的结论导出矛盾。
     
 === "English"
 

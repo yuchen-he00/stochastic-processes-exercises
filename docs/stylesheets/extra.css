@@ -74,3 +74,35 @@
 	font-size: 0.9em;
 	line-height: 1.6;
 }
+
+.md-typeset .admonition.hint,
+.md-typeset details.hint,
+.md-typeset .admonition.theorem {
+	font-size: 0.95em;
+	line-height: 1.55;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	background-color: color-mix(in srgb, var(--md-default-fg-color) 3%, transparent);
+	box-shadow: none;
+}
+
+.md-typeset .admonition.hint > .admonition-title,
+.md-typeset details.hint > summary,
+.md-typeset .admonition.theorem > .admonition-title {
+	font-size: 0.86em;
+	font-weight: 550;
+	color: var(--md-default-fg-color--light);
+	letter-spacing: 0.01em;
+}
+
+.md-typeset .admonition.hint > .admonition-title::before,
+.md-typeset details.hint > summary::before,
+.md-typeset .admonition.theorem > .admonition-title::before {
+	opacity: 0.75;
+}
+
+.md-typeset .admonition.hint p,
+.md-typeset details.hint p,
+.md-typeset .admonition.theorem p {
+	color: var(--md-default-fg-color--light);
+}
