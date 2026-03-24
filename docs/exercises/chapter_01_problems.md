@@ -40,7 +40,7 @@
     1. 如果我们已知所有次优臂与最优臂的均值差距都至少为 $\Delta > 0$（但不知道哪个是最优臂）。基于霍夫丁不等式，请设计一个简单的算法（例如，对所有臂进行相同次数的均匀探索），说明总共需要拉动多少次才能保证有至少 $1-\delta$ 的概率选出最优臂。
     2. 均匀探索算法存在的问题是会在明显极差的臂上浪费大量单次测试成本。我们可以考虑一个更聪明的连续淘汰（successive elimination）算法：维护一个活跃臂的集合 $S$，初始 $S=[n]$。在第 $r$ 轮对活跃集的每一个臂各拉动一次，获得活跃集中每个臂在前 $r$ 轮的经验均值 $\hat{\mu}_{i,r}$。取 $C_r = \sqrt{\frac{\ln(4n r^2 / \delta)}{2r}}$，若某一活跃臂 $i$ 的经验均值满足 $\max_{j\in S}\hat{\mu}_{j,r} - \hat{\mu}_{i,r}\geq 2C_r$，则将臂 $i$ 从活跃集中淘汰。定义事件
     	$$
-	    \mathcal{E} = \left\{ \forall\, i \in [n],\; \forall\, r \ge 1 :\ \abs{\hat{\mu}_{i,r} - \mu_i} < C_r \right\}
+	    \mathcal{E} = \left\lbrace \forall\, i \in [n],\; \forall\, r \ge 1 :\ \abs{\hat{\mu}_{i,r} - \mu_i} < C_r \right\rbrace
     	$$
     	请证明 $\Pr{\mathcal{E}}\geq 1-\delta$，并据此说明算法成功概率至少为 $1-\delta$。
     3. 不妨假设最优臂的标号为 $1$（玩家并不知道这个信息），请证明，以至少 $1-\delta$ 的概率，该算法的拉动次数不超过 $O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}$。

@@ -99,19 +99,19 @@
     1. **（集中性）**请证明：如果 $X$ 是参数为 $(\nu, \alpha)$ 的次指数随机变量，那么对于任意 $t \ge 0$，有
     	$$
     	\Pr{X - \E{X} \ge t} \le
-    	\begin{cases}
-    	\exp\tp{-\frac{t^2}{2\nu}}, & \text{若 } t \in \stp{0, \frac{\nu}{\alpha}}, \\
-    	\exp\tp{-\frac{t}{2\alpha}}, & \text{若 } t \in \tp{\frac{\nu}{\alpha}, \infty}.
-    	\end{cases}
+        \left\lbrace\begin{aligned}
+    &\exp\tp{-\frac{t^2}{2\nu}}, && \text{若 } t \in \stp{0, \frac{\nu}{\alpha}}; \\
+    &\exp\tp{-\frac{t}{2\alpha}}, && \text{若 } t \in \tp{\frac{\nu}{\alpha}, \infty}.
+    \end{aligned}\right.
     	$$
     2. **（可加性）**假设 $X_1, \dots, X_N$ 是相互独立的随机变量，且每个 $X_i$ 都是参数为 $(\nu_i, \alpha_i)$ 的次指数随机变量。证明：对于任意常数 $w_1, \dots, w_N \in \bb R$，加权和 $\sum_{i=1}^N w_i X_i$ 也是次指数随机变量，且其参数为 $\tp{\sum_{i=1}^N w_i^2 \nu_i, \max_{i \in [N]} \abs{w_i} \alpha_i}$。
     3. **（广义伯恩斯坦不等式）**结合前两问的结论，证明广义伯恩斯坦不等式（generalized Bernstein inequality）：在上一问的条件下，记 $S_N = \sum_{i=1}^N w_i X_i$，对于任意 $t \ge 0$，有
     	$$
     	\Pr{S_N - \E{S_N} \ge t} \le
-    	\begin{cases}
-    	\exp\tp{-\frac{t^2}{2\sum_{i=1}^N w_i^2 \nu_i}}, & \text{若 } t \in \stp{0, \frac{\sum_{i=1}^N w_i^2 \nu_i}{\max_{i \in [N]} \abs{w_i} \alpha_i}}, \\
-    	\exp\tp{-\frac{t}{2\max_{i \in [N]} \abs{w_i} \alpha_i}}, & \text{其他情况.}
-    	\end{cases}
+        \left\lbrace\begin{aligned}
+    &\exp\tp{-\frac{t^2}{2\sum_{i=1}^N w_i^2 \nu_i}}, && \text{若 } t \in \stp{0, \frac{\sum_{i=1}^N w_i^2 \nu_i}{\max_{i \in [N]} \abs{w_i} \alpha_i}}; \\
+    &\exp\tp{-\frac{t}{2\max_{i \in [N]} \abs{w_i} \alpha_i}}, && \text{其他情况.}
+    \end{aligned}\right.
     	$$
 === "English"
 
