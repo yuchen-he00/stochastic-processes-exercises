@@ -121,3 +121,30 @@
 	font-family: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif;
 	line-height: 1.6;
 }
+
+.md-typeset .update-log {
+	margin-top: 0.5rem;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	overflow: hidden;
+	background: color-mix(in srgb, var(--md-default-bg-color) 94%, var(--md-default-fg-color) 6%);
+}
+
+.md-typeset .update-item {
+	padding: 0.68rem 0.85rem;
+}
+
+.md-typeset .update-item + .update-item {
+	border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .update-meta {
+	font-size: 0.82em;
+	color: var(--md-default-fg-color--light);
+	margin-bottom: 0.2rem;
+}
+
+.md-typeset .update-item p {
+	margin: 0;
+	line-height: 1.55;
+}
