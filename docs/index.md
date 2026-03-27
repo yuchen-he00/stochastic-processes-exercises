@@ -6,15 +6,26 @@
 
 欢迎为本仓库补充解答、思路和勘误，希望各位读者学的开心！
 
-## 如何贡献你的解答和想法
+## 如何贡献你的解答和想法 💡
 
-### Fork 并同步仓库
-- 仓库地址：https://github.com/yuchen-he00/stochastic-process-exercises
+### Fork 并同步仓库 🍴
+- 仓库地址：`https://github.com/yuchen-he00/stochastic-process-exercises`
 - 先点击 GitHub 页面右上角 **Fork**。
 - 克隆你自己的仓库：`git clone <你的仓库地址>`
-- 进入项目目录后执行：`git pull`
+- 进入项目目录：`cd stochastic-process-exercises`
+- 把原仓库设为 `upstream`（只需一次）：
+    `git remote add upstream https://github.com/yuchen-he00/stochastic-process-exercises.git`
+- 检查远程是否配置成功：`git remote -v`
+- 开始做题前，先同步到最新主分支：
+    `git fetch upstream`
+    `git checkout main`
+    `git rebase upstream/main`
+    `git push origin main`
 
-### 找到对应题目与解答文件
+如果你更习惯网页操作，也可以在 GitHub 的 Fork 页面点击 **Sync fork**，再拉取本地更新：
+`git checkout main && git pull origin main`
+
+### 找到对应题目与解答文件 🔎
 - 先在 `docs/exercises/` 里找到题目文件。
 - 每道题下方都有一行 `--8<--`，这行会标出对应解答文件。
 
@@ -24,8 +35,8 @@
 对应文件就是：
 `docs/solutions/chapter_01/exercises/exercise_coupon_collector.md`
 
-### 追加你的内容
-把下面代码块直接复制到对应文件末尾（保留缩进），并在对应位置写上你的解答或者想法，中英文皆可，请使用符合 Markdown 语法的格式：
+### 追加你的内容 ✍️
+把下面代码块直接复制到对应文件末尾（保留缩进），并在对应位置写上你的解答或者想法，中英文皆可，请使用符合 Markdown 语法的格式，请不要修改文件内已有的内容：
 
 ```markdown
 ??? success "来自[Your Name]的解答"
@@ -47,10 +58,17 @@
 
     你的补充思路或者评论写在这里。
 
-### 提交 Pull Request
-1. 新建分支：`git checkout -b your-branch-name`
-2. 提交修改：`git add .`，再执行 `git commit -m "add solution for xx"`
-3. 推送到你的仓库：`git push origin your-branch-name`
-4. 回到 GitHub，点击 **Compare & pull request**
+### 提交 Pull Request 🚀
+1. 确保本地 `main` 已与上游同步（见上一步）。
+2. 从最新 `main` 新建分支：`git checkout -b your-branch-name`
+3. 仅添加你改动的文件（避免误提交无关内容）：
+    `git add docs/solutions/...`
+4. 提交修改：`git commit -m "add solution for xx, by xx"`
+5. 推送到你的仓库：`git push -u origin your-branch-name`
+6. 回到 GitHub，点击 **Compare & pull request**，确认：
+    - base repository: `yuchen-he00/stochastic-process-exercises`
+    - base branch: `main`
+    - compare branch: `your-branch-name`
+7. 在 PR 描述中简要写明：改了哪道题、补充了解答还是想法、是否修改了现有内容。
 
 作者会在 1～3 天内审核你的 PR；通过后会合并并自动编译。
