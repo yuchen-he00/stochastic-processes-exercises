@@ -13,7 +13,7 @@ nav:
   - 首页:
       - 首页: index.md
       - 题目更新日志: update_log.md
-      - 安全守则: code_of_conduct.md
+      # - 安全守则: code_of_conduct.md
   - 习题与解答:
       - 第一章: 
         - 练习: exercises/chapter_01_exercises.md
