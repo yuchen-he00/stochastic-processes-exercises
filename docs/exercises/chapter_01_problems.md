@@ -85,9 +85,11 @@
 
 	定义如下三个事件：
 
-      	- $A$: $T \le 4L$；
-      	- $B$: 对于任意 $1 \le t \le 4L$，$\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}$，其中 $K_t$ 表示前 $t$ 次实验中正面的个数；
-      	- $C$: $\mathcal{A}$ 输出 $0$，即认为硬币是公平的。
+    - $A$: $T \le 4L$；
+    - $B$: 对于任意 $1 \le t \le 4L$，$\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}$，其中 $K_t$ 表示前 $t$ 次实验中正面的个数；
+    - $C$: $\mathcal{A}$ 输出 $0$，即认为硬币是公平的。
+
+	请解答下面的问题。
 
     1. 下面这个定理是切比雪夫不等式的推广，请用这个定理证明 $\Pr[0]{A \cap B \cap C} \ge 1/4$（此定理本身无需证明，可以直接使用）。
 
@@ -107,9 +109,12 @@
 	Let $L = \frac{1}{100\eps^2}\log\frac{1}{4\delta}$. Suppose $\eps \in (0, 1/8), \delta \in (0, e^{-4}/4)$. We first consider deterministic algorithms, where the only source of randomness is the outcome of the coin flips. Let $\Pr[0]{\cdot}$ and $\E[0]{\cdot}$ denote the probability and expectation when the input coin is case $0$, and let $\Pr[1]{\cdot}$ and $\E[1]{\cdot}$ denote the probability and expectation when the input coin is case $1$, where $0$ represents the fair coin and $1$ represents the biased coin. Using proof by contradiction, assume there exists a deterministic algorithm $\mathcal{A}$ meeting the requirements perfectly and satisfying $\E[0]{T} \le L$. Consider the sample space $\Omega = \left\{0, 1\right\}^{*}$.
 
 	Define the following three events:
-    	- $A$: $T \le 4L$;
-    	- $B$: For any $1 \le t \le 4L$, $\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}$, where $K_t$ is the number of heads in the first $t$ trials;
-    	- $C$: $\mathcal{A}$ outputs $0$, concluding that the coin is fair.
+
+    - $A$: $T \le 4L$;
+    - $B$: For any $1 \le t \le 4L$, $\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}$, where $K_t$ is the number of heads in the first $t$ trials;
+    - $C$: $\mathcal{A}$ outputs $0$, concluding that the coin is fair.
+
+	Please answer the following questions.
 
     1. The following theorem is a generalization of Chebyshev's inequality. Use this theorem to prove that $\Pr[0]{A \cap B \cap C} \ge 1/4$ (the theorem itself does not need to be proved and can be used directly).
 
