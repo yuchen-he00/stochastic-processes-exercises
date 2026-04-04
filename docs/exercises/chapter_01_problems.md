@@ -1,7 +1,10 @@
 # 第一章 独立随机变量 (Independent Random Variables)
 
+
 ## 问题 (Problems) {: .prob-counter style="counter-reset: chapter 1 question 0;" }
 
+
+<!--
 ### 双选之力 (Power of Two Choices)
 === "中文"
     在正文讲的投球入箱模型中，我们将 $n$ 个球独立均匀随机地投入 $n$ 个箱子，最大负载高概率是 $O\tp{\frac{\log n}{\log \log n}}$。这就是大自然的“不公平性”。现在假设我们改变投球规则：每次投球时，我们独立均匀随机地挑选 $2$ 个不同的箱子，然后看一眼，把球放入这两个箱子中当前球更少的那一个（如果一样多就随便挑一个）。
@@ -13,7 +16,9 @@
     
 === "English"
 
+
 --8<-- "solutions/chapter_01/problems/problem_two_choices.md"
+-->
 
 ### 乐观的馈赠 (Gift of Optimism)
 === "中文"
