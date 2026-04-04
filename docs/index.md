@@ -130,3 +130,7 @@ git checkout main        # 切回主分支
 git pull origin main     # 同步合并后的最新内容
 git branch -d your-branch-name  # 删除已完成的本地分支
 ```
+
+## 意见与勘误 💬
+
+如果你对教材本身有任何意见、建议，或者发现了 typo，欢迎前往 [GitHub 仓库](https://github.com/yuchen-he00/stochastic-process-exercises/issues) 提交 Issue，我们会及时处理。
