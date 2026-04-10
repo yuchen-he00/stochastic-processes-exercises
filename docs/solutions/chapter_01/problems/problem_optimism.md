@@ -28,11 +28,13 @@
     
     记 $k = T_1(t-1)$，$X = k\hat{\mu}_1$，则有 $E(X) = k\mu_1$；
 
-    代入霍夫丁不等式，有
+    由霍夫丁不等式，有
 
-    \[\mathbb{P}[\hat{\mu}_1 - \mu_1 \leq -\sqrt{\frac{2\ln t}{k}}] = \mathbb{P}[X - E(X) < -\sqrt{2k\ln t}] \leq e ^ {-\frac{4k\ln t}{k}} = t ^ {-4}\]
+    \[\mathbb{P}(A) = \sum\limits_{j = 1} ^ t\mathbb{P}(A \cap \left\lbrace k = j \right\rbrace) \leq \sum\limits_{j = 1} ^ t \mathbb{P}[\hat{\mu}_1 - \mu_1 \leq -\sqrt{\frac{2\ln t}{j}}] \]
+    
+    \[= \sum\limits_{j = 1} ^ t\mathbb{P}[X - E(X) < -\sqrt{2j\ln t}] \leq \sum\limits_{j = 1} ^ t e ^ {-\frac{4j\ln t}{j}} = t ^ {-3}\]
 
-    故事件 $A$ 发生的概率不超过 $t^{-4}$。
+    故事件 $A$ 发生的概率不超过 $t^{-3}$。
 
     (3) 对于次优臂 $i$，定义随机变量 $X_t$，如果第 $t$ 次选中了这个臂则 $X_t = 1$，否则 $X_t = 0$；
 
@@ -46,11 +48,11 @@
 
     其中，$X_t = 1 \cap T_i(t-1) > \frac{8\ln t}{\Delta_i ^ 2}$ 代表选中了次优臂 $i$ 但是事件 $C$ 不发生，此时事件 $A$ 和事件 $B$ 中必有一个发生，从而可得概率上界
 
-    \[\mathbb{P}[X_t = 1 \cap T_i(t-1) > \frac{8\ln t}{\Delta_i ^ 2}] \leq \mathbb{P}[A] + \mathbb{P}[B] \leq 2t^{-4}\]
+    \[\mathbb{P}[X_t = 1 \cap T_i(t-1) > \frac{8\ln t}{\Delta_i ^ 2}] \leq \mathbb{P}[A] + \mathbb{P}[B] \leq 2t^{-3}\]
 
     故有
 
-    \[E(T_i(T)) \leq \sum\limits_{t = n + 1} ^ T \mathbb{P}[X_t = 1 \cap T_i(t-1) \le \frac{8\ln t}{\Delta_i ^ 2}] + \sum\limits_{t = n+1} ^ T \frac{2}{t^4} + 1 \leq \frac{8\ln T}{\Delta_i ^ 2} + 3 = O(\frac{\ln T}{\Delta_i ^ 2})\]
+    \[E(T_i(T)) \leq \sum\limits_{t = n + 1} ^ T \mathbb{P}[X_t = 1 \cap T_i(t-1) \le \frac{8\ln t}{\Delta_i ^ 2}] + \sum\limits_{t = n+1} ^ T \frac{2}{t^3} + 1 \leq \frac{8\ln T}{\Delta_i ^ 2} + 3 = O(\frac{\ln T}{\Delta_i ^ 2})\]
 
     然后估计懊悔上界 $R(T)$；
 
