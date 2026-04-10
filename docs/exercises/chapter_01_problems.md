@@ -33,7 +33,7 @@
       	- 事件 $A$：最优臂 $1$ 的经验均值被严重低估了，即 $\hat{\mu}_{1, T_1(t-1)} \le \mu_1 - \sqrt{\frac{2\ln t}{T_1(t-1)}}$；
       	- 事件 $B$：次优臂 $i$ 的经验均值被严重高估了，即 $\hat{\mu}_{i, T_i(t-1)} \ge \mu_i + \sqrt{\frac{2\ln t}{T_i(t-1)}}$；
       	- 事件 $C$：该次优臂 $i$ 被探索的次数还不够多，$T_i(t-1)$ 对于区分均值差 $\Delta_i$ 来说太小了，即 $\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}$。
-	2. 对于确定的 $t$ 和次优臂 $i$（其中 $t\ge n+1$, $i\neq 1$），请证明上一问中事件 $A$ 和事件 $B$ 发生的概率均不超过 $t^{-4}$。
+	2. 对于确定的 $t$ 和次优臂 $i$（其中 $t\ge n+1$, $i\neq 1$），请证明上一问中事件 $A$ 和事件 $B$ 发生的概率均不超过 $t^{-3}$。
 	3. 证明每个次优臂被拉动的期望次数 $\E{T_i(T)} = O\tp{\frac{\ln T}{\Delta_i^2}}$，并据此进一步证明 UCB 算法的期望懊悔上界为 $O\tp{\sqrt{nT\ln T}}$。
 	4. 请指出直观上 UCB 算法为什么比 ETC 算法的表现更好？
     
@@ -49,7 +49,7 @@
        - Event $A$: The empirical mean of the optimal arm $1$ is severely underestimated, i.e., $\hat{\mu}_{1, T_1(t-1)} \le \mu_1 - \sqrt{\frac{2\ln t}{T_1(t-1)}}$;
        - Event $B$: The empirical mean of the suboptimal arm $i$ is severely overestimated, i.e., $\hat{\mu}_{i, T_i(t-1)} \ge \mu_i + \sqrt{\frac{2\ln t}{T_i(t-1)}}$;
        - Event $C$: The suboptimal arm $i$ has not been explored enough, and $T_i(t-1)$ is too small to distinguish the mean difference $\Delta_i$, i.e., $\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}$.
-    2. For a fixed $t$ and suboptimal arm $i$ (where $t\ge n+1$, $i\neq 1$), prove that the probability of occurrence for both Event $A$ and Event $B$ in the previous question is at most $t^{-4}$.
+    2. For a fixed $t$ and suboptimal arm $i$ (where $t\ge n+1$, $i\neq 1$), prove that the probability of occurrence for both Event $A$ and Event $B$ in the previous question is at most $t^{-3}$.
     3. Prove that the expected number of pulls for each suboptimal arm is $\E{T_i(T)} = O\tp{\frac{\ln T}{\Delta_i^2}}$, and use this to further prove that the expected regret upper bound of the UCB algorithm is $O\tp{\sqrt{nT\ln T}}$.
     4. Provide an intuitive explanation for why the UCB algorithm performs better than the ETC algorithm.
 
