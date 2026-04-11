@@ -10,20 +10,20 @@
 
 | 章节 | 下载 |
 |------|------|
-| 第一章：独立随机变量与集中不等式 | [PDF](https://yuchen-he00.github.io/stochastic-process-exercises/book/ch01.pdf) |
-| 第二章：有限状态马尔可夫链 | [PDF](https://yuchen-he00.github.io/stochastic-process-exercises/book/ch02.pdf) |
+| 第一章：独立随机变量与集中不等式 | [PDF](https://yuchen-he00.github.io/stochastic-processes-exercises/book/ch01.pdf) |
+| 第二章：有限状态马尔可夫链 | [PDF](https://yuchen-he00.github.io/stochastic-processes-exercises/book/ch02.pdf) |
 
 ## 🌐 习题网站
 
 习题与解答发布在 GitHub Pages 上：
 
-**👉 [https://yuchen-he00.github.io/stochastic-process-exercises/](https://yuchen-he00.github.io/stochastic-process-exercises/)**
+**👉 [https://yuchen-he00.github.io/stochastic-processes-exercises/](https://yuchen-he00.github.io/stochastic-processes-exercises/)**
 
 ## 💬 反馈与建议
 
-如果你对习题或书籍内容有任何意见、建议或勘误，欢迎直接 [提 Issue](https://github.com/yuchen-he00/stochastic-process-exercises/issues)。
+如果你对习题或书籍内容有任何意见、建议或勘误，欢迎直接 [提 Issue](https://github.com/yuchen-he00/stochastic-processes-exercises/issues)。
 
-也欢迎通过 Pull Request 贡献你的解答和思路，具体流程请参阅[习题网站首页](https://yuchen-he00.github.io/stochastic-process-exercises/)的贡献指南。
+也欢迎通过 Pull Request 贡献你的解答和思路，具体流程请参阅[习题网站首页](https://yuchen-he00.github.io/stochastic-processes-exercises/)的贡献指南。
 
 ---
 
