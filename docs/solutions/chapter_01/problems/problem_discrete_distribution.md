@@ -2,7 +2,7 @@
 
     (1)
 
-    算法：跑 $T = \frac 1 {\eps^2} \log \frac 2 \delta$ 次，令 $\hat p_i = \frac 1 T \sum_{t=1}^T \1{X_t = i}$，即出现次数的频率。
+    算法：跑 $T = \frac 1 {2\eps^2} \log \frac 2 \delta$ 次，令 $\hat p_i = \frac 1 T \sum_{t=1}^T \1{X_t = i}$，即出现次数的频率。
 
     分析：$\hat p_1$ 是 $T$ 个独立的伯努利随机变量的平均值。由 Hoeffding 不等式有：
 
