@@ -1,0 +1,1352 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../update_log/">
+      
+      
+        <link rel="next" href="../chapter_01_problems/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>练习 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#independent-random-variables" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              练习
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coupon-collector-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        再探奖券收集问题 (Coupon Collector Revisited)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-bound-on-expected-maximum-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大负载期望上界 (Upper Bound on Expected Maximum Load)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-lower-bound-for-exact-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        精确计数内存下界 (Memory Lower Bound for Exact Counting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wisdom-of-the-majority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多数人的智慧 (Wisdom of the Majority)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concentration-of-gaussian-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高斯分布的集中性 (Concentration of Gaussian Distribution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entangled-extremes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        纠缠的极值 (Entangled Extremes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-sub-gaussian-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次高斯分布初探 (Introduction to Sub-Gaussian Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-sub-exponential-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次指数分布初探 (Introduction to Sub-Exponential Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concentration-inequality-for-uncorrelated-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不相关变量集中不等式 (Concentration Inequality for Uncorrelated Variables)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counterexample-to-concentration-under-pairwise-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两两独立下的集中性反例 (Counterexample to Concentration under Pairwise Independence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coupon-collector-revisited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        再探奖券收集问题 (Coupon Collector Revisited)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-bound-on-expected-maximum-load" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大负载期望上界 (Upper Bound on Expected Maximum Load)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-lower-bound-for-exact-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        精确计数内存下界 (Memory Lower Bound for Exact Counting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wisdom-of-the-majority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多数人的智慧 (Wisdom of the Majority)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concentration-of-gaussian-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高斯分布的集中性 (Concentration of Gaussian Distribution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entangled-extremes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        纠缠的极值 (Entangled Extremes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-sub-gaussian-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次高斯分布初探 (Introduction to Sub-Gaussian Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-sub-exponential-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        次指数分布初探 (Introduction to Sub-Exponential Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concentration-inequality-for-uncorrelated-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不相关变量集中不等式 (Concentration Inequality for Uncorrelated Variables)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counterexample-to-concentration-under-pairwise-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两两独立下的集中性反例 (Counterexample to Concentration under Pairwise Independence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="independent-random-variables">第一章 独立随机变量 (Independent Random Variables)</h1>
+<h2 class="ex-counter" id="exercises" style="counter-reset: chapter 1 question 0;">练习 (Exercises)</h2>
+<h3 id="coupon-collector-revisited">再探奖券收集问题 (Coupon Collector Revisited)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中，我们用切比雪夫不等式分析了奖券收集问题，得到了 <span class="arithmatex">\(\Pr{Y\ge n H_n+t}\le \frac{2n^2}{t^2}\)</span>，其中 <span class="arithmatex">\(n\)</span> 是奖券类型总数， <span class="arithmatex">\(Y\)</span> 是收集齐全 <span class="arithmatex">\(n\)</span> 种奖券所需的抽奖次数，<span class="arithmatex">\(H_n\)</span> 是调和数。现在我们用另一种方法来计算这个问题的集中性。</p>
+<ol>
+<li>请用联合界分析存在一种奖券类型在前 <span class="arithmatex">\(n H_n + t\)</span> 次抽奖中都没有被抽到的概率。并据此证明
+    $$
+    \Pr{Y\ge n H_n+t}\le e^{-t/n}.
+    $$</li>
+<li>请根据上一问结论，计算在 <span class="arithmatex">\(n=100\)</span>时，开多少包可以保证以至少 <span class="arithmatex">\(99\%\)</span> 的概率收集全一套？把你的界和切比雪夫不等式得到的界进行比较。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we analyzed the coupon collector's problem using Chebyshev's inequality and showed that <span class="arithmatex">\(\Pr{Y\ge n H_n+t}\le \frac{2n^2}{t^2}\)</span>, where <span class="arithmatex">\(n\)</span> is the total number of coupon types, <span class="arithmatex">\(Y\)</span> is the number of draws required to collect all <span class="arithmatex">\(n\)</span> types, and <span class="arithmatex">\(H_n\)</span> is the harmonic number. Now we use an alternative approach to bound the concentration of this process.</p>
+<ol>
+<li>Use the union bound to analyze the probability that there exists a coupon type not drawn in the first <span class="arithmatex">\(n H_n + t\)</span> draws. Use this to prove that
+    $$
+    \Pr{Y\ge n H_n+t}\le e^{-t/n}.
+    $$</li>
+<li>Based on the previous result, calculate the number of packs required to collect a full set with probability at least <span class="arithmatex">\(99\%\)</span> for <span class="arithmatex">\(n=100\)</span>. Compare your bound with the one obtained from Chebyshev's inequality.</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自[Your name]的解答</summary>
+<p>总所周知，<span class="arithmatex">\(1+1=2\)</span>。</p>
+</details>
+<details class="note">
+<summary>来自[Your name]的想法</summary>
+<p>oh这里有一个小想法想说。</p>
+</details>
+<h3 id="upper-bound-on-expected-maximum-load">最大负载期望上界 (Upper Bound on Expected Maximum Load)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中我们证明了，当 <span class="arithmatex">\(n\)</span> 个球随机投入 <span class="arithmatex">\(n\)</span> 个箱子中时，最大负载 <span class="arithmatex">\(X = \max_{i\in[n]} X_i\)</span> 满足：
+$$
+\Pr{X \ge \frac{6 \log n}{\log \log n}} \le \frac{1}{n}.
+$$
+请利用这一尾部概率的结论，以及 <span class="arithmatex">\(0\le X \le n\)</span> 的事实，证明最大负载的期望满足 <span class="arithmatex">\(\E{X} = O\tp{\frac{\log n}{\log\log n}}\)</span>。</p>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we proved that when <span class="arithmatex">\(n\)</span> balls are randomly thrown into <span class="arithmatex">\(n\)</span> bins, the maximum load <span class="arithmatex">\(X = \max_{i\in[n]} X_i\)</span> satisfies:
+$$
+\Pr{X \ge \frac{6 \log n}{\log \log n}} \le \frac{1}{n}.
+$$
+Using this tail probability bound and the fact that <span class="arithmatex">\(0\le X \le n\)</span>, prove that the expected maximum load satisfies <span class="arithmatex">\(\E{X} = O\tp{\frac{\log n}{\log\log n}}\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="memory-lower-bound-for-exact-counting">精确计数内存下界 (Memory Lower Bound for Exact Counting)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在流模型计算流长度的问题中，我们提到，任何试图精确计算数据流长度 <span class="arithmatex">\(m\)</span> 的确定性算法，如果内存不足，则必然会出错。</p>
+<ol>
+<li>请使用鸽巢原理，严格证明：任何状态数少于 <span class="arithmatex">\(N+1\)</span> 的确定性算法，必定无法对所有长度不超过 <span class="arithmatex">\(N\)</span> 的数据流给出精确的计数。这说明，任何保证精确计数的确定性算法至少需要 <span class="arithmatex">\(\lceil \log_2(N+1) \rceil\)</span> 比特的内存。</li>
+<li>如果不限制是确定性算法，而是允许使用随机算法，但依然要求算法在任何输入下都必须零误差输出流长度 <span class="arithmatex">\(m\)</span>，它能否比确定性算法消耗更少的峰值内存空间？请证明你的结论。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the problem of computing the stream length <span class="arithmatex">\(m\)</span> in the streaming model, we mentioned that any deterministic algorithm attempting exact counting will inevitably fail if its memory is insufficient.</p>
+<ol>
+<li>Use the pigeonhole principle to rigorously prove that any deterministic algorithm with fewer than <span class="arithmatex">\(N+1\)</span> states cannot output the exact count for all data streams of length up to <span class="arithmatex">\(N\)</span>. This implies that any deterministic algorithm guaranteeing exact counting requires at least <span class="arithmatex">\(\lceil \log_2(N+1) \rceil\)</span> bits of memory.</li>
+<li>If we allow randomized algorithms instead of restricting to deterministic ones, but still require the algorithm to output the stream length <span class="arithmatex">\(m\)</span> with zero error on any input, can it consume less peak memory space than a deterministic algorithm? Prove your conclusion.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="wisdom-of-the-majority">多数人的智慧 (Wisdom of the Majority)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设你有一个预测股市明天涨跌的算法。该算法每次独立进行预测时，都会以 <span class="arithmatex">\(\frac{3}{4}\)</span> 的概率给出正确的建议。为了提升预测的准确率，你决定让该算法独立运行 <span class="arithmatex">\(N\)</span> 次，并采用多数表决（majority vote）的方式得出最终的投资决策。请证明：对于任意给定的允许出错的概率上限 <span class="arithmatex">\(\delta \in (0, 1)\)</span>，只要运行次数满足
+$$
+N \ge 8 \ln\tp{\frac{1}{\delta}},
+$$
+这种多数表决策略就能以至少 <span class="arithmatex">\(1 - \delta\)</span> 的概率给出正确的投资决策。</p>
+</div>
+<div class="tabbed-block">
+<p>Suppose you have an algorithm that predicts whether the stock market will go up or down tomorrow. Each time the algorithm makes an independent prediction, it gives the correct advice with probability <span class="arithmatex">\(\frac{3}{4}\)</span>. To improve the prediction accuracy, you decide to run the algorithm independently <span class="arithmatex">\(N\)</span> times and use a majority vote to make the final investment decision. Prove that for any given error probability bound <span class="arithmatex">\(\delta \in (0, 1)\)</span>, as long as the number of runs satisfies
+$$
+N \ge 8 \ln\tp{\frac{1}{\delta}},
+$$
+this majority vote strategy will yield the correct investment decision with probability at least <span class="arithmatex">\(1 - \delta\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="concentration-of-gaussian-distribution">高斯分布的集中性 (Concentration of Gaussian Distribution)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(X \sim \+N(0, 1)\)</span> 为标准高斯随机变量。我们来探究其尾部概率的精确上下界。</p>
+<ol>
+<li>请证明对于任意 <span class="arithmatex">\(x &gt; 0\)</span>，有如下积分不等式成立：
+    $$
+    (x^{-1} - x^{-3})e^{-x^2/2} \le \int_x^{+\infty} e^{-y^2/2} \dd y \le x^{-1} e^{-x^2/2}.
+    $$</li>
+<li>利用上述结论，证明标准高斯分布的尾部概率 <span class="arithmatex">\(\Pr{\abs{X} \ge t}\)</span> 的上下界（<span class="arithmatex">\(t&gt;0\)</span>），并说明当 <span class="arithmatex">\(t\)</span> 足够大时，该概率为 <span class="arithmatex">\(\Theta\tp{t^{-1} \exp(-t^2/2)}\)</span>。进一步地，证明当 <span class="arithmatex">\(t \to +\infty\)</span> 时，有如下渐近等价关系：
+    $$
+    \Pr{\abs{X} \ge t} \sim \sqrt{\frac{2}{\pi}} t^{-1} \exp(-t^2/2).
+    $$</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(X \sim \+N(0, 1)\)</span> be a standard Gaussian random variable. We explore tight upper and lower bounds for its tail probability.</p>
+<ol>
+<li>Prove that for any <span class="arithmatex">\(x &gt; 0\)</span>, the following integral inequalities hold:
+    $$
+    (x^{-1} - x^{-3})e^{-x^2/2} \le \int_x^{+\infty} e^{-y^2/2} \dd y \le x^{-1} e^{-x^2/2}.
+    $$</li>
+<li>Using the above result, prove the upper and lower bounds for the tail probability <span class="arithmatex">\(\Pr{\abs{X} \ge t}\)</span> of the standard Gaussian distribution (for <span class="arithmatex">\(t&gt;0\)</span>), and show that when <span class="arithmatex">\(t\)</span> is sufficiently large, this probability is <span class="arithmatex">\(\Theta\tp{t^{-1} \exp(-t^2/2)}\)</span>. Furthermore, prove that as <span class="arithmatex">\(t \to +\infty\)</span>, the following asymptotic equivalence holds:
+    $$
+    \Pr{\abs{X} \ge t} \sim \sqrt{\frac{2}{\pi}} t^{-1} \exp(-t^2/2).
+    $$</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="entangled-extremes">纠缠的极值 (Entangled Extremes)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> 为 <span class="arithmatex">\(n\)</span> 个标准高斯分布的随机变量，即对所有 <span class="arithmatex">\(i \in [n]\)</span> 有 <span class="arithmatex">\(X_i \sim \+N(0, 1)\)</span>。这里我们不要求它们是相互独立的。令 <span class="arithmatex">\(Z = \max_{i \in [n]} X_i\)</span> 表示它们的最大值。请证明：
+$$
+\E{Z} \le \sqrt{2 \log n}.
+$$</p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> be <span class="arithmatex">\(n\)</span> standard Gaussian random variables, i.e., <span class="arithmatex">\(X_i \sim \+N(0, 1)\)</span> for all <span class="arithmatex">\(i \in [n]\)</span>. Here, we do not require them to be mutually independent. Let <span class="arithmatex">\(Z = \max_{i \in [n]} X_i\)</span> denote their maximum value. Prove that:
+$$
+\E{Z} \le \sqrt{2 \log n}.
+$$</p>
+</div>
+</div>
+</div>
+<h3 id="introduction-to-sub-gaussian-distributions">次高斯分布初探 (Introduction to Sub-Gaussian Distributions)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>如果一个均值为 <span class="arithmatex">\(0\)</span> 的随机变量 <span class="arithmatex">\(X\)</span>，其矩生成函数满足，对于任意 <span class="arithmatex">\(\lambda \in \bb R\)</span>，有 <span class="arithmatex">\(\E{e^{\lambda X}} \le \exp\tp{\frac{\lambda^2 \sigma^2}{2}}\)</span>，我们称 <span class="arithmatex">\(X\)</span> 是参数为 <span class="arithmatex">\(\sigma^2\)</span> 的次高斯随机变量。</p>
+<ol>
+<li><strong>（集中性）</strong>请模仿正文中切尔诺夫界的证明，证明如果 <span class="arithmatex">\(X\)</span> 是均值为 <span class="arithmatex">\(0\)</span>、参数为 <span class="arithmatex">\(\sigma^2\)</span> 的次高斯随机变量，则对于任意 <span class="arithmatex">\(t&gt;0\)</span>，有 <span class="arithmatex">\(\Pr{X \ge t} \le \exp\tp{-\frac{t^2}{2\sigma^2}}\)</span>。</li>
+<li><strong>（可加性）</strong>证明：若 <span class="arithmatex">\(X_1\)</span> 和 <span class="arithmatex">\(X_2\)</span> 是相互独立的次高斯随机变量，均值为 <span class="arithmatex">\(0\)</span> 且参数分别为 <span class="arithmatex">\(\sigma_1^2\)</span> 和 <span class="arithmatex">\(\sigma_2^2\)</span>，那么它们的和 <span class="arithmatex">\(X_1 + X_2\)</span> 也是次高斯随机变量，并且其参数为 <span class="arithmatex">\(\sigma_1^2 + \sigma_2^2\)</span>。</li>
+<li><strong>（有界变量即次高斯）</strong>请结合正文中证明过的霍夫丁引理，说明：如果随机变量 <span class="arithmatex">\(X\)</span> 满足 <span class="arithmatex">\(\E{X} = 0\)</span> 且 <span class="arithmatex">\(X\in[a, b]\)</span>，那么 <span class="arithmatex">\(X\)</span> 是一个参数为 <span class="arithmatex">\(\sigma^2 = \frac{(b-a)^2}{4}\)</span> 的次高斯随机变量。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>A random variable <span class="arithmatex">\(X\)</span> with mean <span class="arithmatex">\(0\)</span> is called a sub-Gaussian random variable with parameter <span class="arithmatex">\(\sigma^2\)</span> if its moment generating function satisfies <span class="arithmatex">\(\E{e^{\lambda X}} \le \exp\tp{\frac{\lambda^2 \sigma^2}{2}}\)</span> for all <span class="arithmatex">\(\lambda \in \bb R\)</span>.</p>
+<ol>
+<li><strong>(Concentration)</strong> Emulating the proof of the Chernoff bound in the main text, prove that if <span class="arithmatex">\(X\)</span> is a zero-mean sub-Gaussian random variable with parameter <span class="arithmatex">\(\sigma^2\)</span>, then for any <span class="arithmatex">\(t&gt;0\)</span>, <span class="arithmatex">\(\Pr{X \ge t} \le \exp\tp{-\frac{t^2}{2\sigma^2}}\)</span>.</li>
+<li><strong>(Additivity)</strong> Prove that if <span class="arithmatex">\(X_1\)</span> and <span class="arithmatex">\(X_2\)</span> are independent zero-mean sub-Gaussian random variables with parameters <span class="arithmatex">\(\sigma_1^2\)</span> and <span class="arithmatex">\(\sigma_2^2\)</span> respectively, then their sum <span class="arithmatex">\(X_1 + X_2\)</span> is also a sub-Gaussian random variable with parameter <span class="arithmatex">\(\sigma_1^2 + \sigma_2^2\)</span>.</li>
+<li><strong>(Bounded implies sub-Gaussian)</strong> Using Hoeffding's lemma proved in the main text, show that if a random variable <span class="arithmatex">\(X\)</span> satisfies <span class="arithmatex">\(\E{X} = 0\)</span> and <span class="arithmatex">\(X\in[a, b]\)</span>, then <span class="arithmatex">\(X\)</span> is a sub-Gaussian random variable with parameter <span class="arithmatex">\(\sigma^2 = \frac{(b-a)^2}{4}\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="introduction-to-sub-exponential-distributions">次指数分布初探 (Introduction to Sub-Exponential Distributions)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在前面的练习中我们探讨了次高斯分布。然而，许多常见的随机变量（例如高斯随机变量的平方，即卡方分布）的尾部比高斯分布更厚，它们并不满足次高斯分布的条件。为此，我们引入次指数分布的概念。</p>
+<p>我们称一个随机变量 <span class="arithmatex">\(X\)</span> 为参数为 <span class="arithmatex">\((\nu, \alpha)\)</span> 的次指数（sub-exponential）随机变量（其中 <span class="arithmatex">\(\nu, \alpha &gt; 0\)</span>），如果其中心化后的矩生成函数满足：对于任意 <span class="arithmatex">\(\abs{\lambda} \le \frac{1}{\alpha}\)</span>，有
+$$
+\E{e^{\lambda (X - \E{X})}} \le \exp\tp{\frac{\lambda^2 \nu}{2}}.
+$$
+1. <strong>（集中性）</strong>请证明：如果 <span class="arithmatex">\(X\)</span> 是参数为 <span class="arithmatex">\((\nu, \alpha)\)</span> 的次指数随机变量，那么对于任意 <span class="arithmatex">\(t \ge 0\)</span>，有
+    $$
+    \Pr{X - \E{X} \ge t} \le
+    \left\lbrace\begin{aligned}
+&amp;\exp\tp{-\frac{t^2}{2\nu}}, &amp;&amp; \text{若 } t \in \stp{0, \frac{\nu}{\alpha}}; \cr
+&amp;\exp\tp{-\frac{t}{2\alpha}}, &amp;&amp; \text{若 } t \in \tp{\frac{\nu}{\alpha}, \infty}.
+\end{aligned}\right.
+    $$
+2. <strong>（可加性）</strong>假设 <span class="arithmatex">\(X_1, \dots, X_N\)</span> 是相互独立的随机变量，且每个 <span class="arithmatex">\(X_i\)</span> 都是参数为 <span class="arithmatex">\((\nu_i, \alpha_i)\)</span> 的次指数随机变量。证明：对于任意常数 <span class="arithmatex">\(w_1, \dots, w_N \in \bb R\)</span>，加权和 <span class="arithmatex">\(\sum_{i=1}^N w_i X_i\)</span> 也是次指数随机变量，且其参数为 <span class="arithmatex">\(\tp{\sum_{i=1}^N w_i^2 \nu_i, \max_{i \in [N]} \abs{w_i} \alpha_i}\)</span>。</p>
+<ol>
+<li><strong>（广义伯恩斯坦不等式）</strong>结合前两问的结论，证明广义伯恩斯坦不等式（generalized Bernstein inequality）：在上一问的条件下，记 <span class="arithmatex">\(S_N = \sum_{i=1}^N w_i X_i\)</span>，对于任意 <span class="arithmatex">\(t \ge 0\)</span>，有
+    $$
+    \Pr{S_N - \E{S_N} \ge t} \le
+    \left\lbrace\begin{aligned}
+&amp;\exp\tp{-\frac{t^2}{2\sum_{i=1}^N w_i^2 \nu_i}}, &amp;&amp; \text{若 } t \in \stp{0, \frac{\sum_{i=1}^N w_i^2 \nu_i}{\max_{i \in [N]} \abs{w_i} \alpha_i}}; \cr
+&amp;\exp\tp{-\frac{t}{2\max_{i \in [N]} \abs{w_i} \alpha_i}}, &amp;&amp; \text{其他情况.}
+\end{aligned}\right.
+    $$</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the previous exercises, we explored sub-Gaussian distributions. However, many common random variables (such as the square of a Gaussian random variable, i.e., the <span class="arithmatex">\(\chi^2\)</span>-distribution) have heavier tails than the Gaussian distribution and do not satisfy the sub-Gaussian condition. For this reason, we introduce the concept of sub-exponential distributions.</p>
+<p>A random variable <span class="arithmatex">\(X\)</span> is called a sub-exponential random variable with parameters <span class="arithmatex">\((\nu, \alpha)\)</span> (where <span class="arithmatex">\(\nu, \alpha &gt; 0\)</span>) if its centered moment generating function satisfies the following condition: for any <span class="arithmatex">\(\abs{\lambda} \le \frac{1}{\alpha}\)</span>,
+$$
+\E{e^{\lambda (X - \E{X})}} \le \exp\tp{\frac{\lambda^2 \nu}{2}}.
+$$
+1. <strong>(Concentration)</strong> Prove that if <span class="arithmatex">\(X\)</span> is a sub-exponential random variable with parameters <span class="arithmatex">\((\nu, \alpha)\)</span>, then for any <span class="arithmatex">\(t \ge 0\)</span>,
+    $$
+    \Pr{X - \E{X} \ge t} \le
+    \left\lbrace\begin{aligned}
+&amp;\exp\tp{-\frac{t^2}{2\nu}}, &amp;&amp; \text{if } t \in \stp{0, \frac{\nu}{\alpha}}; \cr
+&amp;\exp\tp{-\frac{t}{2\alpha}}, &amp;&amp; \text{if } t \in \tp{\frac{\nu}{\alpha}, \infty}.
+\end{aligned}\right.
+    $$
+2. <strong>(Additivity)</strong> Suppose <span class="arithmatex">\(X_1, \dots, X_N\)</span> are independent random variables, and each <span class="arithmatex">\(X_i\)</span> is a sub-exponential random variable with parameters <span class="arithmatex">\((\nu_i, \alpha_i)\)</span>. Prove that for any constants <span class="arithmatex">\(w_1, \dots, w_N \in \bb R\)</span>, the weighted sum <span class="arithmatex">\(\sum_{i=1}^N w_i X_i\)</span> is also a sub-exponential random variable, and its parameters are <span class="arithmatex">\(\tp{\sum_{i=1}^N w_i^2 \nu_i, \max_{i \in [N]} \abs{w_i} \alpha_i}\)</span>.</p>
+<ol>
+<li><strong>(Generalized Bernstein Inequality)</strong> Using the results from the previous two parts, prove the generalized Bernstein inequality: under the conditions of the previous part, let <span class="arithmatex">\(S_N = \sum_{i=1}^N w_i X_i\)</span>. Then for any <span class="arithmatex">\(t \ge 0\)</span>,
+    $$
+    \Pr{S_N - \E{S_N} \ge t} \le
+    \left\lbrace\begin{aligned}
+&amp;\exp\tp{-\frac{t^2}{2\sum_{i=1}^N w_i^2 \nu_i}}, &amp;&amp; \text{if } t \in \stp{0, \frac{\sum_{i=1}^N w_i^2 \nu_i}{\max_{i \in [N]} \abs{w_i} \alpha_i}}; \cr
+&amp;\exp\tp{-\frac{t}{2\max_{i \in [N]} \abs{w_i} \alpha_i}}, &amp;&amp; \text{otherwise.}
+\end{aligned}\right.
+    $$</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="concentration-inequality-for-uncorrelated-variables">不相关变量集中不等式 (Concentration Inequality for Uncorrelated Variables)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中，我们探讨了独立随机变量之和的集中不等式。现在我们放宽条件，看看如果随机变量仅仅是不相关的，能得到怎样的集中性。设 <span class="arithmatex">\(X_1, X_2, \dots\)</span> 是一系列中心化（即 <span class="arithmatex">\(\E{X_i} = 0\)</span>）且两两不相关的随机变量，即对于任意 <span class="arithmatex">\(i \neq j\)</span>，有 <span class="arithmatex">\(\E{X_i X_j} = \E{X_i}\E{X_j}\)</span>。</p>
+<ol>
+<li>假设存在常数 <span class="arithmatex">\(C &lt; +\infty\)</span> 使得对所有 <span class="arithmatex">\(i\)</span> 都有 <span class="arithmatex">\(\Var{X_i} \le C\)</span>。请证明对于任意 <span class="arithmatex">\(t &gt; 0\)</span>，有：
+    $$
+    \Pr{\abs{\frac{1}{n} \sum_{i=1}^n X_i} \ge t} \le \frac{C}{n t^2}.
+    $$</li>
+<li>利用上述结论，证明 <span class="arithmatex">\(L^2\)</span> 弱大数定律：若 <span class="arithmatex">\(X_1, X_2, \dots\)</span> 是期望均为 <span class="arithmatex">\(\mu\)</span>、方差一致有界（<span class="arithmatex">\(\sup_i \Var{X_i} &lt; +\infty\)</span>）且两两不相关的随机变量，则其经验均值依概率收敛到 <span class="arithmatex">\(\mu\)</span>，即 <span class="arithmatex">\(\frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{p} \mu\)</span>。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we explored concentration inequalities for the sum of independent random variables. Now we relax this condition to see what degree of concentration can be achieved if the random variables are only uncorrelated. Let <span class="arithmatex">\(X_1, X_2, \dots\)</span> be a sequence of centered (i.e., <span class="arithmatex">\(\E{X_i} = 0\)</span>) and pairwise uncorrelated random variables, meaning <span class="arithmatex">\(\E{X_i X_j} = \E{X_i}\E{X_j}\)</span> for any <span class="arithmatex">\(i \neq j\)</span>.</p>
+<ol>
+<li>Suppose there exists a constant <span class="arithmatex">\(C &lt; +\infty\)</span> such that <span class="arithmatex">\(\Var{X_i} \le C\)</span> for all <span class="arithmatex">\(i\)</span>. Prove that for any <span class="arithmatex">\(t &gt; 0\)</span>:
+    $$
+    \Pr{\abs{\frac{1}{n} \sum_{i=1}^n X_i} \ge t} \le \frac{C}{n t^2}.
+    $$</li>
+<li>Using the above result, prove the <span class="arithmatex">\(L^2\)</span> weak law of large numbers: if <span class="arithmatex">\(X_1, X_2, \dots\)</span> are pairwise uncorrelated random variables with common mean <span class="arithmatex">\(\mu\)</span> and uniformly bounded variances (<span class="arithmatex">\(\sup_i \Var{X_i} &lt; +\infty\)</span>), then their empirical mean converges in probability to <span class="arithmatex">\(\mu\)</span>, i.e., <span class="arithmatex">\(\frac{1}{n} \sum_{i=1}^n X_i \xrightarrow{p} \mu\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="counterexample-to-concentration-under-pairwise-independence">两两独立下的集中性反例 (Counterexample to Concentration under Pairwise Independence)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>上一题表明，仅仅是不相关的条件，就足以让我们得到多项式级别的集中不等式。那么，两两独立且有界的随机变量能否像完全独立那样，带来指数级的集中性呢？本题将给出一个反例。</p>
+<p>设 <span class="arithmatex">\(U = (U_1, \dots, U_\ell)\)</span> 是均匀分布在 <span class="arithmatex">\(\left\{0, 1\right\}^\ell\)</span> 上的随机向量。令 <span class="arithmatex">\(n = 2^\ell - 1\)</span>。对于任意非零向量 <span class="arithmatex">\(v \in \left\{0, 1\right\}^\ell \setminus \left\{\*0\right\}\)</span>，定义随机变量 <span class="arithmatex">\(X_v = \inner{U}{v} \pmod 2\)</span>。
+1. 请证明：这 <span class="arithmatex">\(n\)</span> 个随机变量 <span class="arithmatex">\(X_v\)</span> 均服从 <span class="arithmatex">\(\left\{0, 1\right\}\)</span> 上的均匀分布，且它们是两两独立的。
+2. 请证明：对于任何由这 <span class="arithmatex">\(n\)</span> 个随机变量 <span class="arithmatex">\(\left\{X_v\right\}_{v \neq \*0}\)</span> 生成的事件 <span class="arithmatex">\(A\)</span>（即 <span class="arithmatex">\(A \in \sigma\tp{\left\{X_v\right\}_{v \neq \*0}}\)</span>），其发生的概率 <span class="arithmatex">\(\Pr{A}\)</span> 要么是 <span class="arithmatex">\(0\)</span>，要么至少是 <span class="arithmatex">\(\frac{1}{n+1}\)</span>。</p>
+<p><p class="note-inline">注：这说明，由两两独立随机变量构成的系统，不能保证指数尾部概率的衰减。</p></p>
+</div>
+<div class="tabbed-block">
+<p>The previous exercise shows that the condition of being uniformly uncorrelated is sufficient to obtain a polynomial-level concentration inequality. Can pairwise independent and bounded random variables provide exponential concentration, just as fully independent ones do? This problem constructs a counterexample.</p>
+<p>Let <span class="arithmatex">\(U = (U_1, \dots, U_\ell)\)</span> be a random vector uniformly distributed over <span class="arithmatex">\(\left\{0, 1\right\}^\ell\)</span>. Let <span class="arithmatex">\(n = 2^\ell - 1\)</span>. For any non-zero vector <span class="arithmatex">\(v \in \left\{0, 1\right\}^\ell \setminus \left\{\*0\right\}\)</span>, define the random variable <span class="arithmatex">\(X_v = \inner{U}{v} \pmod 2\)</span>.</p>
+<ol>
+<li>
+<p>Prove that these <span class="arithmatex">\(n\)</span> random variables <span class="arithmatex">\(X_v\)</span> are uniformly distributed over <span class="arithmatex">\(\left\{0, 1\right\}\)</span> and are pairwise independent.</p>
+</li>
+<li>
+<p>Prove that for any event <span class="arithmatex">\(A\)</span> generated by these <span class="arithmatex">\(n\)</span> random variables <span class="arithmatex">\(\left\{X_v\right\}_{v \neq \*0}\)</span> (i.e., <span class="arithmatex">\(A \in \sigma\tp{\left\{X_v\right\}_{v \neq \*0}}\)</span>), its probability <span class="arithmatex">\(\Pr{A}\)</span> is either <span class="arithmatex">\(0\)</span> or at least <span class="arithmatex">\(\frac{1}{n+1}\)</span>.</p>
+</li>
+</ol>
+<p><p class="note-inline">Note: This implies that a system composed of pairwise independent random variables cannot guarantee exponential decay of tail probabilities.</p></p>
+</div>
+</div>
+</div>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

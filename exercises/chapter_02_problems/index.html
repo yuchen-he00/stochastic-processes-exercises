@@ -1,0 +1,1284 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_02_exercises/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>问题 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finite-state-markov-chains" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter_01_exercises/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revisiting-the-fundamental-theorem-of-markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        再探马尔可夫链基本定理 (Revisiting the Fundamental Theorem of Markov Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-decomposition-of-reversible-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可逆链的谱分解 (Spectral Decomposition of Reversible Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-art-of-shuffling-transposition-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        洗牌的艺术：交换洗牌法 (The Art of Shuffling: Transposition Shuffle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-art-of-shuffling-top-to-random-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        洗牌的艺术：顶牌随机插入法 (The Art of Shuffling: Top-to-Random Shuffle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#independent-will-and-herd-mentality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        独立意志与从众心理 (Independent Will and Herd Mentality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revisiting-the-fundamental-theorem-of-markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        再探马尔可夫链基本定理 (Revisiting the Fundamental Theorem of Markov Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-decomposition-of-reversible-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可逆链的谱分解 (Spectral Decomposition of Reversible Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-art-of-shuffling-transposition-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        洗牌的艺术：交换洗牌法 (The Art of Shuffling: Transposition Shuffle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-art-of-shuffling-top-to-random-shuffle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        洗牌的艺术：顶牌随机插入法 (The Art of Shuffling: Top-to-Random Shuffle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#independent-will-and-herd-mentality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        独立意志与从众心理 (Independent Will and Herd Mentality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="finite-state-markov-chains">第二章 有限状态马尔可夫链 (Finite-State Markov Chains)</h1>
+<h2 class="prob-counter" id="problems" style="counter-reset: chapter 2 question 0;">问题 (Problems)</h2>
+<h3 id="revisiting-the-fundamental-theorem-of-markov-chains">再探马尔可夫链基本定理 (Revisiting the Fundamental Theorem of Markov Chains)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文的马尔可夫链基本定理的证明中，我们考虑了两个以 <span class="arithmatex">\(Q\defeq P^{t^*}\)</span> 为转移概率矩阵的马尔可夫链的耦合。在本题，我们将使用另一种“耦合的耦合”的方法来证明这个定理。</p>
+<p>已知状态空间 <span class="arithmatex">\(\Omega=[n]\)</span>，<span class="arithmatex">\(P\)</span> 是一个不可约且非周期的马尔可夫链转移矩阵，给定任意初始状态$ X_0 = x$ 且 <span class="arithmatex">\(Y_0 = y\)</span>。我们在同一概率空间中定义两组过程：</p>
+<ul>
+<li><strong>耦合过程 <span class="arithmatex">\((X_t, Y_t)\)</span></strong>：从 <span class="arithmatex">\((X_0,Y_0)\)</span> 出发，在 <span class="arithmatex">\(X_t \neq Y_t\)</span> 时各自独立按 <span class="arithmatex">\(P\)</span> 转移；一旦存在某时刻 <span class="arithmatex">\(X_t = Y_t\)</span>，此后将永远保持一致，一起按 <span class="arithmatex">\(P\)</span> 转移。</li>
+<li><strong>独立的影子过程 <span class="arithmatex">\((X'_t, Y'_t)\)</span></strong>：从相同的初始状态 <span class="arithmatex">\(X'_0 = x, Y'_0 = y\)</span> 出发，无论是否相遇，全程各自独立按 <span class="arithmatex">\(P\)</span> 转移。</li>
+</ul>
+<p>分别定义它们的首次相遇时间为 <span class="arithmatex">\(\tau = \min\{t \ge 0 | X_t = Y_t\}\)</span> 和 <span class="arithmatex">\(\tau' = \min\{t \ge 0 | X'_t = Y'_t\}\)</span>。</p>
+<ol>
+<li>请证明，对于任意时刻 <span class="arithmatex">\(t\)</span>，<span class="arithmatex">\(\Pr{X_{t} \neq Y_{t}} = \Pr{\tau' &gt; t}\)</span>。</li>
+<li>请利用上一问结论证明马尔可夫链基本定理。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the proof of the Fundamental Theorem of Markov Chains in the main text, we considered a coupling of two Markov chains with transition probability matrix <span class="arithmatex">\(Q\defeq P^{t^*}\)</span>. In this problem, we will prove this theorem using an alternative "coupling of couplings" approach.</p>
+<p>Consider a state space <span class="arithmatex">\(\Omega=[n]\)</span> and an irreducible, aperiodic transition matrix <span class="arithmatex">\(P\)</span>. Given any initial states <span class="arithmatex">\(X_0 = x\)</span> and <span class="arithmatex">\(Y_0 = y\)</span>, we define two sets of processes on the same probability space:</p>
+<ul>
+<li><strong>Coupled process <span class="arithmatex">\((X_t, Y_t)\)</span></strong>: Starts from <span class="arithmatex">\((X_0,Y_0)\)</span>. When <span class="arithmatex">\(X_t \neq Y_t\)</span>, they evolve independently according to <span class="arithmatex">\(P\)</span>. Once they meet (i.e., <span class="arithmatex">\(X_t = Y_t\)</span> for some <span class="arithmatex">\(t\)</span>), they stay together forever, taking identical transitions according to <span class="arithmatex">\(P\)</span>.</li>
+<li><strong>Independent shadow process <span class="arithmatex">\((X'_t, Y'_t)\)</span></strong>: Starts from the same initial states <span class="arithmatex">\(X'_0 = x, Y'_0 = y\)</span>. They evolve independently according to <span class="arithmatex">\(P\)</span> for all time, regardless of whether they meet.</li>
+</ul>
+<p>Define their respective first meeting times as <span class="arithmatex">\(\tau = \min\{t \ge 0 | X_t = Y_t\}\)</span> and <span class="arithmatex">\(\tau' = \min\{t \ge 0 | X'_t = Y'_t\}\)</span>.</p>
+<ol>
+<li>Prove that for any time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(\Pr{X_{t} \neq Y_{t}} = \Pr{\tau' &gt; t}\)</span>.</li>
+<li>Use the result from the previous part to prove the Fundamental Theorem of Markov Chains.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="spectral-decomposition-of-reversible-chains">可逆链的谱分解 (Spectral Decomposition of Reversible Chains)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文以及上一题中，我们介绍了如何用耦合的方法证明马尔可夫链基本定理，在本题中，我们将用谱分解的方法来证明可逆马尔可夫链上的该定理。设 <span class="arithmatex">\(P\)</span> 是一个状态空间为 <span class="arithmatex">\(\Omega=[n]\)</span> 的可逆马尔可夫链的转移矩阵，<span class="arithmatex">\(\pi\)</span> 是其平稳分布。</p>
+<ol>
+<li>
+<p>定义对角矩阵 <span class="arithmatex">\(\Pi = \text{diag}(\pi)\)</span>，定义矩阵 <span class="arithmatex">\(Q = \Pi^{1/2} P \Pi^{-1/2}\)</span>。我们可以用以下谱分解定理给出 <span class="arithmatex">\(Q\)</span> 的谱分解 <span class="arithmatex">\(Q= U \Lambda U^T\)</span>，定义列向量 <span class="arithmatex">\(v_i = \Pi^{-1/2} u_i\)</span>，请证明：<span class="arithmatex">\(\lambda_i\)</span> 也是 <span class="arithmatex">\(P\)</span> 的特征值，且 <span class="arithmatex">\(v_i\)</span> 是对应的特征向量，即 <span class="arithmatex">\(P v_i = \lambda_i v_i\)</span>。</p>
+<div class="admonition theorem">
+<p class="admonition-title">定理（可直接使用）</p>
+<p>设矩阵 <span class="arithmatex">\(A \in \mathbb{R}^{n \times n}\)</span> 为实对称矩阵，则存在正交矩阵 <span class="arithmatex">\(U\)</span> 和对角矩阵 <span class="arithmatex">\(\Lambda = \text{diag}(\lambda_1, \dots, \lambda_n)\)</span>，使得 <span class="arithmatex">\(A = U \Lambda U^T\)</span>。其中 <span class="arithmatex">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_n\)</span> 为 $A $ 的特征值，$ U$ 的列向量 <span class="arithmatex">\(u_1, \dots, u_n\)</span> 构成 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的一组标准正交基，且 <span class="arithmatex">\(A u_i = \lambda_i u_i\)</span>。</p>
+</div>
+</li>
+<li>
+<p>在函数空间 <span class="arithmatex">\(\mathbb{R}^n\)</span> 上定义 <span class="arithmatex">\(\pi\)</span>-内积：对于任意 <span class="arithmatex">\(x, y \in \mathbb{R}^n\)</span>，</p>
+<div class="arithmatex">\[ \langle x, y \rangle_\pi = \sum_{z \in [n]} \pi(z) x(z) y(z) = x^T \Pi y. \]</div>
+<p>定义转移矩阵 <span class="arithmatex">\(P\)</span> 关于该内积的<em>瑞利商 (Rayleigh quotient)</em> 为 <span class="arithmatex">\(R_P(x) = \frac{\langle x, Px \rangle_\pi}{\langle x, x \rangle_\pi}\)</span>（其中 <span class="arithmatex">\(x \neq 0\)</span>）。</p>
+<ol>
+<li>
+<p>请证明 <span class="arithmatex">\(P\)</span> 的第 <span class="arithmatex">\(k\)</span> 大特征值 <span class="arithmatex">\(\lambda_k\)</span> 可以表示为：</p>
+<div class="arithmatex">\[ \lambda_k = \max_{\substack{x \neq 0 \\ \langle x, v_i \rangle_\pi = 0, \forall i &lt; k}} \frac{\langle x, Px \rangle_\pi}{\langle x, x \rangle_\pi}. \]</div>
+</li>
+<li>
+<p>请证明 <span class="arithmatex">\(\lambda_1 = 1\)</span>。并进一步证明：如果该马尔可夫链是不可约的，则 <span class="arithmatex">\(\lambda_1 = 1\)</span> 的几何重数为 <span class="arithmatex">\(1\)</span>，即 <span class="arithmatex">\(\lambda_2 &lt; 1\)</span>。</p>
+</li>
+<li>如果该马尔可夫链是无周期的，请证明 <span class="arithmatex">\(\lambda_n &gt; -1\)</span>。</li>
+</ol>
+</li>
+<li>
+<p>请利用上述谱分解结论，证明对于任意的 <span class="arithmatex">\((x, y)\)</span>：</p>
+<div class="arithmatex">\[ P^t(x,y) = \sum_{i=1}^n \lambda_i^t\, v_i(x)\cdot\pi(y)v_i(y). \]</div>
+<p>并且证明当该马尔可夫链是不可约且无周期的，对于任意的 <span class="arithmatex">\(x\in [n]\)</span>，有</p>
+<div class="arithmatex">\[ \lim_{t \to \infty} P^t(x, \cdot) = \pi. \]</div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text and the previous problem, we introduced how to prove the fundamental theorem using coupling. In this problem, we will prove it for reversible Markov chains using spectral decomposition. Let <span class="arithmatex">\(P\)</span> be the transition matrix of a reversible Markov chain on state space <span class="arithmatex">\(\Omega=[n]\)</span> with stationary distribution <span class="arithmatex">\(\pi\)</span>.</p>
+<ol>
+<li>
+<p>Define the diagonal matrix <span class="arithmatex">\(\Pi = \text{diag}(\pi)\)</span> and the matrix <span class="arithmatex">\(Q = \Pi^{1/2} P \Pi^{-1/2}\)</span>. By the spectral theorem below, <span class="arithmatex">\(Q\)</span> admits a spectral decomposition <span class="arithmatex">\(Q= U \Lambda U^T\)</span>. Defining the column vectors <span class="arithmatex">\(v_i = \Pi^{-1/2} u_i\)</span>, prove that <span class="arithmatex">\(\lambda_i\)</span> is also an eigenvalue of <span class="arithmatex">\(P\)</span>, and that <span class="arithmatex">\(v_i\)</span> is its corresponding eigenvector, meaning <span class="arithmatex">\(P v_i = \lambda_i v_i\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem (Can be used directly)</p>
+<p>Let <span class="arithmatex">\(A \in \mathbb{R}^{n \times n}\)</span> be a real symmetric matrix. Then there exist an orthogonal matrix <span class="arithmatex">\(U\)</span> and a diagonal matrix <span class="arithmatex">\(\Lambda = \text{diag}(\lambda_1, \dots, \lambda_n)\)</span> such that <span class="arithmatex">\(A = U \Lambda U^T\)</span>. Here, <span class="arithmatex">\(\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_n\)</span> are the eigenvalues of <span class="arithmatex">\(A\)</span>, and the columns <span class="arithmatex">\(u_1, \dots, u_n\)</span> of <span class="arithmatex">\(U\)</span> form an orthonormal basis of <span class="arithmatex">\(\mathbb{R}^n\)</span> with <span class="arithmatex">\(A u_i = \lambda_i u_i\)</span>.</p>
+</div>
+</li>
+<li>
+<p>Define a <span class="arithmatex">\(\pi\)</span>-inner product on the function space <span class="arithmatex">\(\mathbb{R}^n\)</span>: for any <span class="arithmatex">\(x, y \in \mathbb{R}^n\)</span>,</p>
+<div class="arithmatex">\[ \langle x, y \rangle_\pi = \sum_{z \in [n]} \pi(z) x(z) y(z) = x^T \Pi y. \]</div>
+<p>Define the <em>Rayleigh quotient</em> of the transition matrix <span class="arithmatex">\(P\)</span> with respect to this inner product as <span class="arithmatex">\(R_P(x) = \frac{\langle x, Px \rangle_\pi}{\langle x, x \rangle_\pi}\)</span> (for <span class="arithmatex">\(x \neq 0\)</span>).</p>
+<ol>
+<li>
+<p>Prove that the <span class="arithmatex">\(k\)</span>-th largest eigenvalue <span class="arithmatex">\(\lambda_k\)</span> of <span class="arithmatex">\(P\)</span> can be expressed as:</p>
+<div class="arithmatex">\[ \lambda_k = \max_{\substack{x \neq 0 \\ \langle x, v_i \rangle_\pi = 0, \forall i &lt; k}} \frac{\langle x, Px \rangle_\pi}{\langle x, x \rangle_\pi}. \]</div>
+</li>
+<li>
+<p>Prove that <span class="arithmatex">\(\lambda_1 = 1\)</span>. Furthermore, show that if the Markov chain is irreducible, then the geometric multiplicity of <span class="arithmatex">\(\lambda_1 = 1\)</span> is <span class="arithmatex">\(1\)</span>, which implies <span class="arithmatex">\(\lambda_2 &lt; 1\)</span>.</p>
+</li>
+<li>If the Markov chain is aperiodic, prove that <span class="arithmatex">\(\lambda_n &gt; -1\)</span>.</li>
+</ol>
+</li>
+<li>
+<p>Using the spectral decomposition results above, prove that for any pair <span class="arithmatex">\((x, y)\)</span>:</p>
+<div class="arithmatex">\[ P^t(x,y) = \sum_{i=1}^n \lambda_i^t\, v_i(x)\cdot\pi(y)v_i(y). \]</div>
+<p>Moreover, prove that if this Markov chain is both irreducible and aperiodic, then for any <span class="arithmatex">\(x\in [n]\)</span>,</p>
+<div class="arithmatex">\[ \lim_{t \to \infty} P^t(x, \cdot) = \pi. \]</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="the-art-of-shuffling-transposition-shuffle">洗牌的艺术：交换洗牌法 (The Art of Shuffling: Transposition Shuffle)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中我们讲过一种随机至顶的洗牌方法，在本题我们考虑另一种方式，对于一副有 <span class="arithmatex">\(n\)</span> 张牌的牌堆：</p>
+<ul>
+<li>从 <span class="arithmatex">\([n]\)</span> 中均匀随机地选择两个位置 <span class="arithmatex">\(i, j\)</span>（允许 <span class="arithmatex">\(i = j\)</span>）；</li>
+<li>交换牌堆中第 <span class="arithmatex">\(i\)</span> 张和第 <span class="arithmatex">\(j\)</span> 张牌。</li>
+</ul>
+<!-- -->
+<ol>
+<li>证明这个链是不可约的、非周期的，并且均匀分布是其唯一的平稳分布。</li>
+<li>证明上述洗牌方法等价于以下方法：  <ul>
+<li>从 <span class="arithmatex">\([n]\)</span> 中随机选择一个位置 <span class="arithmatex">\(i\)</span>，并且独立地均匀随机选择一张牌 <span class="arithmatex">\(c\)</span>（例如 <span class="arithmatex">\(c = \clubsuit Q\)</span>）；</li>
+<li>将牌 <span class="arithmatex">\(c\)</span> 与牌堆中第 <span class="arithmatex">\(i\)</span> 张牌交换。</li>
+</ul>
+</li>
+<li>证明上述洗牌方法的混合时间是 <span class="arithmatex">\(O(n^2)\)</span>。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text we introduced the top-to-random shuffle. Here we consider another shuffling method. For a deck of <span class="arithmatex">\(n\)</span> cards:</p>
+<ul>
+<li>Uniformly and randomly choose two positions <span class="arithmatex">\(i, j\)</span> from <span class="arithmatex">\([n]\)</span> (allowing <span class="arithmatex">\(i = j\)</span>);</li>
+<li>Swap the <span class="arithmatex">\(i\)</span>-th and <span class="arithmatex">\(j\)</span>-th cards in the deck.</li>
+</ul>
+<!-- -->
+<ol>
+<li>Prove that this chain is irreducible and aperiodic, and that the uniform distribution is its unique stationary distribution.</li>
+<li>Prove that the shuffling method above is equivalent to the following:<ul>
+<li>Randomly choose a position <span class="arithmatex">\(i\)</span> from <span class="arithmatex">\([n]\)</span>, and independently uniformly pick a card <span class="arithmatex">\(c\)</span> (e.g., <span class="arithmatex">\(c = \clubsuit Q\)</span>);</li>
+<li>Swap card <span class="arithmatex">\(c\)</span> with the <span class="arithmatex">\(i\)</span>-th card in the deck.</li>
+</ul>
+</li>
+<li>Prove that the mixing time of this shuffling method is <span class="arithmatex">\(O(n^2)\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="the-art-of-shuffling-top-to-random-shuffle">洗牌的艺术：顶牌随机插入法 (The Art of Shuffling: Top-to-Random Shuffle)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>正文里我们用耦合的技术分析了随机至顶洗牌方法的混合时间，现在考虑我们在第二章开头提过的另一种洗牌方法：顶牌随机插入法（Top-to-random shuffle）。
+考虑一副有 <span class="arithmatex">\(n\)</span> 张牌的牌堆。在每一次洗牌操作中，我们将当前牌堆顶部的第一张牌抽出，并将其以相等的概率（<span class="arithmatex">\(1/n\)</span>）随机插入到牌堆的 <span class="arithmatex">\(n\)</span> 个可能位置之一（包括留在顶部）。该马尔可夫链的状态空间 <span class="arithmatex">\(\Omega\)</span> 为由 <span class="arithmatex">\(n\)</span> 张牌的所有排列组成的集合 <span class="arithmatex">\(\mathcal{S}_n\)</span>。</p>
+<p>注意到我们无法像随机至顶洗牌法那样构造一个简单的耦合来分析混合时间，因此我们需要引入一些新的概念和工具。</p>
+<ol>
+<li>证明：该马尔可夫链是不可约、非周期的，其唯一的平稳分布 <span class="arithmatex">\(\pi\)</span> 为 <span class="arithmatex">\(\Omega\)</span> 上的均匀分布。</li>
+<li>
+<p>对于具有平稳分布 <span class="arithmatex">\(\pi\)</span> 的马尔可夫链 <span class="arithmatex">\(\{X_t\}\)</span>，定义<em>强平稳时间（strong stationary time）</em> <span class="arithmatex">\(\tau\)</span> 为一个可能依赖于初始状态 <span class="arithmatex">\(x\)</span> 的停时，满足：对于任意状态 <span class="arithmatex">\(y\)</span> 和时间 <span class="arithmatex">\(t\)</span>，有：</p>
+<div class="arithmatex">\[ \Pr[x]{\tau = t, X_\tau = y} = \Pr[x]{\tau = t}\pi(y). \]</div>
+<p>其中 <span class="arithmatex">\(\mathbb{P}_x\)</span> 表示初始状态为 <span class="arithmatex">\(x\)</span> 时的概率。换言之，在时刻 <span class="arithmatex">\(\tau\)</span> 时，马尔可夫链的状态 <span class="arithmatex">\(X_\tau\)</span> 服从平稳分布 <span class="arithmatex">\(\pi\)</span>，且与停时 <span class="arithmatex">\(\tau\)</span> 独立。</p>
+<p>令 <span class="arithmatex">\(\tau_{\text{top}}\)</span> 为初始牌堆最底部的牌首次被洗入牌堆内部的时间（即原底牌第一次到达牌顶后，进行的再下一次洗牌的时间）。请证明：<span class="arithmatex">\(\tau_{\text{top}}\)</span> 是该洗牌过程的一个强平稳时间。</p>
+</li>
+<li>
+<p>下面我们来证明，强平稳时间可以用来界定马尔可夫链的混合时间。</p>
+<ol>
+<li>
+<p>设 <span class="arithmatex">\(\tau\)</span> 为强平稳时间，请证明对于任意 <span class="arithmatex">\(t \ge 0\)</span>，有：</p>
+<div class="arithmatex">\[ \Pr[x]{\tau \le t, X_t = y} = \Pr[x]{\tau \le t}\pi(y). \]</div>
+</li>
+<li>
+<p>利用（a）的结论证明</p>
+<div class="arithmatex">\[ d(t) = \max_{x \in \Omega} \dTV (P^t(x, \cdot), \pi)\le \max_{x \in \Omega} \Pr[x]{\tau &gt; t}. \]</div>
+<details class="hint">
+<summary>提示</summary>
+<p>定义 <span class="arithmatex">\(s_x(t) \defeq \max_{y \in \Omega} \left[ 1 - \frac{P^t(x,y)}{\pi(y)} \right]\)</span>。可以先分别证明 <span class="arithmatex">\(s_x(t) \le \Pr[x]{\tau &gt; t}\)</span> 和 <span class="arithmatex">\(\dTV (P^t(x, \cdot), \pi) \le s_x(t)\)</span>。</p>
+</details>
+</li>
+</ol>
+</li>
+<li>
+<p>结合前三小问的结论，请证明顶牌随机插入法的混合时间 <span class="arithmatex">\(\tau_{\text{mix}}(\varepsilon)=O\left(n\log \frac{n}{\varepsilon}\right)\)</span>。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we analyzed the mixing time of the random-to-top shuffle using coupling techniques. Now, consider another shuffling method mentioned at the beginning of Chapter 2: the top-to-random shuffle.
+Consider a deck of <span class="arithmatex">\(n\)</span> cards. In each shuffling step, we take the top card and insert it randomly into one of the <span class="arithmatex">\(n\)</span> possible positions in the deck (including remaining at the top) with equal probability (<span class="arithmatex">\(1/n\)</span>). The state space <span class="arithmatex">\(\Omega\)</span> of this Markov chain is the set of all permutations of the <span class="arithmatex">\(n\)</span> cards, denoted as <span class="arithmatex">\(\mathcal{S}_n\)</span>.</p>
+<p>Because we cannot construct a simple coupling like we did for the random-to-top shuffle, we need to introduce some new concepts and tools to analyze its mixing time.</p>
+<ol>
+<li>Prove that this Markov chain is irreducible and aperiodic, and its unique stationary distribution <span class="arithmatex">\(\pi\)</span> is the uniform distribution over <span class="arithmatex">\(\Omega\)</span>.</li>
+<li>
+<p>For a Markov chain <span class="arithmatex">\(\{X_t\}\)</span> with stationary distribution <span class="arithmatex">\(\pi\)</span>, define a <em>strong stationary time</em> <span class="arithmatex">\(\tau\)</span> as a stopping time (which may depend on the initial state <span class="arithmatex">\(x\)</span>) satisfying: for any state <span class="arithmatex">\(y\)</span> and time <span class="arithmatex">\(t\)</span>,</p>
+<div class="arithmatex">\[ \Pr[x]{\tau = t, X_\tau = y} = \Pr[x]{\tau = t}\pi(y). \]</div>
+<p>Here, <span class="arithmatex">\(\mathbb{P}_x\)</span> denotes the probability given the initial state <span class="arithmatex">\(x\)</span>. In other words, at time <span class="arithmatex">\(\tau\)</span>, the state <span class="arithmatex">\(X_\tau\)</span> of the Markov chain follows the stationary distribution <span class="arithmatex">\(\pi\)</span>, and is independent of the stopping time <span class="arithmatex">\(\tau\)</span>.</p>
+<p>Let <span class="arithmatex">\(\tau_{\text{top}}\)</span> be the time when the original bottom card of the deck is first shuffled into the interior of the deck (i.e., the time of the shuffle immediately after the original bottom card reaches the top for the first time). Prove that <span class="arithmatex">\(\tau_{\text{top}}\)</span> is a strong stationary time for this shuffling process.</p>
+</li>
+<li>
+<p>Next, we will show how strong stationary times can be used to bound the mixing time of a Markov chain.</p>
+<ol>
+<li>
+<p>Let <span class="arithmatex">\(\tau\)</span> be a strong stationary time. Prove that for any <span class="arithmatex">\(t \ge 0\)</span>:</p>
+<div class="arithmatex">\[ \Pr[x]{\tau \le t, X_t = y} = \Pr[x]{\tau \le t}\pi(y). \]</div>
+</li>
+<li>
+<p>Use the result from (a) to prove:</p>
+<div class="arithmatex">\[ d(t) = \max_{x \in \Omega} \dTV (P^t(x, \cdot), \pi)\le \max_{x \in \Omega} \Pr[x]{\tau &gt; t}. \]</div>
+<details class="hint">
+<summary>Hint</summary>
+<p>Define <span class="arithmatex">\(s_x(t) \defeq \max_{y \in \Omega} \left[ 1 - \frac{P^t(x,y)}{\pi(y)} \right]\)</span>. You can first show that <span class="arithmatex">\(s_x(t) \le \Pr[x]{\tau &gt; t}\)</span> and <span class="arithmatex">\(\dTV (P^t(x, \cdot), \pi) \le s_x(t)\)</span>.</p>
+</details>
+</li>
+</ol>
+</li>
+<li>
+<p>Combining the results from the previous three parts, prove that the mixing time of the top-to-random shuffle is <span class="arithmatex">\(\tau_{\text{mix}}(\varepsilon)=O\left(n\log \frac{n}{\varepsilon}\right)\)</span>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="independent-will-and-herd-mentality">独立意志与从众心理 (Independent Will and Herd Mentality)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在社交网络中，用户的观点演化常常受到独立思考与从众心理的共同影响。我们考察一个由 <span class="arithmatex">\(n\)</span> 个用户组成的无向连通社交网络 <span class="arithmatex">\(G=(V, E)\)</span>，假设图 <span class="arithmatex">\(G\)</span> 是一个 <span class="arithmatex">\(d\)</span>-正则图，即每个用户都恰好有 <span class="arithmatex">\(d\)</span> 个邻居。每个用户 <span class="arithmatex">\(v \in V\)</span> 在时刻 <span class="arithmatex">\(t\)</span> 持有一个二元观点 <span class="arithmatex">\(X_t(v) \in \{+1, -1\}\)</span>。全局状态记为 <span class="arithmatex">\(X_t \in \{+1, -1\}^V\)</span>。在每一步里，系统按照<em>噪声投票者模型（noisy voter model）</em>进行演化：</p>
+<ul>
+<li>均匀随机地选中一个用户 <span class="arithmatex">\(v \in V\)</span>。</li>
+<li>以概率 <span class="arithmatex">\(\alpha \in [0, 1)\)</span>，用户 <span class="arithmatex">\(v\)</span> 展现独立意志，即从 <span class="arithmatex">\(\{+1, -1\}\)</span> 中均匀随机地选取一个新观点。</li>
+<li>以概率 <span class="arithmatex">\(1-\alpha\)</span>，用户 <span class="arithmatex">\(v\)</span> 展现从众心理，从它的 <span class="arithmatex">\(d\)</span> 个邻居中均匀随机地选中一个邻居 <span class="arithmatex">\(u\)</span>，并完全复制 <span class="arithmatex">\(u\)</span> 当前的观点，即 <span class="arithmatex">\(X_{t+1}(v) = X_t(u)\)</span>。</li>
+<li>集合 <span class="arithmatex">\(V \setminus \{v\}\)</span> 中的其余用户的观点保持不变。</li>
+</ul>
+<!-- -->
+<ol>
+<li>我们首先来分析该马尔可夫链平稳分布的唯一性。<ol>
+<li>假设网络完全没有独立意志，即 <span class="arithmatex">\(\alpha = 0\)</span>，此为经典的投票者模型（voter model）。请说明该马尔可夫链平稳分布不唯一。</li>
+<li>当 <span class="arithmatex">\(\alpha \in (0, 1)\)</span> 时，请证明该马尔可夫链是不可约且无周期的。</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>
+<p>请写出该链的单步转移概率 <span class="arithmatex">\(P_{k \to k+1}\)</span> 和 <span class="arithmatex">\(P_{k \to k-1}\)</span>，并证明其平稳分布满足：</p>
+<div class="arithmatex">\[ \pi(k) \propto \binom{n}{k} \cdot \Gamma(\beta+k)\cdot \Gamma(\beta+n-k) \]</div>
+<p>，其中 <span class="arithmatex">\(\Gamma(\cdot)\)</span> 为伽马函数：对 <span class="arithmatex">\(z&gt;0\)</span>，</p>
+<div class="arithmatex">\[ \Gamma(z)=\int_0^{\infty} t^{z-1}e^{-t}\dd t, \qquad \text{且满足}\Gamma(z+1)=z\Gamma(z). \]</div>
+</li>
+</ol>
+<p>在一般的 <span class="arithmatex">\(d\)</span>-正则图上，平稳分布极其复杂且不满足细致平衡条件。为了探究平稳分布的宏观特性，我们考虑完全图（<span class="arithmatex">\(d=n-1\)</span>），考察该系统中持 <span class="arithmatex">\(+1\)</span> 观点的用户总数 <span class="arithmatex">\(k \in \{0, 1, \dots, n\}\)</span> 的演变。令参数 <span class="arithmatex">\(\beta = \frac{\alpha(n-1)}{2(1-\alpha)}\)</span>。</p>
+<ol>
+<li>通过分析 <span class="arithmatex">\(\frac{\pi(k+1)}{\pi(k)}\)</span> 的单调性，说明，当 <span class="arithmatex">\(\alpha &gt; \frac{2}{n+1}\)</span> 时，宏观上看，平稳时倾向于形成一半人支持 <span class="arithmatex">\(+1\)</span>，一半人支持 <span class="arithmatex">\(-1\)</span> 的无序状态；当 <span class="arithmatex">\(\alpha &lt; \frac{2}{n+1}\)</span> 时，平稳状态时更倾向于形成大多数人支持同一观点的信息茧房状态。</li>
+</ol>
+</li>
+<li>
+<p>我们回到一般的 <span class="arithmatex">\(d\)</span>-正则图，分析 <span class="arithmatex">\(\alpha \in (0, 1)\)</span> 时系统收敛到平稳状态的速度，即使我们算不出平稳分布，但可以通过这个马尔可夫链快速地生成独立的近似样本，并通过这些样本来估计系统的性质。</p>
+<p>对于任意两个初始状态为 <span class="arithmatex">\(X_0\)</span> 和 $Y_0 $ 的马尔可夫链，构造耦合：在时刻 $ t$，两链选中同一个用户 <span class="arithmatex">\(v\)</span>，使用同一个有偏硬币决定用户 <span class="arithmatex">\(v\)</span> 是否持独立意志更新；若独立，赋予其同一个随机观点；若从众，随机选择 <span class="arithmatex">\(v\)</span> 的同一个邻居 <span class="arithmatex">\(u\)</span> 并复制其观点给 <span class="arithmatex">\(v\)</span>。</p>
+<p>定义时刻 <span class="arithmatex">\(t\)</span> 的汉明距离 <span class="arithmatex">\(H(X_t, Y_t) = |D_t|\)</span>，其中 <span class="arithmatex">\(D_t = \{ w \in V | X_t(w) \neq Y_t(w) \}\)</span>。</p>
+<ol>
+<li>
+<p>请证明单步距离变化的期望满足</p>
+<div class="arithmatex">\[ \E{H(X_{t+1}, Y_{t+1}) - H(X_t, Y_t) | X_t, Y_t} = -\frac{\alpha}{n} H(X_t, Y_t) \]</div>
+</li>
+<li>
+<p>请证明该马尔可夫链的混合时间满足</p>
+<div class="arithmatex">\[ \tau_{\text{mix}}(\epsilon) = O\left( \frac{n}{\alpha} \log \frac{n}{\epsilon} \right). \]</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In social networks, the evolution of users' opinions is often jointly influenced by independent thinking and herd mentality. Consider an undirected connected social network <span class="arithmatex">\(G=(V, E)\)</span> consisting of <span class="arithmatex">\(n\)</span> users, and suppose <span class="arithmatex">\(G\)</span> is a <span class="arithmatex">\(d\)</span>-regular graph, meaning each user has exactly <span class="arithmatex">\(d\)</span> neighbors. Each user <span class="arithmatex">\(v \in V\)</span> holds a binary opinion <span class="arithmatex">\(X_t(v) \in \{+1, -1\}\)</span> at time <span class="arithmatex">\(t\)</span>. The global state is given by <span class="arithmatex">\(X_t \in \{+1, -1\}^V\)</span>. In each step, the system evolves according to the <em>noisy voter model</em>:</p>
+<ul>
+<li>A user <span class="arithmatex">\(v \in V\)</span> is chosen uniformly at random.</li>
+<li>With probability <span class="arithmatex">\(\alpha \in [0, 1)\)</span>, user <span class="arithmatex">\(v\)</span> exercises their independent will, picking a new opinion uniformly at random from <span class="arithmatex">\(\{+1, -1\}\)</span>.</li>
+<li>With probability <span class="arithmatex">\(1-\alpha\)</span>, user <span class="arithmatex">\(v\)</span> exhibits herd mentality, selecting a neighbor <span class="arithmatex">\(u\)</span> uniformly at random from their <span class="arithmatex">\(d\)</span> neighbors, and directly copying <span class="arithmatex">\(u\)</span> 's current opinion, such that <span class="arithmatex">\(X_{t+1}(v) = X_t(u)\)</span>.</li>
+<li>The opinions of all other users in <span class="arithmatex">\(V \setminus \{v\}\)</span> remain unchanged.</li>
+</ul>
+<!-- -->
+<ol>
+<li>Let us first analyze the uniqueness of the stationary distribution for this Markov chain.<ol>
+<li>Assume the network completely lacks independent will, i.e., <span class="arithmatex">\(\alpha = 0\)</span>. This corresponds to the standard voter model. Explain why the stationary distribution of this Markov chain is not unique.</li>
+<li>For <span class="arithmatex">\(\alpha \in (0, 1)\)</span>, prove that this Markov chain is irreducible and aperiodic.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>
+<p>Provide the single-step transition probabilities <span class="arithmatex">\(P_{k \to k+1}\)</span> and <span class="arithmatex">\(P_{k \to k-1}\)</span> for this chain, and prove that its stationary distribution satisfies:</p>
+<div class="arithmatex">\[ \pi(k) \propto \binom{n}{k} \cdot \Gamma(\beta+k)\cdot \Gamma(\beta+n-k) \]</div>
+<p>where <span class="arithmatex">\(\Gamma(\cdot)\)</span> is the Gamma function: for <span class="arithmatex">\(z&gt;0\)</span>,</p>
+<div class="arithmatex">\[ \Gamma(z)=\int_0^{\infty} t^{z-1}e^{-t}\dd t, \qquad \text{and satisfies }\Gamma(z+1)=z\Gamma(z). \]</div>
+</li>
+</ol>
+<p>On a general <span class="arithmatex">\(d\)</span>-regular graph, the stationary distribution is extremely complex and does not satisfy the detailed balance condition. To investigate the macroscopic characteristics of the stationary distribution, we consider a complete graph (<span class="arithmatex">\(d=n-1\)</span>) and study the evolution of the total number of users <span class="arithmatex">\(k \in \{0, 1, \dots, n\}\)</span> holding the <span class="arithmatex">\(+1\)</span> opinion. Let the parameter be <span class="arithmatex">\(\beta = \frac{\alpha(n-1)}{2(1-\alpha)}\)</span>.</p>
+<ol>
+<li>By analyzing the monotonicity of <span class="arithmatex">\(\frac{\pi(k+1)}{\pi(k)}\)</span>, show that when <span class="arithmatex">\(\alpha &gt; \frac{2}{n+1}\)</span>, macroscopically, the system at equilibrium tends to form a disordered state where half the population supports <span class="arithmatex">\(+1\)</span> and the other supports <span class="arithmatex">\(-1\)</span>; when <span class="arithmatex">\(\alpha &lt; \frac{2}{n+1}\)</span>, the equilibrium state is more likely to form an echo chamber where the vast majority supports a single opinion.</li>
+</ol>
+</li>
+<li>
+<p>Returning to a general <span class="arithmatex">\(d\)</span>-regular graph, let's analyze the rate at which the system converges to equilibrium for <span class="arithmatex">\(\alpha \in (0, 1)\)</span>. Even if we cannot exactly compute the stationary distribution, we can rapidly generate approximately independent samples from this Markov chain to estimate the system properties.</p>
+<p>Construct a coupling for two Markov chains starting from arbitrary initial states <span class="arithmatex">\(X_0\)</span> and <span class="arithmatex">\(Y_0\)</span>: at time <span class="arithmatex">\(t\)</span>, both chains select the same user <span class="arithmatex">\(v\)</span>, and use the same biased coin to determine if <span class="arithmatex">\(v\)</span> updates via independent will; if independent, both chains assign the same random opinion to <span class="arithmatex">\(v\)</span>; if herding, they pick the same neighbor <span class="arithmatex">\(u\)</span> of <span class="arithmatex">\(v\)</span> and copy its opinion to <span class="arithmatex">\(v\)</span>.</p>
+<p>Define the Hamming distance at time <span class="arithmatex">\(t\)</span> as <span class="arithmatex">\(H(X_t, Y_t) = |D_t|\)</span>, where <span class="arithmatex">\(D_t = \{ w \in V | X_t(w) \neq Y_t(w) \}\)</span>.</p>
+<ol>
+<li>
+<p>Prove that the expected change in distance for a single step satisfies:</p>
+<div class="arithmatex">\[ \E{H(X_{t+1}, Y_{t+1}) - H(X_t, Y_t) | X_t, Y_t} = -\frac{\alpha}{n} H(X_t, Y_t) \]</div>
+</li>
+<li>
+<p>Prove that the mixing time of this Markov chain satisfies:</p>
+<div class="arithmatex">\[ \tau_{\text{mix}}(\epsilon) = O\left( \frac{n}{\alpha} \log \frac{n}{\epsilon} \right). \]</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

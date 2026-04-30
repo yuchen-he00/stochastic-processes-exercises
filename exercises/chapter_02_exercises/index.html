@@ -1,0 +1,1298 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_01_problems/">
+      
+      
+        <link rel="next" href="../chapter_02_problems/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>练习 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finite-state-markov-chains" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              练习
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter_01_exercises/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aperiodicity-is-a-class-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无周期是类性质 (Aperiodicity is a Class Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traps-in-reducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可约的陷阱 (Traps in Reducibility)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asymmetric-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非对称的平衡 (Asymmetric Balance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-on-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        群上的随机游走 (Random Walk on Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-from-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        以局部见全局 (Global from Local)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-variation-distance-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总变差距离界限 (Total Variation Distance Bounds)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求同存异 (Coupling Lemma)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-of-coins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        硬币的记忆 (Memory of Coins)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-on-a-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环上的随机游走 (Random Walk on a Cycle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aperiodicity-is-a-class-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无周期是类性质 (Aperiodicity is a Class Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traps-in-reducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可约的陷阱 (Traps in Reducibility)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asymmetric-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非对称的平衡 (Asymmetric Balance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-on-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        群上的随机游走 (Random Walk on Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-from-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        以局部见全局 (Global from Local)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-variation-distance-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总变差距离界限 (Total Variation Distance Bounds)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求同存异 (Coupling Lemma)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-of-coins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        硬币的记忆 (Memory of Coins)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walk-on-a-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环上的随机游走 (Random Walk on a Cycle)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="finite-state-markov-chains">第二章 有限状态马尔可夫链 (Finite-State Markov Chains)</h1>
+<h2 class="ex-counter" id="exercises" style="counter-reset: chapter 2 question 0;">练习 (Exercises)</h2>
+<h3 id="aperiodicity-is-a-class-property">无周期是类性质 (Aperiodicity is a Class Property)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>请证明，若一个有限状态且不可约的马尔可夫链中存在一个状态是无周期的，则该马尔可夫链是无周期的。</p>
+</div>
+<div class="tabbed-block">
+<p>Prove that if there exists an aperiodic state in a finite-state, irreducible Markov chain, then the Markov chain itself is aperiodic.</p>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自[Your name]的解答</summary>
+<p>总所周知，<span class="arithmatex">\(1+1=2\)</span>。</p>
+</details>
+<details class="note">
+<summary>来自[Your name]的想法</summary>
+<p>oh这里有一个小想法想说。</p>
+</details>
+<h3 id="traps-in-reducibility">可约的陷阱 (Traps in Reducibility)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>我们在正文中提到，不可约性是有限状态马尔可夫链拥有唯一平稳分布的充分条件。在这道练习题里，我们来说明这一条件并非必要条件，并来探索真正的充分必要条件是什么。</p>
+<ol>
+<li>请构造一个可约的有限状态马尔可夫链，并且其平稳分布存在且唯一。</li>
+<li>我们称状态子集 <span class="arithmatex">\(C \subseteq S\)</span> 为<em>吸收子集（closed set）</em>，若 <span class="arithmatex">\(\forall i \in C, \sum_{j \in C} P(i,j) = 1\)</span>。若一个吸收子集的任何真子集均不是吸收子集，则称之为极小吸收子集。请证明，任何有限状态马尔可夫链的平稳分布的支撑集（即非零分量的集合）必须包含在所有极小吸收子集的并集内。</li>
+<li>假设 <span class="arithmatex">\(C\)</span> 是一个极小吸收子集（不一定是唯一的）。我们可以构造一个限制在 <span class="arithmatex">\(C\)</span> 上的马尔可夫链转移矩阵 <span class="arithmatex">\(P|_C\)</span>，其状态空间为 <span class="arithmatex">\(C\)</span>，转移概率为 <span class="arithmatex">\(P|_C(i,j) = P(i,j)\)</span>。请说明 <span class="arithmatex">\(P|_C\)</span> 是合法的马尔可夫链且不可约。</li>
+<li>请根据上述结论证明，有限马尔可夫链存在唯一平稳分布的充要条件是状态空间中存在唯一的极小吸收子集。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we mentioned that irreducibility is a sufficient condition for a finite-state Markov chain to have a unique stationary distribution. In this exercise, we will show that this condition is not necessary, and explore what the true necessary and sufficient condition is.</p>
+<ol>
+<li>Construct a reducible finite-state Markov chain that has a unique stationary distribution.</li>
+<li>We call a subset of states <span class="arithmatex">\(C \subseteq S\)</span> a <em>closed set</em> if <span class="arithmatex">\(\forall i \in C, \sum_{j \in C} P(i,j) = 1\)</span>. If no proper subset of a closed set is closed, it is called a minimal closed set. Prove that the support of any stationary distribution (i.e., the set of states with non-zero probabilities) of a finite-state Markov chain must be contained in the union of all minimal closed sets.</li>
+<li>Suppose <span class="arithmatex">\(C\)</span> is a minimal closed set (not necessarily unique). We can construct a restricted Markov chain transition matrix <span class="arithmatex">\(P|_C\)</span> with state space <span class="arithmatex">\(C\)</span> and transition probabilities <span class="arithmatex">\(P|_C(i,j) = P(i,j)\)</span>. Show that <span class="arithmatex">\(P|_C\)</span> is a valid Markov chain and is irreducible.</li>
+<li>Based on the above conclusions, prove that a finite Markov chain has a unique stationary distribution if and only if there is a unique minimal closed set in its state space.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="asymmetric-balance">非对称的平衡 (Asymmetric Balance)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中，我们证明了一个分布 <span class="arithmatex">\(\pi\)</span> 满足细致平衡条件为 <span class="arithmatex">\(\pi\)</span> 是平稳分布的充分条件，在这一题里，我们将证明它不是必要条件。请构造一个有限状态马尔可夫链，同时满足：</p>
+<ul>
+<li>平稳分布存在且唯一；</li>
+<li>从任何初始分布出发均收敛到该平稳分布；</li>
+<li>不满足细致平衡条件。</li>
+</ul>
+<p>请给出具体构造，并证明你的构造满足全部要求。</p>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we proved that satisfying the detailed balance condition is a sufficient condition for a distribution <span class="arithmatex">\(\pi\)</span> to be stationary. In this problem, we will demonstrate that it is not a necessary condition. Construct a finite-state Markov chain that simultaneously satisfies the following:</p>
+<ul>
+<li>A unique stationary distribution exists.</li>
+<li>The chain converges to this stationary distribution from any initial distribution.</li>
+<li>It does not satisfy the detailed balance condition.</li>
+</ul>
+<p>Provide the specific construction and prove that your construction meets all the requirements.</p>
+</div>
+</div>
+</div>
+<h3 id="random-walk-on-groups">群上的随机游走 (Random Walk on Groups)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>许多常见的马尔可夫链都具有某种对称性，利用<em>群（group）</em>的语言可以很好地刻画这类结构。回顾群的定义，一个群 <span class="arithmatex">\((G, \oplus)\)</span> 包含一个集合 <span class="arithmatex">\(G\)</span> 和一个满足结合律的二元运算 <span class="arithmatex">\(\oplus\)</span>，存在单位元 <span class="arithmatex">\(e\in G\)</span> 使得对于任意的 <span class="arithmatex">\(g\in G\)</span>，有 <span class="arithmatex">\(e \oplus g = g \oplus e = g\)</span>，且每个元素 <span class="arithmatex">\(g\)</span> 都有逆元 <span class="arithmatex">\(g^{-1}\in G\)</span> 使得 <span class="arithmatex">\(g \oplus g^{-1} = g^{-1} \oplus g = e\)</span>。</p>
+<p>给定群 <span class="arithmatex">\(G\)</span> 上的一个概率分布 <span class="arithmatex">\(\mu\)</span>（称为增量分布），我们定义群 <span class="arithmatex">\(G\)</span> 上的随机游走如下：这是一个状态空间为 <span class="arithmatex">\(G\)</span> 的马尔可夫链，其单步转移通过在当前状态的左侧乘以一个从 <span class="arithmatex">\(\mu\)</span> 中采样得到的随机元素来实现。即转移概率满足：</p>
+<div class="arithmatex">\[ P(g, h \oplus g) = \mu(h), \quad \forall g, h \in G. \]</div>
+<ol>
+<li>
+<p>假设 <span class="arithmatex">\(G\)</span> 是有限的，请证明：无论增量分布 <span class="arithmatex">\(\mu\)</span> 如何选取，该随机游走的平稳分布都是均匀分布。</p>
+<details class="hint">
+<summary>提示</summary>
+<p>可能要用到的群的性质：对于任意的 <span class="arithmatex">\(g\in G\)</span>，有 <span class="arithmatex">\(\{g\oplus h: h\in G\}\)</span> 等价于 <span class="arithmatex">\(G\)</span></p>
+</details>
+</li>
+<li>
+<p>考虑正文中讲过的图上的随机游走，假设该图是一个有 <span class="arithmatex">\(n\)</span> 个顶点的环，请说明它对应于集合 <span class="arithmatex">\(\{0, 1, \dots, n-1\}\)</span> 上的模 <span class="arithmatex">\(n\)</span> 加法群（即相应的二元运算是加法，其相加结果要取对 <span class="arithmatex">\(n\)</span> 的余数）上的随机游走，写出其增量分布 <span class="arithmatex">\(\mu\)</span>，并利用第 1 问的结论直接给出其平稳分布。</p>
+</li>
+<li>考虑正文中讲的超立方体上的随机游走，请说明它对应于集合 <span class="arithmatex">\(\{0, 1\}^d\)</span> 上的按位模 <span class="arithmatex">\(2\)</span> 加法群（即相应的二元运算是把两个向量按位相加，然后模 <span class="arithmatex">\(2\)</span>），写出其增量分布 <span class="arithmatex">\(\mu\)</span>，并利用第 1 问的结论直接给出其平稳分布。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Many common Markov chains exhibit a certain symmetry, which can be well characterized using the language of <em>groups</em>. Recall the definition of a group: a group <span class="arithmatex">\((G, \oplus)\)</span> consists of a set <span class="arithmatex">\(G\)</span> and an associative binary operation <span class="arithmatex">\(\oplus\)</span>. There exists an identity element <span class="arithmatex">\(e\in G\)</span> such that <span class="arithmatex">\(e \oplus g = g \oplus e = g\)</span> for any <span class="arithmatex">\(g\in G\)</span>, and every element <span class="arithmatex">\(g\)</span> has an inverse <span class="arithmatex">\(g^{-1}\in G\)</span> such that <span class="arithmatex">\(g \oplus g^{-1} = g^{-1} \oplus g = e\)</span>.</p>
+<p>Given a probability distribution <span class="arithmatex">\(\mu\)</span> (called the increment distribution) on a group <span class="arithmatex">\(G\)</span>, we define a random walk on <span class="arithmatex">\(G\)</span> as follows: it is a Markov chain with state space <span class="arithmatex">\(G\)</span>, where a single-step transition is performed by multiplying the current state on the left by a random element sampled from <span class="arithmatex">\(\mu\)</span>. Thus, the transition probabilities satisfy:</p>
+<div class="arithmatex">\[ P(g, h \oplus g) = \mu(h), \quad \forall g, h \in G. \]</div>
+<ol>
+<li>
+<p>Assuming <span class="arithmatex">\(G\)</span> is finite, prove that regardless of the choice of increment distribution <span class="arithmatex">\(\mu\)</span>, the stationary distribution of this random walk is the uniform distribution. </p>
+<details class="hint">
+<summary>Hint</summary>
+<p>A property of groups that might be useful: for any <span class="arithmatex">\(g\in G\)</span>, <span class="arithmatex">\(\{g\oplus h: h\in G\}\)</span> is equivalent to <span class="arithmatex">\(G\)</span>.</p>
+</details>
+</li>
+<li>
+<p>Consider the random walk on a graph mentioned in the main text, assuming the graph is a cycle with <span class="arithmatex">\(n\)</span> vertices. Show that it corresponds to a random walk on the modulo-<span class="arithmatex">\(n\)</span> addition group over the set <span class="arithmatex">\(\{0, 1, \dots, n-1\}\)</span> (i.e., the binary operation is addition modulo <span class="arithmatex">\(n\)</span>). Write down its increment distribution <span class="arithmatex">\(\mu\)</span>, and directly give its stationary distribution using the result from part 1.</p>
+</li>
+<li>Consider the random walk on a hypercube discussed in the main text. Show that it corresponds to a random walk on the bitwise modulo-<span class="arithmatex">\(2\)</span> addition group over the set <span class="arithmatex">\(\{0, 1\}^d\)</span> (i.e., the binary operation is bitwise addition modulo <span class="arithmatex">\(2\)</span>). Write down its increment distribution <span class="arithmatex">\(\mu\)</span>, and directly give its stationary distribution using the result from part 1.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="global-from-local">以局部见全局 (Global from Local)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中，我们给出了针对给定目标分布 <span class="arithmatex">\(\pi\)</span> 采样的Metropolis-Hastings算法，在本题中，我们给出另一个可以达到同样目的的算法。</p>
+<div class="admonition theorem">
+<p class="admonition-title">算法 MH-Alt</p>
+<p><strong>输入:</strong> 当前状态 <span class="arithmatex">\(i\)</span>，目标分布 <span class="arithmatex">\(\pi\)</span>，转移图 <span class="arithmatex">\((V,E)\)</span></p>
+<p>1 &nbsp;&nbsp;抛一枚均匀硬币<br />
+2 &nbsp;&nbsp;如果结果为反面：<br />
+3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返回 <span class="arithmatex">\(i\)</span> （原地踏步）<br />
+4 &nbsp;&nbsp;均匀随机选取 <span class="arithmatex">\(i\)</span> 的一个邻居 <span class="arithmatex">\(j\)</span><br />
+5 &nbsp;&nbsp;<span class="arithmatex">\(d(i) \gets\)</span> 节点 <span class="arithmatex">\(i\)</span> 的度数，<span class="arithmatex">\(d(j) \gets\)</span> 节点 <span class="arithmatex">\(j\)</span> 的度数<br />
+6 &nbsp;&nbsp;以概率 <span class="arithmatex">\(\min\left\lbrace\frac{\pi(j)d(i)}{\pi(i)d(j)},\; 1\right\rbrace\)</span> 令 <span class="arithmatex">\(i \gets j\)</span> （接受提议）<br />
+7 &nbsp;&nbsp;返回 <span class="arithmatex">\(i\)</span>  </p>
+</div>
+<p>注意到，该算法保留了Metropolis-Hastings算法的优点，即我们不需要知道 <span class="arithmatex">\(\pi(i)\)</span> 的准确值，只要知道 <span class="arithmatex">\(\frac{\pi(i)}{\pi(j)}\)</span> 的比值即可。此外，该算法是一个纯局部的算法，我们甚至不需要知道图的最大度数 <span class="arithmatex">\(\Delta\)</span>，只需要知道当前点和邻居的度数。</p>
+<p>假设图 <span class="arithmatex">\(G\)</span> 是连通且无环的无向图，请证明该马尔可夫链不可约且无周期，且平稳分布为 <span class="arithmatex">\(\pi\)</span>。并写出该马尔可夫链的转移矩阵。</p>
+</div>
+<div class="tabbed-block">
+<p>In the main text, we introduced the Metropolis-Hastings algorithm for sampling from a given target distribution <span class="arithmatex">\(\pi\)</span>. In this problem, we present another algorithm that achieves the same goal.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Algorithm MH-Alt</p>
+<p><strong>Input:</strong> Current state <span class="arithmatex">\(i\)</span>, target distribution <span class="arithmatex">\(\pi\)</span>, transition graph <span class="arithmatex">\((V,E)\)</span></p>
+<p>1 &nbsp;&nbsp;Toss a fair coin.<br />
+2 &nbsp;&nbsp;If the result is tails:<br />
+3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return <span class="arithmatex">\(i\)</span> (stay in place).<br />
+4 &nbsp;&nbsp;Uniformly at random choose a neighbor <span class="arithmatex">\(j\)</span> of <span class="arithmatex">\(i\)</span>.<br />
+5 &nbsp;&nbsp;Let <span class="arithmatex">\(d(i)\)</span> be the degree of node <span class="arithmatex">\(i\)</span>, and <span class="arithmatex">\(d(j)\)</span> be the degree of node <span class="arithmatex">\(j\)</span>.<br />
+6 &nbsp;&nbsp;With probability <span class="arithmatex">\(\min\left\lbrace\frac{\pi(j)d(i)}{\pi(i)d(j)},\; 1\right\rbrace\)</span>, set <span class="arithmatex">\(i \gets j\)</span> (accept the proposal).<br />
+7 &nbsp;&nbsp;Return <span class="arithmatex">\(i\)</span>.  </p>
+</div>
+<p>Note that this algorithm retains the advantage of the Metropolis-Hastings algorithm: we do not need to know the exact value of <span class="arithmatex">\(\pi(i)\)</span>, only the ratio <span class="arithmatex">\(\frac{\pi(i)}{\pi(j)}\)</span>. Furthermore, it is a purely local algorithm; we do not even need to know the maximum degree <span class="arithmatex">\(\Delta\)</span> of the graph, only the degrees of the current node and its neighbors.</p>
+<p>Assuming the graph <span class="arithmatex">\(G\)</span> is a connected and loopless undirected graph, prove that this Markov chain is irreducible and aperiodic, and its stationary distribution is <span class="arithmatex">\(\pi\)</span>. Also, write down the transition matrix of this Markov chain.</p>
+</div>
+</div>
+</div>
+<h3 id="total-variation-distance-bounds">总变差距离界限 (Total Variation Distance Bounds)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(P\)</span> 为一个有限状态空间上不可约、非周期的马尔可夫链的转移矩阵，<span class="arithmatex">\(\pi\)</span> 为其平稳分布。考虑该空间上两个分布 <span class="arithmatex">\(\mu_0\)</span> 和 $\nu_0 $ 以及从这两个分布出发的马尔可夫链，定义 $ \mu_t $ 和 $ \nu_t $ 为满足 $ \mu_t^{\top}=\mu_0^{\top}P^t $ 以及 $ \nu_t^{\top}=\nu_0^{\top}P^t $ 的分布。对于 $ t \ge 0$，定义</p>
+<div class="arithmatex">\[
+d(t) \defeq \sup_{\mu_0} \dTV(\mu_t,\pi) \quad \text{和} \quad \tilde{d}(t) \defeq \sup_{\mu_0, \nu_0} \dTV(\mu_t, \nu_t).
+\]</div>
+<p>请证明：<span class="arithmatex">\(d(t) \le \tilde{d}(t) \le 2d(t)\)</span>。</p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(P\)</span> be the transition matrix of an irreducible, aperiodic Markov chain on a finite state space, and let <span class="arithmatex">\(\pi\)</span> be its stationary distribution. Consider two distributions <span class="arithmatex">\(\mu_0\)</span> and <span class="arithmatex">\(\nu_0\)</span> on this space, and the Markov chains starting from these distributions. Define <span class="arithmatex">\(\mu_t\)</span> and <span class="arithmatex">\(\nu_t\)</span> as distributions satisfying <span class="arithmatex">\(\mu_t^{\top}=\mu_0^{\top}P^t\)</span> and <span class="arithmatex">\(\nu_t^{\top}=\nu_0^{\top}P^t\)</span>. For <span class="arithmatex">\(t \ge 0\)</span>, define</p>
+<div class="arithmatex">\[
+d(t) \defeq \sup_{\mu_0} \dTV(\mu_t,\pi) \quad \text{and} \quad \tilde{d}(t) \defeq \sup_{\mu_0, \nu_0} \dTV(\mu_t, \nu_t).
+\]</div>
+<p>Prove that: <span class="arithmatex">\(d(t) \le \tilde{d}(t) \le 2d(t)\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="coupling-lemma">求同存异 (Coupling Lemma)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(\mu\)</span> 和 <span class="arithmatex">\(\nu\)</span> 是定义在有限状态空间 <span class="arithmatex">\(\Omega\)</span> 上的两个概率分布。为了证明正文给出的耦合引理，我们需要构造一个联合分布 <span class="arithmatex">\(\omega^*\)</span>，使得 <span class="arithmatex">\(\Pr[(X,Y)\sim \omega^*]{X\neq Y} = \dTV(\mu, \nu)\)</span>。请给出 <span class="arithmatex">\(\omega^*(x, y)\)</span> 的精确表达式，并证明它是一个满足要求的耦合。</p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\nu\)</span> be two probability distributions defined on a finite state space <span class="arithmatex">\(\Omega\)</span>. To prove the coupling lemma given in the main text, we need to construct a joint distribution <span class="arithmatex">\(\omega^*\)</span> such that <span class="arithmatex">\(\Pr[(X,Y)\sim \omega^*]{X\neq Y} = \dTV(\mu, \nu)\)</span>. Provide the exact expression for <span class="arithmatex">\(\omega^*(x, y)\)</span> and prove that it is a valid coupling that satisfies the requirement.</p>
+</div>
+</div>
+</div>
+<h3 id="memory-of-coins">硬币的记忆 (Memory of Coins)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>重复扔一枚均匀硬币，每次出现正面 <span class="arithmatex">\(H\)</span> 和反面 <span class="arithmatex">\(T\)</span> 的概率均为 <span class="arithmatex">\(1/2\)</span>。我们来考察不同的正反面序列在整个扔硬币结果序列中首次出现的时间，令 <span class="arithmatex">\(T_1\)</span> 表示序列 <span class="arithmatex">\(HH\)</span> 第一次出现的时间，<span class="arithmatex">\(T_2\)</span> 表示序列 <span class="arithmatex">\(HT\)</span> 第一次出现的时间。 </p>
+<ol>
+<li>
+<p>分别求出期望时间 <span class="arithmatex">\(\E{T_1}\)</span> 和 <span class="arithmatex">\(\E{T_2}\)</span>，平均来说，$ HH $ 和 $ HT$ 哪一个序列更先出现？</p>
+<details class="hint">
+<summary>提示</summary>
+<p>可以考虑状态空间 <span class="arithmatex">\(S = \{\emptyset, HH, HT, TT, TH\}\)</span> 上的随机游走，其中 <span class="arithmatex">\(\emptyset\)</span> 代表初始状态。</p>
+</details>
+</li>
+<li>
+<p>解释出现上述情况的直观原因。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Repeatedly toss a fair coin, where the probability of a heads <span class="arithmatex">\(H\)</span> and tails <span class="arithmatex">\(T\)</span> appearing is <span class="arithmatex">\(1/2\)</span> each time. We examine the first time different sequences of heads and tails appear in the entire sequence of coin tosses. Let <span class="arithmatex">\(T_1\)</span> denote the first time the sequence <span class="arithmatex">\(HH\)</span> appears, and <span class="arithmatex">\(T_2\)</span> denote the first time the sequence <span class="arithmatex">\(HT\)</span> appears.</p>
+<ol>
+<li>
+<p>Calculate the expected times <span class="arithmatex">\(\E{T_1}\)</span> and <span class="arithmatex">\(\E{T_2}\)</span>. On average, which sequence appears first, <span class="arithmatex">\(HH\)</span> or <span class="arithmatex">\(HT\)</span>?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Consider a random walk on the state space <span class="arithmatex">\(S = \{\emptyset, HH, HT, TT, TH\}\)</span>, where <span class="arithmatex">\(\emptyset\)</span> represents the initial state.</p>
+</details>
+</li>
+<li>
+<p>Explain the intuitive reason for this phenomenon.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="random-walk-on-a-cycle">环上的随机游走 (Random Walk on a Cycle)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>考虑一个由 <span class="arithmatex">\(n\)</span> 个点构成的环上的随机游走，每一步以 <span class="arithmatex">\(1/2\)</span> 的概率原地不动，以 <span class="arithmatex">\(1/2\)</span> 的概率从当前点的邻居中均匀随机选择一个移过去。为计算方便，假设 <span class="arithmatex">\(n\)</span> 可被 4 整除。本题里我们来分析该随机游走的混合时间上下界。</p>
+<ol>
+<li>证明该马尔可夫链 <span class="arithmatex">\(\tau_{\text{mix}}=O(n^2)\)</span>。</li>
+<li>不妨设该环上顶点集合为 <span class="arithmatex">\(\{0,1,\dots,n-1\}\)</span>，令 <span class="arithmatex">\(A = \{n/2, \dots, n-1\}\)</span>，证明对于某个 <span class="arithmatex">\(\alpha_0 &gt; 0\)</span>，当 <span class="arithmatex">\(\alpha \le \alpha_0\)</span> 时，令 <span class="arithmatex">\(t = \alpha n^2\)</span>，有
+   $$ P^t(n/4, A) &lt; \frac{1}{4}. $$ </li>
+<li>由上一问结论，证明</li>
+</ol>
+<p>$$ \tau_{\text{mix}} =\Omega(n^2). $$</p>
+<p><p class="note-inline">注：在后面学到鞅的时候，我们可以用一种更巧妙的方法来证明该随机游走混合时间的上界。</p></p>
+</div>
+<div class="tabbed-block">
+<p>Consider a random walk on a cycle with <span class="arithmatex">\(n\)</span> vertices. At each step, the walk stays in place with probability <span class="arithmatex">\(1/2\)</span> and moves to a uniformly chosen neighbor of the current vertex with probability <span class="arithmatex">\(1/2\)</span>. For convenience, assume <span class="arithmatex">\(n\)</span> is divisible by 4. In this problem, we will analyze the upper and lower bounds of the mixing time for this random walk.</p>
+<ol>
+<li>Prove that for this Markov chain, <span class="arithmatex">\(\tau_{\text{mix}}=O(n^2)\)</span>.</li>
+<li>Let the set of vertices on this cycle be <span class="arithmatex">\(\{0,1,\dots,n-1\}\)</span>, and let <span class="arithmatex">\(A = \{n/2, \dots, n-1\}\)</span>. Prove that for some <span class="arithmatex">\(\alpha_0 &gt; 0\)</span>, when <span class="arithmatex">\(\alpha \le \alpha_0\)</span>, letting <span class="arithmatex">\(t = \alpha n^2\)</span>, we have
+   $$ P^t(n/4, A) &lt; \frac{1}{4}. $$</li>
+<li>From the conclusion of the previous part, prove that</li>
+</ol>
+<p>$$ \tau_{\text{mix}} =\Omega(n^2). $$</p>
+<p><p class="note-inline">Note: When we study martingales in later chapters, we can use a more elegant method to prove the upper bound on the mixing time for this random walk.</p></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1667 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_01_exercises/">
+      
+      
+        <link rel="next" href="../chapter_02_exercises/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>问题 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#independent-random-variables" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter_01_exercises/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gift-of-optimism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乐观的馈赠 (Gift of Optimism)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pure-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        纯粹的探索 (Pure Exploration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-of-distinguishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        区分的代价 (Cost of Distinguishing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-losing-gamble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必输的赌博 (A Losing Gamble)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniformity-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        均匀性测试 (Uniformity Testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-a-discrete-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习离散分布 (Learning a Discrete Distribution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-free-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        没有免费的午餐 (No Free Lunch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gift-of-optimism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乐观的馈赠 (Gift of Optimism)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pure-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        纯粹的探索 (Pure Exploration)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-of-distinguishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        区分的代价 (Cost of Distinguishing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-losing-gamble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        必输的赌博 (A Losing Gamble)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniformity-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        均匀性测试 (Uniformity Testing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-a-discrete-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        学习离散分布 (Learning a Discrete Distribution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-free-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        没有免费的午餐 (No Free Lunch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="independent-random-variables">第一章 独立随机变量 (Independent Random Variables)</h1>
+<h2 class="prob-counter" id="problems" style="counter-reset: chapter 1 question 0;">问题 (Problems)</h2>
+<!--
+### 双选之力 (Power of Two Choices)
+=== "中文"
+    在正文讲的投球入箱模型中，我们将 $n$ 个球独立均匀随机地投入 $n$ 个箱子，最大负载高概率是 $O\tp{\frac{\log n}{\log \log n}}$。这就是大自然的“不公平性”。现在假设我们改变投球规则：每次投球时，我们独立均匀随机地挑选 $2$ 个不同的箱子，然后看一眼，把球放入这两个箱子中当前球更少的那一个（如果一样多就随便挑一个）。
+    1. 令 $\nu_k$ 表示在投入全部 $n$ 个球后，负载至少为 $k$ 的箱子数量（$k\le n$）。请证明：在已知 $\nu_k \le \beta_k$ 的条件下（其中 $\beta_k$ 是一个确定的数），以至少 $1 - n^{-2}$ 的概率，有
+        $$
+        \nu_{k+1} \le \frac{2\beta_k^2}{n}.
+        $$
+    2. 定义序列 $\beta_k$ 如下：$\beta_6 = n/4$，且 $\beta_{k+1} = \frac{2\beta_k^2}{n}$。请解出 $\beta_{k+6}$ 的通项公式。并据此证明，只需要 $k^* = O(\log \log n)$ 次迭代，上界 $\beta_{k^*}$ 就会下降到 $O(\log n)$ 的级别。
+
+=== "English"
+
+
+!!! success "来自[Your name]的解答"
+
+    总所周知，$1+1=2$。
+
+??? note "来自[Your name]的想法"
+
+    oh这里有一个小想法想说。
+-->
+
+<h3 id="gift-of-optimism">乐观的馈赠 (Gift of Optimism)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中讨论多臂老虎机时，我们提到，即使不知晓各个臂的期望收益率，通过置信区间构建的 UCB（Upper Confidence Bound）算法能够实现更优的次线性懊悔。假设我们在第 <span class="arithmatex">\(t\)</span> 次拉动前，第 <span class="arithmatex">\(i\)</span> 个臂已被拉动了 <span class="arithmatex">\(T_i(t-1)\)</span> 次，其前几次的经验均值为 <span class="arithmatex">\(\hat{\mu}_{i, T_i(t-1)}\)</span>。UCB 算法在前 <span class="arithmatex">\(n\)</span> 轮会把每个臂拉一遍，以保证后续 <span class="arithmatex">\(T_i(t-1)&gt;0\)</span>，对于 <span class="arithmatex">\(t\ge n+1\)</span>，算法在第 <span class="arithmatex">\(t\)</span> 次会选择最大化以下值的臂：
+$$
+U_{i,t} = \hat{\mu}_{i, T_i(t-1)} + \sqrt{\frac{2\ln t}{T_i(t-1)}}.
+$$
+如果取到最大值的有多个臂，则随机选择其中一个。不妨假设 <span class="arithmatex">\(1\)</span> 臂是最优臂（玩家并不知道这个信息），并令 <span class="arithmatex">\(\Delta_i=\mu_1-\mu_i\)</span>。</p>
+<ol>
+<li>
+<p>请证明，如果 UCB 算法在第 <span class="arithmatex">\(t\)</span> 步（<span class="arithmatex">\(t\ge n+1\)</span>）选择了次优臂 <span class="arithmatex">\(i\)</span>（意味着 <span class="arithmatex">\(U_{i,t} \geq U_{1,t}\)</span>），那么必然有以下三种情况之一发生了：</p>
+<ul>
+<li>事件 <span class="arithmatex">\(A\)</span>：最优臂 <span class="arithmatex">\(1\)</span> 的经验均值被严重低估了，即 <span class="arithmatex">\(\hat{\mu}_{1, T_1(t-1)} \le \mu_1 - \sqrt{\frac{2\ln t}{T_1(t-1)}}\)</span>；</li>
+<li>事件 <span class="arithmatex">\(B\)</span>：次优臂 <span class="arithmatex">\(i\)</span> 的经验均值被严重高估了，即 <span class="arithmatex">\(\hat{\mu}_{i, T_i(t-1)} \ge \mu_i + \sqrt{\frac{2\ln t}{T_i(t-1)}}\)</span>；</li>
+<li>事件 <span class="arithmatex">\(C\)</span>：该次优臂 <span class="arithmatex">\(i\)</span> 被探索的次数还不够多，<span class="arithmatex">\(T_i(t-1)\)</span> 对于区分均值差 <span class="arithmatex">\(\Delta_i\)</span> 来说太小了，即 <span class="arithmatex">\(\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}\)</span>。</li>
+</ul>
+</li>
+<li>
+<p>对于确定的 <span class="arithmatex">\(t\)</span> 和次优臂 <span class="arithmatex">\(i\)</span>（其中 <span class="arithmatex">\(t\ge n+1\)</span>, <span class="arithmatex">\(i\neq 1\)</span>），请证明上一问中事件 <span class="arithmatex">\(A\)</span> 和事件 <span class="arithmatex">\(B\)</span> 发生的概率均不超过 <span class="arithmatex">\(t^{-3}\)</span>。</p>
+</li>
+<li>证明每个次优臂被拉动的期望次数 <span class="arithmatex">\(\E{T_i(T)} = O\tp{\frac{\ln T}{\Delta_i^2}}\)</span>，并据此进一步证明 UCB 算法的期望懊悔上界为 <span class="arithmatex">\(O\tp{\sqrt{nT\ln T}}\)</span>。</li>
+<li>请指出直观上 UCB 算法为什么比 ETC 算法的表现更好？</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>When discussing multi-armed bandits in the main text, we mentioned that even without knowing the expected rewards of each arm, the UCB (Upper Confidence Bound) algorithm, constructed using confidence intervals, can achieve a better sublinear regret. Suppose that before the <span class="arithmatex">\(t\)</span>-th pull, the <span class="arithmatex">\(i\)</span>-th arm has been pulled <span class="arithmatex">\(T_i(t-1)\)</span> times, and its empirical mean from these previous pulls is <span class="arithmatex">\(\hat{\mu}_{i, T_i(t-1)}\)</span>. The UCB algorithm pulls each arm once in the first <span class="arithmatex">\(n\)</span> rounds to ensure <span class="arithmatex">\(T_i(t-1)&gt;0\)</span> subsequently. For <span class="arithmatex">\(t\ge n+1\)</span>, the algorithm selects the arm at the <span class="arithmatex">\(t\)</span>-th step that maximizes the following value:
+$$
+U_{i,t} = \hat{\mu}_{i, T_i(t-1)} + \sqrt{\frac{2\ln t}{T_i(t-1)}}.
+$$
+If multiple arms attain the maximum, one is chosen uniformly at random. Let us assume without loss of generality that arm <span class="arithmatex">\(1\)</span> is the optimal arm (the player does not know this information), and let <span class="arithmatex">\(\Delta_i=\mu_1-\mu_i\)</span>.</p>
+<ol>
+<li>
+<p>Prove that if the UCB algorithm selects a suboptimal arm <span class="arithmatex">\(i\)</span> at step <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(t\ge n+1\)</span>) (meaning <span class="arithmatex">\(U_{i,t} \geq U_{1,t}\)</span>), then at least one of the following three events must have occurred:</p>
+</li>
+<li>
+<p>Event <span class="arithmatex">\(A\)</span>: The empirical mean of the optimal arm <span class="arithmatex">\(1\)</span> is severely underestimated, i.e., <span class="arithmatex">\(\hat{\mu}_{1, T_1(t-1)} \le \mu_1 - \sqrt{\frac{2\ln t}{T_1(t-1)}}\)</span>;</p>
+</li>
+<li>Event <span class="arithmatex">\(B\)</span>: The empirical mean of the suboptimal arm <span class="arithmatex">\(i\)</span> is severely overestimated, i.e., <span class="arithmatex">\(\hat{\mu}_{i, T_i(t-1)} \ge \mu_i + \sqrt{\frac{2\ln t}{T_i(t-1)}}\)</span>;</li>
+<li>Event <span class="arithmatex">\(C\)</span>: The suboptimal arm <span class="arithmatex">\(i\)</span> has not been explored enough, and <span class="arithmatex">\(T_i(t-1)\)</span> is too small to distinguish the mean difference <span class="arithmatex">\(\Delta_i\)</span>, i.e., <span class="arithmatex">\(\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}\)</span>.</li>
+<li>For a fixed <span class="arithmatex">\(t\)</span> and suboptimal arm <span class="arithmatex">\(i\)</span> (where <span class="arithmatex">\(t\ge n+1\)</span>, <span class="arithmatex">\(i\neq 1\)</span>), prove that the probability of occurrence for both Event <span class="arithmatex">\(A\)</span> and Event <span class="arithmatex">\(B\)</span> in the previous question is at most <span class="arithmatex">\(t^{-3}\)</span>.</li>
+<li>Prove that the expected number of pulls for each suboptimal arm is <span class="arithmatex">\(\E{T_i(T)} = O\tp{\frac{\ln T}{\Delta_i^2}}\)</span>, and use this to further prove that the expected regret upper bound of the UCB algorithm is <span class="arithmatex">\(O\tp{\sqrt{nT\ln T}}\)</span>.</li>
+<li>Provide an intuitive explanation for why the UCB algorithm performs better than the ETC algorithm.</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自张煊的解答</summary>
+<p>(1) 我们只需要说明如果事件 <span class="arithmatex">\(A\)</span> 和 事件 <span class="arithmatex">\(B\)</span> 均不发生，则事件 <span class="arithmatex">\(C\)</span> 必然发生。</p>
+<p>即已知</p>
+<div class="arithmatex">\[U_{i,t} \geq U_{1,t}\]</div>
+<div class="arithmatex">\[\hat{\mu}_{1, T_1(t-1)} &gt; \mu_1 - \sqrt{\frac{2\ln t}{T_1(t-1)}}\]</div>
+<div class="arithmatex">\[\hat{\mu}_{i, T_i(t-1)} &lt; \mu_i + \sqrt{\frac{2\ln t}{T_i(t-1)}}\]</div>
+<p>证明</p>
+<div class="arithmatex">\[\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}\]</div>
+<p>证明：</p>
+<p>由条件可知</p>
+<div class="arithmatex">\[\mu_1 &lt; \hat{\mu}_{1, T_1(t-1)} + \sqrt{\frac{2\ln t}{T_1(t-1)}} = U_{1,t} \leq U_{i,t} = \hat{\mu}_{i, T_i(t-1)} + \sqrt{\frac{2\ln t}{T_i(t-1)}} &lt; \mu_i + 2\sqrt{\frac{2\ln t}{T_i(t-1)}}\]</div>
+<p>故有</p>
+<div class="arithmatex">\[\Delta_i \leq 2\sqrt{\frac{2\ln t}{T_i(t-1)}}\]</div>
+<p>(2) 我们只证明事件 <span class="arithmatex">\(A\)</span>，对于事件 <span class="arithmatex">\(B\)</span> 的证明类似；  </p>
+<p>记 <span class="arithmatex">\(k = T_1(t-1)\)</span>，<span class="arithmatex">\(X = k\hat{\mu}_1\)</span>，则有 <span class="arithmatex">\(E(X) = k\mu_1\)</span>；</p>
+<p>由霍夫丁不等式，有</p>
+<div class="arithmatex">\[\mathbb{P}(A) = \sum\limits_{j = 1} ^ t\mathbb{P}(A \cap \left\lbrace k = j \right\rbrace) \leq \sum\limits_{j = 1} ^ t \mathbb{P}[\hat{\mu}_1 - \mu_1 \leq -\sqrt{\frac{2\ln t}{j}}] \]</div>
+<div class="arithmatex">\[= \sum\limits_{j = 1} ^ t\mathbb{P}[X - E(X) &lt; -\sqrt{2j\ln t}] \leq \sum\limits_{j = 1} ^ t e ^ {-\frac{4j\ln t}{j}} = t ^ {-3}\]</div>
+<p>故事件 <span class="arithmatex">\(A\)</span> 发生的概率不超过 <span class="arithmatex">\(t^{-3}\)</span>。</p>
+<p>(3) 对于次优臂 <span class="arithmatex">\(i\)</span>，定义随机变量 <span class="arithmatex">\(X_t\)</span>，如果第 <span class="arithmatex">\(t\)</span> 次选中了这个臂则 <span class="arithmatex">\(X_t = 1\)</span>，否则 <span class="arithmatex">\(X_t = 0\)</span>；</p>
+<p>由期望的线性性，可得 </p>
+<div class="arithmatex">\[E(T_i(T)) = \sum\limits_{t = n + 1} ^ T E(X_t) + 1\]</div>
+<p>考虑到 <span class="arithmatex">\(E(X_t) = \mathbb{P}[X_t = 1]\)</span>，所以只需要分析第 <span class="arithmatex">\(t\)</span> 次选中次优臂 <span class="arithmatex">\(i\)</span> 的概率即可。</p>
+<div class="arithmatex">\[\mathbb{P}[X_t = 1] = \mathbb{P}[X_t = 1 \cap T_i(t-1) \le \frac{8\ln t}{\Delta_i ^ 2}] + \mathbb{P}[X_t = 1 \cap T_i(t-1) &gt; \frac{8\ln t}{\Delta_i ^ 2}]\]</div>
+<p>其中，<span class="arithmatex">\(X_t = 1 \cap T_i(t-1) &gt; \frac{8\ln t}{\Delta_i ^ 2}\)</span> 代表选中了次优臂 <span class="arithmatex">\(i\)</span> 但是事件 <span class="arithmatex">\(C\)</span> 不发生，此时事件 <span class="arithmatex">\(A\)</span> 和事件 <span class="arithmatex">\(B\)</span> 中必有一个发生，从而可得概率上界</p>
+<div class="arithmatex">\[\mathbb{P}[X_t = 1 \cap T_i(t-1) &gt; \frac{8\ln t}{\Delta_i ^ 2}] \leq \mathbb{P}[A] + \mathbb{P}[B] \leq 2t^{-3}\]</div>
+<p>故有</p>
+<div class="arithmatex">\[E(T_i(T)) \leq \sum\limits_{t = n + 1} ^ T \mathbb{P}[X_t = 1 \cap T_i(t-1) \le \frac{8\ln t}{\Delta_i ^ 2}] + \sum\limits_{t = n+1} ^ T \frac{2}{t^3} + 1 \leq \frac{8\ln T}{\Delta_i ^ 2} + 3 = O(\frac{\ln T}{\Delta_i ^ 2})\]</div>
+<p>然后估计懊悔上界 <span class="arithmatex">\(R(T)\)</span>；</p>
+<p>我们将所有臂分成两个部分 <span class="arithmatex">\(S = \left\lbrace i | \Delta_i \leq \delta \right\rbrace\)</span> 和 <span class="arithmatex">\(T = \left\lbrace i | \Delta_i &gt; \delta \right\rbrace\)</span>，然后用两种方式去估计这两部分产生懊悔的上界；</p>
+<div class="arithmatex">\[R(T) = \sum\limits_{i \in S} T_i(T)\Delta_i + \sum\limits_{i \in T} T_i(T)\Delta_i \leq T\delta + nO(\frac{\ln T}{\delta})\]</div>
+<p>取 <span class="arithmatex">\(\delta = \sqrt{\frac{n\ln T}{T}}\)</span>，有</p>
+<div class="arithmatex">\[R(T) = O(\sqrt{nT\ln T})\]</div>
+<p>(4) 直观而言，UCB 算法从第 <span class="arithmatex">\(n+1\)</span> 次开始，一直是根据预测的最优解在进行操作。而 ETC 算法的前 <span class="arithmatex">\(nL\)</span> 次尝试是将每个臂都尝试 <span class="arithmatex">\(L\)</span> 次，这里产生了巨大的懊悔值；</p>
+<p>与此同时，ETC 算法之后的决策完全基于前 <span class="arithmatex">\(nL\)</span> 次的结果，可能产生比较大的偏差；而 UCB 算法的决策基于前面所有的尝试，随着 <span class="arithmatex">\(T\)</span> 增大，这个偏差会不断变小；</p>
+<p>因此 UCB 算法会比 ETC 算法更优。</p>
+</details>
+<h3 id="pure-exploration">纯粹的探索 (Pure Exploration)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>考虑多臂老虎机的纯探索（pure exploration）变体，我们不在乎累计懊悔，我们唯一的目的是：拉动尽可能少的次数之后结束探索，并且在结束时以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率输出均值最大的那个臂（<span class="arithmatex">\(\delta \in (0,1)\)</span>）。</p>
+<ol>
+<li>如果我们已知所有次优臂与最优臂的均值差距都至少为 <span class="arithmatex">\(\Delta &gt; 0\)</span>（但不知道哪个是最优臂）。基于霍夫丁不等式，请设计一个简单的算法（例如，对所有臂进行相同次数的均匀探索），说明总共需要拉动多少次才能保证有至少 <span class="arithmatex">\(1-\delta\)</span> 的概率选出最优臂。</li>
+<li>均匀探索算法存在的问题是会在明显极差的臂上浪费大量单次测试成本。我们可以考虑一个更聪明的连续淘汰（successive elimination）算法：维护一个活跃臂的集合 <span class="arithmatex">\(S\)</span>，初始 <span class="arithmatex">\(S=[n]\)</span>。在第 <span class="arithmatex">\(r\)</span> 轮对活跃集的每一个臂各拉动一次，获得活跃集中每个臂在前 <span class="arithmatex">\(r\)</span> 轮的经验均值 <span class="arithmatex">\(\hat{\mu}_{i,r}\)</span>。取 <span class="arithmatex">\(C_r = \sqrt{\frac{\ln(4n r^2 / \delta)}{2r}}\)</span>，若某一活跃臂 <span class="arithmatex">\(i\)</span> 的经验均值满足 <span class="arithmatex">\(\max_{j\in S}\hat{\mu}_{j,r} - \hat{\mu}_{i,r}\geq 2C_r\)</span>，则将臂 <span class="arithmatex">\(i\)</span> 从活跃集中淘汰。定义事件
+    $$
+    \mathcal{E} = \left\lbrace \forall\, i \in [n],\; \forall\, r \ge 1 : \abs{\hat{\mu}_{i,r} - \mu_i} &lt; C_r \right\rbrace
+    $$
+    请证明 <span class="arithmatex">\(\Pr{\mathcal{E}}\geq 1-\delta\)</span>，并据此说明算法成功概率至少为 <span class="arithmatex">\(1-\delta\)</span>。</li>
+<li>不妨假设最优臂的标号为 <span class="arithmatex">\(1\)</span>（玩家并不知道这个信息），请证明，以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率，该算法的拉动次数不超过 <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span>。</li>
+<li>探讨上述连续淘汰算法与均匀探索算法的优劣。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Consider the pure exploration variant of the multi-armed bandit problem, where we do not care about the cumulative regret. Our sole objective is to terminate the exploration after as few pulls as possible and output the arm with the maximum mean reward with probability at least <span class="arithmatex">\(1-\delta\)</span> (<span class="arithmatex">\(\delta \in (0,1)\)</span>).</p>
+<ol>
+<li>Suppose we know that the mean difference between any suboptimal arm and the optimal arm is at least <span class="arithmatex">\(\Delta &gt; 0\)</span> (but we do not know which arm is optimal). Based on Hoeffding's inequality, design a simple algorithm (e.g., uniform exploration that pulls all arms the same number of times) and determine the total number of pulls required to guarantee that the optimal arm is selected with probability at least <span class="arithmatex">\(1-\delta\)</span>.</li>
+<li>The problem with the uniform exploration algorithm is that it wastes a significant amount of testing cost on obviously inferior arms. We can consider a smarter successive elimination algorithm: maintain a set of active arms <span class="arithmatex">\(S\)</span>, initially <span class="arithmatex">\(S=[n]\)</span>. In round <span class="arithmatex">\(r\)</span>, pull each arm in the active set once, and obtain the empirical mean <span class="arithmatex">\(\hat{\mu}_{i,r}\)</span> of each active arm over the first <span class="arithmatex">\(r\)</span> rounds. Let <span class="arithmatex">\(C_r = \sqrt{\frac{\ln(4n r^2 / \delta)}{2r}}\)</span>. If the empirical mean of an active arm <span class="arithmatex">\(i\)</span> satisfies <span class="arithmatex">\(\max_{j\in S}\hat{\mu}_{j,r} - \hat{\mu}_{i,r}\geq 2C_r\)</span>, then arm <span class="arithmatex">\(i\)</span> is eliminated from the active set. Define the event
+    $$
+    \mathcal{E} = \left\lbrace \forall\, i \in [n],\; \forall\, r \ge 1 : \abs{\hat{\mu}_{i,r} - \mu_i} &lt; C_r \right\rbrace
+    $$
+    Prove that <span class="arithmatex">\(\Pr{\mathcal{E}}\geq 1-\delta\)</span>, and use this to show that the success probability of the algorithm is at least <span class="arithmatex">\(1-\delta\)</span>.</li>
+<li>Assuming without loss of generality that the optimal arm is labeled <span class="arithmatex">\(1\)</span> (the player does not know this information), prove that with probability at least <span class="arithmatex">\(1-\delta\)</span>, the number of pulls by this algorithm does not exceed <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span>.</li>
+<li>Discuss the pros and cons of the successive elimination algorithm compared to the uniform exploration algorithm.</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自张煊的解答</summary>
+<p>(1) 假设这是一个 <span class="arithmatex">\(n\)</span> 臂老虎机，每个臂去拉动 <span class="arithmatex">\(L\)</span> 次；</p>
+<p>我们尝试去 bound 出来选错臂概率的上界；</p>
+<p>如果我们选择了次优臂 <span class="arithmatex">\(i\)</span> 而不是最优臂 1，此时下面两个事件中至少有一个发生</p>
+<div class="arithmatex">\[A: \hat{\mu}_1 - \mu_1 \leq -\frac{\Delta}{2}\]</div>
+<div class="arithmatex">\[B_i: \hat{\mu}_i - \mu_i \geq \frac{\Delta}{2}\]</div>
+<p>由霍夫丁不等式</p>
+<div class="arithmatex">\[P(A) = P[L\hat{\mu}_1 - L\mu_1 \leq -\frac{L\Delta}{2}] \leq e ^ {-\frac{L\Delta^2}{2}}\]</div>
+<div class="arithmatex">\[P(B_i) = P[L\hat{\mu}_i - L\mu_i \geq \frac{L\Delta}{2}] \leq e ^ {-\frac{L\Delta^2}{2}}\]</div>
+<p>故 </p>
+<div class="arithmatex">\[\mathbb{P}[选择次优臂 i] \leq P(A) + P(B_i) \leq 2e ^ {-\frac{L\Delta^2}{2}}\]</div>
+<p>从而选错概率</p>
+<div class="arithmatex">\[\mathbb{P}[选错臂] \leq \sum\limits_{i = 2} ^ n \mathbb{P}[选择次优臂 i] \leq 2(n - 1)e ^ {-\frac{L\Delta^2}{2}}\]</div>
+<p>由题目条件</p>
+<div class="arithmatex">\[2(n - 1)e ^ {-\frac{L\Delta^2}{2}} \leq \delta\]</div>
+<p>得到 <span class="arithmatex">\(L \geq \frac{2}{\Delta^2}\ln\frac{2(n-1)}{\delta}\)</span></p>
+<p>进而拉动总次数 <span class="arithmatex">\(N \geq \frac{2n}{\Delta^2}\ln\frac{2(n-1)}{\delta}\)</span>。</p>
+<p>(2) 考虑问题的反面，我们尝试去 bound <span class="arithmatex">\(\mathcal{E}\)</span> 不发生概率的上界，记其不发生为 <span class="arithmatex">\(\mathcal{E} ^ \prime = \left\lbrace \exists i \in [n], \exists r \geq 1 :\ \abs{\hat{\mu}_{i,r} - \mu_i} \geq C_r \right\rbrace\)</span>；</p>
+<p>利用霍夫丁不等式，对于给定的 <span class="arithmatex">\(i\)</span> 号臂，其在第 <span class="arithmatex">\(r\)</span> 轮满足 <span class="arithmatex">\(\abs{\hat{\mu}_{i,r} - \mu_i} \geq C_r\)</span> 的概率</p>
+<div class="arithmatex">\[\mathbb{P}[\abs{\hat{\mu}_{i,r} - \mu_i} \geq C_r] \leq 2e^{-\frac{2(rC_r) ^ 2}{r}} = 2e^{-\ln\frac{4nr^2}{\delta}} = \frac{\delta}{2nr^2}\]</div>
+<p>故 </p>
+<div class="arithmatex">\[\mathbb{P}[\mathcal{E}^\prime] \leq \sum\limits_{i = 1} ^ n{\sum\limits_{r = 1} ^ {\infty} \frac{\delta}{2nr^2}} \leq \delta\]</div>
+<p>从而有 <span class="arithmatex">\(\mathbb{P}[\mathcal{E}] \geq 1 - \delta\)</span>。</p>
+<p>(3) 由于 <span class="arithmatex">\(\mathbb{P}[\mathcal{E}] \geq 1 - \delta\)</span>，只需证明当 <span class="arithmatex">\(\epsilon\)</span> 发生时拉动次数不超过 <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span> 即可；</p>
+<p>根据淘汰的规则，对于第 <span class="arithmatex">\(i\)</span> 个臂，当 <span class="arithmatex">\(C_r &lt; \frac{\Delta_i}{4}\)</span> 时，其必然会被淘汰；</p>
+<p>故 <span class="arithmatex">\(r\)</span> 需满足</p>
+<div class="arithmatex">\[\sqrt{\frac{\ln{4nr^2/\delta}}{2r}} \leq \frac{\Delta_i}{4}\]</div>
+<p>化简后有</p>
+<div class="arithmatex">\[r \leq \frac{8}{\Delta_i^2}\ln{\frac{4nr^2}{\delta}}\]</div>
+<p>根据 <span class="arithmatex">\(x leq A\ln(Bx)\)</span> 可得 <span class="arithmatex">\(x = O(A\ln(AB))\)</span> 可知</p>
+<div class="arithmatex">\[r = O(\frac{1}{\Delta_i^2}\ln(\frac{n}{\delta\Delta_i^4})) = O(\frac{1}{\Delta_i^2}\ln(\frac{n}{\delta\Delta_i}))\]</div>
+<p>其中，对数中的次数拿到对数外会变成线性的常数；</p>
+<p>故次优臂拉动的总次数不会超过 <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span> 次；</p>
+<p>对于最优臂，其拉动次数不会超过次优臂拉动次数的最大值，进而拉动次数也是 <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span> 次；</p>
+<p>综上所述，总次数为 <span class="arithmatex">\(O\tp{\sum_{i\neq 1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta \Delta_i}}\)</span> 次。</p>
+<p>(4) 对于均匀探索算法，其优点在于其计算复杂度较低，而且对高并行有着天然的支持。因为在已知 <span class="arithmatex">\(\Delta\)</span> 的时候，我们可以事先计算出需要的轮数。其缺点在于时间复杂度一般较高，尤其是当其中某一个次优臂的概率和最优臂相当接近，而其它次优臂与最优臂的概率相差较大时会比连续淘汰算法多引入因子 <span class="arithmatex">\(n\)</span>；</p>
+<p>对于连续淘汰算法，其优点在于时间复杂度一般较低，但在其它次优臂概率差异不大时有退化的风险。其缺点在于计算复杂度高，每进行一轮之后都需要重新计算阈值和经验值，对于并行的支持度不如均匀探索算法。</p>
+</details>
+<h3 id="cost-of-distinguishing">区分的代价 (Cost of Distinguishing)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在公平硬币检验中，我们讲过如何用 <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span> 个样本来判断一个硬币是公平的（<span class="arithmatex">\(\!{Ber}(1/2)\)</span>）还是有偏的（<span class="arithmatex">\(\!{Ber}(1/2+\eps)\)</span>），且判断准确的概率至少为 <span class="arithmatex">\(1-\delta\)</span>。在本题中，我们将证明（在忽略常数倍的意义下）这一算法是最优的。换言之，我们将证明任何满足该条件的算法在输入是公平硬币时必有 <span class="arithmatex">\(\E{T} = \Omega\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span>。</p>
+<p>设 <span class="arithmatex">\(L = \frac{1}{100\eps^2}\log\frac{1}{4\delta}\)</span>。假设 <span class="arithmatex">\(\eps \in (0, 1/8), \delta \in (0, e^{-4}/4)\)</span>。我们先考虑确定性算法，即随机性的唯一来源是扔硬币的结果。令 <span class="arithmatex">\(\Pr[0]{\cdot}\)</span> 和 <span class="arithmatex">\(\E[0]{\cdot}\)</span> 表示输入硬币是情况 <span class="arithmatex">\(0\)</span> 时的概率和期望，令 <span class="arithmatex">\(\Pr[1]{\cdot}\)</span> 和 <span class="arithmatex">\(\E[1]{\cdot}\)</span> 表示输入硬币是情况 <span class="arithmatex">\(1\)</span> 时的概率和期望，其中 <span class="arithmatex">\(0\)</span> 表示公平硬币，<span class="arithmatex">\(1\)</span> 表示有偏硬币。使用反证法，假设存在一个满足要求的确定性算法 <span class="arithmatex">\(\mathcal{A}\)</span>，满足 <span class="arithmatex">\(\E[0]{T} \le L\)</span>。考虑样本空间 <span class="arithmatex">\(\Omega = \left\{0, 1\right\}^{*}\)</span>。</p>
+<p>定义如下三个事件：</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>: <span class="arithmatex">\(T \le 4L\)</span>；</li>
+<li><span class="arithmatex">\(B\)</span>: 对于任意 <span class="arithmatex">\(1 \le t \le 4L\)</span>，<span class="arithmatex">\(\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}\)</span>，其中 <span class="arithmatex">\(K_t\)</span> 表示前 <span class="arithmatex">\(t\)</span> 次实验中正面的个数；</li>
+<li><span class="arithmatex">\(C\)</span>: <span class="arithmatex">\(\mathcal{A}\)</span> 输出 <span class="arithmatex">\(0\)</span>，即认为硬币是公平的。</li>
+</ul>
+<p>请解答下面的问题。</p>
+<ol>
+<li>
+<p>下面这个定理是切比雪夫不等式的推广，请用这个定理证明 <span class="arithmatex">\(\Pr[0]{A \cap B \cap C} \ge 1/4\)</span>（此定理本身无需证明，可以直接使用）。</p>
+<div class="admonition theorem">
+<p class="admonition-title">定理（可直接使用）</p>
+<p>假设 <span class="arithmatex">\(X_1,\dots,X_N\)</span> 是 <span class="arithmatex">\(N\)</span> 个定义在同一个概率空间上的独立伯努利随机变量，令 <span class="arithmatex">\(S_k=\sum_{i=1}^k \tp{X_i - \E{X_i}}\)</span>，那么对于任意的 <span class="arithmatex">\(s&gt;0\)</span>,
+$$
+\Pr{\max_{1\le k\le N}\abs{S_k}\ge s} \le \frac{\Var{S_n}}{s^2}.
+$$</p>
+</div>
+</li>
+<li>
+<p>请证明，对于任意的 <span class="arithmatex">\(\omega \in A \cap B \cap C\)</span>，有 <span class="arithmatex">\(\frac{\Pr[1]{\omega}}{\Pr[0]{\omega}} \ge 4\delta\)</span>。</p>
+</li>
+<li>请证明 <span class="arithmatex">\(\Pr[1]{C} &gt; \delta\)</span>，并据此证明满足要求且保证 <span class="arithmatex">\(\E[0]{T} \le L\)</span> 的确定性算法是不存在的。</li>
+<li>若 <span class="arithmatex">\(\mathcal{A}\)</span> 是一个随机算法，即 <span class="arithmatex">\(\mathcal{A}\)</span> 可以使用额外的随机数，那么 <span class="arithmatex">\(\E[0]{T} = \Omega\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span> 的下界是否仍然成立？为什么？</li>
+<li>如果你了解相对熵（KL divergence），计算硬币每次独立抛掷中这两种伯努利分布的 KL 散度。你能否直观地解释，为了使两个分布产生的可观测序列在统计上变得“足够好区分”，我们需要积累与 <span class="arithmatex">\(1/\eps^2\)</span> 成正比的信息量？</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the fair coin testing problem, we discussed how to use <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span> samples to determine whether a coin is fair (<span class="arithmatex">\(\!{Ber}(1/2)\)</span>) or biased (<span class="arithmatex">\(\!{Ber}(1/2+\eps)\)</span>), with a successful probability of at least <span class="arithmatex">\(1-\delta\)</span>. In this problem, we will prove that (up to a constant factor) this algorithm is optimal. In other words, we will prove that any algorithm satisfying this condition must have <span class="arithmatex">\(\E{T} = \Omega\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span> when the input is a fair coin.</p>
+<p>Let <span class="arithmatex">\(L = \frac{1}{100\eps^2}\log\frac{1}{4\delta}\)</span>. Suppose <span class="arithmatex">\(\eps \in (0, 1/8), \delta \in (0, e^{-4}/4)\)</span>. We first consider deterministic algorithms, where the only source of randomness is the outcome of the coin flips. Let <span class="arithmatex">\(\Pr[0]{\cdot}\)</span> and <span class="arithmatex">\(\E[0]{\cdot}\)</span> denote the probability and expectation when the input coin is case <span class="arithmatex">\(0\)</span>, and let <span class="arithmatex">\(\Pr[1]{\cdot}\)</span> and <span class="arithmatex">\(\E[1]{\cdot}\)</span> denote the probability and expectation when the input coin is case <span class="arithmatex">\(1\)</span>, where <span class="arithmatex">\(0\)</span> represents the fair coin and <span class="arithmatex">\(1\)</span> represents the biased coin. Using proof by contradiction, assume there exists a deterministic algorithm <span class="arithmatex">\(\mathcal{A}\)</span> meeting the requirements perfectly and satisfying <span class="arithmatex">\(\E[0]{T} \le L\)</span>. Consider the sample space <span class="arithmatex">\(\Omega = \left\{0, 1\right\}^{*}\)</span>.</p>
+<p>Define the following three events:</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>: <span class="arithmatex">\(T \le 4L\)</span>;</li>
+<li><span class="arithmatex">\(B\)</span>: For any <span class="arithmatex">\(1 \le t \le 4L\)</span>, <span class="arithmatex">\(\abs{K_t - \frac{t}{2}} \le \sqrt{L \log \frac{1}{4\delta}}\)</span>, where <span class="arithmatex">\(K_t\)</span> is the number of heads in the first <span class="arithmatex">\(t\)</span> trials;</li>
+<li><span class="arithmatex">\(C\)</span>: <span class="arithmatex">\(\mathcal{A}\)</span> outputs <span class="arithmatex">\(0\)</span>, concluding that the coin is fair.</li>
+</ul>
+<p>Please answer the following questions.</p>
+<ol>
+<li>
+<p>The following theorem is a generalization of Chebyshev's inequality. Use this theorem to prove that <span class="arithmatex">\(\Pr[0]{A \cap B \cap C} \ge 1/4\)</span> (the theorem itself does not need to be proved and can be used directly).</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem (Can be used directly)</p>
+<p>Suppose <span class="arithmatex">\(X_1,\dots,X_N\)</span> are <span class="arithmatex">\(N\)</span> independent Bernoulli random variables defined on the same probability space. Let <span class="arithmatex">\(S_k=\sum_{i=1}^k \tp{X_i - \E{X_i}}\)</span>, then for any <span class="arithmatex">\(s&gt;0\)</span>,
+$$
+\Pr{\max_{1\le k\le N}\abs{S_k}\ge s} \le \frac{\Var{S_n}}{s^2}.
+$$</p>
+</div>
+</li>
+<li>
+<p>Prove that for any <span class="arithmatex">\(\omega \in A \cap B \cap C\)</span>, it holds that <span class="arithmatex">\(\frac{\Pr[1]{\omega}}{\Pr[0]{\omega}} \ge 4\delta\)</span>.</p>
+</li>
+<li>Prove that <span class="arithmatex">\(\Pr[1]{C} &gt; \delta\)</span>, and use this to prove that a deterministic algorithm satisfying the requirements and guaranteeing <span class="arithmatex">\(\E[0]{T} \le L\)</span> does not exist.</li>
+<li>If <span class="arithmatex">\(\mathcal{A}\)</span> is a randomized algorithm (i.e., <span class="arithmatex">\(\mathcal{A}\)</span> can use additional random numbers), does the lower bound <span class="arithmatex">\(\E[0]{T} = \Omega\tp{\frac{1}{\eps^2}\log\frac{1}{\delta}}\)</span> still hold? Why?</li>
+<li>If you are familiar with relative entropy (KL divergence), calculate the KL divergence of these two Bernoulli distributions for each independent coin flip. Can you intuitively explain why, in order to make the observable sequences generated by the two distributions statistically "distinguishable enough", we need to accumulate an amount of information proportional to <span class="arithmatex">\(1/\eps^2\)</span>?</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自陈志杰的解答</summary>
+<p><em>Proof of Part 1.</em></p>
+<p>By Markov's inequality,</p>
+<div class="arithmatex">\[
+\Pr[0]{A^c} = \Pr[0]{T&gt;4L} \le \frac{\E[0]{T}}{4L}\le \frac{1}{4}.
+\]</div>
+<p>By the given theorem,</p>
+<div class="arithmatex">\[
+\Pr[0]{B^c} = \Pr[0]{\max_{1\le t\le 4L}\left\lvert K_t-\frac{t}{2} \right\rvert &gt; \sqrt{L\log{\frac{1}{4\delta}}}} \le \frac{\Var[0]{K_{4L}-2L}}{L\log{\frac{1}{4\delta}}} = \frac{1}{\log{\frac{1}{4\delta}}}\le \frac{1}{4}.
+\]</div>
+<p>By the correctness of <span class="arithmatex">\(\mathcal{A}\)</span>,</p>
+<div class="arithmatex">\[
+\Pr[0]{C^c}\le \delta \le \frac{1}{4}.
+\]</div>
+<p>Now the union bound implies</p>
+<div class="arithmatex">\[
+\Pr[0]{A\cap B\cap C} = 1-\Pr[0]{A^c\cup B^c\cup C^c} \ge 1-\Pr[0]{A^c}-\Pr[0]{B^c}-\Pr[0]{C^c}\ge \frac{1}{4}.
+\]</div>
+<p><em>Proof of Part 2.</em></p>
+<p>Let <span class="arithmatex">\(t=T(\omega)\)</span> and <span class="arithmatex">\(k=K_t(\omega)=K_{T(\omega)}(\omega)\)</span>. Then</p>
+<div class="arithmatex">\[
+\Pr[0]{\omega} = \left(\frac{1}{2}\right)^t,\quad \Pr[1]{\omega} = \left(\frac{1+2\eps}{2}\right)^k\left(\frac{1-2\eps}{2}\right)^{t-k}\implies \frac{\Pr[1]{\omega}}{\Pr[0]{\omega}}=(1+2\eps)^k(1-2\eps)^{t-k}.
+\]</div>
+<p>It suffices to prove that</p>
+<div class="arithmatex">\[
+k\log(1+2\eps)+(t-k)\log(1-2\eps)\ge -\log\frac{1}{4\delta}.
+\]</div>
+<p><span class="arithmatex">\(\omega\in A\)</span> implies <span class="arithmatex">\(t\le \frac{1}{25\eps^2}\log\frac{1}{4\delta}\)</span>. <span class="arithmatex">\(\omega\in B\)</span> implies <span class="arithmatex">\(k-\frac{t}{2}\ge -\sqrt{L\log\frac{1}{4\delta}}=-\frac{1}{10\eps}\log\frac{1}{4\delta}\)</span>. Hence</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \text{LHS} &amp; = \left(k-\frac{t}{2}\right)\log\frac{1+2\eps}{1-2\eps}+\frac{t}{2}\log(1-4\eps^2) \cr
+               &amp; \ge -\frac{1}{10\eps}\log\frac{1}{4\delta}\log\frac{1+2\eps}{1-2\eps}+\frac{1}{50\eps^2}\log\frac{1}{4\delta}\log(1-4\eps^2).
+\end{align*}
+\]</div>
+<p>Thus it suffices to prove that</p>
+<div class="arithmatex">\[
+-\frac{1}{10\eps}\log\frac{1+2\eps}{1-2\eps}+\frac{1}{50\eps^2}\log(1-4\eps^2)\ge -1.
+\]</div>
+<p>This follows from</p>
+<div class="arithmatex">\[
+\log\frac{1+2\eps}{1-2\eps}\le 5\eps,\quad \log(1-4\eps^2)\ge -8\eps^2,\quad 0&lt;\eps&lt;\frac{1}{8},
+\]</div>
+<p>whose validity can be verified by brute force.</p>
+<p><em>Proof of Part 3.</em></p>
+<p>Observe that the <span class="arithmatex">\(\ge\)</span> in the inequality above can be replaced by a strict <span class="arithmatex">\(&gt;\)</span>. Because <span class="arithmatex">\(\Omega\)</span> is countable, by countable additivity,</p>
+<div class="arithmatex">\[
+\Pr[1]{C}\ge \Pr[1]{A\cap B\cap C} = \sum_{\omega\in A\cap B\cap C}\Pr[1]{\omega} &gt; \sum_{\omega\in A\cap B\cap C}(4\delta\cdot \Pr[0]{\omega}) = 4\delta\cdot \Pr[0]{A\cap B\cap C}\ge \delta.
+\]</div>
+<p>Hence <span class="arithmatex">\(\Pr[1]{C}&gt;\delta\)</span>, contradicting the correctness of <span class="arithmatex">\(\mathcal{A}\)</span>. This implies that such a deterministic algorithm does not exist.</p>
+<p><em>Proof of Part 4.</em></p>
+<p>We view the randomized algorithm as a deterministic algorithm after picking a random seed. For any random seed, the argument above for deterministic algorithms still holds, which implies that the lower bound still applies. Hence the lower bound also applies to randomized algorithms.</p>
+<p><em>Proof of Part 5.</em></p>
+<p>Let <span class="arithmatex">\(p=\Ber{1/2}\)</span> and <span class="arithmatex">\(q=\Ber{1/2+\eps}\)</span>.</p>
+<div class="arithmatex">\[
+D_{\mathrm{KL}}(p\parallel q) = \sum_{x=0,1}p(x)\log\frac{p(x)}{q(x)} = -\frac{1}{2}\log(1-4\eps^2).
+\]</div>
+<p>Let <span class="arithmatex">\(P=B(n,1/2)\)</span> and <span class="arithmatex">\(Q=B(n,1/2+\eps)\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    D_{\mathrm{KL}}(P\parallel Q) &amp; = \sum_{k=0}^{n}P(k)\log\frac{P(k)}{Q(k)} \cr
+                                  &amp; = -n\log(1-2\eps)-\log\frac{1+2\eps}{1-2\eps}\cdot \frac{1}{2^n}\sum_{k=1}^{n}k\binom nk \cr
+                                  &amp; = -\frac{1}{2}\log(1-4\eps^2)n=\Theta(\eps^2)n.
+\end{align*}
+\]</div>
+<p>Here <span class="arithmatex">\(\sum_{k=1}^{n}k\binom nk=n2^{n-1}\)</span> is calculated via power series. Therefore, to gather constant KL divergence, i.e., make the two distributions sufficiently distinguishable, we need <span class="arithmatex">\(n=\Theta(1/\eps^2)\)</span>.</p>
+</details>
+<h3 id="a-losing-gamble">必输的赌博 (A Losing Gamble)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在上一题中，我们证明了要区分公平硬币和偏差 <span class="arithmatex">\(\eps\)</span> 的硬币，至少需要 <span class="arithmatex">\(\Omega(\eps^{-2}\log \delta^{-1})\)</span> 的样本。本题我们将这一结论推广，来证明多臂老虎机（MAB）的懊悔下界。</p>
+<p>考虑 <span class="arithmatex">\(K = n+1\)</span> 个臂的老虎机，臂的编号为 <span class="arithmatex">\(0, 1, \dots, n\)</span>。我们构造如下 <span class="arithmatex">\(n+1\)</span> 个实例集合 <span class="arithmatex">\(\mathcal{I} = \left\{\nu_0, \nu_1, \dots, \nu_n\right\}\)</span>：</p>
+<ul>
+<li>实例 <span class="arithmatex">\(\nu_0\)</span>：臂 <span class="arithmatex">\(0\)</span> 是最优臂，服从 <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \frac{\eps}{2}}\)</span>；其余臂 <span class="arithmatex">\(i \in [n]\)</span> 服从 <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2}}\)</span>。</li>
+<li>实例 <span class="arithmatex">\(\nu_j\)</span>（<span class="arithmatex">\(j \in [n]\)</span>）：臂 <span class="arithmatex">\(0\)</span> 服从 <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \frac{\eps}{2}}\)</span>；臂 <span class="arithmatex">\(j\)</span> 是最优臂，服从 <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \eps}\)</span>；其余臂 <span class="arithmatex">\(i \notin \left\{0, j\right\}\)</span> 服从 <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2}}\)</span>。</li>
+</ul>
+<p>在这个问题上，我们称一个算法是 <span class="arithmatex">\((\eps, \delta)\)</span>-PAC 的，如果它在停止时能以至少 <span class="arithmatex">\(1-\delta\)</span> 的概率输出一个 <span class="arithmatex">\(\eps\)</span>-最优臂（即其与最优臂的期望受益之差小于 <span class="arithmatex">\(\eps\)</span>）。令 <span class="arithmatex">\(T_j\)</span> 表示臂 <span class="arithmatex">\(j\)</span> 被拉动的总次数，<span class="arithmatex">\(\E[\nu]{\cdot}\)</span> 表示在实例 <span class="arithmatex">\(\nu\)</span> 下的期望，注意，此处的随机性来自算法本身的随机性以及臂的收益的随机性。</p>
+<ol>
+<li>假设 <span class="arithmatex">\(\mathcal{G}\)</span> 是一个 <span class="arithmatex">\(\tp{\frac{\eps}{2}, \delta}\)</span>-PAC 算法（其中 <span class="arithmatex">\(\delta &lt; 1/8\)</span>）。请利用上一题的结论论证：存在常数 <span class="arithmatex">\(c&gt;0\)</span>，使得对于任意 <span class="arithmatex">\(j \in [n]\)</span>，在实例 <span class="arithmatex">\(\nu_0\)</span> 下，算法 <span class="arithmatex">\(\mathcal{G}\)</span> 拉动臂 <span class="arithmatex">\(j\)</span> 的期望次数 <span class="arithmatex">\(\E[\nu_0]{T_j}\)</span> 满足：
+    $$
+    \E[\nu_0]{T_j} \ge \frac{c}{\eps^2} \log \frac{1}{\delta} .
+    $$</li>
+<li>
+<p>考虑一个总轮数为 <span class="arithmatex">\(T\)</span> 的 MAB 算法 <span class="arithmatex">\(\mathcal{A}\)</span>，设其在实例 <span class="arithmatex">\(\nu\)</span> 上的累积期望懊悔为 <span class="arithmatex">\(R_T(\mathcal{A}, \nu)\)</span>。请证明：对于任意 MAB 算法 <span class="arithmatex">\(\mathcal{A}\)</span>，总是存在某个实例 <span class="arithmatex">\(\nu \in \mathcal{I}\)</span>，使得
+    $$
+    R_T(\mathcal{A}, \nu) = \Omega(\sqrt{nT}).
+    $$</p>
+<details class="hint">
+<summary>提示</summary>
+<p>取 <span class="arithmatex">\(\eps = 2\sqrt{\frac{n}{T}}\)</span>。假设 <span class="arithmatex">\(\mathcal{A}\)</span> 在所有实例上的懊悔都很小，可以构造一个纯探索算法 <span class="arithmatex">\(\mathcal{G}\)</span>：运行 <span class="arithmatex">\(\mathcal{A}\)</span> 一共 <span class="arithmatex">\(T\)</span> 轮，然后输出被拉动次数最多的臂。证明 <span class="arithmatex">\(\mathcal{G}\)</span> 是一个 <span class="arithmatex">\(\tp{\frac{\eps}{2}, \delta}\)</span>-PAC 算法，并利用第一问的结论导出矛盾。</p>
+</details>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the previous problem, we proved that distinguishing a fair coin from a coin with bias <span class="arithmatex">\(\eps\)</span> requires at least <span class="arithmatex">\(\Omega(\eps^{-2}\log \delta^{-1})\)</span> samples. In this problem, we generalize this conclusion to prove the regret lower bound for Multi-Armed Bandits (MAB).</p>
+<p>Consider a bandit with <span class="arithmatex">\(K = n+1\)</span> arms, indexed as <span class="arithmatex">\(0, 1, \dots, n\)</span>. We construct a set of <span class="arithmatex">\(n+1\)</span> instances <span class="arithmatex">\(\mathcal{I} = \left\{\nu_0, \nu_1, \dots, \nu_n\right\}\)</span> as follows:</p>
+<ul>
+<li>Instance <span class="arithmatex">\(\nu_0\)</span>: Arm <span class="arithmatex">\(0\)</span> is the optimal arm, following <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \frac{\eps}{2}}\)</span>; the remaining arms <span class="arithmatex">\(i \in [n]\)</span> follow <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2}}\)</span>.</li>
+<li>Instance <span class="arithmatex">\(\nu_j\)</span> (<span class="arithmatex">\(j \in [n]\)</span>): Arm <span class="arithmatex">\(0\)</span> follows <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \frac{\eps}{2}}\)</span>; arm <span class="arithmatex">\(j\)</span> is the optimal arm, following <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2} + \eps}\)</span>; the remaining arms <span class="arithmatex">\(i \notin \left\{0, j\right\}\)</span> follow <span class="arithmatex">\(\!{Ber}\tp{\frac{1}{2}}\)</span>.</li>
+</ul>
+<p>In this problem, we call an algorithm <span class="arithmatex">\((\eps, \delta)\)</span>-PAC if, upon termination, it outputs an <span class="arithmatex">\(\eps\)</span>-optimal arm (i.e., the difference between its expected reward and that of the optimal arm is strictly less than <span class="arithmatex">\(\eps\)</span>) with probability at least <span class="arithmatex">\(1-\delta\)</span>. Let <span class="arithmatex">\(T_j\)</span> denote the total number of pulls for arm <span class="arithmatex">\(j\)</span>, and <span class="arithmatex">\(\E[\nu]{\cdot}\)</span> denote the expectation under instance <span class="arithmatex">\(\nu\)</span>. Note that the randomness here stems from both the algorithm's internal randomization and the stochastic rewards of the arms.</p>
+<ol>
+<li>Suppose <span class="arithmatex">\(\mathcal{G}\)</span> is an <span class="arithmatex">\(\tp{\frac{\eps}{2}, \delta}\)</span>-PAC algorithm (where <span class="arithmatex">\(\delta &lt; 1/8\)</span>). Use the conclusion from the previous problem to argue that there exists a constant <span class="arithmatex">\(c&gt;0\)</span> such that for any <span class="arithmatex">\(j \in [n]\)</span>, under instance <span class="arithmatex">\(\nu_0\)</span>, the expected number of pulls for arm <span class="arithmatex">\(j\)</span> by algorithm <span class="arithmatex">\(\mathcal{G}\)</span>, denoted as <span class="arithmatex">\(\E[\nu_0]{T_j}\)</span>, satisfies:
+    $$
+    \E[\nu_0]{T_j} \ge \frac{c}{\eps^2} \log \frac{1}{\delta} .
+    $$</li>
+<li>
+<p>Consider an MAB algorithm <span class="arithmatex">\(\mathcal{A}\)</span> running for <span class="arithmatex">\(T\)</span> rounds, and let its expected cumulative regret on instance <span class="arithmatex">\(\nu\)</span> be <span class="arithmatex">\(R_T(\mathcal{A}, \nu)\)</span>. Prove that for any MAB algorithm <span class="arithmatex">\(\mathcal{A}\)</span>, there always exists some instance <span class="arithmatex">\(\nu \in \mathcal{I}\)</span> such that
+    $$
+    R_T(\mathcal{A}, \nu) = \Omega(\sqrt{nT}).
+    $$</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>Let <span class="arithmatex">\(\eps = 2\sqrt{\frac{n}{T}}\)</span>. Assuming <span class="arithmatex">\(\mathcal{A}\)</span> has small regret on all instances, one can construct a pure exploration algorithm <span class="arithmatex">\(\mathcal{G}\)</span>: run <span class="arithmatex">\(\mathcal{A}\)</span> for a total of <span class="arithmatex">\(T\)</span> rounds, and then output the most pulled arm. Prove that <span class="arithmatex">\(\mathcal{G}\)</span> is an <span class="arithmatex">\(\tp{\frac{\eps}{2}, \delta}\)</span>-PAC algorithm, and use the conclusion from part 1 to derive a contradiction.</p>
+</details>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="uniformity-testing">均匀性测试 (Uniformity Testing)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在公平硬币检验中，我们讲了如何区分公平硬币和有偏硬币。现在我们来推广这个问题。</p>
+<p>考虑样本空间 <span class="arithmatex">\(\Omega = \left\{1, 2, \dots, n\right\}\)</span>。对于 <span class="arithmatex">\(\Omega\)</span> 上的任意一个分布 <span class="arithmatex">\(q\)</span>，令 <span class="arithmatex">\(q_i\)</span> 表示从分布 <span class="arithmatex">\(q\)</span> 中采样一次得到样本为 <span class="arithmatex">\(i\)</span> 的概率（<span class="arithmatex">\(i \in [n]\)</span>）。对于 <span class="arithmatex">\(\Omega\)</span> 上的两个分布 <span class="arithmatex">\(p\)</span> 和 <span class="arithmatex">\(q\)</span>，定义其总变分距离（total variation distance）为 <span class="arithmatex">\(\dTV(p, q) = \frac{1}{2} \sum_{i=1}^n \abs{p_i - q_i}\)</span>。</p>
+<p>令 <span class="arithmatex">\(\mu\)</span> 是 <span class="arithmatex">\(\Omega\)</span> 上的均匀分布，<span class="arithmatex">\(\pi\)</span> 是 <span class="arithmatex">\(\Omega\)</span> 上的一个未知分布。假设我们已经知道 <span class="arithmatex">\(\pi\)</span> 要么就是均匀分布（即 <span class="arithmatex">\(\pi = \mu\)</span>），要么与均匀分布差别很大，即 <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>（其中 <span class="arithmatex">\(\eps \in (0, 1/2)\)</span> 是一个已知的常数）。均匀性测试问题指的是，通过从分布中采样，来判断它到底是均匀分布还是距离均匀分布很远。在这个问题里，我们来设计一个高效的均匀性测试算法，即使用尽量少的样本来保证至少 <span class="arithmatex">\(1 - \delta\)</span> 的判断准确概率。</p>
+<p>大家可以首先猜一下我们至少需要多少个样本才能达到这个目标。在正文里，我们讲了奖券收集问题，知道平均需要大约 <span class="arithmatex">\(n \log n\)</span> 个样本，才能够保证每一个样本都被采集到。这是否说明，判断目标分布是不是均匀分布，至少需要 <span class="arithmatex">\(\Omega(n \log n)\)</span> 个样本呢？</p>
+<p>实际上，我们可以用少得多的样本达到这个目标。我们一起来设计一个算法，只要用 <span class="arithmatex">\(O(\sqrt{n})\)</span> 的样本就可以了。我们用到的工具就是正文提到的生日悖论，我们知道如果 <span class="arithmatex">\(\pi\)</span> 是均匀分布，那么实际上大约 <span class="arithmatex">\(\Theta(\sqrt{n})\)</span> 个样本就可以保证高概率出现两个同样的样本。我们接下来的讨论将说明，均匀分布是让这件事最难发生的分布，并利用这个事实来判断一个分布是不是均匀分布。</p>
+<ol>
+<li>令 <span class="arithmatex">\(\|\pi\| = \sqrt{\sum_{i=1}^n \pi_i^2}\)</span>。假设 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 是独立地从 <span class="arithmatex">\(\pi\)</span> 中采的两个样本，请证明 <span class="arithmatex">\(\Pr{X = Y} = \|\pi\|^2\)</span>。这里 <span class="arithmatex">\(\|\pi\|^2\)</span> 被称为碰撞概率。</li>
+<li>
+<p>请证明：</p>
+<p>1) <span class="arithmatex">\(\|\mu\|^2 = \frac{1}{n}\)</span>；</p>
+<p>2) 若 <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>，则有 <span class="arithmatex">\(\|\pi\|^2 - \|\mu\|^2 \ge \frac{4\eps^2}{n}\)</span>。</p>
+</li>
+<li>
+<p>假设 <span class="arithmatex">\(X_1, X_2, \dots, X_m\)</span> 是 <span class="arithmatex">\(m\)</span> 个从 <span class="arithmatex">\(\pi\)</span> 中独立采出的样本点（<span class="arithmatex">\(m \ge 4\)</span>），对于 <span class="arithmatex">\(1 \le i &lt; j \le m\)</span>，定义随机变量 <span class="arithmatex">\(Y_{ij} = \1{X_i = X_j}\)</span>。令 <span class="arithmatex">\(Z = \frac{1}{\binom{m}{2}} \sum_{1 \le i &lt; j \le m} Y_{ij}\)</span> 表示碰撞发生的频率，请证明：</p>
+<p>1) <span class="arithmatex">\(\E{Z} = \|\pi\|^2\)</span>；</p>
+<p>2) <span class="arithmatex">\(\Var{Z} \le \frac{4\|\pi\|^3}{m} + \frac{4\|\pi\|^2}{m^2}\)</span>；</p>
+<p>3) 无论 <span class="arithmatex">\(\pi = \mu\)</span> 或 <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>，都有
+$$
+\Pr{\abs{Z - \E{Z}} \ge \eps^2 \E{Z}} \le \frac{4\sqrt{n}}{\eps^4 m} + \frac{4n}{\eps^4 m^2}.
+$$</p>
+</li>
+<li>
+<p>根据以上结论，我们知道当 <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span> 时碰撞发生概率明显大于均匀分布下碰撞发生概率，于是我们可以考虑根据碰撞发生频率 <span class="arithmatex">\(Z\)</span> 的大小来判断 <span class="arithmatex">\(\pi\)</span> 是否为均匀分布。我们考虑如下算法：</p>
+<ul>
+<li>从 <span class="arithmatex">\(\pi\)</span> 中独立地采 <span class="arithmatex">\(m = \frac{100\sqrt{n}}{\eps^4}\)</span> 个样本点，并计算 <span class="arithmatex">\(Z\)</span> 的值；</li>
+<li>若 <span class="arithmatex">\(Z \ge \frac{1+2\eps^2}{n}\)</span>，则输出 <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>，反之输出 <span class="arithmatex">\(\pi = \mu\)</span>。</li>
+</ul>
+<p>请证明该算法出错概率不超过 <span class="arithmatex">\(0.1\)</span>。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the fair coin testing problem, we discussed how to distinguish a fair coin from a biased coin. Now we generalize this problem.</p>
+<p>Consider the sample space <span class="arithmatex">\(\Omega = \left\{1, 2, \dots, n\right\}\)</span>. For any distribution <span class="arithmatex">\(q\)</span> on <span class="arithmatex">\(\Omega\)</span>, let <span class="arithmatex">\(q_i\)</span> denote the probability of obtaining sample <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(i \in [n]\)</span>) in a single draw from <span class="arithmatex">\(q\)</span>. For two distributions <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> on <span class="arithmatex">\(\Omega\)</span>, their total variation distance is defined as <span class="arithmatex">\(\dTV(p, q) = \frac{1}{2} \sum_{i=1}^n \abs{p_i - q_i}\)</span>.</p>
+<p>Let <span class="arithmatex">\(\mu\)</span> be the uniform distribution on <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(\pi\)</span> be an unknown distribution on <span class="arithmatex">\(\Omega\)</span>. Suppose we already know that <span class="arithmatex">\(\pi\)</span> is either the uniform distribution (i.e., <span class="arithmatex">\(\pi = \mu\)</span>) or it is far from the uniform distribution, meaning <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span> (where <span class="arithmatex">\(\eps \in (0, 1/2)\)</span> is a known constant). The uniformity testing problem is to determine whether <span class="arithmatex">\(\pi\)</span> is the uniform distribution or far from it by sampling from the distribution. In this problem, we design an efficient uniformity testing algorithm, which uses as few samples as possible to guarantee a correct judgment probability of at least <span class="arithmatex">\(1 - \delta\)</span>.</p>
+<p>Before proceeding, one might guess the minimum number of samples required to achieve this goal. In the main text, we discussed the coupon collector's problem and established that on average, about <span class="arithmatex">\(n \log n\)</span> samples are needed to ensure every sample is collected. Does this imply that at least <span class="arithmatex">\(\Omega(n \log n)\)</span> samples are required to determine whether the target distribution is uniform?</p>
+<p>In fact, we can achieve this goal with far fewer samples. We will work together to design an algorithm that requires only <span class="arithmatex">\(O(\sqrt{n})\)</span> samples. The tool we employ is the birthday paradox mentioned in the main text. We know that if <span class="arithmatex">\(\pi\)</span> is a uniform distribution, then approximately <span class="arithmatex">\(\Theta(\sqrt{n})\)</span> samples are sufficient to guarantee a high probability of drawing two identical samples. Our subsequent discussion will demonstrate that the uniform distribution makes this event the hardest to occur, and we will exploit this fact to test uniformity.</p>
+<ol>
+<li>Let <span class="arithmatex">\(\|\pi\| = \sqrt{\sum_{i=1}^n \pi_i^2}\)</span>. Suppose <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are two independent samples drawn from <span class="arithmatex">\(\pi\)</span>. Prove that <span class="arithmatex">\(\Pr{X = Y} = \|\pi\|^2\)</span>. Here, <span class="arithmatex">\(\|\pi\|^2\)</span> is referred to as the collision probability.</li>
+<li>
+<p>Prove that:</p>
+<p>1) <span class="arithmatex">\(\|\mu\|^2 = \frac{1}{n}\)</span>;</p>
+<p>2) If <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>, then <span class="arithmatex">\(\|\pi\|^2 - \|\mu\|^2 \ge \frac{4\eps^2}{n}\)</span>.</p>
+</li>
+<li>
+<p>Suppose <span class="arithmatex">\(X_1, X_2, \dots, X_m\)</span> are <span class="arithmatex">\(m\)</span> independent samples drawn from <span class="arithmatex">\(\pi\)</span> (<span class="arithmatex">\(m \ge 4\)</span>). For <span class="arithmatex">\(1 \le i &lt; j \le m\)</span>, define the random variable <span class="arithmatex">\(Y_{ij} = \1{X_i = X_j}\)</span>. Let <span class="arithmatex">\(Z = \frac{1}{\binom{m}{2}} \sum_{1 \le i &lt; j \le m} Y_{ij}\)</span> denote the empirical collision frequency. Prove that:</p>
+<p>1) <span class="arithmatex">\(\E{Z} = \|\pi\|^2\)</span>;</p>
+<p>2) <span class="arithmatex">\(\Var{Z} \le \frac{4\|\pi\|^3}{m} + \frac{4\|\pi\|^2}{m^2}\)</span>;</p>
+<p>3) Whether <span class="arithmatex">\(\pi = \mu\)</span> or <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>, we always have
+$$
+\Pr{\abs{Z - \E{Z}} \ge \eps^2 \E{Z}} \le \frac{4\sqrt{n}}{\eps^4 m} + \frac{4n}{\eps^4 m^2}.
+$$</p>
+</li>
+<li>
+<p>According to the above results, when <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>, the collision probability is significantly larger than under the uniform distribution. Therefore, we can base our judgment of whether <span class="arithmatex">\(\pi\)</span> is uniform on the magnitude of the empirical collision frequency <span class="arithmatex">\(Z\)</span>. We consider the following algorithm:</p>
+<ul>
+<li>Draw <span class="arithmatex">\(m = \frac{100\sqrt{n}}{\eps^4}\)</span> independent samples from <span class="arithmatex">\(\pi\)</span>, and calculate the value of <span class="arithmatex">\(Z\)</span>;</li>
+<li>If <span class="arithmatex">\(Z \ge \frac{1+2\eps^2}{n}\)</span>, output <span class="arithmatex">\(\dTV(\pi, \mu) \ge \eps\)</span>; otherwise, output <span class="arithmatex">\(\pi = \mu\)</span>.</li>
+</ul>
+<p>Prove that the failure probability of this algorithm is at most <span class="arithmatex">\(0.1\)</span>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自陈志杰的解答</summary>
+<p><em>Proof of Part 1.</em></p>
+<div class="arithmatex">\[
+\Pr{X=Y} = \Pr{\bigsqcup_{i=1}^n (X=i \land Y=i)} = \sum_{i=1}^{n}\Pr{X=i \land Y=i} = \sum_{i=1}^{n}\pi_i^2 = \|\pi\|^2.
+\]</div>
+<p><em>Proof of Part 2.</em></p>
+<div class="arithmatex">\[
+\|\mu\|^2 = \sum_{i=1}^{n}\left(\frac{1}{n}\right)^2 = \frac{1}{n}.
+\]</div>
+<p>Let <span class="arithmatex">\(x_i=\pi_i-1/n\)</span>. Then <span class="arithmatex">\(\sum x_i=0\)</span> and <span class="arithmatex">\(\sum \left\lvert x_i \right\rvert = 2dTV(\pi,\mu)\ge 2\eps\)</span>. By the Cauchy-Schwarz inequality,</p>
+<div class="arithmatex">\[
+\sqrt{\sum x_i^2}\cdot \sqrt{n} \ge \sum (\left\lvert x_i \right\rvert \cdot 1) \ge 2\eps.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\|\pi\|^2 = \sum \left(x_i+\frac{1}{n}\right)^2 = \sum x_i^2+\frac{2}{n}\sum x_i+\frac{1}{n} \ge \frac{4\eps^2}{n}+\frac{1}{n}.
+\]</div>
+<p>This directly implies the desired result.</p>
+<p><em>Proof of Part 3.</em></p>
+<div class="arithmatex">\[
+\E{Z} = \frac{1}{\binom m2}\sum_{1\le i&lt;j\le m}\E{Y_{ij}} = \E{Y_{ij}} = \Pr{X_i=X_j} = \|\pi\|^2,
+\]</div>
+<p>where the last equality follows from part 1.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \mathrm{Var}(Z) &amp; = \frac{1}{\binom m2^2}\left(\sum_{\substack{i&lt;j,k&lt;l \cr \left\lvert \left\lbrace i,j,k,l \right\rbrace \right\rvert =2}}+\sum_{\substack{i&lt;j,k&lt;l \cr \left\lvert \left\lbrace i,j,k,l \right\rbrace \right\rvert =3}}+\sum_{\substack{i&lt;j,k&lt;l \cr \left\lvert \left\lbrace i,j,k,l \right\rbrace \right\rvert =4}}\right)\mathrm{Cov}(Y_{ij},Y_{kl}) \cr
+                   &amp; = \frac{1}{\binom m2^2}\left(\binom m2\mathrm{Var}(Y_{ij})+\binom m3\cdot 3\cdot 2\cdot \mathrm{Cov}(Y_{ij},Y_{jk})+\binom m4\cdot \binom 42 \cdot \mathrm{Cov}(Y_{ij},Y_{kl})\right).
+\end{align*}
+\]</div>
+<p>Because <span class="arithmatex">\(Y_{ij}\sim \Ber{\|\pi\|^2}\)</span>, <span class="arithmatex">\(\mathrm{Var}(Y_{ij})=\|\pi\|^2(1-\|\pi\|^2)\)</span>. Because <span class="arithmatex">\(\mathrm{Cov}(X,Y)=\E{XY}-\E{X}\E{Y}\)</span>,</p>
+<div class="arithmatex">\[
+\mathrm{Cov}(Y_{ij},Y_{jk}) = \Pr{X_i=X_j=X_k}-\|\pi\|^4 = \sum \pi_i^3-\|\pi\|^4,
+\]</div>
+<div class="arithmatex">\[
+\mathrm{Cov}(Y_{ij},Y_{kl}) = \Pr{X_i=X_j \land X_k=X_l}-\|\pi\|^4 = 0.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \mathrm{Var}(Z) &amp; \le \frac{2}{m(m-1)}\|\pi\|^2+\frac{4(m-2)}{m(m-1)}\sum \pi_i^3 \cr
+                   &amp; \le \frac{2}{m(m-1)}\|\pi\|^2+\frac{4(m-2)}{m(m-1)}\|\pi\|^3 \cr
+                   &amp; \le \frac{4}{m^2}\|\pi\|^2+\frac{4}{m}\|\pi\|^3,\quad m\ge 4.
+\end{align*}
+\]</div>
+<p>If <span class="arithmatex">\(\pi=\mu\)</span>, then <span class="arithmatex">\(\|\pi\|^2=1/n\)</span>; if <span class="arithmatex">\(dTV(\pi,\mu)\ge \eps\)</span>, then <span class="arithmatex">\(\|\pi\|^2\ge \|\mu\|^2=1/n\)</span> by part 2. By Chebyshev's inequality,</p>
+<div class="arithmatex">\[
+\Pr{\left\lvert Z-\E{Z} \right\rvert \ge \eps^2 \E{Z}} \le \frac{\mathrm{Var}(Z)}{\eps^4\|\pi\|^4} \le \frac{4}{\eps^4m\|\pi\|}+\frac{4}{\eps^4m^2\|\pi\|^2} \le \frac{4\sqrt n}{\eps^4m}+\frac{4n}{\eps^4m^2}.
+\]</div>
+<p><em>Proof of Part 4.</em></p>
+<p>Suppose <span class="arithmatex">\(\pi=\mu\)</span>. Then <span class="arithmatex">\(\E{Z}=\|\pi\|^2=1/n\)</span>.</p>
+<div class="arithmatex">\[
+\Pr{Z\ge \frac{1+2\eps^2}{n}} \le \Pr{\left\lvert Z-\E{Z} \right\rvert \ge 2\eps^2 \E{Z}} \le \frac{\sqrt n}{\eps^4 m}+\frac{n}{\eps^4m^2} = \frac{1}{100}+\frac{\eps^4}{10000}\le 0.1.
+\]</div>
+<p>Suppose <span class="arithmatex">\(dTV(\pi,\mu)\ge \eps\)</span>. Then <span class="arithmatex">\(\E{Z}=\|\pi\|^2\ge (1+4\eps^2)/n\)</span> by part 2.</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \Pr{Z&lt;\frac{1+2\eps^2}{n}} &amp; \le \Pr{\frac{Z}{\E{Z}}&lt;\frac{1+2\eps^2}{1+4\eps^2}} \le \Pr{\left\lvert Z-\E{Z} \right\rvert &gt; \frac{2\eps^2}{1+4\eps^2}\E{Z}} \cr
+                               &amp; \le \frac{(1+4\eps^2)^2}{100}+\frac{\eps^4(1+4\eps^2)^2}{10000}\le 0.1.
+\end{align*}
+\]</div>
+</details>
+<h3 id="learning-a-discrete-distribution">学习离散分布 (Learning a Discrete Distribution)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设你计划在校园里开一家咖啡店，想了解学生们最喜欢的咖啡口味。菜单上有 <span class="arithmatex">\(n\)</span> 种选择。你决定进行一次问卷调查，随机询问学生他们最喜欢的咖啡。问题是：如何利用这些数据来推断学生们的口味偏好？你需要询问多少名学生？</p>
+<p>我们将这个问题转化为一个数学模型。令 <span class="arithmatex">\(p\)</span> 为样本空间 <span class="arithmatex">\(\Omega = \left\{1, 2, \dots, n\right\}\)</span> 上的一个未知分布。现在我们有 <span class="arithmatex">\(T\)</span> 个独立同分布的样本 <span class="arithmatex">\(X_1, X_2, \dots, X_T \sim p\)</span>。我们希望利用这些样本计算出一个经验分布 <span class="arithmatex">\(\hat{p}\)</span>，使得 <span class="arithmatex">\(\hat{p}\)</span> 尽可能接近 <span class="arithmatex">\(p\)</span>。具体而言，给定两个参数 <span class="arithmatex">\(\eps, \delta \in (0, 1)\)</span>，你的任务是设计算法，使得算法能以至少 <span class="arithmatex">\(1 - \delta\)</span> 的概率输出一个满足总变分距离 <span class="arithmatex">\(\dTV(p, \hat{p}) = \frac{1}{2} \sum_{i=1}^n \abs{p_i - \hat{p}_i} \le \eps\)</span> 的分布 <span class="arithmatex">\(\hat{p}\)</span>，并且使用的样本数 <span class="arithmatex">\(T\)</span> 尽可能少。</p>
+<p>在下文中，我们可以将 <span class="arithmatex">\(p = (p_1, \dots, p_n)\)</span> 和 <span class="arithmatex">\(\hat{p} = (\hat{p}_1, \dots, \hat{p}_n)\)</span> 视为两个 <span class="arithmatex">\(n\)</span> 维向量，满足 <span class="arithmatex">\(\sum_{i=1}^n p_i = \sum_{i=1}^n \hat{p}_i = 1\)</span> 且对于任意 <span class="arithmatex">\(i \in [n]\)</span> 都有 <span class="arithmatex">\(p_i, \hat{p}_i \ge 0\)</span>。</p>
+<ol>
+<li>首先考虑 <span class="arithmatex">\(n = 2\)</span> 的情况。对于两个分布 <span class="arithmatex">\(p = (p_1, p_2)\)</span> 和 <span class="arithmatex">\(\hat{p} = (\hat{p}_1, \hat{p}_2)\)</span>，请设计一个算法，使用 <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2} \log \frac{1}{\delta}}\)</span> 个样本，以至少 <span class="arithmatex">\(1 - \delta\)</span> 的概率找到满足 <span class="arithmatex">\(\dTV(p, \hat{p}) \le \eps\)</span> 的 <span class="arithmatex">\(\hat{p}\)</span>，并给出你的算法分析。</li>
+<li>对于一般的 <span class="arithmatex">\(n \ge 2\)</span>，请证明：
+    $$
+    \dTV(p, \hat{p}) = \max_{S \subseteq [n]} \sum_{j \in S} (p_j - \hat{p}_j).
+    $$</li>
+<li>考虑如下算法：对于每个 <span class="arithmatex">\(i \in [n]\)</span>，令 <span class="arithmatex">\(\hat{p}_i = \frac{1}{T} \sum_{t=1}^T \1{X_t = i}\)</span>，即第 <span class="arithmatex">\(i\)</span> 种选择出现的频率。对于任意子集 <span class="arithmatex">\(S \subseteq [n]\)</span>，我们用 <span class="arithmatex">\(p(S)\)</span> 和 <span class="arithmatex">\(\hat{p}(S)\)</span> 分别表示 <span class="arithmatex">\(\sum_{j \in S} p_j\)</span> 和 <span class="arithmatex">\(\sum_{j \in S} \hat{p}_j\)</span>。请证明，存在一个常数 <span class="arithmatex">\(c &gt; 0\)</span>，使得对于任意的子集 <span class="arithmatex">\(S\)</span> 和任意 <span class="arithmatex">\(\eps &gt; 0\)</span>，都有
+    $$
+    \Pr{p(S) - \hat{p}(S) \ge \eps} \le \exp(-c \cdot \eps^2 T).
+    $$</li>
+<li>证明：使用上述算法构造的 <span class="arithmatex">\(\hat{p}\)</span>，只需要 <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2}\tp{n + \log \frac{1}{\delta}}}\)</span> 个样本，就能以至少 <span class="arithmatex">\(1 - \delta\)</span> 的概率满足 <span class="arithmatex">\(\dTV(p, \hat{p}) \le \eps\)</span>。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Suppose you plan to open a coffee shop on campus and want to know the students' favorite coffee flavors. There are <span class="arithmatex">\(n\)</span> choices on the menu. You decide to conduct a questionnaire survey by randomly asking students for their favorite coffee. The questions are: how do you use this data to infer the students' flavor preferences, and how many students do you need to ask?</p>
+<p>We translate this problem into a mathematical model. Let <span class="arithmatex">\(p\)</span> be an unknown distribution over the sample space <span class="arithmatex">\(\Omega = \left\{1, 2, \dots, n\right\}\)</span>. Now we have <span class="arithmatex">\(T\)</span> independent and identically distributed samples <span class="arithmatex">\(X_1, X_2, \dots, X_T \sim p\)</span>. We hope to use these samples to compute an empirical distribution <span class="arithmatex">\(\hat{p}\)</span> such that <span class="arithmatex">\(\hat{p}\)</span> is as close to <span class="arithmatex">\(p\)</span> as possible. Specifically, given two parameters <span class="arithmatex">\(\eps, \delta \in (0, 1)\)</span>, your task is to design an algorithm such that it can, with probability at least <span class="arithmatex">\(1 - \delta\)</span>, output a distribution <span class="arithmatex">\(\hat{p}\)</span> satisfying a total variation distance <span class="arithmatex">\(\dTV(p, \hat{p}) = \frac{1}{2} \sum_{i=1}^n \abs{p_i - \hat{p}_i} \le \eps\)</span>, while using as few samples <span class="arithmatex">\(T\)</span> as possible.</p>
+<p>In the following, we can view <span class="arithmatex">\(p = (p_1, \dots, p_n)\)</span> and <span class="arithmatex">\(\hat{p} = (\hat{p}_1, \dots, \hat{p}_n)\)</span> as two <span class="arithmatex">\(n\)</span>-dimensional vectors, satisfying <span class="arithmatex">\(\sum_{i=1}^n p_i = \sum_{i=1}^n \hat{p}_i = 1\)</span> and <span class="arithmatex">\(p_i, \hat{p}_i \ge 0\)</span> for all <span class="arithmatex">\(i \in [n]\)</span>.</p>
+<ol>
+<li>First, consider the case where <span class="arithmatex">\(n = 2\)</span>. For two distributions <span class="arithmatex">\(p = (p_1, p_2)\)</span> and <span class="arithmatex">\(\hat{p} = (\hat{p}_1, \hat{p}_2)\)</span>, design an algorithm that uses <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2} \log \frac{1}{\delta}}\)</span> samples to find a <span class="arithmatex">\(\hat{p}\)</span> satisfying <span class="arithmatex">\(\dTV(p, \hat{p}) \le \eps\)</span> with probability at least <span class="arithmatex">\(1 - \delta\)</span>, and provide the analysis for your algorithm.</li>
+<li>For a general <span class="arithmatex">\(n \ge 2\)</span>, prove that:
+    $$
+    \dTV(p, \hat{p}) = \max_{S \subseteq [n]} \sum_{j \in S} (p_j - \hat{p}_j).
+    $$</li>
+<li>Consider the following algorithm: for each <span class="arithmatex">\(i \in [n]\)</span>, let <span class="arithmatex">\(\hat{p}_i = \frac{1}{T} \sum_{t=1}^T \1{X_t = i}\)</span>, which is the frequency of the <span class="arithmatex">\(i\)</span>-th choice. For any subset <span class="arithmatex">\(S \subseteq [n]\)</span>, we use <span class="arithmatex">\(p(S)\)</span> and <span class="arithmatex">\(\hat{p}(S)\)</span> to denote <span class="arithmatex">\(\sum_{j \in S} p_j\)</span> and <span class="arithmatex">\(\sum_{j \in S} \hat{p}_j\)</span>, respectively. Prove that there exists a constant <span class="arithmatex">\(c &gt; 0\)</span> such that for any subset <span class="arithmatex">\(S\)</span> and any <span class="arithmatex">\(\eps &gt; 0\)</span>:
+    $$
+    \Pr{p(S) - \hat{p}(S) \ge \eps} \le \exp(-c \cdot \eps^2 T).
+    $$</li>
+<li>Prove that: the <span class="arithmatex">\(\hat{p}\)</span> constructed by the above algorithm only requires <span class="arithmatex">\(T = O\tp{\frac{1}{\eps^2}\tp{n + \log \frac{1}{\delta}}}\)</span> samples to satisfy <span class="arithmatex">\(\dTV(p, \hat{p}) \le \eps\)</span> with probability at least <span class="arithmatex">\(1 - \delta\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自 朱泽木 的解答</summary>
+<p>(1)</p>
+<p>算法：跑 <span class="arithmatex">\(T = \frac 1 {2\eps^2} \log \frac 2 \delta\)</span> 次，令 <span class="arithmatex">\(\hat p_i = \frac 1 T \sum_{t=1}^T \1{X_t = i}\)</span>，即出现次数的频率。</p>
+<p>分析：<span class="arithmatex">\(\hat p_1\)</span> 是 <span class="arithmatex">\(T\)</span> 个独立的伯努利随机变量的平均值。由 Hoeffding 不等式有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \Pr{\abs{\hat p_i - p_i} \ge \eps} = \Pr{\abs{T \hat p_i - T p_i} \ge T \eps} \cr
+&amp; \le 2 \exp\left(- \frac {2 (T \eps)^2}{T}\right) = 2 \exp\left(- \log \frac 2 \delta\right) = \delta.
+\end{aligned}
+\]</div>
+<p>(2)</p>
+<p>设 <span class="arithmatex">\(d_i = p_i - \hat p_i\)</span>，则 <span class="arithmatex">\(d_1 + d_2 + \cdots + d_n = 0\)</span>。不妨设 <span class="arithmatex">\(d_1 \dots d_m &lt; 0, d_{m+1} \dots d_n \ge 0\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \dTV(p, \hat p) = \frac 1 2 \sum_{i=1}^n \abs{d_i} \cr
+&amp; = \frac 1 2(-  \sum_{i=1}^m d_i + \sum_{i=m+1}^n d_i) = \sum_{i=m+1}^n d_i \cr
+&amp; = \max_{S \subseteq [n]} \sum_{j \in S} d_j = \max_{S \subseteq [n]} \sum_{j \in S} (p_j - \hat p_j).
+\end{aligned}
+\]</div>
+<p>(3)</p>
+<p><span class="arithmatex">\(\hat p(S)\)</span> 可以看成 <span class="arithmatex">\(T\)</span> 个独立的、均值为 <span class="arithmatex">\(p(S)\)</span> 的伯努利随机变量的平均值。由 Hoeffding 不等式有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \Pr{p(S) - \hat p(S) \ge \eps} = \Pr{T p(S) - T \hat p(S) \ge T \eps} \cr
+&amp; \le \exp\left(- \frac {2 (T \eps)^2}{T}\right) = \exp(-2 \eps^2 T).
+\end{aligned}
+\]</div>
+<p>即 <span class="arithmatex">\(c = 2\)</span>。</p>
+<p>(4)</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \Pr{\dTV(p, \hat p) \ge \eps} = \Pr{\max_{S \subseteq [n]} \sum_{j \in S} (p_j - \hat p_j) \ge \eps} \cr
+&amp; \le \sum_{S \subseteq [n]} \Pr{p(S) - \hat p(S) \ge \eps} \le 2^n \exp(-2 \eps^2 T) = \exp(-2 \eps^2 T + \ln 2 \cdot n).
+\end{aligned}
+\]</div>
+<p>当 <span class="arithmatex">\(T = O\left(\frac 1 {\eps^2} \left(n + \log \frac 1 \delta\right)\right)\)</span> 时带入可得：<span class="arithmatex">\(\Pr{\dTV(p, \hat p) \ge \eps} \le \delta\)</span>。即此时以 <span class="arithmatex">\(1-\delta\)</span> 的概率 <span class="arithmatex">\(\dTV(p, \hat p) &lt; \eps\)</span>。</p>
+</details>
+<h3 id="no-free-lunch">没有免费的午餐 (No Free Lunch)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在二分类问题中，给定样本集 <span class="arithmatex">\(S_m = \left\{(X_i, C(X_i))\right\}_{i=1}^m\)</span>，其中 <span class="arithmatex">\(X_i \in \bb R^d\)</span> 独立同分布地采样自未知概率测度 <span class="arithmatex">\(\mu\)</span>，标签由布尔函数 <span class="arithmatex">\(C: \bb R^d \to \left\{0, 1\right\}\)</span> 给出。我们的目标是通过学习算法 <span class="arithmatex">\(\mathcal{A}\)</span>，基于样本 <span class="arithmatex">\(S_m\)</span> 构造一个函数 <span class="arithmatex">\(h(\cdot) = \mathcal{A}(\cdot, S_m): \bb R^d \to \left\{0, 1\right\}\)</span>，使得其误差 <span class="arithmatex">\(R(h) = \Pr{h(X) \neq C(X)}\)</span> 尽可能小，其中 <span class="arithmatex">\(X \sim \mu\)</span>。</p>
+<p>本题旨在证明机器学习中的经典结论，没有免费的午餐定理（no free lunch theorem）。给定任意学习算法 <span class="arithmatex">\(\mathcal{A}\)</span> 和任意大小为偶数的有限特征空间 <span class="arithmatex">\(\mathcal{X} \subseteq \bb R^d\)</span>，记 <span class="arithmatex">\(\abs{\mathcal{X}} = 2m &gt; 4\)</span>。我们将证明：存在一个函数 <span class="arithmatex">\(C: \mathcal{X} \to \left\{0, 1\right\}\)</span> 和 <span class="arithmatex">\(\mathcal{X}\)</span> 上的分布 <span class="arithmatex">\(\mu\)</span>，使得
+$$
+\Pr{R(\mathcal{A}(\cdot, S_m)) \ge 1/8} \ge 1/8.
+$$
+为了证明这一结论，我们采用概率方法。假设 <span class="arithmatex">\(\mu\)</span> 是 <span class="arithmatex">\(\mathcal{X}\)</span> 上的均匀分布。对于每个 <span class="arithmatex">\(x \in \mathcal{X}\)</span>，我们独立且均匀地从 <span class="arithmatex">\(\left\{0, 1\right\}\)</span> 中随机选取 <span class="arithmatex">\(Y_x\)</span>，并定义随机函数 <span class="arithmatex">\(C(x) := Y_x\)</span>。</p>
+<ol>
+<li>首先，考虑在随机标签 <span class="arithmatex">\(\left\{Y_x\right\}_{x \in \mathcal{X}}\)</span> 和随机样本 <span class="arithmatex">\(S_m\)</span> 上的期望风险 <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))}\)</span>。请证明：
+    $$
+    \E{R(\mathcal{A}(\cdot, S_m))} \ge \frac{1}{4},
+    $$
+    并由此说明，存在一个确定的函数 <span class="arithmatex">\(C\)</span>，使得在该函数下 <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot,S_m))} \ge 1/4\)</span>（此处的期望仅对样本 <span class="arithmatex">\(S_m\)</span> 取）。</li>
+<li>基于上一问的结论，证明存在一个确定性的函数 <span class="arithmatex">\(C\)</span>，使得：
+    $$
+    \Pr{R(\mathcal{A}(\cdot, S_m)) \ge 1/8} \ge 1/8.
+    $$</li>
+</ol>
+<p><p class="note-inline">注：这一结论直观上说明了，如果目标函数是完全任意的，且我们只观察到了空间中一半的样本，那么对于剩下未见的一半样本，我们实际上没有获得任何信息，因此无法期望得到较低的泛化误差。这并非通常意义上的欠拟合（underfitting），而是强调了归纳偏置（inductive bias）的必要性：即没有任何算法能在不依赖先验假设的情况下对所有问题都表现良好。</p></p>
+</div>
+<div class="tabbed-block">
+<p>In the binary classification problem, we are given a sample set <span class="arithmatex">\(S_m = \left\{(X_i, C(X_i))\right\}_{i=1}^m\)</span>, where <span class="arithmatex">\(X_i \in \bb R^d\)</span> are drawn independently and identically from an unknown probability measure <span class="arithmatex">\(\mu\)</span>, and labels are given by a Boolean function <span class="arithmatex">\(C: \bb R^d \to \left\{0, 1\right\}\)</span>. Our goal is to use a learning algorithm <span class="arithmatex">\(\mathcal{A}\)</span> to construct a function <span class="arithmatex">\(h(\cdot) = \mathcal{A}(\cdot, S_m): \bb R^d \to \left\{0, 1\right\}\)</span> based on the sample <span class="arithmatex">\(S_m\)</span>, such that its risk <span class="arithmatex">\(R(h) = \Pr{h(X) \neq C(X)}\)</span> is as small as possible, where <span class="arithmatex">\(X \sim \mu\)</span>.</p>
+<p>This problem aims to prove a classical result in machine learning: the no free lunch theorem. Given any learning algorithm <span class="arithmatex">\(\mathcal{A}\)</span> and any finite feature space <span class="arithmatex">\(\mathcal{X} \subseteq \bb R^d\)</span> of even size, denote <span class="arithmatex">\(\abs{\mathcal{X}} = 2m &gt; 4\)</span>. We will prove that: there exists a function <span class="arithmatex">\(C: \mathcal{X} \to \left\{0, 1\right\}\)</span> and a distribution <span class="arithmatex">\(\mu\)</span> over <span class="arithmatex">\(\mathcal{X}\)</span> such that
+$$
+\Pr{R(\mathcal{A}(\cdot, S_m)) \ge 1/8} \ge 1/8.
+$$
+To prove this conclusion, we adopt the probabilistic method. Suppose <span class="arithmatex">\(\mu\)</span> is the uniform distribution over <span class="arithmatex">\(\mathcal{X}\)</span>. For each <span class="arithmatex">\(x \in \mathcal{X}\)</span>, we sample <span class="arithmatex">\(Y_x\)</span> independently and uniformly at random from <span class="arithmatex">\(\left\{0, 1\right\}\)</span>, and define a random function <span class="arithmatex">\(C(x) := Y_x\)</span>.</p>
+<ol>
+<li>First, consider the expected risk <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))}\)</span> over the random labels <span class="arithmatex">\(\left\{Y_x\right\}_{x \in \mathcal{X}}\)</span> and random sample <span class="arithmatex">\(S_m\)</span>. Prove that:
+    $$
+    \E{R(\mathcal{A}(\cdot, S_m))} \ge \frac{1}{4},
+    $$
+    and use this to demonstrate that there exists a deterministic function <span class="arithmatex">\(C\)</span> under which <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))} \ge 1/4\)</span> (the expectation here is taken only over the sample <span class="arithmatex">\(S_m\)</span>).</li>
+<li>Based on the conclusion of the previous part, prove that there exists a deterministic function <span class="arithmatex">\(C\)</span> such that:
+    $$
+    \Pr{R(\mathcal{A}(\cdot, S_m)) \ge 1/8} \ge 1/8.
+    $$</li>
+</ol>
+<p><p class="note-inline">Note: Intuitively, this conclusion implies that if the target function is completely arbitrary and we only observe half of the samples in the space, then we essentially gain no information about the unseen half, and thus we cannot expect a low generalization error. This is not underfitting in the usual sense, but rather emphasizes the necessity of an inductive bias: no algorithm can perform well on all problems without relying on prior assumptions.</p></p>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自 朱泽木 的解答</summary>
+<p>(1)</p>
+<p>在考虑一个固定的样本集 <span class="arithmatex">\(S_m = \left\lbrace i_1, \dots, i_m \right\rbrace\)</span>，以及在该样本集下函数 <span class="arithmatex">\(C\)</span> 的取值已经确定（即 <span class="arithmatex">\(C_{i_1} = j_1, \dots, C_{i_m} = j_m\)</span>）的情况下，此时训练出来的 <span class="arithmatex">\(h\)</span> 是一个固定的函数。</p>
+<p>此时有：
+$$
+\begin{aligned}
+&amp; \E{R(h) \mid S_m = \left\lbrace i_1, \dots, i_m \right\rbrace, C_{i_1} = j_1, \dots, C_{i_m} = j_m} \cr
+&amp; = \Pr{h(X) \neq C(X) \mid S_m = \left\lbrace i_1, \dots, i_m \right\rbrace, C_{i_1} = j_1, \dots, C_{i_m} = j_m} \cr
+&amp; \ge \Pr{h(X) \neq C(X), X \notin S_m \mid S_m = \left\lbrace i_1, \dots, i_m \right\rbrace, C_{i_1} = j_1, \dots, C_{i_m} = j_m} \cr
+&amp; \ge \frac 1 {2m} \times m \times \frac 1 2 = \frac 1 4
+\end{aligned}
+$$</p>
+<p>因此，根据全概率公式有：<span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))} \ge \frac 1 4\)</span>。</p>
+<p>此外，根据全概率公式有：<span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))} = \sum_c \Pr{C = c} \E{R(\mathcal{A}(\cdot, S_m)) \mid C = c} \ge \frac 1 4\)</span>，故至少存在一个确定的 <span class="arithmatex">\(c\)</span> 使得 <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m)) \mid C = c} \ge \frac 1 4\)</span>，即在该函数下 <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))} \ge \frac 1 4\)</span>。</p>
+<p>(2)</p>
+<p>由 (1) 可知：存在函数 <span class="arithmatex">\(C\)</span> 使得 <span class="arithmatex">\(\E{R(\mathcal{A}(\cdot, S_m))} \ge \frac 1 4\)</span>。</p>
+<p>已知 <span class="arithmatex">\(R(\mathcal{A}(\cdot, S_m)) \le 1\)</span>。有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \frac 1 4 \le \E{R(\mathcal{A}(\cdot, S_m))} \cr
+&amp; \le \Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 8} + \frac 1 8 \Pr{R(\mathcal{A}(\cdot, S_m)) &lt; \frac 1 8} \cr
+&amp; = \frac 1 8 + \frac 7 8 \Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 8}
+\end{aligned}
+\]</div>
+<p>故 <span class="arithmatex">\(\Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 8} \ge \frac 1 7 \ge \frac 1 8\)</span>。</p>
+</details>
+<details class="note">
+<summary>来自 朱泽木 的想法</summary>
+<p>第二问直接这么放缩放的太松了：只用到了期望的值，等号取到当且仅当取值只有 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(\frac 1 8\)</span>，忽略了在一个随机的 <span class="arithmatex">\(C\)</span> 的情况下，未知的 <span class="arithmatex">\(m\)</span> 个样本点预测的结果（可以认为）完全就是随机的。所以我觉得可以有更好的方法：</p>
+<p>直接用第一问的思路：计算在 <span class="arithmatex">\(C\)</span> 为随机函数的情况下的 <span class="arithmatex">\(\E{\Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 4}}\)</span>（这里的期望是对样本 <span class="arithmatex">\(C\)</span> 取）。</p>
+<p>那么用前面的方法可以得到 <span class="arithmatex">\(\E{\Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 4}} \ge \frac 1 2\)</span>（同样考虑先固定 <span class="arithmatex">\(S_m\)</span> 以及对应的函数，没见过的服从二项分布）。根据全概率公式可知存在一个确定的 <span class="arithmatex">\(C\)</span> 使得 <span class="arithmatex">\(\Pr{R(\mathcal{A}(\cdot, S_m)) \ge \frac 1 4} \ge \frac 1 2\)</span>。</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
