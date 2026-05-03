@@ -12,7 +12,7 @@
     \|\mu\|^2 = \sum_{i=1}^{n}\left(\frac{1}{n}\right)^2 = \frac{1}{n}.
     $$
 
-    Let $x_i=\pi_i-1/n$. Then $\sum x_i=0$ and $\sum \left\lvert x_i \right\rvert = 2dTV(\pi,\mu)\ge 2\eps$. By the Cauchy-Schwarz inequality,
+    Let $x_i=\pi_i-1/n$. Then $\sum x_i=0$ and $\sum \left\lvert x_i \right\rvert = 2\dTV(\pi,\mu)\ge 2\eps$. By the Cauchy-Schwarz inequality,
 
     $$
     \sqrt{\sum x_i^2}\cdot \sqrt{n} \ge \sum (\left\lvert x_i \right\rvert \cdot 1) \ge 2\eps.
@@ -61,7 +61,7 @@
     \end{align*}
     $$
 
-    If $\pi=\mu$, then $\|\pi\|^2=1/n$; if $dTV(\pi,\mu)\ge \eps$, then $\|\pi\|^2\ge \|\mu\|^2=1/n$ by part 2. By Chebyshev's inequality,
+    If $\pi=\mu$, then $\|\pi\|^2=1/n$; if $\dTV(\pi,\mu)\ge \eps$, then $\|\pi\|^2\ge \|\mu\|^2=1/n$ by part 2. By Chebyshev's inequality,
 
     $$
     \Pr{\left\lvert Z-\E{Z} \right\rvert \ge \eps^2 \E{Z}} \le \frac{\mathrm{Var}(Z)}{\eps^4\|\pi\|^4} \le \frac{4}{\eps^4m\|\pi\|}+\frac{4}{\eps^4m^2\|\pi\|^2} \le \frac{4\sqrt n}{\eps^4m}+\frac{4n}{\eps^4m^2}.
@@ -75,7 +75,7 @@
     \Pr{Z\ge \frac{1+2\eps^2}{n}} \le \Pr{\left\lvert Z-\E{Z} \right\rvert \ge 2\eps^2 \E{Z}} \le \frac{\sqrt n}{\eps^4 m}+\frac{n}{\eps^4m^2} = \frac{1}{100}+\frac{\eps^4}{10000}\le 0.1.
     $$
 
-    Suppose $dTV(\pi,\mu)\ge \eps$. Then $\E{Z}=\|\pi\|^2\ge (1+4\eps^2)/n$ by part 2.
+    Suppose $\dTV(\pi,\mu)\ge \eps$. Then $\E{Z}=\|\pi\|^2\ge (1+4\eps^2)/n$ by part 2.
 
     $$
     \begin{align*}
