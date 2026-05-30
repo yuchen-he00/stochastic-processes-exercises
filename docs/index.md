@@ -8,12 +8,7 @@
 
 ## 书籍草稿 📖
 
-本书各章节的最新草稿可以在此下载（持续更新中）：
-
-| 章节 | 标题 | 下载 |
-|:----:|------|:----:|
-| 第一章 | 独立随机变量与集中不等式 | [:material-file-pdf-box: PDF](book/ch01.pdf) |
-| 第二章 | 有限状态马尔可夫链 | [:material-file-pdf-box: PDF](book/ch02.pdf) |
+本书的最新草稿可以在此查看与下载（持续更新中）：[:material-file-pdf-box: 点击阅读最新草稿](https://chihaozhang.com/books/main.pdf)
 
 !!! warning "注意"
     本草稿为未定稿版本，内容可能随时更新，仅供学习参考。
