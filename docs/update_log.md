@@ -3,6 +3,10 @@
 === "中文"
     <div class="update-log">
       <div class="update-item">
+        <div class="update-meta">2026-05-30</div>
+        <p>第三章习题发布。</p>
+      </div>
+      <div class="update-item">
         <div class="update-meta">2026-04-30</div>
         <p>第二章习题发布。</p>
       </div>
@@ -18,6 +22,10 @@
 
 === "English"
     <div class="update-log">
+      <div class="update-item">
+        <div class="update-meta">2026-05-30</div>
+        <p>Chapter 3 exercises released.</p>
+      </div>
       <div class="update-item">
         <div class="update-meta">2026-04-30</div>
         <p>Chapter 2 exercises released.</p>

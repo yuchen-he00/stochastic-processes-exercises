@@ -21,6 +21,9 @@ nav:
       - 第二章: 
         - 练习: exercises/chapter_02_exercises.md
         - 问题: exercises/chapter_02_problems.md
+      - 第三章: 
+        - 练习: exercises/chapter_03_exercises.md
+        - 问题: exercises/chapter_03_problems.md
 
 markdown_extensions:
   - attr_list
