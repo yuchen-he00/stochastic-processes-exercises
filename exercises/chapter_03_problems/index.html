@@ -1,0 +1,1569 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_03_exercises/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>问题 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#countable-markov-chains" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter_01_exercises/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_03_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-of-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信息年龄 (Age of Information)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parrondo-parrondos-paradox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parrondo悖论 (Parrondo's Paradox)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endless-trial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无尽试炼 (Endless Trial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renewal-process-and-generating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新过程与生成函数 (Renewal Process and Generating Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foster-fosters-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foster定理 (Foster's Theorem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-of-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生命之树 (Tree of Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lindley-process-and-system-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        林德利过程与系统稳定性 (Lindley Process and System Stability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题 (Problems)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题 (Problems)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-of-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信息年龄 (Age of Information)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parrondo-parrondos-paradox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parrondo悖论 (Parrondo's Paradox)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endless-trial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无尽试炼 (Endless Trial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renewal-process-and-generating-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更新过程与生成函数 (Renewal Process and Generating Function)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foster-fosters-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foster定理 (Foster's Theorem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tree-of-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生命之树 (Tree of Life)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lindley-process-and-system-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        林德利过程与系统稳定性 (Lindley Process and System Stability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="countable-markov-chains">第三章 可数无限状态马尔可夫链 (Countable Markov Chains)</h1>
+<h2 class="prob-counter" id="problems" style="counter-reset: chapter 3 question 0;">问题 (Problems)</h2>
+<h3 id="age-of-information">信息年龄 (Age of Information)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在现代互联网中，我们往往会关心数据的新鲜度，为了研究这个量，学者们提出了一个新的度量指标——<em>信息年龄（age of information, AoI）</em>。</p>
+<p>假设有一个传感器持续向基站发送状态更新。我们将基站成功接收更新的时刻视为重置点。定义离散时间的随机过程 <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n \ge 0}\)</span> 为时刻 <span class="arithmatex">\(n\)</span> 的“信息年龄”，即距离上一次成功接收更新已经过去了多少个时间步。</p>
+<ul>
+<li>如果时刻 <span class="arithmatex">\(n\)</span> 接收到了更新，则年龄归零：<span class="arithmatex">\(Y_{n} = 0\)</span>。</li>
+<li>如果时刻 <span class="arithmatex">\(n\)</span> 没有接收到更新，则年龄增长：<span class="arithmatex">\(Y_{n} = Y_{n-1} + 1\)</span>。</li>
+</ul>
+<p>假设连续两次成功更新之间的时间间隔为独立同分布的随机变量 <span class="arithmatex">\(T\)</span>，且取值为正整数，期望周期 <span class="arithmatex">\(\E{T} = \mu &lt; \infty\)</span>。显然，<span class="arithmatex">\(\left\lbrace Y_n\right\rbrace\)</span> 构成了一个状态空间为 <span class="arithmatex">\(\bb Z_{\ge 0}\)</span> 的不可约马尔可夫链。</p>
+<ol>
+<li>请写出该马尔可夫链的转移概率（可以用 <span class="arithmatex">\(T\)</span> 的分布表示），并证明该马尔可夫链是正常返的。</li>
+<li>设该马尔可夫链的平稳分布为 <span class="arithmatex">\(\pi = (\pi_0, \pi_1, \dots)\)</span>。请求出 <span class="arithmatex">\(\pi_k\)</span> 关于 <span class="arithmatex">\(\pi_0\)</span> 的表达式。</li>
+<li>基于上一问的条件，请证明 <span class="arithmatex">\(\pi_0 = \frac{1}{\mu}\)</span>。并由此得出信息年龄为 <span class="arithmatex">\(k\)</span> 的平稳概率为：
+   $$
+       \pi_k = \frac{\Pr{T &gt; k}}{\E{T}}.
+   $$</li>
+<li>假设更新周期 <span class="arithmatex">\(T\)</span> 服从参数为 <span class="arithmatex">\(p\)</span> 的几何分布，请写出信息年龄 <span class="arithmatex">\(Y_n\)</span> 的平稳分布。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In modern internet, we often care about the freshness of data. To study this quantity, scholars have proposed a new metric—<em>age of information (AoI)</em>.</p>
+<p>Suppose there is a sensor continuously sending state updates to a base station. We consider the moment the base station successfully receives an update as a reset point. Define a discrete-time stochastic process <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n \ge 0}\)</span> as the "age of information" at time <span class="arithmatex">\(n\)</span>, which is the number of time steps elapsed since the last successful reception of an update.</p>
+<ul>
+<li>If an update is received at time <span class="arithmatex">\(n\)</span>, the age is reset to zero: <span class="arithmatex">\(Y_{n} = 0\)</span>.</li>
+<li>If no update is received at time <span class="arithmatex">\(n\)</span>, the age increases: <span class="arithmatex">\(Y_{n} = Y_{n-1} + 1\)</span>.</li>
+</ul>
+<p>Suppose the time interval between two consecutive successful updates is an independent and identically distributed random variable <span class="arithmatex">\(T\)</span>, which takes positive integer values, with expected period <span class="arithmatex">\(\E{T} = \mu &lt; \infty\)</span>. Obviously, <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace\)</span> constitutes an irreducible Markov chain with a state space of <span class="arithmatex">\(\bb Z_{\ge 0}\)</span>.</p>
+<ol>
+<li>Please write down the transition probabilities of this Markov chain (which can be expressed using the distribution of <span class="arithmatex">\(T\)</span>), and prove that this Markov chain is positive recurrent.</li>
+<li>Let the stationary distribution of this Markov chain be <span class="arithmatex">\(\pi = (\pi_0, \pi_1, \dots)\)</span>. Please find the expression for <span class="arithmatex">\(\pi_k\)</span> in terms of <span class="arithmatex">\(\pi_0\)</span>.</li>
+<li>Based on the condition of the previous question, please prove that <span class="arithmatex">\(\pi_0 = \frac{1}{\mu}\)</span>. And from this, derive that the stationary probability of the age of information being <span class="arithmatex">\(k\)</span> is:
+   $$
+       \pi_k = \frac{\Pr{T &gt; k}}{\E{T}}.
+   $$</li>
+<li>Suppose the update period <span class="arithmatex">\(T\)</span> follows a geometric distribution with parameter <span class="arithmatex">\(p\)</span>. Please write down the stationary distribution of the age of information <span class="arithmatex">\(Y_n\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="parrondo-parrondos-paradox">Parrondo悖论 (Parrondo's Paradox)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>直觉上，两个必输的方案复合得到的新方案，似乎依然是必输的。然而西班牙物理学家 Juan Parrondo 提出了一个令人吃惊的悖论：两个收益为负的游戏，按照简单的随机策略交替进行，其整体的收益会变成正的。这一反直觉的现象在博弈论、种群动力学和控制理论中有着深刻的应用。</p>
+<ol>
+<li>
+<p>考虑状态空间为 <span class="arithmatex">\(\bb Z\)</span> 的随机游走，每一步所处的位置代表玩家现有的资金，玩家每一步移动方向（资金变化）由抛掷硬币的结果确定。考虑如下三个游戏：</p>
+<ul>
+<li>游戏 A：每一时刻独立抛掷一枚有偏硬币，硬币为正面则移动 <span class="arithmatex">\(+1\)</span>，否则移动 <span class="arithmatex">\(-1\)</span>。该有偏硬币为正面的概率为 <span class="arithmatex">\(p = 0.49\)</span>。</li>
+<li>游戏 B：若当前资金是 3 的倍数，则抛一枚正面概率为 <span class="arithmatex">\(p_0 = 0.09\)</span> 的硬币并根据结果移动；否则抛掷一枚正面概率为 <span class="arithmatex">\(p_1 = 0.74\)</span> 的硬币并根据结果移动。</li>
+<li>复合游戏 C：在每一步，玩家先独立抛掷一枚公平的硬币，若为正面则在该步根据游戏 A 规则游走，若为反面则根据游戏 B 规则游走。</li>
+</ul>
+<p>要判断随机游走最终发散到 <span class="arithmatex">\(+\infty\)</span>（代表玩家会赢）还是 <span class="arithmatex">\(-\infty\)</span>（代表玩家会输），我们可以考察其长期增长率 <span class="arithmatex">\(J = \lim_{n \to \infty} \frac{X_n}{n}\)</span>，其中 <span class="arithmatex">\(X_n\)</span> 表示玩家走完第 <span class="arithmatex">\(n\)</span> 步时的资金。对于游戏 B，考虑序列 <span class="arithmatex">\(Y_n = X_n \pmod 3\)</span>，<span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n\geq 0}\)</span> 构成了一个状态空间为 <span class="arithmatex">\(\left\lbrace 0,1,2\right\rbrace\)</span> 的马尔可夫链。我们有以下结论，随机过程 <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n\geq 0}\)</span> 存在唯一的稳态分布 <span class="arithmatex">\(\pi = (\pi_0, \pi_1, \pi_2)\)</span>，并且
+$$
+    J = \lim_{n \to \infty} \frac{X_n}{n} = \pi_0(p_0 - q_0) + \pi_1(p_1 - q_1) + \pi_2(p_1 - q_1).
+$$
+该结论在下面的题目中可以直接使用，无需证明。</p>
+<ol>
+<li>请证明，如果单独一直玩游戏 A 或单独一直玩游戏 B，玩家会输。</li>
+<li>请证明，如果玩家玩的是复合游戏 C，那么玩家会赢。</li>
+</ol>
+</li>
+<li>
+<p>现在我们对 Parrondo 悖论进行一个扩展，我们来说明，两个瞬时的马尔可夫链，按照简单的随机策略交替进行，会得到正常返的马尔可夫链。考虑非负整数集 <span class="arithmatex">\(\bb Z_{\ge 0}\)</span> 上的马尔可夫链，每一时刻状态的变化由掷硬币结果确定，掷出正面则向右移动一步，掷出反面则向左移动一步（如果当前状态是 <span class="arithmatex">\(0\)</span> 掷出反面则原地不动）。考虑如下三个马尔可夫链：</p>
+<ul>
+<li>链 A：每一步独立抛掷一枚正面概率为 <span class="arithmatex">\(0.51\)</span> 的硬币，并根据结果移动。</li>
+<li>链 B：若当前状态模 3 为 0，则抛掷一枚正面概率为 <span class="arithmatex">\(p_0 = 0.91\)</span> 的硬币，否则抛掷一枚正面概率为 <span class="arithmatex">\(p_1 = 0.26\)</span> 的硬币，并根据结果移动。</li>
+<li>复合链 C：每步先独立抛掷一枚公平的硬币，若为正面则在该步根据链 A 规则游走，若为反面则根据链 B 规则游走。</li>
+</ul>
+<!-- -->
+<ol>
+<li>请证明，链 A 和链 B 都是瞬时的。</li>
+<li>请证明，复合链 C 是正常返的。</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Intuitively, a new strategy compounded from two losing strategies seems like it would still be a losing strategy. However, the Spanish physicist Juan Parrondo proposed a surprising paradox: two games with negative payoffs, alternated according to a simple random strategy, can have an overall payoff that becomes positive. This counterintuitive phenomenon has profound applications in game theory, population dynamics, and control theory.</p>
+<ol>
+<li>
+<p>Consider a random walk with state space <span class="arithmatex">\(\bb Z\)</span>, where the position at each step represents the player's current capital, and the direction of movement (change in capital) at each step is determined by the result of flipping a coin. Consider the following three games:</p>
+<ul>
+<li>Game A: At each moment, flip a biased coin independently. If the coin comes up heads, move <span class="arithmatex">\(+1\)</span>; otherwise, move <span class="arithmatex">\(-1\)</span>. The probability of heads for this biased coin is <span class="arithmatex">\(p = 0.49\)</span>.</li>
+<li>Game B: If the current capital is a multiple of 3, flip a coin with a heads probability of <span class="arithmatex">\(p_0 = 0.09\)</span> and move according to the result; otherwise, flip a coin with a heads probability of <span class="arithmatex">\(p_1 = 0.74\)</span> and move according to the result.</li>
+<li>Composite Game C: At each step, the player first independently flips a fair coin. If heads, follow the rules of Game A for that step; if tails, follow the rules of Game B.</li>
+</ul>
+<p><!-- -->
+To determine whether the random walk eventually diverges to <span class="arithmatex">\(+\infty\)</span> (meaning the player will win) or <span class="arithmatex">\(-\infty\)</span> (meaning the player will lose), we can examine its long-term growth rate <span class="arithmatex">\(J = \lim_{n \to \infty} \frac{X_n}{n}\)</span>, where <span class="arithmatex">\(X_n\)</span> represents the player's capital after the <span class="arithmatex">\(n\)</span>-th step. For Game B, consider the sequence <span class="arithmatex">\(Y_n = X_n \pmod 3\)</span>, <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n \ge 0}\)</span> forms a Markov chain with state space <span class="arithmatex">\(\left\lbrace 0,1,2\right\rbrace\)</span>. We have the following conclusion: the stochastic process <span class="arithmatex">\(\left\lbrace Y_n\right\rbrace_{n \ge 0}\)</span> has a unique stationary distribution <span class="arithmatex">\(\pi = (\pi_0, \pi_1, \pi_2)\)</span>, and
+$$
+    J = \lim_{n \to \infty} \frac{X_n}{n} = \pi_0(p_0 - q_0) + \pi_1(p_1 - q_1) + \pi_2(p_1 - q_1).
+$$
+This conclusion can be used directly in the following questions without proof.</p>
+<ol>
+<li>Prove that if the player constantly plays Game A alone or constantly plays Game B alone, the player will lose.</li>
+<li>Prove that if the player plays the composite Game C, the player will win.</li>
+</ol>
+</li>
+<li>
+<p>Now we extend Parrondo's paradox to show that alternating between two transient Markov chains using a simple random strategy can result in a positive recurrent Markov chain. Consider a Markov chain on the set of non-negative integers <span class="arithmatex">\(\bb Z_{\ge 0}\)</span>, where the state change at each moment is determined by the result of a coin flip: move right one step on heads, move left one step on tails (stay in place if the current state is 0 and tails is flipped). Consider the following three Markov chains:</p>
+<ul>
+<li>Chain A: At each step, independently flip a coin with a heads probability of <span class="arithmatex">\(0.51\)</span> and move accordingly.</li>
+<li>Chain B: If the current state modulo 3 is 0, flip a coin with a heads probability of <span class="arithmatex">\(p_0 = 0.91\)</span>, otherwise flip a coin with a heads probability of <span class="arithmatex">\(p_1 = 0.26\)</span>, and move accordingly.</li>
+<li>Composite Chain C: At each step, independently flip a fair coin first. If heads, move according to the rules of Chain A; if tails, move according to the rules of Chain B.</li>
+</ul>
+<!-- -->
+<ol>
+<li>Prove that both Chain A and Chain B are transient.</li>
+<li>Prove that composite Chain C is positive recurrent.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="endless-trial">无尽试炼 (Endless Trial)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在一个游戏中，勇者需要打怪升级。一只怪物初始血量为 10 点，且血量没有上限。勇者每次攻击的效果如下：</p>
+<ul>
+<li>以 <span class="arithmatex">\(\frac{1}{5}\)</span> 的概率产生暴击，造成 2 点伤害；</li>
+<li>以 <span class="arithmatex">\(p\)</span> 的概率攻击失误，不造成伤害反而让怪物恢复 1 点血量（<span class="arithmatex">\(0 &lt; p &lt; \frac{4}{5}\)</span>）；</li>
+<li>以 <span class="arithmatex">\(\frac{4}{5} - p\)</span> 的概率产生普通攻击，造成 1 点伤害。</li>
+</ul>
+<p>我们想知道，杀死怪物（使怪物血量 <span class="arithmatex">\(\le 0\)</span> ）需要的攻击次数期望是多少？</p>
+<p>我们通过定义一个状态空间为 <span class="arithmatex">\(\bb N\)</span> 的马尔可夫链来解决这个问题。假设有无数个 10 血的怪物等着我们砍，砍完一个砍下一个，一旦当前怪物的血量 <span class="arithmatex">\(\le 0\)</span>，它会瞬间死亡，而勇者的下一次攻击将直接落在一只新的、初始有10血的怪物身上。用状态表示当前怪物的血量，也就是说，到达状态 <span class="arithmatex">\(0\)</span> 时下一步可能会直接转移到 <span class="arithmatex">\(8,9\)</span> 或者 <span class="arithmatex">\(11\)</span>，表示即将开始砍下一个怪物。每步状态转移对应一次攻击。</p>
+<ol>
+<li>描述该马尔可夫链的状态转移概率，并说明杀死怪物需要的攻击次数期望为 <span class="arithmatex">\(\E[0]{T_0}\)</span> 。</li>
+<li>证明该马尔可夫链是不可约的、非周期的。</li>
+<li>若 <span class="arithmatex">\(p\in(\frac 35,\frac 45)\)</span> 时，证明该马尔可夫链是瞬时的。</li>
+<li>若 <span class="arithmatex">\(p\in (0,\frac 35)\)</span> 时，证明该马尔可夫链是正常返的，且存在唯一平稳分布 <span class="arithmatex">\(\pi\)</span> 。</li>
+<li>
+<p>若 <span class="arithmatex">\(p\in (0,\frac 35)\)</span> 时，请证明对任意 <span class="arithmatex">\(x\ge 11\)</span> ，有 <span class="arithmatex">\(\pi(x+1)=\frac{5p-5+\sqrt{25p^2-30p+25}}2\cdot \pi(x)\)</span> 。</p>
+<details class="hint">
+<summary>提示</summary>
+<p>若数列 <span class="arithmatex">\(\left\lbrace a_n\right\rbrace_{n\ge 0}\)</span> 满足递推公式 <span class="arithmatex">\(a_{n+3}=ba_{n+2}+ca_{n+1}+da_n\)</span> ，且方程 <span class="arithmatex">\(x^3-bx^2-cx-d=0\)</span> 有三个两两不同的根 <span class="arithmatex">\(\lambda_1,\lambda_2,\lambda_3\)</span> ，则 <span class="arithmatex">\(a_n\)</span> 的通项公式为 <span class="arithmatex">\(a_n=A\lambda_1^n+B\lambda_2^n+C\lambda_3^n\)</span> 。</p>
+</details>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(p=\frac 12\)</span> 时，通过数值方法解得 <span class="arithmatex">\(\pi(0)\)</span> ，并计算杀死怪物需要的攻击次数期望。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In a game, a brave hero needs to fight monsters to level up. A monster has an initial health of 10 points, and there is no upper limit to its health. The effect of the hero's each attack is as follows:</p>
+<ul>
+<li>With probability <span class="arithmatex">\(\frac{1}{5}\)</span>, a critical hit is triggered, causing 2 points of damage;</li>
+<li>With probability <span class="arithmatex">\(p\)</span>, the attack misses, causing no damage but instead allowing the monster to recover 1 health point (<span class="arithmatex">\(0 &lt; p &lt; \frac{4}{5}\)</span>);</li>
+<li>With probability <span class="arithmatex">\(\frac{4}{5} - p\)</span>, a normal attack occurs, causing 1 point of damage.</li>
+</ul>
+<p>We want to know: what is the expected number of attacks required to kill a monster (making the monster's health <span class="arithmatex">\(\le 0\)</span>)?</p>
+<p>We solve this problem by defining a Markov chain with state space <span class="arithmatex">\(\bb N\)</span>. Suppose there are infinitely many monsters with 10 health waiting for us to slay, one after another. As soon as the current monster's health is <span class="arithmatex">\(\le 0\)</span>, it dies instantly, and the hero's next attack will directly land on a new monster with an initial health of 10. We use the state to represent the current monster's health. This means that upon reaching state <span class="arithmatex">\(0\)</span>, the next step might transition directly to <span class="arithmatex">\(8, 9\)</span>, or <span class="arithmatex">\(11\)</span>, indicating the start of fighting the next monster. Each state transition corresponds to one attack.</p>
+<ol>
+<li>Describe the state transition probabilities of this Markov chain, and explain that the expected number of attacks required to kill a monster is <span class="arithmatex">\(\E[0]{T_0}\)</span>.</li>
+<li>Prove that this Markov chain is irreducible and aperiodic.</li>
+<li>If <span class="arithmatex">\(p \in (\frac{3}{5}, \frac{4}{5})\)</span>, prove that this Markov chain is transient.</li>
+<li>If <span class="arithmatex">\(p \in (0, \frac{3}{5})\)</span>, prove that this Markov chain is positive recurrent, and there exists a unique stationary distribution <span class="arithmatex">\(\pi\)</span>.</li>
+<li>
+<p>If <span class="arithmatex">\(p \in (0, \frac{3}{5})\)</span>, please prove that for any <span class="arithmatex">\(x \ge 11\)</span>, <span class="arithmatex">\(\pi(x+1) = \frac{5p-5+\sqrt{25p^2-30p+25}}{2} \cdot \pi(x)\)</span>.</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>If a sequence <span class="arithmatex">\(\left\lbrace a_n\right\rbrace_{n\ge 0}\)</span> satisfies the recurrence formula <span class="arithmatex">\(a_{n+3} = b a_{n+2} + c a_{n+1} + d a_n\)</span>, and the equation <span class="arithmatex">\(x^3 - bx^2 - cx - d = 0\)</span> has three distinct roots <span class="arithmatex">\(\lambda_1, \lambda_2, \lambda_3\)</span>, then the general term formula for <span class="arithmatex">\(a_n\)</span> is <span class="arithmatex">\(a_n = A\lambda_1^n + B\lambda_2^n + C\lambda_3^n\)</span>.</p>
+</details>
+</li>
+<li>
+<p>When <span class="arithmatex">\(p = \frac{1}{2}\)</span>, solve for <span class="arithmatex">\(\pi(0)\)</span> using numerical methods, and calculate the expected number of attacks required to kill the monster.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="renewal-process-and-generating-function">更新过程与生成函数 (Renewal Process and Generating Function)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在状态空间无穷大的马尔可夫链中，直接分析概率可能会很复杂。我们可以引入<em>概率母函数（probability generating function, PGF）</em>来帮助分析。
+对于任意离散时间马尔可夫链和任意给定状态 <span class="arithmatex">\(j\)</span>，我们定义两个序列：</p>
+<ul>
+<li><span class="arithmatex">\(p_{jj}^{(n)} = \Pr{X_n = j \mid X_0 = j}\)</span>：从 <span class="arithmatex">\(j\)</span> 出发，第 <span class="arithmatex">\(n\)</span> 步处于状态 <span class="arithmatex">\(j\)</span> 的概率，约定 <span class="arithmatex">\(p_{jj}^{(0)} = 1\)</span>。</li>
+<li><span class="arithmatex">\(f_{jj}^{(n)} = \Pr{X_n = j, X_k \neq j \text{ for } 1 \le k &lt; n \mid X_0 = j}\)</span>：从 <span class="arithmatex">\(j\)</span> 出发，恰好在第 <span class="arithmatex">\(n\)</span> 步首次返回状态 <span class="arithmatex">\(j\)</span> 的概率，约定 <span class="arithmatex">\(f_{jj}^{(0)} = 0\)</span>。</li>
+</ul>
+<p>为这两个序列分别定义母函数 <span class="arithmatex">\(P(s)\)</span> 和 <span class="arithmatex">\(F(s)\)</span>，对于满足 <span class="arithmatex">\(|s| &lt; 1\)</span> 的复数 <span class="arithmatex">\(s\)</span>，
+$$
+    P(s) = \sum_{n=0}^\infty p_{jj}^{(n)} s^n, \quad F(s) = \sum_{n=1}^\infty f_{jj}^{(n)} s^n
+$$
+在后面题目中，我们定义函数 <span class="arithmatex">\(P(s)\)</span> 和 <span class="arithmatex">\(F(s)\)</span> 在 <span class="arithmatex">\(s=1\)</span> 处的值或导数为 <span class="arithmatex">\(s \to 1^-\)</span> 时的函数或导数的左极限。</p>
+<ol>
+<li>请证明对于任意 <span class="arithmatex">\(n \ge 1\)</span>，有
+   $$
+       p_{jj}^{(n)} = \sum_{k=1}^n f_{jj}^{(k)} p_{jj}^{(n-k)}.
+   $$
+   并据此证明，对于任意的 <span class="arithmatex">\(|s| &lt; 1\)</span>，
+   $$
+       P(s) = \frac{1}{1 - F(s)}.
+   $$</li>
+<li>下面我们来说明函数 <span class="arithmatex">\(P(s)\)</span> 和 <span class="arithmatex">\(F(s)\)</span> 在某些点处的值或其导数可以直接刻画马尔可夫链的常返性。<ol>
+<li>请证明状态 <span class="arithmatex">\(j\)</span> 是常返的，当且仅当 <span class="arithmatex">\(P(1)=\lim_{s \to 1^-} P(s) = \infty\)</span>。</li>
+<li>假设状态 <span class="arithmatex">\(j\)</span> 是常返的。请证明，状态 <span class="arithmatex">\(j\)</span> 是正常返的，当且仅当 <span class="arithmatex">\(F'(1) = \lim_{s \to 1^-} F'(s) &lt; \infty\)</span>。并据此进一步证明，当状态 <span class="arithmatex">\(j\)</span> 是正常返时，平稳分布 <span class="arithmatex">\(\pi_j = \frac{1}{F'(1)}\)</span>。</li>
+</ol>
+</li>
+<li>现在我们来看一个具体的例子。在一维整数集 <span class="arithmatex">\(\bb Z\)</span> 上的对称简单随机游走（每一步以相等的概率往左或往右走）中，计算首次返回原点的概率 <span class="arithmatex">\(f_{00}^{(n)}\)</span> 是一个很复杂的任务，但 <span class="arithmatex">\(p_{00}^{(n)}\)</span> 的计算相对简单。<ol>
+<li>已知该游走在奇数步不可能回到原点，而在偶数步 <span class="arithmatex">\(2n\)</span> 回到原点的概率为 <span class="arithmatex">\(p_{00}^{(2n)} = \binom{2n}{n} (1/2)^{2n}\)</span>。请利用广义二项式展开 <span class="arithmatex">\((1-x)^{-1/2} = \sum_{n=0}^\infty \binom{2n}{n} (x/4)^n\)</span>，算出 <span class="arithmatex">\(P(s)\)</span> 的闭式解。</li>
+<li>请利用你算出的 <span class="arithmatex">\(P(s)\)</span> 和前面小问的结论，直接得出母函数 <span class="arithmatex">\(F(s)\)</span> 的表达式。并据此计算 <span class="arithmatex">\(F'(1)\)</span>，从而证明一维对称简单随机游走是零常返的。</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In Markov chains with infinite state spaces, directly analyzing probabilities can be quite complex. We can introduce the <em>probability generating function (PGF)</em> to help with the analysis.
+For any discrete-time Markov chain and any given state <span class="arithmatex">\(j\)</span>, we define two sequences:</p>
+<ul>
+<li><span class="arithmatex">\(p_{jj}^{(n)} = \Pr{X_n = j \mid X_0 = j}\)</span>: the probability of being in state <span class="arithmatex">\(j\)</span> at step <span class="arithmatex">\(n\)</span>, starting from <span class="arithmatex">\(j\)</span>, with the convention <span class="arithmatex">\(p_{jj}^{(0)} = 1\)</span>.</li>
+<li><span class="arithmatex">\(f_{jj}^{(n)} = \Pr{X_n = j, X_k \neq j \text{ for } 1 \le k &lt; n \mid X_0 = j}\)</span>: the probability of returning to state <span class="arithmatex">\(j\)</span> for the first time exactly at step <span class="arithmatex">\(n\)</span>, starting from <span class="arithmatex">\(j\)</span>, with the convention <span class="arithmatex">\(f_{jj}^{(0)} = 0\)</span>.</li>
+</ul>
+<p>Define their generating functions <span class="arithmatex">\(P(s)\)</span> and <span class="arithmatex">\(F(s)\)</span> respectively, for complex numbers <span class="arithmatex">\(s\)</span> satisfying <span class="arithmatex">\(|s| &lt; 1\)</span>:
+$$
+    P(s) = \sum_{n=0}^\infty p_{jj}^{(n)} s^n, \quad F(s) = \sum_{n=1}^\infty f_{jj}^{(n)} s^n
+$$
+In subsequent questions, we define the value or derivative of the functions <span class="arithmatex">\(P(s)\)</span> and <span class="arithmatex">\(F(s)\)</span> at <span class="arithmatex">\(s=1\)</span> as their left limit as <span class="arithmatex">\(s \to 1^-\)</span>.</p>
+<ol>
+<li>Prove that for any <span class="arithmatex">\(n \ge 1\)</span>, we have
+   $$
+       p_{jj}^{(n)} = \sum_{k=1}^n f_{jj}^{(k)} p_{jj}^{(n-k)}.
+   $$
+   And based on this, prove that for any <span class="arithmatex">\(|s| &lt; 1\)</span>,
+   $$
+       P(s) = \frac{1}{1 - F(s)}.
+   $$</li>
+<li>Next, we will show that the values of the functions <span class="arithmatex">\(P(s)\)</span> and <span class="arithmatex">\(F(s)\)</span> at certain points or their derivatives can directly characterize the recurrence of a Markov chain.<ol>
+<li>Prove that state <span class="arithmatex">\(j\)</span> is recurrent if and only if <span class="arithmatex">\(P(1) = \lim_{s \to 1^-} P(s) = \infty\)</span>.</li>
+<li>Suppose state <span class="arithmatex">\(j\)</span> is recurrent. Prove that state <span class="arithmatex">\(j\)</span> is positive recurrent if and only if <span class="arithmatex">\(F'(1) = \lim_{s \to 1^-} F'(s) &lt; \infty\)</span>. And further prove that when state <span class="arithmatex">\(j\)</span> is positive recurrent, the stationary distribution is <span class="arithmatex">\(\pi_j = \frac{1}{F'(1)}\)</span>.</li>
+</ol>
+</li>
+<li>Now let's look at a concrete example. In a symmetric simple random walk on the one-dimensional integer set <span class="arithmatex">\(\bb Z\)</span> (moving left or right with equal probability at each step), calculating the probability <span class="arithmatex">\(f_{00}^{(n)}\)</span> of returning to the origin for the first time is a very complex task, but calculating <span class="arithmatex">\(p_{00}^{(n)}\)</span> is relatively simple.<ol>
+<li>It is known that the walk cannot return to the origin in an odd number of steps, and the probability of returning to the origin in an even number of steps <span class="arithmatex">\(2n\)</span> is <span class="arithmatex">\(p_{00}^{(2n)} = \binom{2n}{n} (1/2)^{2n}\)</span>. Using the generalized binomial expansion <span class="arithmatex">\((1-x)^{-1/2} = \sum_{n=0}^\infty \binom{2n}{n} (x/4)^n\)</span>, calculate the closed-form solution of <span class="arithmatex">\(P(s)\)</span>.</li>
+<li>Based on the calculated <span class="arithmatex">\(P(s)\)</span> and the conclusions of the previous sub-questions, directly derive the expression for the generating function <span class="arithmatex">\(F(s)\)</span>. And accordingly calculate <span class="arithmatex">\(F'(1)\)</span>, thereby proving that the one-dimensional symmetric simple random walk is null recurrent.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="foster-fosters-theorem">Foster定理 (Foster's Theorem)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>对于一个无穷状态的马尔可夫链，有时证明其正常返性并不容易，在本题中，我们将介绍 Foster 定理，这个定理允许我们通过构造一个李雅普诺夫函数（Lyapunov function）来引入物理学中势能的思想，帮助判别一个马尔可夫链的正常返性。</p>
+<p>设 <span class="arithmatex">\(\left\lbrace X_n\right\rbrace_{n \ge 0}\)</span> 是一个在可数状态空间 <span class="arithmatex">\(S\)</span> 上的不可约的马尔可夫链。假设存在一个非负函数 <span class="arithmatex">\(V: S \to \bb R_{\ge 0}\)</span>，一个有限子集 <span class="arithmatex">\(F \subset S\)</span>，以及一个常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，使得以下两个条件成立：</p>
+<ul>
+<li>在有限集 <span class="arithmatex">\(F\)</span> 内部，对于任意 <span class="arithmatex">\(i \in F\)</span>，有 <span class="arithmatex">\(\E{V(X_{n+1}) \mid X_n = i} &lt; \infty\)</span>。</li>
+<li>在有限集 <span class="arithmatex">\(F\)</span> 外部，对于任意 <span class="arithmatex">\(i \notin F\)</span>，有 <span class="arithmatex">\(\E{V(X_{n+1}) - V(X_n) \mid X_n = i} \le -\epsilon\)</span>。</li>
+</ul>
+<p>该函数通常被称为李雅普诺夫函数，直观上，李雅普诺夫函数描述了系统的势能，当系统处于有限集 <span class="arithmatex">\(F\)</span> 外部，条件二保证了走一步后势能的期望是降低的，这意味着系统不会倾向于向无穷远处逃逸，而当系统处于有限集 <span class="arithmatex">\(F\)</span> 内部，条件一保证了势能不会在一步之内变得无穷大。</p>
+<ol>
+<li>定义停时 <span class="arithmatex">\(\tau_F = \inf\left\lbrace n \ge 0: X_n \in F\right\rbrace\)</span>，我们先来证明，在上述条件下，从任意状态 <span class="arithmatex">\(i \notin F\)</span> 出发，到达 <span class="arithmatex">\(F\)</span> 的期望时间 <span class="arithmatex">\(\E[i]{\tau_F}\)</span> 是有限的。<ol>
+<li>考察截断过程 <span class="arithmatex">\(X_{k \wedge \tau_F}\)</span>，其中 <span class="arithmatex">\(k \wedge \tau_F = \min\left\lbrace k, \tau_F\right\rbrace\)</span>，请证明
+   $$
+       \E[i]{V(X_{(k+1) \wedge \tau_F})} \leq \E[i]{V(X_{k \wedge \tau_F})} - \epsilon \Pr[i]{\tau_F &gt; k}.
+   $$</li>
+<li>请证明对于任意的 <span class="arithmatex">\(i\notin F\)</span>，以及任意整数 <span class="arithmatex">\(n&gt; 0\)</span>，有
+   $$
+       \E[i]{V(X_{n \wedge \tau_F})} \le V(i) - \epsilon \sum_{k=0}^{n-1} \Pr[i]{\tau_F &gt; k},
+   $$
+   并在此基础上证明 <span class="arithmatex">\(\E[i]{\tau_F}&lt;\infty\)</span>。</li>
+</ol>
+</li>
+<li>请证明 Foster 定理，即假设存在满足上述条件的函数 <span class="arithmatex">\(V\)</span> 和有限集 <span class="arithmatex">\(F\subset S\)</span>，那么该马尔可夫链是正常返的。</li>
+<li>我们再来看正文讲的 <span class="arithmatex">\(\bb N\)</span> 上的有偏随机游走，请构造出一个李雅普诺夫函数和对应的有限集合 <span class="arithmatex">\(F\)</span>，应用 Foster 定理，证明在 <span class="arithmatex">\(p&lt;1/2\)</span> 时，该马尔可夫链是正常返的。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>For a Markov chain with an infinite state space, it is sometimes not easy to prove its positive recurrence. In this problem, we will introduce Foster's Theorem. This theorem allows us to introduce the idea of potential energy in physics by constructing a Lyapunov function to help determine the positive recurrence of a Markov chain.</p>
+<p>Let <span class="arithmatex">\(\left\lbrace X_n\right\rbrace_{n \ge 0}\)</span> be an irreducible Markov chain on a countable state space <span class="arithmatex">\(S\)</span>. Suppose there exists a non-negative function <span class="arithmatex">\(V: S \to \bb R_{\ge 0}\)</span>, a finite subset <span class="arithmatex">\(F \subset S\)</span>, and a constant <span class="arithmatex">\(\epsilon &gt; 0\)</span> such that the following two conditions hold:</p>
+<ul>
+<li>Inside the finite set <span class="arithmatex">\(F\)</span>, for any <span class="arithmatex">\(i \in F\)</span>, <span class="arithmatex">\(\E{V(X_{n+1}) \mid X_n = i} &lt; \infty\)</span>.</li>
+<li>Outside the finite set <span class="arithmatex">\(F\)</span>, for any <span class="arithmatex">\(i \notin F\)</span>, <span class="arithmatex">\(\E{V(X_{n+1}) - V(X_n) \mid X_n = i} \le -\epsilon\)</span>.</li>
+</ul>
+<p>This function is usually called a Lyapunov function. Intuitively, a Lyapunov function describes the potential energy of the system. When the system is outside the finite set <span class="arithmatex">\(F\)</span>, the second condition guarantees that the expected potential energy decreases after one step, which means the system will not tend to escape to infinity. When the system is inside the finite set <span class="arithmatex">\(F\)</span>, the first condition guarantees that the potential energy will not become infinite in a single step.</p>
+<ol>
+<li>Define the stopping time <span class="arithmatex">\(\tau_F = \inf\left\lbrace n \ge 0: X_n \in F\right\rbrace\)</span>. We first prove that under the above conditions, starting from any state <span class="arithmatex">\(i \notin F\)</span>, the expected time to reach <span class="arithmatex">\(F\)</span>, <span class="arithmatex">\(\E[i]{\tau_F}\)</span>, is finite.<ol>
+<li>Consider the truncated process <span class="arithmatex">\(X_{k \wedge \tau_F}\)</span>, where <span class="arithmatex">\(k \wedge \tau_F = \min\left\lbrace k, \tau_F\right\rbrace\)</span>. Please prove
+   $$
+       \E[i]{V(X_{(k+1) \wedge \tau_F})} \leq \E[i]{V(X_{k \wedge \tau_F})} - \epsilon \Pr[i]{\tau_F &gt; k}.
+   $$</li>
+<li>Prove that for any <span class="arithmatex">\(i \notin F\)</span> and any integer <span class="arithmatex">\(n &gt; 0\)</span>, we have
+   $$
+       \E[i]{V(X_{n \wedge \tau_F})} \le V(i) - \epsilon \sum_{k=0}^{n-1} \Pr[i]{\tau_F &gt; k},
+   $$
+   and based on this, prove that <span class="arithmatex">\(\E[i]{\tau_F} &lt; \infty\)</span>.</li>
+</ol>
+</li>
+<li>Prove Foster's Theorem, that is, suppose there exists a function <span class="arithmatex">\(V\)</span> and a finite set <span class="arithmatex">\(F \subset S\)</span> satisfying the above conditions, then the Markov chain is positive recurrent.</li>
+<li>Let's look again at the biased random walk on <span class="arithmatex">\(\bb N\)</span> discussed in the text. Please construct a Lyapunov function and a corresponding finite set <span class="arithmatex">\(F\)</span>, and apply Foster's Theorem to prove that when <span class="arithmatex">\(p &lt; 1/2\)</span>, the Markov chain is positive recurrent.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="tree-of-life">生命之树 (Tree of Life)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>19 世纪，为了研究某些欧洲贵族姓氏为何会逐渐消亡，数学家 Galton 和 Watson 提出了一种简化的数学模型——<em>分支过程（Branching process）</em>。</p>
+<p>假设一个种群的繁衍遵循以下规则：第 <span class="arithmatex">\(0\)</span> 代只有 <span class="arithmatex">\(1\)</span> 个祖先，即 <span class="arithmatex">\(Z_0 = 1\)</span>。第 <span class="arithmatex">\(n\)</span> 代的每一个个体 <span class="arithmatex">\(i\)</span> 都会独立地产生 <span class="arithmatex">\(X_{i,n}\)</span> 个后代，<span class="arithmatex">\(X_{i,n}\)</span> 为独立同分布的非负整数随机变量，且独立于之前各代的人数，假设每个个体产生 <span class="arithmatex">\(k\)</span> 个后代的概率均为 <span class="arithmatex">\(p_k\)</span>。第 <span class="arithmatex">\(n+1\)</span> 代的总人数可以表示为
+$$
+    Z_{n+1} = \sum_{i=1}^{Z_n} X_{i,n}
+$$</p>
+<p>我们用概率母函数来研究这个量。记单个个体的后代数量为随机变量 <span class="arithmatex">\(X\)</span>，其母函数为 <span class="arithmatex">\(G(s) = \E{s^X} = \sum_{k=0}^\infty p_k s^k\)</span>，并记第 <span class="arithmatex">\(n\)</span> 代总人数 <span class="arithmatex">\(Z_n\)</span> 的母函数为 <span class="arithmatex">\(G_n(s) = \E{s^{Z_n}}\)</span>。显然有 <span class="arithmatex">\(G_1(s) = G(s)\)</span>。</p>
+<ol>
+<li>证明第 <span class="arithmatex">\(n\)</span> 代人数的母函数满足
+   $$
+       G_{n+1}(s) = G_{n}(G(s)) = G(G_n(s)).
+   $$</li>
+<li>我们定义“种族最终灭绝”的概率为 <span class="arithmatex">\(p = \lim_{n \to \infty} \Pr{Z_n = 0}\)</span>。请利用上一问的结论证明，灭绝概率 <span class="arithmatex">\(p\)</span> 必定是方程 <span class="arithmatex">\(s = G(s)\)</span> 在区间 <span class="arithmatex">\([0, 1]\)</span> 上的一个实根。</li>
+<li>
+<p>设每个个体的期望后代数为 <span class="arithmatex">\(\mu = \E{X} = G'(1)\)</span>。为了排除“永远单传”这种平凡情况，我们假设 <span class="arithmatex">\(p_1 &lt; 1\)</span> 且 <span class="arithmatex">\(p_0 &gt; 0\)</span>。请分类讨论当 <span class="arithmatex">\(\mu \le 1\)</span> 和 <span class="arithmatex">\(\mu &gt; 1\)</span> 时，方程 <span class="arithmatex">\(s = G(s)\)</span> 在 <span class="arithmatex">\([0, 1]\)</span> 上根的分布情况。并据此说明：在这两种情况下，种族是否会以概率 1 灭绝？</p>
+<details class="hint">
+<summary>提示</summary>
+<p>可以利用母函数 <span class="arithmatex">\(G(s)\)</span> 在区间 <span class="arithmatex">\((0,1)\)</span> 上的单调性和严格下凸性（即 <span class="arithmatex">\(G''(s) &gt; 0\)</span>）来分析。</p>
+</details>
+</li>
+<li>
+<p>我们知道，分支过程 <span class="arithmatex">\(\left\lbrace Z_n\right\rbrace_{n \ge 0}\)</span> 可以看成是一个状态空间为 <span class="arithmatex">\(\bb Z_{\ge 0}\)</span> 的马尔可夫链。当 <span class="arithmatex">\(\mu &lt; 1\)</span> 时，请证明这个马尔可夫链不是正常返的。</p>
+<p>如果取李雅普诺夫函数 <span class="arithmatex">\(V(x) = x\)</span> 以及有限集 <span class="arithmatex">\(F = \left\lbrace 0\right\rbrace\)</span>。请证明函数 <span class="arithmatex">\(V\)</span> 和集合 <span class="arithmatex">\(S\)</span> 满足上一题给出的 Foster 定理的条件。这个例子说明了，如果在 Foster 定理中没有不可约性的假设，那么定理的结论就不再成立了。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the 19th century, to study why certain European aristocratic surnames would gradually die out, mathematicians Galton and Watson proposed a simplified mathematical model—the <em>branching process</em>.</p>
+<p>Suppose the reproduction of a population follows the following rules: The <span class="arithmatex">\(0\)</span>-th generation has only <span class="arithmatex">\(1\)</span> ancestor, i.e., <span class="arithmatex">\(Z_0 = 1\)</span>. Each individual <span class="arithmatex">\(i\)</span> in the <span class="arithmatex">\(n\)</span>-th generation will independently produce <span class="arithmatex">\(X_{i,n}\)</span> offspring, where <span class="arithmatex">\(X_{i,n}\)</span> are independent and identically distributed non-negative integer random variables, and are independent of the population sizes of previous generations. Suppose the probability that each individual produces <span class="arithmatex">\(k\)</span> offspring is <span class="arithmatex">\(p_k\)</span>. The total population size of the <span class="arithmatex">\((n+1)\)</span>-th generation can be expressed as
+$$
+    Z_{n+1} = \sum_{i=1}^{Z_n} X_{i,n}
+$$</p>
+<p>We use probability generating functions to study this quantity. Let the number of offspring of a single individual be the random variable <span class="arithmatex">\(X\)</span>, with generating function <span class="arithmatex">\(G(s) = \E{s^X} = \sum_{k=0}^\infty p_k s^k\)</span>, and let the generating function of the total population size <span class="arithmatex">\(Z_n\)</span> of the <span class="arithmatex">\(n\)</span>-th generation be <span class="arithmatex">\(G_n(s) = \E{s^{Z_n}}\)</span>. Obviously, <span class="arithmatex">\(G_1(s) = G(s)\)</span>.</p>
+<ol>
+<li>Prove that the generating function of the <span class="arithmatex">\(n\)</span>-th generation population size satisfies
+   $$
+       G_{n+1}(s) = G_{n}(G(s)) = G(G_n(s)).
+   $$</li>
+<li>We define the probability of "ultimate extinction of the population" as <span class="arithmatex">\(p = \lim_{n \to \infty} \Pr{Z_n = 0}\)</span>. Using the conclusion from the previous question, prove that the extinction probability <span class="arithmatex">\(p\)</span> must be a real root of the equation <span class="arithmatex">\(s = G(s)\)</span> in the interval <span class="arithmatex">\([0, 1]\)</span>.</li>
+<li>
+<p>Let the expected number of offspring for each individual be <span class="arithmatex">\(\mu = \E{X} = G'(1)\)</span>. To exclude the trivial case of "always passing to a single descendant", we assume <span class="arithmatex">\(p_1 &lt; 1\)</span> and <span class="arithmatex">\(p_0 &gt; 0\)</span>. Please discuss by case the distribution of the roots of the equation <span class="arithmatex">\(s = G(s)\)</span> in <span class="arithmatex">\([0, 1]\)</span> when <span class="arithmatex">\(\mu \le 1\)</span> and <span class="arithmatex">\(\mu &gt; 1\)</span>. And based on this, explain: under these two cases, will the population go extinct with probability 1?</p>
+<details class="hint">
+<summary>Hint</summary>
+<p>You can use the monotonicity and strict convexity (<span class="arithmatex">\(G''(s) &gt; 0\)</span>) of the generating function <span class="arithmatex">\(G(s)\)</span> on the interval <span class="arithmatex">\((0,1)\)</span> to analyze.</p>
+</details>
+</li>
+<li>
+<p>We know that the branching process <span class="arithmatex">\(\left\lbrace Z_n\right\rbrace_{n \ge 0}\)</span> can be viewed as a Markov chain with state space <span class="arithmatex">\(\bb Z_{\ge 0}\)</span>. When <span class="arithmatex">\(\mu &lt; 1\)</span>, prove that this Markov chain is not positive recurrent.</p>
+<p>If we choose the Lyapunov function <span class="arithmatex">\(V(x) = x\)</span> and the finite set <span class="arithmatex">\(F = \left\lbrace 0\right\rbrace\)</span>, please prove that the function <span class="arithmatex">\(V\)</span> and the set <span class="arithmatex">\(S\)</span> satisfy the conditions of Foster's Theorem given in the previous problem. This example shows that if the assumption of irreducibility is removed from Foster's Theorem, the conclusion of the theorem will no longer hold.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="lindley-process-and-system-stability">林德利过程与系统稳定性 (Lindley Process and System Stability)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在概率论中，<em>林德利过程（Lindley process）</em>是一类定义在非负整数上的随机过程，在排队论、风险理论等领域都有着广泛的应用，其第 <span class="arithmatex">\(n\)</span> 步的状态 <span class="arithmatex">\(X_n\)</span> 可以由前一步状态 <span class="arithmatex">\(X_{n-1}\)</span> 和一个随机增量 <span class="arithmatex">\(\xi_n\)</span> 刻画：
+$$
+    X_n = \max\left\lbrace X_{n-1} + \xi_n, 0\right\rbrace.
+$$</p>
+<p>现在我们来考虑一个具体的林德利过程，假设初始状态 <span class="arithmatex">\(X_0 = 0\)</span>，<span class="arithmatex">\(\left\lbrace \xi_n\right\rbrace_{n&gt;0}\)</span> 是一列独立同分布的整数取值随机变量，代表系统在每一步不考虑边界 <span class="arithmatex">\(0\)</span> 的情况下试图移动的距离，并且假设 <span class="arithmatex">\(\xi_n\)</span> 的分布保证了该马尔可夫链是不可约且无周期的。假设 <span class="arithmatex">\(\Var{\xi_n}&gt;0\)</span>，并记其期望为 <span class="arithmatex">\(\E{\xi_n} = \lambda\)</span>。</p>
+<ol>
+<li>我们先来分析上述条件下林德利过程的常返性，请证明：<ol>
+<li>考虑过程 <span class="arithmatex">\(Y_n = \sum_{i=1}^n \xi_i\)</span>，请证明在 <span class="arithmatex">\(n\to \infty\)</span> 时，<span class="arithmatex">\(\frac{Y_n}{n}\)</span> 以概率 <span class="arithmatex">\(1\)</span> 收敛到 <span class="arithmatex">\(\lambda\)</span>。</li>
+<li>当 <span class="arithmatex">\(\lambda &lt; 0\)</span> 时，该马尔可夫链是正常返的。</li>
+<li>当 <span class="arithmatex">\(\lambda = 0\)</span> 时，该马尔可夫链是零常返的。</li>
+<li>当 <span class="arithmatex">\(\lambda &gt; 0\)</span> 时，该马尔可夫链是瞬时的。</li>
+</ol>
+</li>
+<li>
+<p>我们来学习一个林德利过程在调度算法中的具体应用。在无线通信网络中，基站通常需要使用有限的无线电频谱资源来并发服务多个用户的下行数据流。如何根据实时的队列拥塞情况以及不同用户的信道质量，动态调度传输资源以防止网络崩溃，是网络控制领域的核心问题之一。</p>
+<p>考虑一个包含两个队列 <span class="arithmatex">\(Q1\)</span> 和 <span class="arithmatex">\(Q2\)</span> 的基站下行链路。在每个时刻，队列 <span class="arithmatex">\(Q1\)</span> 和队列 <span class="arithmatex">\(Q2\)</span> 分别有 <span class="arithmatex">\(A_1(t)\)</span>和 <span class="arithmatex">\(A_2(t)\)</span> 个新数据包到达，其到达包数的期望分别为 <span class="arithmatex">\(\E{A_1(t)} = \lambda_1&lt;\infty\)</span> 和 <span class="arithmatex">\(\E{A_2(t)} = \lambda_2&lt;\infty\)</span>，且有 <span class="arithmatex">\(0&lt;\Var{A_1(t)}, \Var{A_2(t)}&lt;\infty\)</span>。假设 <span class="arithmatex">\(\left\lbrace A_i(t)\right\rbrace_{t\ge 0}\)</span> 是独立同分布的随机变量序列，并且<span class="arithmatex">\(A_i(t)\)</span> 之间相互独立。</p>
+<p>由于队列 <span class="arithmatex">\(Q1\)</span> 距离基站较近，队列 <span class="arithmatex">\(Q2\)</span> 距离较远，基站在每个时间步只能在以下两种服务模式中选择其一：</p>
+<ul>
+<li>模式 1：只服务队列 <span class="arithmatex">\(Q1\)</span>。可从 <span class="arithmatex">\(Q1\)</span> 处理至多 3 个数据包。</li>
+<li>模式 2：只服务队列 <span class="arithmatex">\(Q2\)</span>。可从 <span class="arithmatex">\(Q2\)</span> 处理至多 2 个数据包。</li>
+</ul>
+<p>令 <span class="arithmatex">\(S_1(t), S_2(t)\)</span> 为时刻 <span class="arithmatex">\(t\)</span> 基站试图处理的两条队列的包数，<span class="arithmatex">\(S_1(t)\in \left\lbrace 0,3\right\rbrace\)</span> 且 <span class="arithmatex">\(S_2(t)\in \left\lbrace 0,2\right\rbrace\)</span>，记两条队列 <span class="arithmatex">\(t\)</span> 时刻的长度分别为 <span class="arithmatex">\(Q_1(t)\)</span> 和 <span class="arithmatex">\(Q_2(t)\)</span>，队列演化遵循 <span class="arithmatex">\(Q_i(t+1) = \max \left( 0, Q_i(t) - S_i(t) \right) + A_i(t)\)</span>。</p>
+<ol>
+<li>请证明，无论基站采用何种调度算法，当 <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 \ge 1\)</span> 时，该系统的状态序列 <span class="arithmatex">\(\left\lbrace (Q_1(t), Q_2(t))\right\rbrace_{t \ge 0}\)</span> 构成的马尔可夫链不可能是正常返的，特别地，当 <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 &gt;1\)</span> 时，请证明该马尔可夫链一定是瞬时的。</li>
+<li>
+<p>请构造一个调度算法，使得当 <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 &lt; 1\)</span> 时，该马尔可夫链是正常返的，并且证明你的算法满足这一性质。</p>
+<details class="hint">
+<summary>提示</summary>
+<p>可以考虑用 Foster 定理来证明你的结论。</p>
+</details>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In probability theory, the <em>Lindley process</em> is a class of stochastic processes defined on non-negative integers, which has broad applications in fields such as queueing theory and risk theory. Its state <span class="arithmatex">\(X_n\)</span> at step <span class="arithmatex">\(n\)</span> can be characterized by the state at the previous step <span class="arithmatex">\(X_{n-1}\)</span> and a random increment <span class="arithmatex">\(\xi_n\)</span>:
+$$
+    X_n = \max\left\lbrace X_{n-1} + \xi_n, 0\right\rbrace.
+$$</p>
+<p>Now let's consider a specific Lindley process. Suppose the initial state is <span class="arithmatex">\(X_0 = 0\)</span>, and <span class="arithmatex">\(\left\lbrace \xi_n\right\rbrace_{n&gt;0}\)</span> is a sequence of independent and identically distributed integer-valued random variables, representing the distance the system attempts to move at step without considering the boundary <span class="arithmatex">\(0\)</span>. Further assume that the distribution of <span class="arithmatex">\(\xi_n\)</span> guarantees that this Markov chain is irreducible and aperiodic. Assume <span class="arithmatex">\(\Var{\xi_n} &gt; 0\)</span>, and denote its expectation as <span class="arithmatex">\(\E{\xi_n} = \lambda\)</span>.</p>
+<ol>
+<li>Let's first analyze the recurrence of the Lindley process under the above conditions. Please prove:<ol>
+<li>Consider the process <span class="arithmatex">\(Y_n = \sum_{i=1}^n \xi_i\)</span>. Prove that as <span class="arithmatex">\(n \to \infty\)</span>, <span class="arithmatex">\(\frac{Y_n}{n}\)</span> converges to <span class="arithmatex">\(\lambda\)</span> with probability <span class="arithmatex">\(1\)</span>.</li>
+<li>When <span class="arithmatex">\(\lambda &lt; 0\)</span>, the Markov chain is positive recurrent.</li>
+<li>When <span class="arithmatex">\(\lambda = 0\)</span>, the Markov chain is null recurrent.</li>
+<li>When <span class="arithmatex">\(\lambda &gt; 0\)</span>, the Markov chain is transient.</li>
+</ol>
+</li>
+<li>
+<p>Let's study a specific application of the Lindley process in scheduling algorithms. In wireless communication networks, base stations usually need to use limited radio spectrum resources to concurrently serve the downlink data streams of multiple users. How to dynamically schedule transmission resources to prevent network collapse based on real-time queue congestion and different users' channel quality is one of the core problems in the field of network control.</p>
+<p>Consider a base station downlink containing two queues <span class="arithmatex">\(Q1\)</span> and <span class="arithmatex">\(Q2\)</span>. At each moment, queue <span class="arithmatex">\(Q1\)</span> and queue <span class="arithmatex">\(Q2\)</span> have <span class="arithmatex">\(A_1(t)\)</span> and <span class="arithmatex">\(A_2(t)\)</span> new data packets arriving, respectively, and the expectations of their arrival packet numbers are <span class="arithmatex">\(\E{A_1(t)} = \lambda_1 &lt; \infty\)</span> and <span class="arithmatex">\(\E{A_2(t)} = \lambda_2 &lt; \infty\)</span>, with <span class="arithmatex">\(0 &lt; \Var{A_1(t)}, \Var{A_2(t)} &lt; \infty\)</span>. Suppose <span class="arithmatex">\(\left\lbrace A_i(t)\right\rbrace_{t \ge 0}\)</span> is a sequence of independent and identically distributed random variables, and <span class="arithmatex">\(A_i(t)\)</span> are mutually independent.</p>
+<p>Since queue <span class="arithmatex">\(Q1\)</span> is closer to the base station and queue <span class="arithmatex">\(Q2\)</span> is farther away, the base station can only choose one of the following two service modes at each time step:</p>
+<ul>
+<li>Mode 1: Serve queue <span class="arithmatex">\(Q1\)</span> only. Up to 3 data packets can be processed from <span class="arithmatex">\(Q1\)</span>.</li>
+<li>Mode 2: Serve queue <span class="arithmatex">\(Q2\)</span> only. Up to 2 data packets can be processed from <span class="arithmatex">\(Q2\)</span>.</li>
+</ul>
+<p>Let <span class="arithmatex">\(S_1(t)\)</span> and <span class="arithmatex">\(S_2(t)\)</span> be the numbers of packets the base station attempts to process from the two queues at time <span class="arithmatex">\(t\)</span>, with <span class="arithmatex">\(S_1(t) \in \left\lbrace 0, 3\right\rbrace\)</span> and <span class="arithmatex">\(S_2(t) \in \left\lbrace 0, 2\right\rbrace\)</span>. Let the lengths of the two queues at time <span class="arithmatex">\(t\)</span> be <span class="arithmatex">\(Q_1(t)\)</span> and <span class="arithmatex">\(Q_2(t)\)</span>, respectively. The queues evolve according to <span class="arithmatex">\(Q_i(t+1) = \max \left( 0, Q_i(t) - S_i(t) \right) + A_i(t)\)</span>.</p>
+<ol>
+<li>Prove that regardless of the scheduling algorithm used by the base station, when <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 \ge 1\)</span>, the Markov chain formed by the state sequence <span class="arithmatex">\(\left\lbrace (Q_1(t), Q_2(t))\right\rbrace_{t \ge 0}\)</span> of this system cannot be positive recurrent. In particular, when <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 &gt; 1\)</span>, prove that this Markov chain must be transient.</li>
+<li>Construct a scheduling algorithm such that when <span class="arithmatex">\(\lambda_1/3 + \lambda_2/2 &lt; 1\)</span>, this Markov chain is positive recurrent, and prove that your algorithm satisfies this property.</li>
+</ol>
+<details class="hint">
+<summary>Hint</summary>
+<p>You can use Foster theorem to prove your conclusion.</p>
+</details>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

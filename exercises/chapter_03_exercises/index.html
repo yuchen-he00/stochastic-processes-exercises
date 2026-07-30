@@ -1,0 +1,1306 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_02_problems/">
+      
+      
+        <link rel="next" href="../chapter_03_problems/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>练习 - 《计算机科学中的随机过程》习题书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#countable-markov-chains" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-header__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            《计算机科学中的随机过程》习题书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              练习
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter_01_exercises/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  习题与解答
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="《计算机科学中的随机过程》习题书" class="md-nav__button md-logo" aria-label="《计算机科学中的随机过程》习题书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    《计算机科学中的随机过程》习题书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../update_log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    习题与解答
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    习题与解答
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第三章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    练习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-definition-of-markov-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        马尔可夫性的等价定义 (Equivalent Definition of Markov Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-chapman-kolmogorov-equation-for-infinite-state-markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无穷状态马尔可夫链的查普曼-科尔莫戈罗夫方程 (Chapman-Kolmogorov Equation for Infinite-State Markov Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-recurrence-is-a-class-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正常返是类性质 (Positive Recurrence is a Class Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irreducibility-and-recurrence-of-time-reversed-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时间反演链的不可约性和常返性 (Irreducibility and Recurrence of Time-Reversed Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invariant-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不变测度 (Invariant Measure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stationary-distribution-of-truncated-reversible-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        截断可逆链的平稳分布 (Stationary Distribution of Truncated Reversible Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broken-mirrors-can-not-be-rejoined" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        破镜难重圆 (Broken Mirrors Can Not Be Rejoined)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_03_problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        练习 (Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习 (Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-definition-of-markov-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        马尔可夫性的等价定义 (Equivalent Definition of Markov Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-chapman-kolmogorov-equation-for-infinite-state-markov-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无穷状态马尔可夫链的查普曼-科尔莫戈罗夫方程 (Chapman-Kolmogorov Equation for Infinite-State Markov Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#positive-recurrence-is-a-class-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正常返是类性质 (Positive Recurrence is a Class Property)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irreducibility-and-recurrence-of-time-reversed-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时间反演链的不可约性和常返性 (Irreducibility and Recurrence of Time-Reversed Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invariant-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不变测度 (Invariant Measure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stationary-distribution-of-truncated-reversible-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        截断可逆链的平稳分布 (Stationary Distribution of Truncated Reversible Chains)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broken-mirrors-can-not-be-rejoined" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        破镜难重圆 (Broken Mirrors Can Not Be Rejoined)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="countable-markov-chains">第三章 可数无限状态马尔可夫链 (Countable Markov Chains)</h1>
+<h2 class="ex-counter" id="exercises" style="counter-reset: chapter 3 question 0;">练习 (Exercises)</h2>
+<h3 id="equivalent-definition-of-markov-property">马尔可夫性的等价定义 (Equivalent Definition of Markov Property)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在正文中，我们用信息流定义了马尔可夫性，请证明该定义与我们第二章给出的离散马尔可夫性定义是等价的。</p>
+</div>
+<div class="tabbed-block">
+<p>In the text, we defined the Markov property using filtration. Please prove that this definition is equivalent to the discrete Markov property definition given in Chapter 2.</p>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>来自[Your name]的解答</summary>
+<p>总所周知，<span class="arithmatex">\(1+1=2\)</span>。</p>
+</details>
+<details class="note">
+<summary>来自[Your name]的想法</summary>
+<p>oh这里有一个小想法想说。</p>
+</details>
+<h3 id="-chapman-kolmogorov-equation-for-infinite-state-markov-chains">无穷状态马尔可夫链的查普曼-科尔莫戈罗夫方程 (Chapman-Kolmogorov Equation for Infinite-State Markov Chains)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>请证明对于转移核为 <span class="arithmatex">\(P\)</span> 的无穷状态马尔可夫链，查普曼-科尔莫戈罗夫方程依然成立，即对于任意 <span class="arithmatex">\(s, t \ge 0\)</span> 和状态 <span class="arithmatex">\(i, j \in \Omega\)</span>，
+$$
+    P^{s+t}(i, j) = \sum_{k \in \Omega} P^s(i, k) P^t(k, j).
+$$</p>
+</div>
+<div class="tabbed-block">
+<p>Please prove that the Chapman-Kolmogorov equation still holds for infinite-state Markov chains with transition kernel <span class="arithmatex">\(P\)</span>, that is, for any <span class="arithmatex">\(s, t \ge 0\)</span> and states <span class="arithmatex">\(i, j \in \Omega\)</span>,
+$$
+    P^{s+t}(i, j) = \sum_{k \in \Omega} P^s(i, k) P^t(k, j).
+$$</p>
+</div>
+</div>
+</div>
+<h3 id="positive-recurrence-is-a-class-property">正常返是类性质 (Positive Recurrence is a Class Property)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>我们在正文中证明了，对于不可约的马尔可夫链，常返是一个类性质，请证明正常返也是一种类性质。</p>
+</div>
+<div class="tabbed-block">
+<p>We proved in the text that recurrence is a class property for irreducible Markov chains. Please prove that positive recurrence is also a class property.</p>
+</div>
+</div>
+</div>
+<h3 id="irreducibility-and-recurrence-of-time-reversed-chains">时间反演链的不可约性和常返性 (Irreducibility and Recurrence of Time-Reversed Chains)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>考虑正文中定义的马尔可夫链 <span class="arithmatex">\(P\)</span> 关于平稳分布 <span class="arithmatex">\(\pi\)</span> 的时间反演链 <span class="arithmatex">\(\hat P\)</span>，
+$$
+    \forall i,j\in\Omega,\quad \hat P(i\to j) = \frac{\pi_j P(j\to i)}{\pi_i}.
+$$
+请证明，若马尔可夫链 <span class="arithmatex">\(P\)</span> 是不可约且常返的，那么时间反演链 <span class="arithmatex">\(\hat P\)</span> 也是不可约且常返的。</p>
+</div>
+<div class="tabbed-block">
+<p>Consider the time-reversed chain <span class="arithmatex">\(\hat P\)</span> of a Markov chain <span class="arithmatex">\(P\)</span> with respect to its stationary distribution <span class="arithmatex">\(\pi\)</span> defined in the text,
+$$
+    \forall i,j\in\Omega,\quad \hat P(i\to j) = \frac{\pi_j P(j\to i)}{\pi_i}.
+$$
+Please prove that if the Markov chain <span class="arithmatex">\(P\)</span> is irreducible and recurrent, then the time-reversed chain <span class="arithmatex">\(\hat P\)</span> is also irreducible and recurrent.</p>
+</div>
+</div>
+</div>
+<h3 id="invariant-measure">不变测度 (Invariant Measure)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>我们知道对于零常返或瞬时的马尔可夫链，是不存在平稳分布的，但这并不意味着系统没有宏观规律可循。</p>
+<p>设 <span class="arithmatex">\(\left\lbrace X_n\right\rbrace_{n \ge 0}\)</span> 是一个不可约且常返的马尔可夫链，我们定义 <em>不变测度（invariant measure）</em> 为一个非负且不全为零的向量 <span class="arithmatex">\(\nu = (\nu_i)_{i \in \Omega}\)</span>，满足全局平衡方程 <span class="arithmatex">\(\nu P = \nu\)</span>，其中 <span class="arithmatex">\(P\)</span> 是转移核。此处我们不要求 <span class="arithmatex">\(\nu\)</span> 的逐项和为 <span class="arithmatex">\(1\)</span>，甚至不要求它有限，因此 <span class="arithmatex">\(\nu\)</span> 不一定是一个概率分布。在这道题中，我们来证明对于不可约的常返马尔可夫链，不变测度一定存在且（在忽略常数倍的意义下）唯一，并且即使系统发散，不变测度也能在一定程度上刻画系统特性。</p>
+<p>我们考虑某个状态 <span class="arithmatex">\(0 \in \Omega\)</span>，记 <span class="arithmatex">\(T_0^+ = \inf\left\lbrace n \ge 1: X_n = 0\right\rbrace\)</span> 为首次返回状态 <span class="arithmatex">\(0\)</span> 的时间。我们定义系统在两次访问状态 <span class="arithmatex">\(0\)</span> 的间隔内，访问另一个状态 <span class="arithmatex">\(j\)</span> 的期望次数为 <span class="arithmatex">\(\nu_j\)</span>：
+$$
+    \nu_j = \E[0]{ \sum_{n=0}^{T_0^+ - 1} \1{X_n = j} }.
+$$
+显然，当 <span class="arithmatex">\(j = 0\)</span> 时， <span class="arithmatex">\(\nu_0 = 1\)</span>。</p>
+<ol>
+<li>将 <span class="arithmatex">\(\nu_i\)</span> 写为概率求和 <span class="arithmatex">\(\nu_i = \sum_{n=0}^\infty \Pr[0]{X_n = i, T_0^+ &gt; n}\)</span>。请证明对于任意状态 <span class="arithmatex">\(j\)</span>：
+    $$
+        \sum_{i \in \Omega} \nu_i P(i, j) = \sum_{n=0}^\infty \Pr[0]{X_{n+1} = j, T_0^+ &gt; n}.
+    $$</li>
+<li>分别讨论当 <span class="arithmatex">\(j \neq 0\)</span> 和 <span class="arithmatex">\(j = 0\)</span> 时第一小问中的级数和，据此证明 <span class="arithmatex">\(\nu\)</span> 是马尔可夫链 <span class="arithmatex">\(P\)</span> 的一个不变测度。</li>
+<li>请证明该马尔可夫链的不变测度在忽略常数倍的意义下是唯一的，即对于任意的 <span class="arithmatex">\(\nu,\lambda\)</span> 满足 <span class="arithmatex">\(\nu P = \nu\)</span> 和 <span class="arithmatex">\(\lambda P = \lambda\)</span>，存在常数 <span class="arithmatex">\(c &gt; 0\)</span> 使得对于任意的 <span class="arithmatex">\(i\in\Omega\)</span> 都有 <span class="arithmatex">\(\nu_i = c \lambda_i\)</span>。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>We know that for a null recurrent or transient Markov chain, there is no stationary distribution, but this does not mean the system lacks macroscopic regularities.</p>
+<p>Let <span class="arithmatex">\(\left\lbrace X_n\right\rbrace_{n \ge 0}\)</span> be an irreducible and recurrent Markov chain. We define an <em>invariant measure</em> as a non-negative and not identically zero vector <span class="arithmatex">\(\nu = (\nu_i)_{i \in \Omega}\)</span> that satisfies the global balance equation <span class="arithmatex">\(\nu P = \nu\)</span>, where <span class="arithmatex">\(P\)</span> is the transition kernel. Here we do not require the sum of the elements of <span class="arithmatex">\(\nu\)</span> to be <span class="arithmatex">\(1\)</span>, nor do we even require it to be finite, so <span class="arithmatex">\(\nu\)</span> is not necessarily a probability distribution. In this exercise, we will prove that for an irreducible recurrent Markov chain, an invariant measure always exists and is unique (up to a constant multiplier), and even if the system diverges, the invariant measure can still characterize system properties to some extent.</p>
+<p>Consider a state <span class="arithmatex">\(0 \in \Omega\)</span>. Let <span class="arithmatex">\(T_0^+ = \inf\left\lbrace n \ge 1: X_n = 0\right\rbrace\)</span> be the time of first return to state <span class="arithmatex">\(0\)</span>. We define the expected number of visits to another state <span class="arithmatex">\(j\)</span> between two visits to state <span class="arithmatex">\(0\)</span> as <span class="arithmatex">\(\nu_j\)</span>:
+$$
+    \nu_j = \E[0]{ \sum_{n=0}^{T_0^+ - 1} \1{X_n = j} }.
+$$
+Obviously, when <span class="arithmatex">\(j = 0\)</span>, <span class="arithmatex">\(\nu_0 = 1\)</span>.</p>
+<ol>
+<li>Write <span class="arithmatex">\(\nu_i\)</span> as a probability sum <span class="arithmatex">\(\nu_i = \sum_{n=0}^\infty \Pr[0]{X_n = i, T_0^+ &gt; n}\)</span>. Please prove that for any state <span class="arithmatex">\(j\)</span>:
+   $$
+       \sum_{i \in \Omega} \nu_i P(i, j) = \sum_{n=0}^\infty \Pr[0]{X_{n+1} = j, T_0^+ &gt; n}.
+   $$</li>
+<li>Discuss the series sum in the first question separately for <span class="arithmatex">\(j \neq 0\)</span> and <span class="arithmatex">\(j = 0\)</span>, and use this to prove that <span class="arithmatex">\(\nu\)</span> is an invariant measure of the Markov chain <span class="arithmatex">\(P\)</span>.</li>
+<li>Please prove that the invariant measure of this Markov chain is unique up to a constant multiplier, that is, for any <span class="arithmatex">\(\nu, \lambda\)</span> satisfying <span class="arithmatex">\(\nu P = \nu\)</span> and <span class="arithmatex">\(\lambda P = \lambda\)</span>, there exists a constant <span class="arithmatex">\(c &gt; 0\)</span> such that <span class="arithmatex">\(\nu_i = c \lambda_i\)</span> for any <span class="arithmatex">\(i \in \Omega\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="stationary-distribution-of-truncated-reversible-chains">截断可逆链的平稳分布 (Stationary Distribution of Truncated Reversible Chains)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>想象一个基站，如果数据包的到达率大于处理率，那么系统会是瞬时的，队列长度会趋于无穷大，不存在平稳分布。但是，现实中的路由器内存不是无限的，假设缓冲池最多只能存 <span class="arithmatex">\(K\)</span> 个包，满了就会把新来的包丢弃，也就是说我们会强行把这个系统截断到有限状态空间 <span class="arithmatex">\(\left\lbrace 0, 1, \dots, K\right\rbrace\)</span> 上。在这一题里，我们就来研究无限状态空间的马尔可夫链截断到有限状态空间后的表现。</p>
+<p>考虑一个在可数状态空间 <span class="arithmatex">\(\Omega\)</span> 上的不可约马尔可夫链，其转移概率为 <span class="arithmatex">\(P(i, j)\)</span>。我们将其截断到有限子集 <span class="arithmatex">\(S\subset \Omega\)</span> 中，构造一个新的截断链 <span class="arithmatex">\(\tilde{P}\)</span>，在集合 <span class="arithmatex">\(S\)</span> 内部的转移概率保持不变；如果原本要跳出 <span class="arithmatex">\(S\)</span>，则强制让其留在原地。即对于任意 <span class="arithmatex">\(i, j \in S\)</span>：
+$$
+\tilde{P}(i, j) = 
+\begin{cases} 
+    P(i, j), &amp; \text{若 } i \neq j \cr
+    P(i, i) + \sum_{k \notin S} P(i, k), &amp; \text{若 } i = j
+\end{cases}
+$$
+假设截断后的链 <span class="arithmatex">\(\tilde{P}\)</span> 在集合 <span class="arithmatex">\(S\)</span> 上依然是不可约的。</p>
+<ol>
+<li>假设原链 <span class="arithmatex">\(P\)</span> 是正常返的，其平稳分布为 <span class="arithmatex">\(\pi\)</span> 且满足细致平衡条件 <span class="arithmatex">\(\pi_i P(i, j) = \pi_j P(j, i)\)</span>。请证明：截断链 <span class="arithmatex">\(\tilde{P}\)</span> 的平稳分布 <span class="arithmatex">\(\tilde{\pi}\)</span> 正是原分布限制在子集 <span class="arithmatex">\(S\)</span> 上的条件概率分布，并且 <span class="arithmatex">\(\tilde{P}\)</span> 关于 <span class="arithmatex">\(\tilde{\pi}\)</span> 是时间可逆的。</li>
+<li>如果原链 <span class="arithmatex">\(P\)</span> 是零常返或瞬时的，它不存在平稳分布。但假设它有一个严格为正且（在忽略常数倍的意义下）唯一的不变测度（定义见上一道练习题）<span class="arithmatex">\(\nu = (\nu_1, \nu_2, \dots)\)</span>，且满足 <span class="arithmatex">\(\nu_i P(i, j) = \nu_j P(j, i)\)</span>。请证明：虽然原系统不存在平稳分布，但截断链 <span class="arithmatex">\(\tilde{P}\)</span> 存在平稳分布，并基于不变测度 <span class="arithmatex">\(\nu\)</span> 给出平稳分布 <span class="arithmatex">\(\tilde{\pi}\)</span> 的表达式。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Imagine a base station where if the packet arrival rate is greater than the processing rate, the system will be transient, the queue length will tend to infinity, and no stationary distribution will exist. However, the memory of routers in reality is not infinite. Suppose the buffer pool can store at most <span class="arithmatex">\(K\)</span> packets, and newly arriving packets will be discarded when it is full. This means we forcefully truncate this system to a finite state space <span class="arithmatex">\(\left\lbrace 0, 1, \dots, K\right\rbrace\)</span>. In this exercise, we will study the behavior of an infinite-state Markov chain after being truncated to a finite state space.</p>
+<p>Consider an irreducible Markov chain on a countable state space <span class="arithmatex">\(\Omega\)</span> with transition probabilities <span class="arithmatex">\(P(i, j)\)</span>. We truncate it to a finite subset <span class="arithmatex">\(S \subset \Omega\)</span> to construct a new truncated chain <span class="arithmatex">\(\tilde{P}\)</span>, where the transition probabilities within <span class="arithmatex">\(S\)</span> remain unchanged; if it originally transitions out of <span class="arithmatex">\(S\)</span>, it is forced to stay in its current state. That is, for any <span class="arithmatex">\(i, j \in S\)</span>:
+$$
+\tilde{P}(i, j) = 
+\begin{cases} 
+    P(i, j), &amp; \text{if } i \neq j \cr
+    P(i, i) + \sum_{k \notin S} P(i, k), &amp; \text{if } i = j
+\end{cases}
+$$
+Suppose the truncated chain <span class="arithmatex">\(\tilde{P}\)</span> is still irreducible on the set <span class="arithmatex">\(S\)</span>.</p>
+<ol>
+<li>Assume the original chain <span class="arithmatex">\(P\)</span> is positive recurrent, its stationary distribution is <span class="arithmatex">\(\pi\)</span>, and it satisfies the detailed balance condition <span class="arithmatex">\(\pi_i P(i, j) = \pi_j P(j, i)\)</span>. Please prove that the stationary distribution <span class="arithmatex">\(\tilde{\pi}\)</span> of the truncated chain <span class="arithmatex">\(\tilde{P}\)</span> is exactly the conditional probability distribution of the original distribution restricted to the subset <span class="arithmatex">\(S\)</span>, and that <span class="arithmatex">\(\tilde{P}\)</span> is time-reversible with respect to <span class="arithmatex">\(\tilde{\pi}\)</span>.</li>
+<li>If the original chain <span class="arithmatex">\(P\)</span> is null recurrent or transient, it does not have a stationary distribution. But suppose it has a strictly positive and (up to a constant multiplier) unique invariant measure (see definition in the previous exercise) <span class="arithmatex">\(\nu = (\nu_1, \nu_2, \dots)\)</span>, which satisfies <span class="arithmatex">\(\nu_i P(i, j) = \nu_j P(j, i)\)</span>. Please prove that although the original system does not have a stationary distribution, the truncated chain <span class="arithmatex">\(\tilde{P}\)</span> has a stationary distribution, and give the expression of the stationary distribution <span class="arithmatex">\(\tilde{\pi}\)</span> based on the invariant measure <span class="arithmatex">\(\nu\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="broken-mirrors-can-not-be-rejoined">破镜难重圆 (Broken Mirrors Can Not Be Rejoined)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">English</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在宏观世界中，热力学第二定律告诉我们，孤立系统会自发地朝着熵增加的方向演化。例如，将所有的气体分子用隔板隔在一个盒子的左半边，撤去隔板后，分子会均匀地散布到整个盒子中。然而，如果在微观层面用马尔可夫链来描述这个过程，如果这个马尔可夫链是正常返的，经过足够长的时间，系统会以概率 <span class="arithmatex">\(1\)</span> 回到初始状态，这难道和热力学第二定律矛盾吗？</p>
+<p>为了解答这个问题，我们考虑一个包含 <span class="arithmatex">\(N\)</span> 个粒子的简化模型， <em>埃伦费斯特瓮模型（Ehrenfest model）</em> 。假设有两个盒子 A 和 B，里面共有 <span class="arithmatex">\(N\)</span> 个粒子（<span class="arithmatex">\(N\geq 2\)</span>）。在每一个离散的时间步，我们随机均匀地从这 <span class="arithmatex">\(N\)</span> 个粒子中挑出一个，把它移到另一个盒子里。
+令 <span class="arithmatex">\(X_n\)</span> 表示第 <span class="arithmatex">\(n\)</span> 步时盒子 A 中的粒子数，显然 <span class="arithmatex">\(\left\lbrace X_n\right\rbrace\)</span> 是一个状态空间为 <span class="arithmatex">\(\left\lbrace 0, 1, \dots, N\right\rbrace\)</span> 的马尔可夫链。</p>
+<ol>
+<li>证明该马尔可夫链不可约并且是正常返的，并求出它的唯一平稳分布 <span class="arithmatex">\(\pi\)</span>。</li>
+<li>假设初始状态 <span class="arithmatex">\(X_0=N\)</span>，即所有粒子都在盒子 A 中。证明系统以概率 <span class="arithmatex">\(1\)</span> 会在有限步内回到状态 <span class="arithmatex">\(N\)</span>，并计算首次返回状态 <span class="arithmatex">\(N\)</span> 的期望时间。</li>
+<li>假设每秒钟可以发生 100 亿次转移，计算当 <span class="arithmatex">\(N=100\)</span> 时，系统从 <span class="arithmatex">\(X_0=N\)</span> 出发，首次返回状态 <span class="arithmatex">\(N\)</span> 的期望时间。把这个期望时间与宇宙的年龄（约 <span class="arithmatex">\(1.38 \times 10^{10}\)</span> 年）进行对比，并解释为什么我们在现实中永远观察不到“破镜重圆”或“气体倒流”的宏观现象。</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>In the macroscopic world, the second law of thermodynamics tells us that isolated systems will spontaneously evolve in the direction of increasing entropy. For example, if all gas molecules are separated into the left half of a box by a partition, after removing the partition, the molecules will evenly spread throughout the entire box. However, if this process is described by a Markov chain at the microscopic level, and if this Markov chain is positive recurrent, the system will return to its initial state with probability <span class="arithmatex">\(1\)</span> after a sufficiently long time. Does this contradict the second law of thermodynamics?</p>
+<p>To answer this question, we consider a simplified model containing <span class="arithmatex">\(N\)</span> particles, the <em>Ehrenfest model</em>. Suppose there are two boxes A and B containing a total of <span class="arithmatex">\(N\)</span> particles (<span class="arithmatex">\(N \geq 2\)</span>). At each discrete time step, we pick one of these <span class="arithmatex">\(N\)</span> particles uniformly at random and move it to the other box.
+Let <span class="arithmatex">\(X_n\)</span> denote the number of particles in box A at step <span class="arithmatex">\(n\)</span>. Obviously, <span class="arithmatex">\(\left\lbrace X_n\right\rbrace\)</span> is a Markov chain with a state space of <span class="arithmatex">\(\left\lbrace 0, 1, \dots, N\right\rbrace\)</span>.</p>
+<ol>
+<li>Prove that this Markov chain is irreducible and positive recurrent, and find its unique stationary distribution <span class="arithmatex">\(\pi\)</span>.</li>
+<li>Assume the initial state is <span class="arithmatex">\(X_0=N\)</span>, that is, all particles are in box A. Prove that the system will return to state <span class="arithmatex">\(N\)</span> in a finite number of steps with probability <span class="arithmatex">\(1\)</span>, and calculate the expected time of the first return to state <span class="arithmatex">\(N\)</span>.</li>
+<li>Assume that 10 billion transitions can occur per second. Calculate the expected time of the first return to state <span class="arithmatex">\(N\)</span> when the system starts from <span class="arithmatex">\(X_0=N\)</span> with <span class="arithmatex">\(N=100\)</span>. Compare this expected time with the age of the universe (about <span class="arithmatex">\(1.38 \times 10^{10}\)</span> years), and explain why we will never observe macroscopic phenomena like "broken mirrors being rejoined" or "gas flowing backward" in reality.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/heading-numbering.js"></script>
+      
+        <script src="../../javascripts/inline-tabs.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

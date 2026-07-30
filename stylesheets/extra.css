@@ -1,0 +1,162 @@
+/* Heading numbering moved to docs/javascripts/heading-numbering.js */
+
+.md-typeset h1 {
+	color: var(--md-default-fg-color);
+	font-weight: 700;
+}
+
+.md-typeset h2 {
+	color: var(--md-default-fg-color);
+	font-weight: 650;
+}
+
+.md-typeset h3 {
+	color: var(--md-default-fg-color);
+	font-weight: 650;
+}
+
+.md-typeset h3.with-inline-tabs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding: 0.42rem 0.62rem;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	background-color: var(--md-code-bg-color);
+}
+
+.md-typeset .inline-tab-controls {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	flex-shrink: 0;
+}
+
+.md-typeset .inline-tab-btn {
+	background: transparent;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 999px;
+	padding: 0.15rem 0.65rem;
+	font-size: 0.72rem;
+	font-weight: 600;
+	color: var(--md-default-fg-color--light);
+	cursor: pointer;
+}
+
+.md-typeset .inline-tab-btn.is-active {
+	color: var(--md-default-fg-color);
+	border-color: var(--md-default-fg-color--light);
+	background: var(--md-default-bg-color);
+}
+
+.md-typeset .tabbed-set.inline-tabbed > .tabbed-labels {
+	display: none;
+}
+
+.md-nav--secondary .md-nav__link {
+	color: var(--md-default-fg-color--light) !important;
+}
+
+.md-nav--secondary .md-nav__link--active,
+.md-nav--secondary .md-nav__link[aria-current="true"] {
+	color: var(--md-typeset-a-color) !important;
+}
+
+.md-typeset pre {
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.5rem;
+	background-color: var(--md-code-bg-color);
+}
+
+.md-typeset pre code {
+	font-family: var(--md-code-font-family);
+	font-size: 0.9em;
+	line-height: 1.6;
+}
+
+.md-typeset .admonition.hint,
+.md-typeset details.hint,
+.md-typeset .admonition.theorem {
+	font-size: 0.95em;
+	line-height: 1.55;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	background-color: color-mix(in srgb, var(--md-default-fg-color) 3%, transparent);
+	box-shadow: none;
+}
+
+.md-typeset .admonition.hint > .admonition-title,
+.md-typeset details.hint > summary,
+.md-typeset .admonition.theorem > .admonition-title {
+	font-size: 0.86em;
+	font-weight: 550;
+	color: var(--md-default-fg-color--light);
+	letter-spacing: 0.01em;
+	background-color: color-mix(in srgb, var(--md-default-fg-color) 7%, transparent);
+	border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .admonition.hint > .admonition-title::before,
+.md-typeset details.hint > summary::before,
+.md-typeset .admonition.theorem > .admonition-title::before {
+	opacity: 0.75;
+}
+
+.md-typeset .admonition.hint p,
+.md-typeset details.hint p,
+.md-typeset .admonition.theorem p {
+	color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .note-inline {
+	margin: 0.65rem 0 0.9rem;
+	padding: 0.5rem 0.7rem;
+	border-left: 2px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.35rem;
+	background-color: color-mix(in srgb, var(--md-default-fg-color) 3%, transparent);
+	color: var(--md-default-fg-color--light);
+	font-size: 0.95em;
+	font-style: italic;
+	font-family: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif;
+	line-height: 1.6;
+}
+
+.md-typeset .update-log {
+	margin-top: 0.5rem;
+	border: 1px solid var(--md-default-fg-color--lightest);
+	border-radius: 0.45rem;
+	overflow: hidden;
+	background: color-mix(in srgb, var(--md-default-bg-color) 94%, var(--md-default-fg-color) 6%);
+}
+
+.md-typeset .update-item {
+	padding: 0.68rem 0.85rem;
+}
+
+.md-typeset .update-item + .update-item {
+	border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .update-meta {
+	font-size: 0.82em;
+	color: var(--md-default-fg-color--light);
+	margin-bottom: 0.2rem;
+}
+
+.md-typeset .update-item p {
+	margin: 0;
+	line-height: 1.55;
+}
+
+/* Make the sidebar link to code_of_conduct appear lighter than other links. */
+.md-nav a.md-nav__link[href$="code_of_conduct/"],
+.md-nav a.md-nav__link[href$="code_of_conduct.md"] {
+	color: color-mix(in srgb, var(--md-default-fg-color) 45%, white) !important;
+}
+
+/* Warning line styling in code_of_conduct page. */
+.md-typeset .conduct-warning {
+	color: #c62828;
+	font-weight: 600;
+}
